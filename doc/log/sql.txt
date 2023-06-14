@@ -1,0 +1,111 @@
+ドライバ】
+org.h2.Driver
+
+
+【名刺管理アプリで使う URL】
+jdbc:h2:file:C:/pleiades/workspace/data/bcpt
+
+
+【ユーザー名】	【パスワード】
+sa		（なし）
+
+
+【userテーブル作成】
+CREATE TABLE user (
+  ID VARCHAR(20) PRIMARY KEY,
+  l_name VARCHAR(20) NOT NULL,
+  f_name VARCHAR(20) NOT NULL,
+  pw VARCHAR(20) NOT NULL,
+  now_point int(5) DEFAULT 0,
+  which VARCHAR(5) NOT NULL DEFAULT 'week',
+  mode_shift VARCHAR(8) DEFAULT 'business' NOT NULL,
+  tetsuya int(1) DEFAULT 0
+);
+
+【planテーブル作成】
+CREATE TABLE plan (
+  number int(10) NOT NULL,
+  id_number int(3) NOT NULL,
+  mode_number int(1) NOT NULL,
+  which VARCHAR(9) NOT NULL,
+  s_day date NOT NULL,
+  s_time time NOT NULL,
+  e_day date NOT NULL,
+  e_time time NOT NULL,
+  what VARCHAR(30) DEFAULT 0 NOT NULL,
+  color VARCHAR(20) DEFAULT 0 NOT NULL,
+  what_details VARCHAR(100) DEFAULT 0,
+  memo VARCHAR(100) DEFAULT 0,
+  PRIMARY KEY(number,id_number,mode_number)
+);
+
+
+【id_numberテーブル作成】
+CREATE TABLE id_number (
+  id_number int(3) PRIMARY KEY,
+  id varchar(20) NOT NULL
+);
+
+
+【mode_numberテーブル作成】
+CREATE TABLE mode_number (
+  mode_number int(1) PRIMARY KEY,
+  mode varchar(8) NOT NULL
+);
+
+【pointテーブル作成】
+CREATE TABLE point (
+  b_point int(2) NOT NULL,
+  p_point int(2) NOT NULL,
+  tetsuya_b int(2) NOT NULL,
+  tetsuya_p int(2) NOT NULL,
+  chance_bonus int(1) NOT NULL,
+  b_max int(2) NOT NULL,
+  p_max int(2) NOT NULL
+);
+
+
+【rankテーブル作成】
+CREATE TABLE rank (
+  c_start int(4) NOT NULL,
+  b_start int(4) NOT NULL,
+  a_start int(4) NOT NULL,
+  s_start int(4) NOT NULL
+);
+
+
+【point_dayテーブル作成】
+CREATE TABLE point_day (
+  id varchar(20) NOT NULL,
+  year int(4) NOT NULL,
+  month int(2) NOT NULL,
+  day int(2) NOT NULL,
+  point_b int(3) DEFAULT 0,
+  point_p int(3) DEFAULT 0,
+  point_m int(10) DEFAULT 0,
+  PRIMARY KEY(id,year,month,day)
+);
+
+
+【rank_bonusテーブル作成】
+CREATE TABLE rank_bonus (
+  year int(4) NOT NULL,
+  month int(2) NOT NULL,
+  sc_s varchar(20) NOT NULL,
+  sc_a varchar(20) NOT NULL,
+  PRIMARY KEY(year,month)
+);
+
+
+
+【userテーブルにサンプルデータを登録するSQL文】
+INSERT INTO user (ID,l_name,f_name,pw,now_point,which,mode_shift,tetsuya) VALUES ('tetsuya','労働','徹夜','1','0','week','business','0');
+
+【id_numberテーブルにサンプルデータを登録するSQL文】
+INSERT INTO id_number (id_number, id) VALUES ('1','tetsuya');
+
+
+
+【mode_numberテーブルにサンプルデータを登録するSQL文】
+INSERT INTO mode_number (mode_number, mode) VALUES ('1','business');
+INSERT INTO mode_number (mode_number, mode) VALUES ('2','private');
