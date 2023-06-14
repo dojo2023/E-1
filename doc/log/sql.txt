@@ -109,3 +109,6 @@ INSERT INTO id_number (id_number, id) VALUES ('1','tetsuya');
 【mode_numberテーブルにサンプルデータを登録するSQL文】
 INSERT INTO mode_number (mode_number, mode) VALUES ('1','business');
 INSERT INTO mode_number (mode_number, mode) VALUES ('2','private');
+
+
+【テーブルにサンプルデータを登録するSQL文】
