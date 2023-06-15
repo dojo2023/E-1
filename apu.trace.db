@@ -1,0 +1,528 @@
+2023-06-14 14:58:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (
+  ID VARCHAR(20) PRIMARY KEY,
+  L_NAME VARCHAR(20) NOT NULL,
+  F_NAME VARCHAR(20) NOT NULL,
+  PW VARCHAR(20) NOT NULL,
+  NOW_POINT INT()[*] DEFAULT 0,
+  WHICH VARCHAR(5) DEFAULT WEEK NOT NULL,
+  MODE_SHIFT VARCHAR(8) DEFAULT BUSINESS NOT NULL,
+  TETSUYA INT(1) DEFAULT 0
+)"; 期待されるステートメント "integer"
+Syntax error in SQL statement "CREATE TABLE USER (
+  ID VARCHAR(20) PRIMARY KEY,
+  L_NAME VARCHAR(20) NOT NULL,
+  F_NAME VARCHAR(20) NOT NULL,
+  PW VARCHAR(20) NOT NULL,
+  NOW_POINT INT()[*] DEFAULT 0,
+  WHICH VARCHAR(5) DEFAULT WEEK NOT NULL,
+  MODE_SHIFT VARCHAR(8) DEFAULT BUSINESS NOT NULL,
+  TETSUYA INT(1) DEFAULT 0
+)"; expected "integer"; SQL statement:
+CREATE TABLE user (
+  ID VARCHAR(20) PRIMARY KEY,
+  l_name VARCHAR(20) NOT NULL,
+  f_name VARCHAR(20) NOT NULL,
+  pw VARCHAR(20) NOT NULL,
+  now_point int() DEFAULT 0,
+  which VARCHAR(5) DEFAULT week NOT NULL,
+  mode_shift VARCHAR(8) DEFAULT business NOT NULL,
+  tetsuya int(1) DEFAULT 0
+) [42001-200]
+2023-06-14 14:59:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (
+  ID VARCHAR(20) PRIMARY KEY,
+  L_NAME VARCHAR(20) NOT NULL,
+  F_NAME VARCHAR(20) NOT NULL,
+  PW VARCHAR(20) NOT NULL,
+  NOW_POINT INT()[*] DEFAULT '0',
+  WHICH VARCHAR(5) DEFAULT WEEK NOT NULL,
+  MODE_SHIFT VARCHAR(8) DEFAULT BUSINESS NOT NULL,
+  TETSUYA INT(1) DEFAULT '0'
+)"; 期待されるステートメント "integer"
+Syntax error in SQL statement "CREATE TABLE USER (
+  ID VARCHAR(20) PRIMARY KEY,
+  L_NAME VARCHAR(20) NOT NULL,
+  F_NAME VARCHAR(20) NOT NULL,
+  PW VARCHAR(20) NOT NULL,
+  NOW_POINT INT()[*] DEFAULT '0',
+  WHICH VARCHAR(5) DEFAULT WEEK NOT NULL,
+  MODE_SHIFT VARCHAR(8) DEFAULT BUSINESS NOT NULL,
+  TETSUYA INT(1) DEFAULT '0'
+)"; expected "integer"; SQL statement:
+CREATE TABLE user (
+  ID VARCHAR(20) PRIMARY KEY,
+  l_name VARCHAR(20) NOT NULL,
+  f_name VARCHAR(20) NOT NULL,
+  pw VARCHAR(20) NOT NULL,
+  now_point int() DEFAULT '0',
+  which VARCHAR(5) DEFAULT week NOT NULL,
+  mode_shift VARCHAR(8) DEFAULT business NOT NULL,
+  tetsuya int(1) DEFAULT '0'
+) [42001-200]
+2023-06-14 15:06:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (
+  ID VARCHAR(20) PRIMARY KEY,
+  L_NAME VARCHAR(20) NOT NULL,
+  F_NAME VARCHAR(20) NOT NULL,
+  PW VARCHAR(20) NOT NULL,
+  NOW_POINT INT()[*] DEFAULT 0,
+  WHICH VARCHAR(5) DEFAULT WEEK NOT NULL,
+  MODE_SHIFT VARCHAR(8) DEFAULT BUSINESS NOT NULL,
+  TETSUYA INT(1) DEFAULT 0
+)"; 期待されるステートメント "integer"
+Syntax error in SQL statement "CREATE TABLE USER (
+  ID VARCHAR(20) PRIMARY KEY,
+  L_NAME VARCHAR(20) NOT NULL,
+  F_NAME VARCHAR(20) NOT NULL,
+  PW VARCHAR(20) NOT NULL,
+  NOW_POINT INT()[*] DEFAULT 0,
+  WHICH VARCHAR(5) DEFAULT WEEK NOT NULL,
+  MODE_SHIFT VARCHAR(8) DEFAULT BUSINESS NOT NULL,
+  TETSUYA INT(1) DEFAULT 0
+)"; expected "integer"; SQL statement:
+CREATE TABLE user (
+  ID VARCHAR(20) PRIMARY KEY,
+  l_name VARCHAR(20) NOT NULL,
+  f_name VARCHAR(20) NOT NULL,
+  pw VARCHAR(20) NOT NULL,
+  now_point int() DEFAULT 0,
+  which VARCHAR(5) DEFAULT week NOT NULL,
+  mode_shift VARCHAR(8) DEFAULT business NOT NULL,
+  tetsuya int(1) DEFAULT 0
+) [42001-200]
+2023-06-14 15:06:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "WEEK" が見つかりません
+Column "WEEK" not found; SQL statement:
+CREATE TABLE user (
+  ID VARCHAR(20) PRIMARY KEY,
+  l_name VARCHAR(20) NOT NULL,
+  f_name VARCHAR(20) NOT NULL,
+  pw VARCHAR(20) NOT NULL,
+  now_point int(5) DEFAULT 0,
+  which VARCHAR(5) DEFAULT week NOT NULL,
+  mode_shift VARCHAR(8) DEFAULT business NOT NULL,
+  tetsuya int(1) DEFAULT 0
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.table.Column.setDefaultExpression(Column.java:245)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5728)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-14 15:06:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "WEEK" が見つかりません
+Column "WEEK" not found; SQL statement:
+CREATE TABLE user (
+  ID VARCHAR(20) PRIMARY KEY,
+  l_name VARCHAR(20) NOT NULL,
+  f_name VARCHAR(20) NOT NULL,
+  pw VARCHAR(20) NOT NULL,
+  now_point int(5) DEFAULT 0,
+  which VARCHAR(5) DEFAULT week NOT NULL,
+  mode_shift VARCHAR(8) DEFAULT business NOT NULL,
+  tetsuya int(1) DEFAULT 0
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.table.Column.setDefaultExpression(Column.java:245)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5728)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-14 15:07:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "WEEK" が見つかりません
+Column "WEEK" not found; SQL statement:
+CREATE TABLE user (
+  ID VARCHAR(20) PRIMARY KEY,
+  l_name VARCHAR(20) NOT NULL,
+  f_name VARCHAR(20) NOT NULL,
+  pw VARCHAR(20) NOT NULL,
+  now_point int(5) DEFAULT 0,
+  which VARCHAR(5) NOT NULL DEFAULT week,
+  mode_shift VARCHAR(8) DEFAULT business NOT NULL,
+  tetsuya int(1) DEFAULT 0
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.table.Column.setDefaultExpression(Column.java:245)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5728)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-14 15:08:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USER (
+  ID VARCHAR(20) PRIMARY KEY,
+  L_NAME VARCHAR(20) NOT NULL,
+  F_NAME VARCHAR(20) NOT NULL,
+  PW VARCHAR(20) NOT NULL,
+  NOW_POINT INT(5) DEFAULT 0,
+  WHICH VARCHAR(5) NOT NULL DEFAULT[*] ’WEEK’,
+  MODE_SHIFT VARCHAR(8) DEFAULT BUSINESS NOT NULL,
+  TETSUYA INT(1) DEFAULT 0
+)"
+Syntax error in SQL statement "CREATE TABLE USER (
+  ID VARCHAR(20) PRIMARY KEY,
+  L_NAME VARCHAR(20) NOT NULL,
+  F_NAME VARCHAR(20) NOT NULL,
+  PW VARCHAR(20) NOT NULL,
+  NOW_POINT INT(5) DEFAULT 0,
+  WHICH VARCHAR(5) NOT NULL DEFAULT[*] ’WEEK’,
+  MODE_SHIFT VARCHAR(8) DEFAULT BUSINESS NOT NULL,
+  TETSUYA INT(1) DEFAULT 0
+)"; SQL statement:
+CREATE TABLE user (
+  ID VARCHAR(20) PRIMARY KEY,
+  l_name VARCHAR(20) NOT NULL,
+  f_name VARCHAR(20) NOT NULL,
+  pw VARCHAR(20) NOT NULL,
+  now_point int(5) DEFAULT 0,
+  which VARCHAR(5) NOT NULL DEFAULT ’week’,
+  mode_shift VARCHAR(8) DEFAULT business NOT NULL,
+  tetsuya int(1) DEFAULT 0
+) [42000-200]
+2023-06-14 15:48:37 jdbc[4]: java.lang.Exception: Open Stack Trace
+	at org.h2.util.CloseWatcher.register(CloseWatcher.java:100)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:187)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 16 more
+2023-06-14 15:48:37 jdbc[4]: java.lang.Exception: Open Stack Trace
+	at org.h2.util.CloseWatcher.register(CloseWatcher.java:100)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:187)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 16 more
+2023-06-14 15:48:40 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE PLAN (
+  NUMBER INT(10) NOT NULL,
+  ID_NUMBER INT(3) NOT NULL,
+  MODE_NUMBER INT(1) NOT NULL,
+  WHICH VARCHAR(9) NOT NULL,
+  S_DAY DATE()[*] NOT NULL,
+  S_TIME TIME() NOT NULL,
+  E_DAY DATE() NOT NULL,
+  E_TIME TIME() NOT NULL,
+  WHAT VARCHAR(30) DEFAULT 0 NOT NULL,
+  COLOR VARCHAR(20) DEFAULT 0 NOT NULL,
+  WHAT_DETAILS VARCHAR(100) DEFAULT 0,
+  MEMO VARCHAR(100) DEFAULT 0
+  PRIMARY KEY(NUMBER,ID_NUMBER,MODE_NUMBER)
+)"; 期待されるステートメント "integer"
+Syntax error in SQL statement "CREATE TABLE PLAN (
+  NUMBER INT(10) NOT NULL,
+  ID_NUMBER INT(3) NOT NULL,
+  MODE_NUMBER INT(1) NOT NULL,
+  WHICH VARCHAR(9) NOT NULL,
+  S_DAY DATE()[*] NOT NULL,
+  S_TIME TIME() NOT NULL,
+  E_DAY DATE() NOT NULL,
+  E_TIME TIME() NOT NULL,
+  WHAT VARCHAR(30) DEFAULT 0 NOT NULL,
+  COLOR VARCHAR(20) DEFAULT 0 NOT NULL,
+  WHAT_DETAILS VARCHAR(100) DEFAULT 0,
+  MEMO VARCHAR(100) DEFAULT 0
+  PRIMARY KEY(NUMBER,ID_NUMBER,MODE_NUMBER)
+)"; expected "integer"; SQL statement:
+CREATE TABLE plan (
+  number int(10) NOT NULL,
+  id_number int(3) NOT NULL,
+  mode_number int(1) NOT NULL,
+  which VARCHAR(9) NOT NULL,
+  s_day date() NOT NULL,
+  s_time time() NOT NULL,
+  e_day date() NOT NULL,
+  e_time time() NOT NULL,
+  what VARCHAR(30) DEFAULT 0 NOT NULL,
+  color VARCHAR(20) DEFAULT 0 NOT NULL,
+  what_details VARCHAR(100) DEFAULT 0,
+  memo VARCHAR(100) DEFAULT 0
+  PRIMARY KEY(number,id_number,mode_number)
+) [42001-200]
+2023-06-14 15:48:51 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE PLAN (
+  NUMBER INT(10) NOT NULL,
+  ID_NUMBER INT(3) NOT NULL,
+  MODE_NUMBER INT(1) NOT NULL,
+  WHICH VARCHAR(9) NOT NULL,
+  S_DAY DATE NOT NULL,
+  S_TIME TIME NOT NULL,
+  E_DAY DATE NOT NULL,
+  E_TIME TIME NOT NULL,
+  WHAT VARCHAR(30) DEFAULT 0 NOT NULL,
+  COLOR VARCHAR(20) DEFAULT 0 NOT NULL,
+  WHAT_DETAILS VARCHAR(100) DEFAULT 0,
+  MEMO VARCHAR(100) DEFAULT 0
+  PRIMARY KEY([*]NUMBER,ID_NUMBER,MODE_NUMBER)
+)"; 期待されるステートメント "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE PLAN (
+  NUMBER INT(10) NOT NULL,
+  ID_NUMBER INT(3) NOT NULL,
+  MODE_NUMBER INT(1) NOT NULL,
+  WHICH VARCHAR(9) NOT NULL,
+  S_DAY DATE NOT NULL,
+  S_TIME TIME NOT NULL,
+  E_DAY DATE NOT NULL,
+  E_TIME TIME NOT NULL,
+  WHAT VARCHAR(30) DEFAULT 0 NOT NULL,
+  COLOR VARCHAR(20) DEFAULT 0 NOT NULL,
+  WHAT_DETAILS VARCHAR(100) DEFAULT 0,
+  MEMO VARCHAR(100) DEFAULT 0
+  PRIMARY KEY([*]NUMBER,ID_NUMBER,MODE_NUMBER)
+)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE plan (
+  number int(10) NOT NULL,
+  id_number int(3) NOT NULL,
+  mode_number int(1) NOT NULL,
+  which VARCHAR(9) NOT NULL,
+  s_day date NOT NULL,
+  s_time time NOT NULL,
+  e_day date NOT NULL,
+  e_time time NOT NULL,
+  what VARCHAR(30) DEFAULT 0 NOT NULL,
+  color VARCHAR(20) DEFAULT 0 NOT NULL,
+  what_details VARCHAR(100) DEFAULT 0,
+  memo VARCHAR(100) DEFAULT 0
+  PRIMARY KEY(number,id_number,mode_number)
+) [42001-200]
+2023-06-14 15:54:01 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE PLAN (
+  NUMBER INT(10) NOT NULL,
+  ID_NUMBER INT(3) NOT NULL,
+  MODE_NUMBER INT(1) NOT NULL,
+  WHICH VARCHAR(9) NOT NULL,
+  S_DAY DATE NOT NULL,
+  S_TIME TIME NOT NULL,
+  E_DAY DATE NOT NULL,
+  E_TIME TIME NOT NULL,
+  WHAT VARCHAR(30) DEFAULT 0 NOT NULL,
+  COLOR VARCHAR(20) DEFAULT 0 NOT NULL,
+  WHAT_DETAILS VARCHAR(100) DEFAULT 0,
+  MEMO VARCHAR(100) DEFAULT 0
+  PRIMARY KEY([*]NUMBER,ID_NUMBER,MODE_NUMBER)
+)"; 期待されるステートメント "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE PLAN (
+  NUMBER INT(10) NOT NULL,
+  ID_NUMBER INT(3) NOT NULL,
+  MODE_NUMBER INT(1) NOT NULL,
+  WHICH VARCHAR(9) NOT NULL,
+  S_DAY DATE NOT NULL,
+  S_TIME TIME NOT NULL,
+  E_DAY DATE NOT NULL,
+  E_TIME TIME NOT NULL,
+  WHAT VARCHAR(30) DEFAULT 0 NOT NULL,
+  COLOR VARCHAR(20) DEFAULT 0 NOT NULL,
+  WHAT_DETAILS VARCHAR(100) DEFAULT 0,
+  MEMO VARCHAR(100) DEFAULT 0
+  PRIMARY KEY([*]NUMBER,ID_NUMBER,MODE_NUMBER)
+)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE plan (
+  number int(10) NOT NULL,
+  id_number int(3) NOT NULL,
+  mode_number int(1) NOT NULL,
+  which VARCHAR(9) NOT NULL,
+  s_day date NOT NULL,
+  s_time time NOT NULL,
+  e_day date NOT NULL,
+  e_time time NOT NULL,
+  what VARCHAR(30) DEFAULT 0 NOT NULL,
+  color VARCHAR(20) DEFAULT 0 NOT NULL,
+  what_details VARCHAR(100) DEFAULT 0,
+  memo VARCHAR(100) DEFAULT 0
+  PRIMARY KEY(number,id_number,mode_number)
+) [42001-200]
+2023-06-15 10:48:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "RANK_BONUS" はすでに存在します
+Table "RANK_BONUS" already exists; SQL statement:
+CREATE TABLE rank_bonus (
+  id varchar(20) PRIMARY KEY,
+  genre int(1) NOT NULL,
+  text varchar(200)
+) [42101-200]
+2023-06-15 14:13:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ID_NUMBER" が見つかりません
+Column "ID_NUMBER" not found; SQL statement:
+CREATE TABLE plan (
+  number int(10) NOT NULL,
+  id varchar(20) NOT NULL,
+  mode varchar(8) NOT NULL,
+  which VARCHAR(9) NOT NULL,
+  s_day date NOT NULL,
+  s_time time NOT NULL,
+  e_day date NOT NULL,
+  e_time time NOT NULL,
+  what VARCHAR(30) DEFAULT 0 NOT NULL,
+  color VARCHAR(20) DEFAULT 0 NOT NULL,
+  what_details VARCHAR(100) DEFAULT 0,
+  memo VARCHAR(100) DEFAULT 0,
+  PRIMARY KEY(number,id_number,mode_number)
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:115)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:123)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-15 14:18:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列番号が一致しません
+Column count does not match; SQL statement:
+INSERT INTO plan (number, id,mode,which,s_day,s_time,e_day,e_time,what,color,what_details,memo) VALUES ('1','tetsuya','business','2023-01-02','1300','2023-01-02','1500','会議','青','全体会議','') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)

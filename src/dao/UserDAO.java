@@ -5,72 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import model.User;
 
 public class UserDAO {
-	// 引数paramで
-		public List<User> look() {
-			Connection conn = null;
-			List<User> cardList = new ArrayList<User>();
-
-			try {
-				// JDBCドライバを読み込む
-				Class.forName("org.h2.Driver");
-
-				// データベースに接続する
-
-				//URLは変更予定
-				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/bcpt", "sa", "");
-
-				// SQL文を準備する
-				String sql = "select * from user";
-				PreparedStatement pStmt = conn.prepareStatement(sql);
-				// SQL文を実行し、結果表を取得する
-				ResultSet rs = pStmt.executeQuery();
-
-				// 結果表をコレクションにコピーする
-				while (rs.next()) {
-					User card = new User(
-					rs.getString("ID"),
-					rs.getString("L_NAME"),
-					rs.getString("F_NAME"),
-					rs.getString("PW"),
-					rs.getString("NOW_POINT"),
-					rs.getString("WHICH"),
-					rs.getString("MODE_SHIFT"),
-					rs.getString("TETSUYA")
-					);
-					cardList.add(card);
-				}
-			}
-
-			catch (SQLException e) {
-				e.printStackTrace();
-				cardList = null;
-			}
-			catch (ClassNotFoundException e) {
-				e.printStackTrace();
-				cardList = null;
-			}
-			finally {
-				// データベースを切断
-				if (conn != null) {
-					try {
-						conn.close();
-					}
-					catch (SQLException e) {
-						e.printStackTrace();
-						cardList = null;
-					}
-				}
-			}
-			// 結果を返す
-			return cardList;
-		}
-
 		// ログインできるならtrueを返す
 		public boolean isLoginOK(User user) {
 			Connection conn = null;

@@ -10,6 +10,10 @@ jdbc:h2:file:C:/pleiades/workspace/data/bcpt (後々変わります)
 sa		（なし）
 
 
+【BCテーブルを削除するSQL文】
+DROP TABLE BC
+
+
 【userテーブル作成】
 CREATE TABLE user (
   ID VARCHAR(20) PRIMARY KEY,
@@ -25,8 +29,8 @@ CREATE TABLE user (
 【planテーブル作成】
 CREATE TABLE plan (
   number int(10) NOT NULL,
-  id_number int(3) NOT NULL,
-  mode_number int(1) NOT NULL,
+  id varchar(20) NOT NULL,
+  mode varchar(8) NOT NULL,
   which VARCHAR(9) NOT NULL,
   s_day date NOT NULL,
   s_time time NOT NULL,
@@ -36,22 +40,9 @@ CREATE TABLE plan (
   color VARCHAR(20) DEFAULT 0 NOT NULL,
   what_details VARCHAR(100) DEFAULT 0,
   memo VARCHAR(100) DEFAULT 0,
-  PRIMARY KEY(number,id_number,mode_number)
+  PRIMARY KEY(number,id,mode)
 );
 
-
-【id_numberテーブル作成】
-CREATE TABLE id_number (
-  id_number int(3) PRIMARY KEY,
-  id varchar(20) NOT NULL
-);
-
-
-【mode_numberテーブル作成】
-CREATE TABLE mode_number (
-  mode_number int(1) PRIMARY KEY,
-  mode varchar(8) NOT NULL
-);
 
 【pointテーブル作成】
 CREATE TABLE point (
@@ -106,6 +97,11 @@ CREATE TABLE inquiry (
 
 【userテーブルにサンプルデータを登録するSQL文】
 INSERT INTO user (ID,l_name,f_name,pw,now_point,which,mode_shift,tetsuya) VALUES ('tetsuya','労働','徹夜','1','0','week','business','0');
+
+
+【planテーブルにサンプルデータを登録するSQL文】
+INSERT INTO plan (number,id,mode,which,s_day,s_time,e_day,e_time,what,color,what_details,memo) VALUES ('1','tetsuya','business','schebule','2023-01-02','1300','2023-01-02','1500','会議','青','全体会議','');
+
 
 
 【id_numberテーブルにサンプルデータを登録するSQL文】
