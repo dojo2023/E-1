@@ -3,7 +3,7 @@ org.h2.Driver
 
 
 【名刺管理アプリで使う URL】
-jdbc:h2:file:C:/pleiades/workspace/data/bcpt (後々変わります)
+jdbc:h2:file:C:/dojo6/apu
 
 
 【ユーザー名】	【パスワード】
