@@ -19,7 +19,7 @@ public class UserDAO {
 				Class.forName("org.h2.Driver");
 
 				// データベースに接続する
-				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/bcpt", "sa", "");
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 				// SELECT文を準備する
 				String sql = "select count(*) from USER where ID = ? and PW = ?";
@@ -72,7 +72,7 @@ public class UserDAO {
 				Class.forName("org.h2.Driver");
 
 				// データベースに接続する
-				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/bcpt", "sa", "");
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 				// SQL文を準備する
 				String sql = "insert into USER values (?, ?, ?, ?, '0', 'week', 'busibess', '0')";
