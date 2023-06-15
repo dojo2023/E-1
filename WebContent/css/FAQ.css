@@ -1,1 +1,38 @@
 @charset "UTF-8";
+
+
+#dl {
+	background-color:#ddddddf5;
+}
+
+#question{
+	margin: auto;
+	width: 100%;
+	width: 600px;
+}
+
+#mini{
+	width:400px;
+}
+
+#question dl {
+	background: #dadada;; /* 「Q」タイトルの背景色 */
+}
+#question dt {
+	font-size:20px;
+	color: #689cf2; /* 「Q」タイトルの文字色 */
+	padding: 8px;
+	font-weight: bold;
+	border-radius: 2px;
+}
+
+#question dt:before {
+	content: "Q.";
+	font-weight: bold;
+	margin-right: 8px;
+}
+#question dd {
+
+	margin: 0px 16px 20px 40px;
+}
+
