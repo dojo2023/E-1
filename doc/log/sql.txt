@@ -90,7 +90,7 @@ CREATE TABLE rank_bonus (
 
 【inquiryテーブル作成】
 CREATE TABLE inquiry (
-  id varchar(20) PRIMARY KEY,
+  id varchar(20) NOT NULL,
   genre int(1) NOT NULL,
   text varchar(200)
 );
