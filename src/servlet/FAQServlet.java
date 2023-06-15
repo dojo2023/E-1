@@ -9,19 +9,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class Inquiry extends HttpServlet{
+public class FAQServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 		HttpSession session = request.getSession();
-		if (session.getAttribute("id") == null) {
+
+/*		if (session.getAttribute("id") == null) {
 			response.sendRedirect("/AllNightCalender/LoginServlet");
 			return;
 		}
+*/
 
-
-		//お問い合わせページにフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Inquiry.jsp");
+		// よくある質問ページにフォワードする
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/FAQ.jsp");
 		dispatcher.forward(request, response);
 	}
 }
