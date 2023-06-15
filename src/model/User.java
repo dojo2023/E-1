@@ -16,7 +16,7 @@ public class User implements Serializable {
 		super();
 		this.id = id;
 		this.l_name = l_name;
-		this.f_name = l_name;
+		this.f_name = f_name;
 		this.pw = pw;
 		this.now_point = now_point;
 		this.which = which;
@@ -35,9 +35,6 @@ public class User implements Serializable {
 		this.mode_shift = "";
 		this.tetsuya = "";
 	}
-
-	//こっからは自動で作成出来る
-
 
 	public String getId() {
 		return id;
@@ -102,6 +99,7 @@ public class User implements Serializable {
 	public void setTetsuya(String tetsuya) {
 		this.tetsuya = tetsuya;
 	}
+
 
 
 }
