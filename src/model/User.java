@@ -6,13 +6,13 @@ public class User implements Serializable {
 	private String l_name;
 	private String f_name;
 	private String pw;
-	private Integer now_point;
+	private String now_point;
 	private String which;
 	private String mode_shift;
-	private Integer tetsuya;
+	private String tetsuya;
 
-	public User(String id, String l_name, String f_name, String pw, Integer now_point, String which,
-			String mode_shift, Integer tetsuya) {
+	public User(String id, String l_name, String f_name, String pw, String now_point, String which,
+			String mode_shift, String tetsuya) {
 		super();
 		this.id = id;
 		this.l_name = l_name;
@@ -30,10 +30,10 @@ public class User implements Serializable {
 		this.l_name = "";
 		this.f_name = "";
 		this.pw = "";
-		this.now_point = 0;
+		this.now_point = "";
 		this.which = "";
 		this.mode_shift = "";
-		this.tetsuya = 0;
+		this.tetsuya = "";
 	}
 
 	//こっからは自動で作成出来る
@@ -71,11 +71,11 @@ public class User implements Serializable {
 		this.pw = pw;
 	}
 
-	public Integer getNow_point() {
+	public String getNow_point() {
 		return now_point;
 	}
 
-	public void setNow_point(Integer now_point) {
+	public void setNow_point(String now_point) {
 		this.now_point = now_point;
 	}
 
@@ -95,11 +95,11 @@ public class User implements Serializable {
 		this.mode_shift = mode_shift;
 	}
 
-	public Integer getTetsuya() {
+	public String getTetsuya() {
 		return tetsuya;
 	}
 
-	public void setTetsuya(Integer tetsuya) {
+	public void setTetsuya(String tetsuya) {
 		this.tetsuya = tetsuya;
 	}
 
