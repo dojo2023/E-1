@@ -4,7 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>よくある質問</title>
+<link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
+<link rel="stylesheet" href="/AllNightCalender/css/FAQ.css">
+<link rel="stylesheet" href="/AllNightCalender/css/AllNightCalendar.css">
 </head>
 <body>
 
