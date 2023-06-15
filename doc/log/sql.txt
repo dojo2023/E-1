@@ -97,6 +97,12 @@ CREATE TABLE rank_bonus (
 );
 
 
+【inquiryテーブル作成】
+CREATE TABLE inquiry (
+  id varchar(20) PRIMARY KEY,
+  genre int(1) NOT NULL,
+  text varchar(200)
+);
 
 【userテーブルにサンプルデータを登録するSQL文】
 INSERT INTO user (ID,l_name,f_name,pw,now_point,which,mode_shift,tetsuya) VALUES ('tetsuya','労働','徹夜','1','0','week','business','0');
@@ -123,5 +129,5 @@ INSERT INTO rank (c_start,b_start,a_start,s_start) VALUES ('25','50','125','1250
 INSERT INTO point_day (id,year,month,day,point_b,point_p,point_m) VALUES ('tetsuya','2023','5','1','5','1','6');
 
 
-【rank_bonusテーブルにサンプルデータを登録するSQL文】(画像名未定のため未完成)
+【rank_bonusテーブルにサンプルデータを登録するSQL文】
 INSERT INTO rank_bonus(year,month,sc_s,sc_a) VALUE ('2023','month','','');
