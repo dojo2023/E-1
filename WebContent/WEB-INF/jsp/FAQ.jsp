@@ -7,9 +7,10 @@
 <title>よくある質問</title>
 <link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="/AllNightCalender/css/FAQ.css">
-<link rel="stylesheet" href="/AllNightCalender/css/AllNightCalendar.css">
+<!-- <link rel="stylesheet" href="/AllNightCalender/css/AllNightCalendar.css"> -->
 </head>
 <body>
-
+<h1>アザラシ</h1>
+<p>犬</p>
 </body>
 </html>
