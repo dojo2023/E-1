@@ -36,6 +36,9 @@ public class User implements Serializable {
 		this.tetsuya = 0;
 	}
 
+	//こっからは自動で作成出来る
+
+
 	public String getId() {
 		return id;
 	}
