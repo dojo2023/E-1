@@ -9,22 +9,25 @@
 <link rel="stylesheet" href="/AllNightCalender/css/FAQ.css">
 <!-- <link rel="stylesheet" href="/AllNightCalender/css/AllNightCalendar.css"> -->
 </head>
+
+<div class="container">
+  <div class="time"></div>
+  <div class="icon"><img src="/AllNightCalender/img\仮.png" width="50px"></div>
+  <div class="question_main">
+  <h1>よくある質問</h1>
+  </div>
+  <div class="question_hedder"></div>
+  <div class="question_footer"></div>
+  <div class="question_left"></div>
+  <div class="question_right"></div>
+</div>
+
+
+<!--
 <body>
 <div class="container">
-  <div class="header"></div>
-  <div class="question"></div>
-  <div class="icon"></div>
-  <div class="margin"></div>
-  <div class="footer"></div>
-  <div class="title"></div>
-  <div class="margin1"></div>
-  <div class="margin2"></div>
-  <div class="menu"></div>
-</div>
-<div id="question">
-<h1>よくある質問</h1>
-
-<div id="mini">
+ 	 <div class="question">
+  <div id="mini">
 	<dl>
 		<dt>質問タイトル</dt>
 		<dd>回答内<br>回答内容</dd>
@@ -40,9 +43,17 @@
 		<dd>回答内<br>回答内容</dd>
 	</dl>
 </div>
+  </div>
+  <div class="title"><h1>よくある質問</h1></div>
+  <div class="margin1"></div>
+  <div class="menu"></div>
+  <div class="icon">  <img src="/AllNightCalender/img\仮.png" width="50px"></div>
+</div>
 
-</div>
-</div>
+
+
+
+ -->
 </body>
 
 
