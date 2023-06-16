@@ -22,7 +22,7 @@ public class InquiryDAO {
 				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 				// SQL文を準備する
-				String sql = "insert into BC values (?, ?, ?)";
+				String sql = "insert into INQUIRY values (?, ?, ?)";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
