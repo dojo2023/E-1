@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import model.Inquirys;
 
 public class InquiryDAO {
-		// ランクの基準ポイントを見るために取得
 	// 引数cardで指定されたレコードを登録し、成功したらtrueを返す
 		public boolean insert(Inquirys card) {
 			Connection conn = null;

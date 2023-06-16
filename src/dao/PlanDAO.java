@@ -6,13 +6,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import model.Point;
+import model.Plan;
 
-public class PointDAO {
-		// 獲得できるポイント一覧の取得
-		public List<Point> look() {
+public class PlanDAO {
+		// 予定一覧の取得
+		public List<Plan> look(Plan plan) {
 		Connection conn = null;
-		List<Point> cardList = new ArrayList<Point>();
+		List<Plan> planList = new ArrayList<Plan>();
 
 			try {
 				// JDBCドライバを読み込む
@@ -22,33 +22,56 @@ public class PointDAO {
 				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 				// SQL文を準備する
-				String sql = "select * from Point";
+				String sql = "select * from Plan where ID = ? and MODE = ?";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
-				// SQL文を実行し、結果表を取得する
-				ResultSet rs = pStmt.executeQuery();
+
+				// SQL文を完成させる
+				if (plan.getId() != null && !plan.getId().equals("")) {
+					pStmt.setString(1, plan.getId());
+				}
+				else {
+					pStmt.setString(1, null);
+				}
+				if (plan.getMode() != null && !plan.getMode().equals("")) {
+					pStmt.setString(2, plan.getMode());
+				}
+				else {
+					pStmt.setString(2, null);
+				}
+
+
+				// SQL文を実行する
+				if (pStmt.executeUpdate() == 1) {
+					result = true;
+				}
 
 				// 結果表をコレクションにコピーする
 				while (rs.next()) {
-					Point card = new Point(
-					rs.getString("b_POINT"),
-					rs.getString("P_POINT"),
-					rs.getString("TETSUYA_B"),
-					rs.getString("TETSUYA_P"),
-					rs.getString("CHANCE_BONUS"),
-					rs.getString("B_MAX"),
-					rs.getString("P_MAX")
+					Plan plan = new Pan(
+					rs.getString("NUMBER"),
+					rs.getString("ID"),
+					rs.getString("MODE"),
+					rs.getString("WHICH"),
+					rs.getString("S_DAY"),
+					rs.getString("S_TIME"),
+					rs.getString("E_DAY"),
+					rs.getString("E_TIME"),
+					rs.getString("WHAT"),
+					rs.getString("COLOR"),
+					rs.getString("WHAT_DETAILS"),
+					rs.getString("MEMO")
 					);
-					cardList.add(card);
+					planList.add(plan);
 				}
 			}
 
 			catch (SQLException e) {
 				e.printStackTrace();
-				cardList = null;
+				planList = null;
 			}
 			catch (ClassNotFoundException e) {
 				e.printStackTrace();
-				cardList = null;
+				planList = null;
 			}
 			finally {
 				// データベースを切断
@@ -58,12 +81,254 @@ public class PointDAO {
 					}
 					catch (SQLException e) {
 						e.printStackTrace();
-						cardList = null;
+						planList = null;
 					}
 				}
 			}
 			// 結果を返す
-			return cardList;
+			return planList;
 		}
+
+
+		// 引数scheduleで指定されたレコードを登録し、成功したらtrueを返す
+		public boolean insert(Plan schedule) {
+			Connection conn = null;
+			boolean result = false;
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+				// SQL文を準備する
+				String sql = "insert into PLAN (id,mode,which,s_day,s_time,e_day,e_time,what,color,what_details,memo) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				if (schedule.getId() != null && !schedule.getId().equals("")) {
+					pStmt.setString(1, schedule.getId());
+				}
+				else {
+					pStmt.setString(1, null);
+				}
+				if (schedule.getMode() != null && !schedule.getMode().equals("")) {
+					pStmt.setString(2, schedule.getMode());
+				}
+				else {
+					pStmt.setString(2, null);
+				}
+				if (schedule.getWhich() != null && !schedule.getWhich().equals("")) {
+					pStmt.setString(3, schedule.getWhich());
+				}
+				else {
+					pStmt.setString(3, null);
+				}
+				if (schedule.getS_day() != null && !schedule.getS_day().equals("")) {
+					pStmt.setString(4, schedule.getS_day());
+				}
+				else {
+					pStmt.setString(4, null);
+				}
+				if (schedule.getS_time() != null && !schedule.getS_time().equals("")) {
+					pStmt.setString(5, schedule.getS_time());
+				}
+				else {
+					pStmt.setString(5, null);
+				}
+				if (schedule.getE_day() != null && !schedule.getE_day().equals("")) {
+					pStmt.setString(6, schedule.getE_day());
+				}
+				else {
+					pStmt.setString(6, null);
+				}
+				if (schedule.getE_time() != null && !schedule.getE_time().equals("")) {
+					pStmt.setString(7, schedule.getE_time());
+				}
+				else {
+					pStmt.setString(7, null);
+				}
+				if (schedule.getWhat() != null && !schedule.getWhat().equals("")) {
+					pStmt.setString(8, schedule.getWhat());
+				}
+				else {
+					pStmt.setString(8, null);
+				}
+				if (schedule.getColor() != null && !schedule.getColor().equals("")) {
+					pStmt.setString(9, schedule.getColor());
+				}
+				else {
+					pStmt.setString(9, null);
+				}
+				if (schedule.getWhat_details() != null && !schedule.getWhat_details().equals("")) {
+					pStmt.setString(10, schedule.getWhat_details());
+				}
+				else {
+					pStmt.setString(10, null);
+				}
+				if (schedule.getMemo() != null && !schedule.getMemo().equals("")) {
+					pStmt.setString(11, schedule.getMemo());
+				}
+				else {
+					pStmt.setString(11, null);
+				}
+
+				// SQL文を実行する
+				if (pStmt.executeUpdate() == 1) {
+					result = true;
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+
+			// 結果を返す
+			return result;
+		}
+
+		// 引数paramで検索項目を指定し、検索結果のリストを返す
+		public List<Plan> select(Plan param) {
+			Connection conn = null;
+			List<Plan> planList = new ArrayList<Plan>();
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/bcpt", "sa", "");
+
+				// SQL文を準備する
+				String sql = "select * from BC WHERE NUMBER LIKE ? AND NAME LIKE ? AND COMPANY LIKE ? AND DEPARTMENT LIKE ? AND POSITION LIKE ? AND GENDER LIKE ? AND POST_NUMBER LIKE ? AND ADDRESS LIKE ? AND PHONE LIKE ? AND EMAIL LIKE ? AND REMARKS LIKE ? ORDER BY NUMBER";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				if (param.getNumber() != null) {
+					pStmt.setString(1, "%" + param.getNumber() + "%");
+				}
+				else {
+					pStmt.setString(1, "%");
+				}
+				if (param.getName() != null) {
+					pStmt.setString(2, "%" + param.getName() + "%");
+				}
+				else {
+					pStmt.setString(2, "%");
+				}
+				if (param.getCompany() != null) {
+					pStmt.setString(3, "%" + param.getCompany() + "%");
+				}
+				else {
+					pStmt.setString(3, "%");
+				}
+				if (param.getDepartment() != null) {
+					pStmt.setString(4, "%" + param.getDepartment() + "%");
+				}
+				else {
+					pStmt.setString(4, "%");
+				}
+				if (param.getPosition() != null) {
+					pStmt.setString(5, "%" + param.getPosition() + "%");
+				}
+				else {
+					pStmt.setString(5, "%");
+				}
+				if (param.getGender() != null) {
+					pStmt.setString(6, "%" + param.getGender() + "%");
+				}
+				else {
+					pStmt.setString(6, "%");
+				}
+				if (param.getPost_number() != null) {
+					pStmt.setString(7, "%" + param.getPost_number() + "%");
+				}
+				else {
+					pStmt.setString(7, "%");
+				}
+				if (param.getAddress() != null) {
+					pStmt.setString(8, "%" + param.getAddress() + "%");
+				}
+				else {
+					pStmt.setString(8, "%");
+				}
+				if (param.getPhone() != null) {
+					pStmt.setString(9, "%" + param.getPhone() + "%");
+				}
+				else {
+					pStmt.setString(9, "%");
+				}
+				if (param.getEmail() != null) {
+					pStmt.setString(10, "%" + param.getEmail() + "%");
+				}
+				else {
+					pStmt.setString(10, "%");
+				}
+				if (param.getRemarks() != null) {
+					pStmt.setString(11, "%" + param.getRemarks() + "%");
+				}
+				else {
+					pStmt.setString(11, "%");
+				}
+
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+
+				// 結果表をコレクションにコピーする
+				while (rs.next()) {
+					Plan plan = new Bcr(
+					rs.getString("NUMBER"),
+					rs.getString("NAME"),
+					rs.getString("COMPANY"),
+					rs.getString("DEPARTMENT"),
+					rs.getString("POSITION"),
+					rs.getString("GENDER"),
+					rs.getString("POST_NUMBER"),
+					rs.getString("ADDRESS"),
+					rs.getString("PHONE"),
+					rs.getString("EMAIL"),
+					rs.getString("REMARKS")
+				);
+				planList.add(plan);
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			planList = null;
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			planList = null;
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+					planList = null;
+				}
+			}
+		}
+
+		// 結果を返す
+		return planList;
+	}
 }
 */
