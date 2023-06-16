@@ -526,3 +526,93 @@ INSERT INTO plan (number, id,mode,which,s_day,s_time,e_day,e_time,what,color,wha
 	at org.h2.server.web.WebThread.process(WebThread.java:178)
 	at org.h2.server.web.WebThread.run(WebThread.java:94)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-16 11:40:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE PLAN (
+  NUMBER INT(10) INT[*] IDENTITY(1,1),
+  ID VARCHAR(20) NOT NULL,
+  MODE VARCHAR(8) NOT NULL,
+  WHICH VARCHAR(9) NOT NULL,
+  S_DAY DATE NOT NULL,
+  S_TIME TIME NOT NULL,
+  E_DAY DATE NOT NULL,
+  E_TIME TIME NOT NULL,
+  WHAT VARCHAR(30) DEFAULT 0 NOT NULL,
+  COLOR VARCHAR(20) DEFAULT 0 NOT NULL,
+  WHAT_DETAILS VARCHAR(100) DEFAULT 0,
+  MEMO VARCHAR(100) DEFAULT 0,
+  PRIMARY KEY(NUMBER,ID,MODE)
+)"; 期待されるステートメント "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE PLAN (
+  NUMBER INT(10) INT[*] IDENTITY(1,1),
+  ID VARCHAR(20) NOT NULL,
+  MODE VARCHAR(8) NOT NULL,
+  WHICH VARCHAR(9) NOT NULL,
+  S_DAY DATE NOT NULL,
+  S_TIME TIME NOT NULL,
+  E_DAY DATE NOT NULL,
+  E_TIME TIME NOT NULL,
+  WHAT VARCHAR(30) DEFAULT 0 NOT NULL,
+  COLOR VARCHAR(20) DEFAULT 0 NOT NULL,
+  WHAT_DETAILS VARCHAR(100) DEFAULT 0,
+  MEMO VARCHAR(100) DEFAULT 0,
+  PRIMARY KEY(NUMBER,ID,MODE)
+)"; expected "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE plan (
+  number int(10) int IDENTITY(1,1),
+  id varchar(20) NOT NULL,
+  mode varchar(8) NOT NULL,
+  which VARCHAR(9) NOT NULL,
+  s_day date NOT NULL,
+  s_time time NOT NULL,
+  e_day date NOT NULL,
+  e_time time NOT NULL,
+  what VARCHAR(30) DEFAULT 0 NOT NULL,
+  color VARCHAR(20) DEFAULT 0 NOT NULL,
+  what_details VARCHAR(100) DEFAULT 0,
+  memo VARCHAR(100) DEFAULT 0,
+  PRIMARY KEY(number,id,mode)
+) [42001-200]
+2023-06-16 11:41:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 複数のプライマリキーを定義しようとしました
+Attempt to define a second primary key; SQL statement:
+CREATE TABLE plan (
+  number int IDENTITY(1,1),
+  id varchar(20) NOT NULL,
+  mode varchar(8) NOT NULL,
+  which VARCHAR(9) NOT NULL,
+  s_day date NOT NULL,
+  s_time time NOT NULL,
+  e_day date NOT NULL,
+  e_time time NOT NULL,
+  what VARCHAR(30) DEFAULT 0 NOT NULL,
+  color VARCHAR(20) DEFAULT 0 NOT NULL,
+  what_details VARCHAR(100) DEFAULT 0,
+  memo VARCHAR(100) DEFAULT 0,
+  PRIMARY KEY(number,id,mode)
+) [90017-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.ddl.CommandWithColumns.setPrimaryKey(CommandWithColumns.java:144)
+	at org.h2.command.ddl.CommandWithColumns.addConstraintCommand(CommandWithColumns.java:49)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8435)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
