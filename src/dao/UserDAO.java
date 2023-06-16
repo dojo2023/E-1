@@ -62,8 +62,8 @@ public class UserDAO {
 		}
 
 
-		// 引数cardで指定されたレコードを登録し、成功したらtrueを返す
-		public boolean insert(User card) {
+		// 引数accountで指定されたレコードを登録し、成功したらtrueを返す
+		public boolean insert(User account) {
 			Connection conn = null;
 			boolean result = false;
 
@@ -79,26 +79,26 @@ public class UserDAO {
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
-				if (card.getId() != null && !card.getId().equals("")) {
-					pStmt.setString(1, card.getId());
+				if (account.getId() != null && !account.getId().equals("")) {
+					pStmt.setString(1, account.getId());
 				}
 				else {
 					pStmt.setString(1, null);
 				}
-				if (card.getL_name() != null && !card.getL_name().equals("")) {
-					pStmt.setString(2, card.getL_name());
+				if (account.getL_name() != null && !account.getL_name().equals("")) {
+					pStmt.setString(2, account.getL_name());
 				}
 				else {
 					pStmt.setString(2, null);
 				}
-				if (card.getF_name() != null && !card.getF_name().equals("")) {
-					pStmt.setString(3, card.getF_name());
+				if (account.getF_name() != null && !account.getF_name().equals("")) {
+					pStmt.setString(3, account.getF_name());
 				}
 				else {
 					pStmt.setString(3, null);
 				}
-				if (card.getPw() != null && !card.getPw().equals("")) {
-					pStmt.setString(4, card.getPw());
+				if (account.getPw() != null && !account.getPw().equals("")) {
+					pStmt.setString(4, account.getPw());
 				}
 				else {
 					pStmt.setString(4, null);

@@ -11,36 +11,17 @@
 </head>
 <body>
 <div class="container">
-  <div class="header"></div>
-  <div class="menu"></div>
-  <div class="question"></div>
-  <div class="icon"></div>
-  <div class="margin"></div>
-  <div class="footer"></div>
-  <div class="title"></div>
-  <div class="margin1"></div>
-</div>
-<div id="question">
-<h1>よくある質問</h1>
+  <div class="time"></div>
+  <div class="icon"><img src="/AllNightCalender/img\仮.png" width="50px"></div>
+  <div class="question_main">
 
-<div id="mini">
-	<dl>
-		<dt>質問タイトル</dt>
-		<dd>回答内<br>回答内容</dd>
-	</dl>
-
-	<dl>
-		<dt>質問タイトル</dt>
-		<dd>回答内<br>回答内容</dd>
-	</dl>
-
-		<dl>
-		<dt>質問タイトル</dt>
-		<dd>回答内<br>回答内容</dd>
-	</dl>
-</div>
-
-</div>
+  <!-- よくある質問の文字の左にアイコン設置 -->
+  <h1 class="yokuaru">よくある質問</h1>
+  </div>
+  <div class="question_hedder"></div>
+  <div class="question_footer"></div>
+  <div class="question_left"></div>
+  <div class="question_right"></div>
 </div>
 </body>
 

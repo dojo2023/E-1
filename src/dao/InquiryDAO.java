@@ -1,17 +1,16 @@
-/*
+
 package dao;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import model.Inquiry;
+import model.Inquirys;
 
 public class InquiryDAO {
 		// ランクの基準ポイントを見るために取得
 	// 引数cardで指定されたレコードを登録し、成功したらtrueを返す
-		public boolean insert(Inquiry card) {
+		public boolean insert(Inquirys card) {
 			Connection conn = null;
 			boolean result = false;
 
@@ -23,7 +22,7 @@ public class InquiryDAO {
 				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 				// SQL文を準備する
-				String sql = "insert into BC values (?, ?, ?)";
+				String sql = "insert into INQUIRY values (?, ?, ?)";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
@@ -74,4 +73,5 @@ public class InquiryDAO {
 		}
 
 }
-*/
+
+
