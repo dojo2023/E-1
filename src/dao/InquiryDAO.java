@@ -1,4 +1,4 @@
-
+/*
 package dao;
 
 import java.sql.DriverManager;
@@ -73,5 +73,5 @@ public class InquiryDAO {
 		}
 
 }
-
+*/
 

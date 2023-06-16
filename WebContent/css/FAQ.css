@@ -33,7 +33,8 @@
 
 .question_hedder { grid-area: question_hedder; }
 
-.question_footer { grid-area: question_footer; }
+.question_footer { grid-area: question_footer;
+							text-align:center;}
 
 .question_left { grid-area: question_left; }
 

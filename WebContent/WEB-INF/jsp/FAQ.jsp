@@ -19,7 +19,7 @@
   <h1 class="yokuaru">よくある質問</h1>
   </div>
   <div class="question_hedder"></div>
-  <div class="question_footer"></div>
+  <div class="question_footer"><a href="//AllNightCalender/CalendarServlet">ホームに戻る</a></div>
   <div class="question_left"></div>
   <div class="question_right"></div>
 </div>
