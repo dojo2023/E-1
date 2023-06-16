@@ -24,6 +24,9 @@
 	  display: flex;
 }
 	/*アイコン*/
+.hatena_icon{
+	padding:16px 0 0 0;
+}
 
 
 	/*本体*/
