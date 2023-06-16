@@ -8,6 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import model.User;
 
 /**
  * Servlet implementation class RegisterServlet
@@ -29,16 +32,20 @@ public class RegisterServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		String userID = request.getParameter("userID");
 		String userFamilyName = request.getParameter("userFamilyName");
 		String userName = request.getParameter("userName");
 		String userPW = request.getParameter("userPW");
 
-		request.setAttribute("userID", userID);
-		request.setAttribute("userFamilyName", userFamilyName);
-		request.setAttribute("userName", userName);
-		request.setAttribute("userPW", userPW);
+		User user = new User();
+		user.setId(userID);
+		user.setL_name(userFamilyName);
+		user.setF_name(userName);
+		user.setPw(userPW);
 
+		HttpSession session = request.getSession();
+		session.setAttribute("user", user);
 
 		// にフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/registerCheck.jsp");

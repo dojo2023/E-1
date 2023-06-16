@@ -1,9 +1,44 @@
 @charset "UTF-8";
 
 
-
+html {
+	height: 100%;
+	width: 100%;
+}
 
 body {
-	background-image: url();
+	background-image: url("/AllNightCalender/img/LoginBackground.jpg");
 	background-size: cover;
 }
+
+.header {
+	display: flex;
+	margin-right: auto;
+	justify-content: center;
+    align-items: center;
+}
+
+
+.Content {
+	text-align:center;
+    padding:10% 0;
+}
+
+.idpw {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+#title {
+	color:white;
+}
+
+#newlogin {
+	text-decoration: none;
+	color:white;
+}
+
+.logo {
+	height: 10%;
+	width: 10%;
+}
+
