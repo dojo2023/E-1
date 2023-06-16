@@ -12,13 +12,14 @@
 <body>
 <div class="container">
   <div class="header"></div>
-  <div class="menu"></div>
   <div class="question"></div>
   <div class="icon"></div>
   <div class="margin"></div>
   <div class="footer"></div>
   <div class="title"></div>
   <div class="margin1"></div>
+  <div class="margin2"></div>
+  <div class="menu"></div>
 </div>
 <div id="question">
 <h1>よくある質問</h1>
