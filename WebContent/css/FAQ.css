@@ -20,15 +20,21 @@
  						   background-color:#d7d7d7ab;}
 
 /*よくある質問*/
-.question_main h1.yokuaru{
+.inline{
+	  display: flex;
+}
 	/*アイコン*/
+.hatena_icon{
+	padding:16px 0 0 0;
+}
 
 
 	/*本体*/
+.question_main h1.yokuaru{
   color:#4580e6;
   border-bottom:2px solid;
   width: 900px;
-  display: flex;
+
 }
 
 

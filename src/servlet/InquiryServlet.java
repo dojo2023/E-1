@@ -10,21 +10,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class PointDetailsServlet
+ * Servlet implementation class InquiryServlet
  */
-@WebServlet("/PointDetailsServlet")
-public class PointDetailsServlet extends HttpServlet {
+@WebServlet("/InquiryServlet")
+public class InquiryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-
-		// メニューページにフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/pointDetial.jsp");
+		// お問い合わせページにフォワードする
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Inquiry.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -32,8 +29,12 @@ public class PointDetailsServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		// リクエストパラメータを取得する
+		request.setCharacterEncoding("UTF-8");
+		String id = request.getParameter("id");
+		String point = request.getParameter("point");
+		String genre = request.getParameter("genre");
+		String text = request.getParameter("text");
 	}
 
 }
