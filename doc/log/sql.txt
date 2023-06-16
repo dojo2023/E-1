@@ -28,7 +28,7 @@ CREATE TABLE user (
 
 【planテーブル作成】
 CREATE TABLE plan (
-  number int(10) NOT NULL,
+  number int IDENTITY(1,1) PRIMARY KEY,
   id varchar(20) NOT NULL,
   mode varchar(8) NOT NULL,
   which VARCHAR(9) NOT NULL,
@@ -39,8 +39,7 @@ CREATE TABLE plan (
   what VARCHAR(30) DEFAULT 0 NOT NULL,
   color VARCHAR(20) DEFAULT 0 NOT NULL,
   what_details VARCHAR(100) DEFAULT 0,
-  memo VARCHAR(100) DEFAULT 0,
-  PRIMARY KEY(number,id,mode)
+  memo VARCHAR(100) DEFAULT 0
 );
 
 
@@ -100,7 +99,7 @@ INSERT INTO user (ID,l_name,f_name,pw,now_point,which,mode_shift,tetsuya) VALUES
 
 
 【planテーブルにサンプルデータを登録するSQL文】
-INSERT INTO plan (number,id,mode,which,s_day,s_time,e_day,e_time,what,color,what_details,memo) VALUES ('1','tetsuya','business','schebule','2023-01-02','1300','2023-01-02','1500','会議','青','全体会議','');
+INSERT INTO plan (id,mode,which,s_day,s_time,e_day,e_time,what,color,what_details,memo) VALUES ('tetsuya','business','schebule','2023-01-02','1300','2023-01-02','1500','会議','青','全体会議','');
 
 
 
