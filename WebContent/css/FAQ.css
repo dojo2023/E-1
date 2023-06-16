@@ -16,7 +16,20 @@
 
 .icon { grid-area: icon; }
 
-.question_main { grid-area: question_main; }
+.question_main { grid-area: question_main;
+ 						   background-color:#d7d7d7ab;}
+
+/*よくある質問*/
+.question_main h1.yokuaru{
+	/*アイコン*/
+
+
+	/*本体*/
+  color:#4580e6;
+  border-bottom:2px solid;
+  width: 900px;
+}
+
 
 .question_hedder { grid-area: question_hedder; }
 
