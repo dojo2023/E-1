@@ -211,10 +211,10 @@ public class PlanDAO {
 				Class.forName("org.h2.Driver");
 
 				// データベースに接続する
-				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/bcpt", "sa", "");
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 				// SQL文を準備する
-				String sql = "select * from BC WHERE NUMBER LIKE ? AND NAME LIKE ? AND COMPANY LIKE ? AND DEPARTMENT LIKE ? AND POSITION LIKE ? AND GENDER LIKE ? AND POST_NUMBER LIKE ? AND ADDRESS LIKE ? AND PHONE LIKE ? AND EMAIL LIKE ? AND REMARKS LIKE ? ORDER BY NUMBER";
+				String sql = "select * from PLAN WHERE NUMBER LIKE ? AND NAME LIKE ? AND COMPANY LIKE ? AND DEPARTMENT LIKE ? AND POSITION LIKE ? AND GENDER LIKE ? AND POST_NUMBER LIKE ? AND ADDRESS LIKE ? AND PHONE LIKE ? AND EMAIL LIKE ? AND REMARKS LIKE ? ORDER BY NUMBER";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
