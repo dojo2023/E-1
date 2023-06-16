@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
-  <servlet>
-    <description></description>
-    <display-name>test</display-name>
-    <servlet-name>test</servlet-name>
-    <servlet-class>servlet.CalenderServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>test</servlet-name>
-    <url-pattern>/test</url-pattern>
-  </servlet-mapping>
   <display-name>AllNightCalender</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -19,38 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <servlet-name>CalenderServlet.java</servlet-name>
-    <servlet-class>servlet.CalenderServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>PointDetailsServlet</servlet-name>
-    <servlet-class>servlet.PointDetailsServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>InquiryServlet</servlet-name>
-    <servlet-class>servlet.InquiryServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>FAQServlet</servlet-name>
-    <servlet-class>servlet.FAQServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CalenderServlet.java</servlet-name>
-    <url-pattern>/CalenderServlet.java</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>PointDetailsServlet</servlet-name>
-    <url-pattern>/PointDetailsServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>InquiryServlet</servlet-name>
-    <url-pattern>/InquiryServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>FAQServlet</servlet-name>
-    <url-pattern>/FAQServlet</url-pattern>
-  </servlet-mapping>
   <filter>
     <filter-name>SampleFilter</filter-name>
     <filter-class>filter.SampleFilter</filter-class>
@@ -59,14 +17,4 @@
     <filter-name>SampleFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  <servlet>
-    <description></description>
-    <display-name>InquiryCheckServlet.java</display-name>
-    <servlet-name>InquiryCheckServlet.java</servlet-name>
-    <servlet-class>servlet.InquiryServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>InquiryCheckServlet.java</servlet-name>
-    <url-pattern>/InquiryCheckServlet.java</url-pattern>
-  </servlet-mapping>
 </web-app>
