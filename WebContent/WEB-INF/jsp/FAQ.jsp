@@ -21,7 +21,6 @@
   <div class="inline">
   <div class="hatena_icon"><img src="/AllNightCalender/img\yokuaru.png" width="50px"></div>
   <h1 class="yokuaru">よくある質問</h1>
-
   </div>
   <div class="question_hedder"></div>
   <div class="question_footer"><a href="//AllNightCalender/CalendarServlet">ホームに戻る</a></div>

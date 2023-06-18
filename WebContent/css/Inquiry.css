@@ -20,10 +20,16 @@
  						   background-color:#d7d7d7ab;}
 
 /*よくある質問*/
-.question_main h1.yokuaru{
+.inline{
+	  display: flex;
+}
 	/*アイコン*/
+.mail_icon{
+	padding:20px 10px 0 0;
+}
 
 
+.inquiry_main h1.yokuaru{
 	/*本体*/
   color:#4580e6;
   border-bottom:2px solid;
@@ -31,14 +37,14 @@
 }
 
 
-.question_hedder { grid-area: question_hedder; }
+.inquiry_hedder { grid-area: question_hedder; }
 
-.question_footer { grid-area: question_footer;
+.inquiry_footer { grid-area: question_footer;
 							text-align:center;}
 
-.question_left { grid-area: question_left; }
+.inquiry_left { grid-area: question_left; }
 
-.question_right { grid-area: question_right; }
+.inquiry_right { grid-area: question_right; }
 
 .container * {
   border: 1px solid red;
