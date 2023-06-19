@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>お問い合わせ</title>
+<link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
+<link rel="stylesheet" href="/AllNightCalender/css/Inquiry.css">
 </head>
 <body>
 <body>
@@ -13,22 +15,39 @@
   <div class="time"></div>
   <div class="icon"><img src="/AllNightCalender/img\仮.png" width="50px"></div>
   <div class="inquiry_main">
-    <form action="//AllNightCalender/LoginServlet"  method="POST">
+    <!-- よくある質問の文字の左にアイコン設置 -->
+  <div class="inline">
+  <div class="mail_icon"><img src="/AllNightCalender/img\mailicon.png" width="50px"></div>
+  <h1 class="yokuaru">お問い合わせ</h1>
+  </div>
+
+   <div class ="inquiry_form">
+    <table>
+    <form name="inquiry_forming" action="/AllNightCalender/InquiryServlet"  method="POST">
+
+<!-- id -->
    <input type="hidden" name="id">
-    ジャンル<select name="genre">
+
+<tr><th>ジャンル</th></tr>
+    <tr><td> <select name="genre">
     <option value="point">ポイント</option>
      <option value="Schedule">スケジュール</option>
       <option value="timer">タイマー</option>
       <option value="others">その他</option>
-    </select>
-    お問い合わせ内容 <input type="text" name="text">
-    <input type="submit" value="送信">
-    </form>
+    </select></td></tr>
 
-  <div class="question_hedder"></div>
-  <div class="question_footer"><a href="//AllNightCalender/CalendarServlet">ホームに戻る</a></div>
-  <div class="question_left"></div>
-  <div class="question_right"></div>
+ <tr><th>お問い合わせ内容 </th> </tr>
+ <tr><td><textarea name="text"   cols="50" rows="10"  style="width: 539px; height: 200px;"></textarea></td> </tr>
+      </table>
+
+    <td><div class="align-right-angry"><input type="submit" value="送信"  class="button"  action="" ></div></td>
+    </form>
+</div>
+
+  <div class="inquiry_hedder"></div>
+  <div class="inquiry_footer"><a href="//AllNightCalender/CalendarServlet" class="home-return-button">ホームに戻る</a></div>
+  <div class="inquiry_left"></div>
+  <div class="inquiry_right"></div>
   </div>
     </div>
 </body>

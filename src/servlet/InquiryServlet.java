@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class InquiryServlet
@@ -35,6 +36,13 @@ public class InquiryServlet extends HttpServlet {
 		String point = request.getParameter("point");
 		String genre = request.getParameter("genre");
 		String text = request.getParameter("text");
+
+		// セッションスコープにIDを格納する
+		HttpSession session = request.getSession();
+		session.setAttribute("id", id);
+
+		// サーブレットにリダイレクトする
+		response.sendRedirect("InquiryCheckServlet");
 	}
 
 }
