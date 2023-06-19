@@ -23,7 +23,7 @@
 
    <div class ="inquiry_form">
     <table>
-    <form name="inquiry_forming" action="/AllNightCalender/LoginServlet"  method="POST">
+    <form name="inquiry_forming" action="/AllNightCalender/InquiryServlet"  method="POST">
 
 <!-- id -->
    <input type="hidden" name="id">
@@ -37,17 +37,17 @@
     </select></td></tr>
 
  <tr><th>お問い合わせ内容 </th> </tr>
- <tr><td><input type="text" name="text"></td> </tr>
+ <tr><td><textarea name="text"   cols="50" rows="10"  style="width: 539px; height: 200px;"></textarea></td> </tr>
       </table>
 
-    <td><input type="submit" value="送信" class="button"></td>
+    <td><div class="align-right-angry"><input type="submit" value="送信"  class="button"  action="" ></div></td>
     </form>
 </div>
 
-  <div class="question_hedder"></div>
-  <div class="question_footer"><a href="//AllNightCalender/CalendarServlet">ホームに戻る</a></div>
-  <div class="question_left"></div>
-  <div class="question_right"></div>
+  <div class="inquiry_hedder"></div>
+  <div class="inquiry_footer"><a href="//AllNightCalender/CalendarServlet" class="home-return-button">ホームに戻る</a></div>
+  <div class="inquiry_left"></div>
+  <div class="inquiry_right"></div>
   </div>
     </div>
 </body>

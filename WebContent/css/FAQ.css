@@ -17,7 +17,7 @@
 .icon { grid-area: icon; }
 
 .question_main { grid-area: question_main;
- 						   background-color:#d7d7d7ab;}
+ 						   }
 
 /*よくある質問*/
 .inline{
@@ -37,31 +37,54 @@
 
 }
 
+.question-collection{
+	width: 700px;
+	margin: auto ;
+	background-color:#d7d7d7ab;
+}
+
+.question-single th {
+	color:#4580e6;
+	text-align:left;
+	font-size:20px;
+
+}
+
+.question-single td {
+	text-indent: 18px;
+
+}
+
 
 .question_hedder { grid-area: question_hedder; }
 
-.question_footer { grid-area: question_footer;
-							text-align:center;}
+.question_footer{ grid-area: inquiry_footer;
+							text-align:center;
+							padding: 30px 0}
+
+/*aタグ*/
+/*aタグ*/
+.home-return-button {
+  align-items: center;
+  justify-content: center;
+  padding:5px 25px;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 300px;
+  height: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: #1976d2;
+}
+.home-return-button:hover {
+  opacity: .7;
+}
 
 .question_left { grid-area: question_left; }
 
 .question_right { grid-area: question_right; }
-
-.container * {
-  border: 1px solid red;
-  position: relative;
-}
-
-.container *:after {
-  content:attr(class);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
 
 
