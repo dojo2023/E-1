@@ -616,6 +616,7 @@ CREATE TABLE plan (
 	at org.h2.server.web.WebThread.process(WebThread.java:178)
 	at org.h2.server.web.WebThread.run(WebThread.java:94)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+<<<<<<< HEAD
 2023-06-16 17:49:58 database: flush
 org.h2.message.DbException: 一般エラー: "java.lang.IllegalStateException: The file is locked: nio:C:/dojo6/apu.mv.db [1.4.199/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/dojo6/apu.mv.db [1.4.199/7]" [50000-199]
@@ -742,3 +743,30 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/dojo6/apu
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
 	... 44 more
+=======
+2023-06-16 17:51:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AAAA" が見つかりません
+Column "AAAA" not found; SQL statement:
+delete from USER where ID=aaaa [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:191)
+	at org.h2.command.dml.Delete.prepare(Delete.java:184)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+>>>>>>> 09338ca7aa567fda2653481767f1e9971d1997dd

@@ -21,20 +21,28 @@
   <h1 class="yokuaru">お問い合わせ</h1>
   </div>
 
-    <form action="/AllNightCalender/LoginServlet"  method="POST">
+   <div class ="inquiry_form">
+    <table>
+    <form name="inquiry_forming" action="/AllNightCalender/LoginServlet"  method="POST">
+
+<!-- id -->
    <input type="hidden" name="id">
 
-    ジャンル
-    <select name="genre">
+<tr><th>ジャンル</th></tr>
+    <tr><td> <select name="genre">
     <option value="point">ポイント</option>
      <option value="Schedule">スケジュール</option>
       <option value="timer">タイマー</option>
       <option value="others">その他</option>
-    </select>
+    </select></td></tr>
 
-    お問い合わせ内容 <input type="text" name="text">
-    <input type="submit" value="送信">
+ <tr><th>お問い合わせ内容 </th> </tr>
+ <tr><td><input type="text" name="text"></td> </tr>
+      </table>
+
+    <td><input type="submit" value="送信" class="button"></td>
     </form>
+</div>
 
   <div class="question_hedder"></div>
   <div class="question_footer"><a href="//AllNightCalender/CalendarServlet">ホームに戻る</a></div>

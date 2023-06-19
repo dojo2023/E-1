@@ -6,9 +6,9 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "question_hedder question_hedder icon"
-    "question_left question_main question_right"
-    "question_footer question_footer time";
+    "inquiry_hedder inquiry_hedder icon"
+    "inquiry_left inquiry_main inquiry_right"
+    "inquiry_footer inquiry_footer time";
 }
 
 
@@ -16,10 +16,10 @@
 
 .icon { grid-area: icon; }
 
-.inquiry_main { grid-area: question_main;
- 						   background-color:#d7d7d7ab;}
+.inquiry_main { grid-area: inquiry_main;
+ 						  }
 
-/*よくある質問*/
+/*お問い合わせ*/
 .inline{
 	  display: flex;
 }
@@ -36,15 +36,52 @@
   width: 900px;
 }
 
+.inquiry_form {
+	 background-color:#d7d7d7ab;
+	 width:840px;
+	 margin:auto ;
+}
 
-.inquiry_hedder { grid-area: question_hedder; }
 
-.inquiry_footer { grid-area: question_footer;
+.inquiry_form th{
+	font-weight:bold;
+	padding: 10px 0px;
+}
+
+.inquiry_form tr{
+	padding: 10px 0px;
+}
+
+.button{
+	padding:10px 0;
+	text-align: right;
+  display       : inline-block;
+  font-size     : 12pt;        /* 文字サイズ */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #1a1aff;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  border        : 2px solid #1a1aff;    /* 枠の指定 */
+}
+
+.button:hover {
+  color         : #1a1aff;     /* 背景色     */
+  background    : #ffffff;     /* 文字色     */
+}
+
+
+.inquiry_hedder { grid-area: inquiry_hedder; }
+
+.inquiry_footer { grid-area: inquiry_footer;
 							text-align:center;}
 
-.inquiry_left { grid-area: question_left; }
+.inquiry_left { grid-area: inquiry_left; }
 
-.inquiry_right { grid-area: question_right; }
+.inquiry_right { grid-area: inquiry_right; }
+
+/*管理用*/
 
 .container * {
   border: 1px solid red;
