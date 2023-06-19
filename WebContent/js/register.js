@@ -28,6 +28,6 @@
 
 
 		if(id.value && pass.value && f_name.value && l_name.value){
-			document.myform.submit();
+			document.myfrom.submit();
 		}
 	}
