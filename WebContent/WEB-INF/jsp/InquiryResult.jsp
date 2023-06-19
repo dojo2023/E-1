@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>お問い合わせ完了</title>
+<link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
+<link rel="stylesheet" href="/AllNightCalender/css/Inquiry.css">
 </head>
 <body>
 	<p id="logo"></p>
