@@ -8,21 +8,20 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class InquiryServlet
+ * Servlet implementation class RegisterResultServlet
  */
-@WebServlet("/InquiryServlet")
-public class InquiryServlet extends HttpServlet {
+@WebServlet("/InquiryResultServlet")
+public class InquiryResultServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// お問い合わせページにフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Inquiry.jsp");
+		// お問い合わせ完了画面にフォワードする
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/InquiryResult.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -30,19 +29,7 @@ public class InquiryServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// リクエストパラメータを取得する
-		request.setCharacterEncoding("UTF-8");
-		String id = request.getParameter("id");
-		String point = request.getParameter("point");
-		String genre = request.getParameter("genre");
-		String text = request.getParameter("text");
 
-		// セッションスコープにIDを格納する
-		HttpSession session = request.getSession();
-		session.setAttribute("id", id);
-
-		// サーブレットにリダイレクトする
-		response.sendRedirect("InquiryCheckServlet");
 	}
 
 }

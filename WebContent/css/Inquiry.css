@@ -2,7 +2,7 @@
 
 .container {  display: grid;
   grid-template-columns: 1fr 4fr 2fr;
-  grid-template-rows: 1fr 4.5fr 0.5fr;
+  grid-template-rows: 0.5fr 5fr 0.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -42,28 +42,43 @@
 	 margin:auto ;
 }
 
+textarea{
+    vertical-align:top;
+}
 
 .inquiry_form th{
 	font-weight:bold;
-	padding: 10px 0px;
+	padding: 10px 0px 0px 0px;
+	text-align:left;
 }
 
 .inquiry_form tr{
 	padding: 10px 0px;
 }
 
+.align-right-angry{
+	  text-align: right;
+	  padding:30px 100px 20px 0px;
+}
+
+.inquiry_form table{
+	width:600px;
+	margin:auto ;
+}
+
 .button{
-	padding:10px 0;
-	text-align: right;
+  padding:10px 30px;
+  width: 80px;
+  text-align: center;
   display       : inline-block;
   font-size     : 12pt;        /* 文字サイズ */
   cursor        : pointer;     /* カーソル   */
   padding       : 12px 12px;   /* 余白       */
-  background    : #1a1aff;     /* 背景色     */
+  background    :#1976d2;    /* 背景色     */
   color         : #ffffff;     /* 文字色     */
   line-height   : 1em;         /* 1行の高さ  */
   transition    : .3s;         /* なめらか変化 */
-  border        : 2px solid #1a1aff;    /* 枠の指定 */
+  border        : 1px solid #1976d2;    /* 枠の指定 */
 }
 
 .button:hover {
@@ -75,13 +90,35 @@
 .inquiry_hedder { grid-area: inquiry_hedder; }
 
 .inquiry_footer { grid-area: inquiry_footer;
-							text-align:center;}
+							text-align:center;
+							padding: 30px 0}
 
 .inquiry_left { grid-area: inquiry_left; }
 
 .inquiry_right { grid-area: inquiry_right; }
 
-/*管理用*/
+
+/*aタグ*/
+/*aタグ*/
+.home-return-button {
+  align-items: center;
+  justify-content: center;
+  padding:5px 25px;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 300px;
+  height: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: #1976d2;
+}
+.home-return-button:hover {
+  opacity: .7;
+}
+/*管理用
 
 .container * {
   border: 1px solid red;
@@ -99,5 +136,5 @@
   align-items: center;
   justify-content: center;
 }
-
+*/
 
