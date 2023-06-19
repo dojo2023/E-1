@@ -12,9 +12,10 @@ import model.Rank_bonus;
 
 public class Rank_bonusDAO {
 		// Sランク、Aランクの背景を見るために取得
-		public List<Rank_bonus> look() {
+		// dayには年月を与える
+		public List<Rank_bonus> select(Rank_bonus day) {
 		Connection conn = null;
-		List<Rank_bonus> cardList = new ArrayList<Rank_bonus>();
+		List<Rank_bonus> bonusList = new ArrayList<Rank_bonus>();
 
 			try {
 				// JDBCドライバを読み込む
@@ -24,30 +25,45 @@ public class Rank_bonusDAO {
 				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 				// SQL文を準備する
-				String sql = "select * from RANK_bonus";
+				String sql = "select * from RANK_BONUS WHERE YEAR = ? AND MONTH = ?";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				if (day.getYear() != null) {
+					pStmt.setString(1, "%" + day.getYear() + "%");
+				}
+				else {
+					pStmt.setString(1, "%");
+				}
+				if (day.getMonth() != null) {
+					pStmt.setString(2, "%" + day.getMonth() + "%");
+				}
+				else {
+					pStmt.setString(2, "%");
+				}
+
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
 
 				// 結果表をコレクションにコピーする
 				while (rs.next()) {
-					Rank_bonus card = new Rank_bonus(
+					Rank_bonus bonus = new Rank_bonus(
 					rs.getString("YEAR"),
 					rs.getString("MONTH"),
 					rs.getString("SC_S"),
 					rs.getString("SC_A")
 					);
-					cardList.add(card);
+					bonusList.add(bonus);
 				}
 			}
 
 			catch (SQLException e) {
 				e.printStackTrace();
-				cardList = null;
+				bonusList = null;
 			}
 			catch (ClassNotFoundException e) {
 				e.printStackTrace();
-				cardList = null;
+				bonusList = null;
 			}
 			finally {
 				// データベースを切断
@@ -57,12 +73,12 @@ public class Rank_bonusDAO {
 					}
 					catch (SQLException e) {
 						e.printStackTrace();
-						cardList = null;
+						bonusList = null;
 					}
 				}
 			}
 			// 結果を返す
-			return cardList;
+			return bonusList;
 		}
 
 }
