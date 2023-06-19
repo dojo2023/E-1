@@ -12,10 +12,7 @@ body {
 }
 
 .header {
-	display: flex;
-	margin-right: auto;
-	justify-content: center;
-    align-items: center;
+	margin: 0,auto;
 }
 
 
@@ -24,21 +21,50 @@ body {
     padding:10% 0;
 }
 
-.idpw {
-	color: rgba(255, 255, 255, 0.5);
-}
-
-#title {
-	color:white;
+#userID, #userPW {
+	min-width:30%;
+	padding-bottom: 6px;
+	padding-top: 6px;
+	margin-bottom: 6px;
 }
 
 #newlogin {
+	margin-left: 20%;
 	text-decoration: none;
+	font-size: 12px;
 	color:white;
 }
 
-.logo {
+#tetu {
+	margin-bottom: 6%;
+	margin-right: 20px;
 	height: 10%;
 	width: 10%;
+}
+
+#login {
+	margin-right:11%;
+	padding-top: 10px;
+	width: 10%;
+	text-align:center;
+}
+
+#sendBtn {
+	margin-right: 3px;
+}
+
+#resetBtn {
+	margin-left: 3px;
+}
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.Btns {
+	margin-top:6px;
+	display: flex;
+	justify-content: center;
+    align-items: center;
 }
 

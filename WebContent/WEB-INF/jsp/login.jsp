@@ -10,20 +10,21 @@
 <body>
 	<div class="Content">
 		<div class="header">
-			<img src="/AllNightCalender/img/icon.png" class="logo">
-			<img src="/AllNightCalender/img/login_font.png" class="logo">
+			<img src="/AllNightCalender/img/icon.png" id="tetu" class="logo">
+			<img src="/AllNightCalender/img/login_font.png" id="login" class="logo">
 		</div>
 		<form name="myform" action="LoginServlet" method="post">
 		    <div class="idpw">
-				<p>ID　　　　　　<input id="userID" type="text" name="userID"></p>
-				<p>パスワード　　<input id="userPW" type="password" name="userPW"></p>
+				<input id="userID" placeholder="ID"  type="text" name="userID"><br>
+				<input id="userPW" placeholder="PW"  type="password" name="userPW">
 			</div>
-			<div class="ErrorAndNewLogin">
-				<h6 id="error"></h6>
+			<div class="newLogin">
 				<a  id="newlogin" href="/AllNightCalender/RegisterServlet">新規会員登録はこちら</a>
 			</div>
-			<input id="sendBtn" type="submit" value="ログイン">
-			<input id="resetBtn" type="reset" value="リセット">
+			<div class="Btns">
+				<input id="sendBtn" type="submit" value="ログイン">
+				<input id="resetBtn" type="reset" onclick="resetContent()" value="リセット">
+			</div>
 		</form>
 	</div>
 </body>
