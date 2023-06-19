@@ -18,7 +18,7 @@
     <!-- よくある質問の文字の左にアイコン設置 -->
   <div class="inline">
   <div class="mail_icon"><img src="/AllNightCalender/img\mailicon.png" width="50px"></div>
-  <h1 class="yokuaru">お問い合わせ</h1>
+  <h1 class="inquiry-title">お問い合わせ</h1>
   </div>
 
    <div class ="inquiry_form">
