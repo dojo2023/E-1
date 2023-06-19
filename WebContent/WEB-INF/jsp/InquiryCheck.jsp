@@ -36,8 +36,10 @@
 			<td>${text}</td>
 		</tr>
 	</table>
-	<input type="button" onclick="location.href='InquiryServlet'" value="修正する（戻る）">
-	<input type="submit" value="送信">
+	<div class="buttons">
+	<input type="button"  class="fix"  onclick="location.href='InquiryServlet'" value="修正する（戻る）">
+	<input type="submit"  class="send"  value="送信">
+	</div>
 	</form>
 	</div>
 

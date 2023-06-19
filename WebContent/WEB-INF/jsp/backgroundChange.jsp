@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="css/Calendar.css">
 <title>カレンダー</title>
 </head>

@@ -12,6 +12,6 @@
 	<p id="logo"></p>
 	<h2>送信完了</h2>
 	<h3>お問い合わせが${result }しました</h3>
-	<button type="button" onclick="location.href='LoginServlet'" >ホーム画面へ</button>
+  <div class="homebutton"><a href="//AllNightCalender/CalendarServlet">ホームに戻る</a></div>
 </body>
 </html>

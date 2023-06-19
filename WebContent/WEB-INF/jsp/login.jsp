@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="css/login.css">
 <title>ログイン</title>
 </head>
