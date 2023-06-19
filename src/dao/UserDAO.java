@@ -190,6 +190,63 @@ public class UserDAO {
 	}
 
 	// 現在のモードをdbに反映
+	public boolean week_month(User indication) {
+		Connection conn = null;
+		boolean result = false;
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+			// SQL文を準備する
+			String sql = "update USER set WHICH=? where ID=?";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+
+			// SQL文を完成させる
+			if (indication.getWhich() != null && !indication.getWhich().equals("")) {
+				pStmt.setString(1, indication.getWhich());
+			}
+			else {
+				pStmt.setString(1, null);
+			}
+			if (indication.getId() != null && !indication.getId().equals("")) {
+				pStmt.setString(2, indication.getId());
+			}
+			else {
+				pStmt.setString(2, null);
+			}
+
+			// SQL文を実行する
+			if (pStmt.executeUpdate() == 1) {
+				result = true;
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		// 結果を返す
+		return result;
+	}
+
+	// 現在のモードをdbに反映
 	public boolean modehcange(User mode) {
 		Connection conn = null;
 		boolean result = false;
