@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CalenderServlet
  */
-@WebServlet(name = "CalenderServlet.java", urlPatterns = { "/CalenderServlet" })
+@WebServlet(name = "CalenderServlet", urlPatterns = { "/CalenderServlet" })
 public class CalenderServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
