@@ -37,8 +37,8 @@
 		<input type="hidden" value="userName" name="${user.f_name }">
 		<input type="hidden" value="userPW" name="${user.pw }">
 		<div class="Btns">
-			<input type="button" onclick="location.href='RegisterServlet'" value="修正する（戻る）">
-			<input type="submit" value="完了する">
+			<input type="button" id="backBtn" onclick="location.href='RegisterServlet'" value="修正する（戻る）">
+			<input type="submit" id="sendBtn" value="完了する">
 		</div>
 		</form>
 	</div>

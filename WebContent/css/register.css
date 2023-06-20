@@ -41,5 +41,25 @@ img {
 }
 
 #sendBtn {
-	margin-left: 399px;
+	margin-left:352px;
+	margin-right: 3px;
+	align-items: center;
+    justify-content: center;
+    padding:5px 30px;
+    line-height: 2;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    border-radius: 15px;
+    border: 1px solid #949494;
+    border:1.5px solid #000000;
+    height: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: #3e59ba;
+}
+
+#sendBtn:hover {
+  border-bottom-width: 0;
+  transform: translateY(5px);
 }

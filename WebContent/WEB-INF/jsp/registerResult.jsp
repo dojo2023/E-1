@@ -12,7 +12,7 @@
 	<div id="content"></div>
 	<div class="wrap">
 		<h3>登録が${result }しました</h3>
-		<button type="button" onclick="location.href='LoginServlet'" >ログイン画面へ</button>
+		<button type="button" id="backBtn" onclick="location.href='LoginServlet'" >ログイン画面へ</button>
 	</div>
 </body>
 <script src="/AllNightCalender/js/registerResult.js"></script>

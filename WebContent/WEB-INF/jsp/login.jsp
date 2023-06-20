@@ -20,8 +20,8 @@
 				<a  id="newlogin" href="/AllNightCalender/RegisterServlet">新規会員登録はこちら</a>
 			</div>
 			<div class="Btns">
-				<input id="sendBtn" type="submit" value="ログイン">
 				<input id="resetBtn" type="reset" onclick="resetContent()" value="リセット">
+				<input id="sendBtn" type="submit" value="ログイン">
 			</div>
 		</form>
 	</div>
