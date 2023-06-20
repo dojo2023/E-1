@@ -31,10 +31,10 @@
 
 <tr><th>ジャンル</th></tr>
     <tr><td> <select name="genre">
-    <option value="point">ポイント</option>
-     <option value="Schedule">スケジュール</option>
-      <option value="timer">タイマー</option>
-      <option value="others">その他</option>
+    <option value="${inquiry.genre}">ポイント</option>
+     <option value="${inquiry.genre}">スケジュール</option>
+      <option value="${inquiry.genre}">タイマー</option>
+      <option value="${inquiry.genre}">その他</option>
     </select></td></tr>
 
  <tr><th>お問い合わせ内容 </th> </tr>

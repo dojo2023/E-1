@@ -19,9 +19,9 @@
   <div class="mail_icon"><img src="/AllNightCalender/img\mailicon.png" width="50px"></div>
 	<h1 class="inquiry-title">以下の内容でよろしいでしょうか</h1>
 	  </div>
-	<form action="InquiryCheckServlet" method="post">
 
    <div class ="inquiry_check_form">
+   <form action="InquiryResultServlet" method="POST" >
 	<table>
 		<tr>
 			<th>項目</th>
@@ -29,7 +29,7 @@
 		</tr>
 		<tr>
 			<td>ジャンル</td>
-			<td>${genre}</td>
+			<td>${Inquiry.genre}</td>
 		</tr>
 		<tr>
 			<td>お問い合わせ内容</td>
