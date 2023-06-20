@@ -8,6 +8,7 @@
 <title>お問い合わせ</title>
 <link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="/AllNightCalender/css/Inquiry.css">
+<script src="/AllNightCalender/js/Inquiry.js"></script>
 </head>
 <body>
 <body>
@@ -37,10 +38,11 @@
     </select></td></tr>
 
  <tr><th>お問い合わせ内容 </th> </tr>
- <tr><td><textarea name="text"   cols="50" rows="10"  style="width: 539px; height: 200px;"></textarea></td> </tr>
+ <tr><td><textarea name="text"  cols="50"  rows="10"  style="width: 540px; height: 200px;"></textarea></td> </tr>
       </table>
 
-    <td><div class="align-right-angry"><input type="submit" value="送信"  class="button"  action="" ></div></td>
+    <td><div class="align-right-angry">
+    <input type="submit"  value="送信"  class="button"  onclick="return check()" ></div></td>
     </form>
 </div>
 

@@ -30,10 +30,10 @@ public class InquiryServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
-		String point = request.getParameter("point");
 		String genre = request.getParameter("genre");
 		String text = request.getParameter("text");
 
