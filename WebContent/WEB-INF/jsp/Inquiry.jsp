@@ -8,6 +8,7 @@
 <title>お問い合わせ</title>
 <link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="/AllNightCalender/css/Inquiry.css">
+<script src="/AllNightCalender/js/Inquiry.js"></script>
 </head>
 <body>
 <body>
@@ -18,7 +19,7 @@
     <!-- よくある質問の文字の左にアイコン設置 -->
   <div class="inline">
   <div class="mail_icon"><img src="/AllNightCalender/img\mailicon.png" width="50px"></div>
-  <h1 class="yokuaru">お問い合わせ</h1>
+  <h1 class="inquiry-title">お問い合わせ</h1>
   </div>
 
    <div class ="inquiry_form">
@@ -30,22 +31,23 @@
 
 <tr><th>ジャンル</th></tr>
     <tr><td> <select name="genre">
-    <option value="point">ポイント</option>
-     <option value="Schedule">スケジュール</option>
-      <option value="timer">タイマー</option>
-      <option value="others">その他</option>
+    <option value="${inquiry.genre}">ポイント</option>
+     <option value="${inquiry.genre}">スケジュール</option>
+      <option value="${inquiry.genre}">タイマー</option>
+      <option value="${inquiry.genre}">その他</option>
     </select></td></tr>
 
  <tr><th>お問い合わせ内容 </th> </tr>
- <tr><td><textarea name="text"   cols="50" rows="10"  style="width: 539px; height: 200px;"></textarea></td> </tr>
+ <tr><td><textarea name="text"  cols="50"  rows="10"  style="width: 540px; height: 200px;"></textarea></td> </tr>
       </table>
 
-    <td><div class="align-right-angry"><input type="submit" value="送信"  class="button"  action="" ></div></td>
+    <td><div class="align-right-angry">
+    <input type="submit"  value="送信"  class="button"  onclick="return check()" ></div></td>
     </form>
 </div>
 
   <div class="inquiry_hedder"></div>
-  <div class="inquiry_footer"><a href="//AllNightCalender/CalendarServlet" class="home-return-button">ホームに戻る</a></div>
+  <div class="inquiry_footer"><a href="//AllNightCalender/CalendarServlet" class="homebutton">ホームに戻る</a></div>
   <div class="inquiry_left"></div>
   <div class="inquiry_right"></div>
   </div>

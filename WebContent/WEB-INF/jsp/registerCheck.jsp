@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/registerCheck.css">
 <title>新規登録確認</title>
