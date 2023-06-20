@@ -38,7 +38,7 @@
     </select></td></tr>
 
  <tr><th>お問い合わせ内容 </th> </tr>
- <tr><td><textarea name="text"  cols="50"  rows="10"  style="width: 540px; height: 200px;"></textarea></td> </tr>
+ <tr><td><textarea name="text"  cols="50"  rows="10"  style="width: 540px; height: 200px;" value="${inquiry.text}"></textarea></td> </tr>
       </table>
 
     <td><div class="align-right-angry">
