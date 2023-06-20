@@ -54,7 +54,6 @@ public class LoginServlet extends HttpServlet {
 
 			// サーブレットにリダイレクトする
 			response.sendRedirect("CalenderServlet");
-
 		}
 		else {
 			// ログイン失敗

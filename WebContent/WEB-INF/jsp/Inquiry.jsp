@@ -48,7 +48,7 @@
 </div>
 
   <div class="inquiry_hedder"></div>
-  <div class="inquiry_footer"><a href="//AllNightCalender/CalendarServlet" class="homebutton">ホームに戻る</a></div>
+  <div class="inquiry_footer"><a href="/AllNightCalender/CalendarServlet" class="homebutton">ホームに戻る</a></div>
   <div class="inquiry_left"></div>
   <div class="inquiry_right"></div>
   </div>

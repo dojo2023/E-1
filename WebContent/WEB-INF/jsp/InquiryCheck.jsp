@@ -37,7 +37,7 @@
 		</tr>
 	</table>
 	<div class="buttons">
-	<input type="button"  class="fix"  onclick="location.href='InquiryServlet'" value="修正する（戻る）">
+	<input type="button"  class="fix"   onclick="history.back(-1);return false;" value="修正する（戻る）">
 	<input type="submit"  class="send"  value="送信">
 	</div>
 	</form>
