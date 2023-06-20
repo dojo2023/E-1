@@ -8,7 +8,6 @@ html {
 }
 
 body {
-
 	background-image: url("/AllNightCalender/img/LoginBackground.jpg");
 	background-size: cover;
 }
@@ -32,14 +31,14 @@ body {
 }
 
 #userID, #userPW {
-	min-width: 400px;
-	padding-bottom: 6px;
-	padding-top: 6px;
-	margin-bottom: 6px;
+	min-width: 460px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	margin-bottom: 10px;
 }
 
 #newlogin {
-	margin-left: 287px;
+	margin-left: 348px;
 	text-decoration: none;
 	font-size: 12px;
 	color:white;
@@ -54,11 +53,50 @@ body {
 }
 
 #sendBtn {
-	margin-right: 3px;
+	margin-left: 3px;
+	align-items: center;
+    justify-content: center;
+    padding:5px 25px;
+    line-height: 2;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    border-radius: 15px;
+    border: 1px solid #949494;
+    width: 150px;
+    border:1.5px solid #000000;
+    height: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: #3e59ba;
+}
+
+#sendBtn:hover {
+  border-bottom-width: 0;
+  transform: translateY(5px);
 }
 
 #resetBtn {
-	margin-left: 3px;
+	margin-right: 3px;
+    align-items: center;
+    justify-content: center;
+    padding:5px 25px;
+    line-height: 2;
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    border-radius: 15px;
+    border: 1.8px solid #000000;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: #ffffff;
+}
+
+#resetBtn:hover {
+  border-bottom-width: 0;
+  transform: translateY(2px);
 }
 
 form {

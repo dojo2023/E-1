@@ -52,3 +52,28 @@
 	    }
 
     }
+
+    function stringLenghtCheck() {
+ 		var id = document.getElementById("userID").value.length;
+ 		var f_name = document.getElementById("userFamilyName").value.length;
+ 		var l_name = document.getElementById("userName").value.length;
+ 		var pass = document.getElementById("userPW").value.length;
+
+ 		if(id > 20) {
+
+ 		}
+
+ 		if(f_name > 20) {
+
+ 		}
+
+ 		if(l_name > 20) {
+
+ 		}
+
+ 		if(pass > 20) {
+
+ 		}
+
+
+ 	}

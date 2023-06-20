@@ -2,6 +2,8 @@
  *
  */
 
+
+
 	 function setRandomLeft() {
         return Math.floor((Math.random() * document.documentElement.clientWidth + 1)) + "px";
     }
@@ -23,3 +25,5 @@
 	    }
 
     }
+
+
