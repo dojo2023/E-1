@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page contentType="text/html; charset=UTF-8" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,22 +13,15 @@
 
 
 
-<div class="wrapper">
-    <!-- xxxx年xx月を表示 -->
-    <h1 id="header"></h1>
-
-    <!-- ボタンクリックで月移動 -->
-    <div id="next-prev-button">
-        <button id="prev" onclick="prev()"></button>
-        <button id="next" onclick="next()"></button>
-    </div>
-
-    <!-- カレンダー -->
-    <div id="calendar"></div>
-</div>
 
 
-
+<a href="//AllNightCalender/CalendarServlet">ホームに戻る</a>
 
 </body>
+
+
+ <!-- フッター（ここから） -->
+<footer>
+
+</footer>
 </html>
