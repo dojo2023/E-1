@@ -29,11 +29,11 @@
 		</tr>
 		<tr>
 			<td>ジャンル</td>
-			<td>${Inquiry.genre}</td>
+			<td>${inquiry.genre}</td>
 		</tr>
 		<tr>
 			<td>お問い合わせ内容</td>
-			<td>${text}</td>
+			<td>${inquiry.text}</td>
 		</tr>
 	</table>
 	<div class="buttons">

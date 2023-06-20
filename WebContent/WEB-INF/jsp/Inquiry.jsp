@@ -11,7 +11,6 @@
 <script src="/AllNightCalender/js/Inquiry.js"></script>
 </head>
 <body>
-<body>
 <div class="container">
   <div class="time"></div>
   <div class="icon"><img src="/AllNightCalender/img\仮.png" width="50px"></div>
@@ -23,22 +22,23 @@
   </div>
 
    <div class ="inquiry_form">
+   <form name="inquiry_forming" action="/AllNightCalender/InquiryServlet"  method="POST">
     <table>
-    <form name="inquiry_forming" action="/AllNightCalender/InquiryServlet"  method="POST">
+
 
 <!-- id -->
    <input type="hidden" name="id">
 
-<tr><th>ジャンル</th></tr>
-    <tr><td> <select name="genre">
-    <option value="${inquiry.genre}">ポイント</option>
-     <option value="${inquiry.genre}">スケジュール</option>
-      <option value="${inquiry.genre}">タイマー</option>
-      <option value="${inquiry.genre}">その他</option>
+	<tr><th>ジャンル</th></tr>
+    <tr><td> <select name="genre" value="${inquiry.genre}">
+    <option value="ポイント">ポイント</option>
+     <option value="スケジュール">スケジュール</option>
+      <option value="タイマー">タイマー</option>
+      <option value="その他">その他</option>
     </select></td></tr>
 
  <tr><th>お問い合わせ内容 </th> </tr>
- <tr><td><textarea name="text"  cols="50"  rows="10"  style="width: 540px; height: 200px;"></textarea></td> </tr>
+ <tr><td><textarea name="text"  cols="50"  rows="10"  style="width: 540px; height: 200px;" value="${inquiry.text}"></textarea></td> </tr>
       </table>
 
     <td><div class="align-right-angry">
@@ -52,6 +52,5 @@
   <div class="inquiry_right"></div>
   </div>
     </div>
-</body>
 </body>
 </html>
