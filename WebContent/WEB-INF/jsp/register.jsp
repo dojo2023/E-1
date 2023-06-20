@@ -8,10 +8,8 @@
 <title>新規登録</title>
 </head>
 <body>
+	<div id="content"></div>
 	<div class="wrap">
-		<span class="logo">
-			<img src="/AllNightCalender/img/icon.png">
-		</span>
 		<h1>新規登録</h1>
 		<form name="myfrom" action="RegisterServlet" method="post">
 			<p><input type="text" placeholder="ID" id="userID" name="userID" value="${user.id }" ></p>
@@ -21,6 +19,7 @@
 			<p><input id="sendBtn" type="submit" value="新規登録"></p>
 		</form>
 	</div>
+
 </body>
 <script src="/AllNightCalender/js/register.js"></script>
 </html>

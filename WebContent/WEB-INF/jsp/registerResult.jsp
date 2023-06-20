@@ -4,12 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/registerResult.css">
 <title>Insert title here</title>
 </head>
 <body>
-	<p id="logo"></p>
-	<h2>新規登録</h2>
+<div id="content"></div>
+<div class="wrap">
 	<h3>登録が${result }しました</h3>
 	<button type="button" onclick="location.href='LoginServlet'" >ログイン画面へ</button>
+</div>
 </body>
+<script src="/AllNightCalender/js/registerResult.js"></script>
 </html>

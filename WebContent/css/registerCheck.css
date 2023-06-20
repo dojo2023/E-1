@@ -13,6 +13,10 @@ html {
 	flex-direction: column;
 	justify-content: center;
     align-items: center;
+    position: fixed;
+    inset: 0;
+    margin:auto;
+    z-index:1;
 }
 
 img {
@@ -20,10 +24,34 @@ img {
 	width: 30%;
 }
 
+table {
+	font-size: 20px;
+	border-collapse: collapse;
+}
+
+.Btns {
+	margin-top: 50px;
+	text-align:center;
+}
+
+td {
+	border: 1px solid ;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left: 20px;
+	padding-right: 5px;
+	background-color: #CBCBCB;
+}
+
+.right {
+	padding-right: 300px;
+	background-color: white;
+}
 #userID, #userPW, #userFamilyName, #userName{
     min-width: 400px;
 	padding-bottom: 6px;
 	padding-top: 6px;
+
 }
 
 #sendBtn {

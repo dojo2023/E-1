@@ -8,11 +8,8 @@
 <title>ログイン</title>
 </head>
 <body>
+	<div id="content"></div>
 	<div class="Content">
-		<div class="header">
-			<img src="/AllNightCalender/img/icon.png" id="tetu" class="logo">
-			<img src="/AllNightCalender/img/login_font.png" id="login" class="logo">
-		</div>
 		<form name="myform" action="LoginServlet" method="post">
 		    <div class="idpw">
 				<input id="userID" placeholder="ID"  type="text" name="userID"><br>
