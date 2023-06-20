@@ -21,7 +21,7 @@
 	  </div>
 
    <div class ="inquiry_check_form">
-   <form action="InquiryResultServlet" method="POST" >
+   <form action="InquiryCheckServlet" method="POST" >
 	<table>
 		<tr>
 			<th>項目</th>
@@ -29,6 +29,7 @@
 		</tr>
 		<tr>
 			<td>ジャンル</td>
+			<td>${inquiry.id}</td>
 			<td>${inquiry.genre}</td>
 		</tr>
 		<tr>
