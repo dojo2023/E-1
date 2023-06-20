@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+
+body {
+
+	background-image: url("/AllNightCalender/img/LoginBackground.jpg");
+	background-size: cover;
+}
+h1 {
+	color:#ffffff;
+}
 html {
 	width: 100%;
 	height: 100%;
@@ -39,7 +48,7 @@ td {
 	padding-top:5px;
 	padding-bottom:5px;
 	padding-left: 20px;
-	padding-right: 5px;
+	padding-right: 20px;
 	background-color: #CBCBCB;
 }
 

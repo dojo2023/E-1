@@ -8,7 +8,6 @@ html {
 }
 
 body {
-
 	background-image: url("/AllNightCalender/img/LoginBackground.jpg");
 	background-size: cover;
 }
@@ -32,16 +31,17 @@ body {
 }
 
 #userID, #userPW {
-	min-width: 400px;
-	padding-bottom: 6px;
-	padding-top: 6px;
-	margin-bottom: 6px;
+	min-width: 460px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	margin-bottom: 10px;
 }
 
 #newlogin {
-	margin-left: 287px;
+
+	margin-left: 320px;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 15px;
 	color:white;
 }
 
