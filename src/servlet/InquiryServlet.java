@@ -35,13 +35,12 @@ public class InquiryServlet extends HttpServlet {
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-		String id = request.getParameter("id");
 		String genre = request.getParameter("genre");
 		String text = request.getParameter("text");
 
 		//格納するものを作成
 		Inquirys inquiry = new Inquirys();
-		inquiry.setId(id);
+
 		inquiry.setGenre(genre);
 		inquiry.setText(text);
 

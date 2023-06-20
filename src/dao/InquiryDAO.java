@@ -10,7 +10,7 @@ import model.Inquirys;
 public class InquiryDAO {
 		// ランクの基準ポイントを見るために取得
 	// 引数cardで指定されたレコードを登録し、成功したらtrueを返す
-		public boolean insert(Inquirys card) {
+		public boolean insert(String id,Inquirys card) {
 			Connection conn = null;
 			boolean result = false;
 
@@ -24,7 +24,7 @@ public class InquiryDAO {
 				// SQL文を準備する
 				String sql = "insert into INQUIRY values (?, ?, ?)";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
-
+/*
 				// SQL文を完成させる
 				if (card.getId() != null && !card.getId().equals("")) {
 					pStmt.setString(1, card.getId());
@@ -32,6 +32,15 @@ public class InquiryDAO {
 				else {
 					pStmt.setString(1, null);
 				}
+*/
+				if (id != null && !id.equals("")) {
+					pStmt.setString(1, id);
+				}
+				else {
+					pStmt.setString(1, null);
+				}
+
+
 				if (card.getGenre() != null && !card.getGenre().equals("")) {
 					pStmt.setString(2, card.getGenre());
 				}
