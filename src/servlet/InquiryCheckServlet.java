@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.UserDAO;
-import model.User;
+import dao.InquiryDAO;
+import model.Inquirys;
 
 /**
  * Servlet implementation class InquiryCheckServlet
@@ -42,11 +42,11 @@ public class InquiryCheckServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		User user = (User)session.getAttribute("user");
+		Inquirys inquiry = (Inquirys)session.getAttribute("inquiry");
 
-		UserDAO uDao = new UserDAO();
+		InquiryDAO iDao = new InquiryDAO();
 
-		if (uDao.insert(user)) {
+		if (iDao.insert((String)session.getAttribute("id"),inquiry)) {
 			// 登録成功
 			// リクエストスコープにメッセージを格納する
 			request.setAttribute("result","完了");
