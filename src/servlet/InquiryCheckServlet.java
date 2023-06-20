@@ -46,11 +46,7 @@ public class InquiryCheckServlet extends HttpServlet {
 
 		InquiryDAO iDao = new InquiryDAO();
 
-<<<<<<< HEAD
-		if (iDao.insert(inquiry)) {
-=======
 		if (iDao.insert((String)session.getAttribute("id"),inquiry)) {
->>>>>>> 73271d57a8b90e8e1dfded7bfba5bc8ea4c2e68b
 			// 登録成功
 			// リクエストスコープにメッセージを格納する
 			request.setAttribute("result","完了");

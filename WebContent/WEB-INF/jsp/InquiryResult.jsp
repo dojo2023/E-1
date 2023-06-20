@@ -9,8 +9,25 @@
 <link rel="stylesheet" href="/AllNightCalender/css/Inquiry.css">
 </head>
 <body>
-	<h2>送信完了</h2>
+<div class="container">
+ 	<div class="time"></div>
+ 	<div class="icon"><img src="/AllNightCalender/img\仮.png" width="50px"></div>
+  <div class="inquiry_main">
+    <!-- よくある質問の文字の左にアイコン設置 -->
+  <div class="inline">
+    <div class="mail_icon"><img src="/AllNightCalender/img\mailicon.png" width="50px"></div>
+  <h1 class="inquiry-title">送信完了</h1>
+    </div>
+
+
+       <div class ="inquiry_result_form">
 	<h3>お問い合わせが${result}しました</h3>
-  <div class="homebutton"><a href="//AllNightCalender/CalendarServlet">ホームに戻る</a></div>
+	</div>
+  <div class="inquiry_hedder"></div>
+  <div class="inquiry_footer"><a href="/AllNightCalender/CalendarServlet" class="homebutton">ホームに戻る</a></div>
+  <div class="inquiry_left"></div>
+  <div class="inquiry_right"></div>
+    </div>
+    </div>
 </body>
 </html>

@@ -29,7 +29,7 @@
 		</tr>
 		<tr>
 			<td>ジャンル</td>
-			<td>${inquiry.id}</td>
+			<td>${id}</td>
 			<td>${inquiry.genre}</td>
 		</tr>
 		<tr>
