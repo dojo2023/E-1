@@ -8,6 +8,7 @@
 <meta charset="utf-8">
 <title>HTML入門-JavaScriptの基本</title>
 <script src="../../js/pointDetail.js"></script>
+</script><script src="../../js>
 </head>
 
 <body>
