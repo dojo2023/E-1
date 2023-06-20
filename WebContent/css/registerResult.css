@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.wrap {
+	font-size: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    margin:auto;
+    z-index:10;
+}
+

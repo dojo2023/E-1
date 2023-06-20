@@ -4,12 +4,16 @@
 html {
 	height: 100%;
 	width: 100%;
+	overflow: hidden;
 }
 
 body {
+
 	background-image: url("/AllNightCalender/img/LoginBackground.jpg");
 	background-size: cover;
 }
+
+
 
 .header {
 	margin: 0,auto;
@@ -17,30 +21,30 @@ body {
 
 
 .Content {
-	text-align:center;
-    padding:10% 0;
+    position: fixed;
+    inset: 0;
+    margin:auto;
+    z-index:1;
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+    align-items: center;
 }
 
 #userID, #userPW {
-	min-width:30%;
+	min-width: 400px;
 	padding-bottom: 6px;
 	padding-top: 6px;
 	margin-bottom: 6px;
 }
 
 #newlogin {
-	margin-left: 20%;
+	margin-left: 287px;
 	text-decoration: none;
 	font-size: 12px;
 	color:white;
 }
 
-#tetu {
-	margin-bottom: 6%;
-	margin-right: 20px;
-	height: 10%;
-	width: 10%;
-}
 
 #login {
 	margin-right:11%;
@@ -56,6 +60,7 @@ body {
 #resetBtn {
 	margin-left: 3px;
 }
+
 form {
 	display: flex;
 	flex-direction: column;
