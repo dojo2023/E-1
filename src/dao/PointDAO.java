@@ -1,12 +1,12 @@
-/*
+
 package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import model.Point;
+import java.util.ArrayList;
 
 public class PointDAO {
 		// 獲得できるポイント一覧の取得
@@ -24,6 +24,7 @@ public class PointDAO {
 				// SQL文を準備する
 				String sql = "select * from Point";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
+				
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
 
@@ -66,4 +67,3 @@ public class PointDAO {
 			return cardList;
 		}
 }
-*/
