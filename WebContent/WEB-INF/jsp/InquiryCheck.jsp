@@ -21,7 +21,7 @@
 	  </div>
 
    <div class ="inquiry_check_form">
-   <form action="InquiryResultServlet" method="POST" >
+   <form action="InquiryCheckServlet" method="POST" >
 	<table>
 		<tr>
 			<th>項目</th>
@@ -29,6 +29,7 @@
 		</tr>
 		<tr>
 			<td>ジャンル</td>
+			<td>${inquiry.id}</td>
 			<td>${inquiry.genre}</td>
 		</tr>
 		<tr>
@@ -44,9 +45,9 @@
 	</div>
 
 
-	<input type="hidden" value="userID" name="${user.id  }">
-	<input type="hidden" value="genree" name="${genre }">
-	<input type="hidden" value="text" name="${text }">
+	<input type="hidden" value="inquiryid" name="${id}">
+	<input type="hidden" value="inquirygenre" name="${inquiry.genre}">
+	<input type="hidden" value="inquirytext" name="${inquiry.text}">
 
 
 </body>
