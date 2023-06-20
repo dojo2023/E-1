@@ -34,8 +34,11 @@ img {
 }
 
 table {
-	font-size: 20px;
-	border-collapse: collapse;
+	width:500px;
+	text-align:center;
+	padding:30px 0 20px 0;
+	margin:auto;
+	border-spacing:0
 }
 
 .Btns {
@@ -43,19 +46,33 @@ table {
 	text-align:center;
 }
 
-td {
-	border: 1px solid ;
-	padding-top:5px;
-	padding-bottom:5px;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-color: #CBCBCB;
+
+
+th {
+	padding:10px 0px;
+	color:white;
+	background-color:#4580e6;
+	border:none;
 }
 
-.right {
-	padding-right: 300px;
-	background-color: white;
+tr{
+	padding: 0px 0px;
+	border:none;
 }
+
+
+
+
+td {
+	padding: 10px 0px;
+	border:none;
+	background:white;
+}
+
+tr,td {
+	border-bottom: 2px solid #77757547;
+}
+
 #userID, #userPW, #userFamilyName, #userName{
     min-width: 400px;
 	padding-bottom: 6px;

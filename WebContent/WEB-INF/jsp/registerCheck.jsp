@@ -15,20 +15,24 @@
 		<form action="RegisterCheckServlet" method="post">
 		<table>
 			<tr>
-				<td>ID</td>
-				<td class="right">${user.id }</td>
+				<th>項目</th>
+				<th>入力された内容</th>
 			</tr>
 			<tr>
-				<td>姓</td>
-				<td class="right">${user.l_name }</td>
+				<td  class="left">ID</td>
+				<td>${user.id }</td>
 			</tr>
 			<tr>
-				<td>名</td>
-				<td class="right">${user.f_name }</td>
+				<td class="left">姓</td>
+				<td>${user.l_name }</td>
 			</tr>
 			<tr>
-				<td>パスワード</td>
-				<td class="right">${user.pw }</td>
+				<td class="left">名</td>
+				<td>${user.f_name }</td>
+			</tr>
+			<tr>
+				<td class="left">パスワード</td>
+				<td>${user.pw }</td>
 			</tr>
 		</table>
 

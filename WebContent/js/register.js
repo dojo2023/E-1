@@ -9,6 +9,11 @@
 		const f_name = document.getElementById('userFamilyName');
 		const l_name = document.getElementById('userName');
 
+		var id_len = id.value.length;
+		var pass_len = pass.value.length;
+		var f_name_len = f_name.value.length;
+		var l_name_len = l_name.value.length;
+
 		if(!id.value ) {
 			id.placeholder = "※IDを入力してください";
 		}
@@ -25,9 +30,32 @@
 			l_name.placeholder = "※名を入力してください";
 		}
 
-		if(id.value && pass.value && f_name.value && l_name.value){
+
+		if(id_len > 20) {
+ 			id.placeholder = "※20文字以上の文字は入力しないでください";
+ 			id.value = "";
+ 		}
+
+ 		if(f_name_len > 20) {
+			f_name.placeholder = "※20文字以上の文字は入力しないでください";
+			f_name.value = "";
+ 		}
+
+ 		if(l_name_len > 20) {
+			l_name.placeholder = "※20文字以上の文字は入力しないでください";
+			l_name.value = "";
+ 		}
+
+ 		if(pass_len > 20) {
+			pass.placeholder = "※20文字以上の文字は入力しないでください";
+			pass.value = "";
+ 		}
+
+ 		if((0 < id_len && id_len < 21) && (0 < l_name_len && l_name_len < 21) && (0 < f_name_len && f_name_len < 21) && (0 < pass_len && pass_len < 21)){
 			document.myfrom.submit();
 		}
+
+
 	}
 	 function setRandomLeft() {
         return Math.floor((Math.random() * document.documentElement.clientWidth + 1)) + "px";
@@ -59,24 +87,5 @@
  		var l_name = document.getElementById("userName").value.length;
  		var pass = document.getElementById("userPW").value.length;
 
- 		if(id > 20) {
- 			id.placeholder = "※20文字以上の文字は入力しないでください";
- 		}
-
- 		if(f_name > 20) {
-			f_name.placeholder = "※20文字以上の文字は入力しないでください";
- 		}
-
- 		if(l_name > 20) {
-			l_name.placeholder = "※20文字以上の文字は入力しないでください";
- 		}
-
- 		if(pass > 20) {
-			pass.placeholder = "※20文字以上の文字は入力しないでください";
- 		}
-
- 		if(id<21 && pass<21 && f_name<21 && l_name<21){
-			document.myfrom.submit();
-		}
- 	}
+ 		 	}
  	*/

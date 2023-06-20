@@ -53,7 +53,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("id", id);
 
 			// サーブレットにリダイレクトする
-			response.sendRedirect("CalenderServlet");
+			response.sendRedirect("CalendarServlet");
 		}
 		else {
 			// ログイン失敗
