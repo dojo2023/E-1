@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+html {
+	width: 100%;
+	height: 100%;
+
+	margin: 0;
+	padding: 0;
+}
+
+body {
+
+	background-image: url("/AllNightCalender/img/LoginBackground.jpg");
+	background-size: cover;
+}
+
+.wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    margin:auto;
+    z-index:10;
+}
+h1 {
+	color:#ffffff;
+}
+
+img {
+	height: 30%;
+	width: 30%;
+}
+
+#userID, #userPW, #userFamilyName, #userName{
+    min-width: 460px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+#sendBtn {
+	margin-left: 399px;
+}

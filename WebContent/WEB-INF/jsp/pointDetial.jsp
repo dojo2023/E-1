@@ -6,6 +6,7 @@
 <html lang="ja">
 
 <head>
+<link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <meta charset="utf-8">
 <script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
 <title>ポイント詳細画面</title>

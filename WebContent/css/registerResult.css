@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+
+body {
+	background-image: url("/AllNightCalender/img/LoginBackground.jpg");
+	background-size: cover;
+}
+
+h3 {
+	color:#ffffff;
+}
+
+.wrap {
+	font-size: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    margin:auto;
+    z-index:10;
+}
+

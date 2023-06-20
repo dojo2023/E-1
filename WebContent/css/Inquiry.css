@@ -36,6 +36,13 @@
   width: 900px;
 }
 
+.inquiry_main h1.inquiry-title{
+	/*確認画面*/
+  color:#4580e6;
+  border-bottom:2px solid;
+  width: 900px;
+}
+
 .inquiry_form {
 	 background-color:#d7d7d7ab;
 	 width:840px;
@@ -52,9 +59,44 @@ textarea{
 	text-align:left;
 }
 
-.inquiry_form tr{
-	padding: 10px 0px;
+.inquiry_check_form {
+	 background-color:#d7d7d7ab;
+	 width:840px;
+	height:300px;
+	 margin:auto ;
 }
+
+.inquiry_check_form table{
+	width:500px;
+	text-align:center;
+	padding:30px 0 20px 0;
+	margin:auto;
+	border-spacing:0
+}
+
+.inquiry_check_form th{
+	padding:10px 0px;
+		color:white;
+	background-color:#4580e6;
+		border:none;
+}
+
+.inquiry_check_form tr{
+	padding: 0px 0px;
+		border:none;
+}
+
+.inquiry_check_form td{
+	padding: 10px 0px;
+	border:none;
+	background:white;
+}
+
+
+.inquiry_check_form tr td {
+	border-bottom: 2px solid #77757547;
+}
+
 
 .align-right-angry{
 	  text-align: right;
@@ -80,13 +122,62 @@ textarea{
   transition    : .3s;         /* なめらか変化 */
   border        : 1px solid #1976d2;    /* 枠の指定 */
 }
-
 .button:hover {
   color         : #1a1aff;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
 }
 
+/*ボタン*/
 
+.fix {
+  margin-right: 45px;
+  align-items: center;
+  justify-content: center;
+  padding:5px 25px;
+  line-height: 2;
+  text-decoration: none;
+  color: #000000;
+  font-size: 13px;
+  border-radius: 15px;
+  border: 1.8px solid #000000;
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: #ffffff;
+}
+
+.fix:hover {
+  border-bottom-width: 0;
+  transform: translateY(2px);
+}
+
+.send {
+  align-items: center;
+  justify-content: center;
+  padding:5px 25px;
+  line-height: 2;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  border-radius: 15px;
+  border: 1px solid #949494;
+  width: 150px;
+ border:1.5px solid #000000;
+  height: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: #3e59ba;
+}
+
+.send:hover {
+  border-bottom-width: 0;
+  transform: translateY(5px);
+}
+
+.buttons {
+	text-align:center;
+}
 .inquiry_hedder { grid-area: inquiry_hedder; }
 
 .inquiry_footer { grid-area: inquiry_footer;
@@ -99,8 +190,7 @@ textarea{
 
 
 /*aタグ*/
-/*aタグ*/
-.home-return-button {
+.homebutton {
   align-items: center;
   justify-content: center;
   padding:5px 25px;
@@ -115,7 +205,7 @@ textarea{
   transition: 0.3s;
   background-color: #1976d2;
 }
-.home-return-button:hover {
+.homebutton:hover {
   opacity: .7;
 }
 /*管理用

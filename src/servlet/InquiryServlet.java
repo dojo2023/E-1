@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Inquirys;
+
 /**
  * Servlet implementation class InquiryServlet
  */
@@ -30,19 +32,27 @@ public class InquiryServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
-		String point = request.getParameter("point");
 		String genre = request.getParameter("genre");
 		String text = request.getParameter("text");
 
-		// セッションスコープにIDを格納する
-		HttpSession session = request.getSession();
-		session.setAttribute("id", id);
+		//格納するものを作成
+		Inquirys inquiry = new Inquirys();
+		inquiry.setId(id);
+		inquiry.setGenre(genre);
+		inquiry.setText(text);
 
-		// サーブレットにリダイレクトする
-		response.sendRedirect("InquiryCheckServlet");
+		// セッションスコープにお問い合わせ内容を格納する
+		HttpSession session = request.getSession();
+		session.setAttribute("inquiry", inquiry);
+
+
+		//フォワードする
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/InquiryCheck.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }

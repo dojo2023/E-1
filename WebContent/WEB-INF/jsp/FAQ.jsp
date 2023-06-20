@@ -9,6 +9,7 @@
 <title>よくある質問</title>
 <link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="/AllNightCalender/css/FAQ.css">
+<script src="/AllNightCalender/js/FAQ.js"></script>
 <!-- <link rel="stylesheet" href="/AllNightCalender/css/AllNightCalendar.css"> -->
 </head>
 <body>
@@ -42,15 +43,46 @@
    		 </table>
    		  <hr>
 		   </div>
-   </div>
+
+		   <!-- 隠しボタン -->
+		   <div class="content">
+  	<div class="inner">
+  	<table>
+
+   <tr>
+   		<th><div class="wow"><a href="//AllNightCalender/CalendarServlet"> <button>ホームに戻る</button></a></th></div>
+  		  <th> <div class="honmono"  onclick="poor(event)" ><button>ホームに戻る</button></th></div>
+     		<th><div class="nisemono2" onclick="poor(event)"> <button>ホームに戻る</button></th></div>
+     </tr>
+
+      <tr>
+       <td><div class="nisemono1" onclick="poor(event)"> <button>ホームに戻る</button></td></div>
+     <td><button></button></td></div>
+     <td><div class="nisemono2" onclick="poor(event)"> <button>ホームに戻る</button></td></div>
+    </tr>
+
+       <tr>
+       <td><div class="nisemono1" onclick="poor(event)"> <button>ホームに戻る</button></td></div>
+   <td> <div class="honmono" onclick="poor(event)"><button>ホームに戻る</button></td></div>
+    <td><div class="nisemono2" onclick="poor(event)"> <button>ホームに戻る</button></td></div>
+    </tr>
+
+    </table>
+  </div>
+</div>
+
+
 
 
   <div class="question_hedder"></div>
-  <div class="question_footer"><a href="//AllNightCalender/CalendarServlet">ホームに戻る</a></div>
+  <div class="question_footer" >  <div class="home-return-button" onclick="poor(event)" ><a>ホームに戻る</a></div></div>
+     </div>
   <div class="question_left"></div>
   <div class="question_right"></div>
 </div>
 </div>
+
+
 </body>
 
 
@@ -58,4 +90,5 @@
 <footer>
 
 </footer>
+
 </html>

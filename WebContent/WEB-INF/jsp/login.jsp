@@ -4,15 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="css/login.css">
 <title>ログイン</title>
 </head>
 <body>
+	<div id="content"></div>
 	<div class="Content">
-		<div class="header">
-			<img src="/AllNightCalender/img/icon.png" id="tetu" class="logo">
-			<img src="/AllNightCalender/img/login_font.png" id="login" class="logo">
-		</div>
 		<form name="myform" action="LoginServlet" method="post">
 		    <div class="idpw">
 				<input id="userID" placeholder="ID"  type="text" name="userID"><br>
