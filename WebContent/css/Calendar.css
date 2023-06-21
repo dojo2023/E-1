@@ -178,11 +178,14 @@ td.today {
 #next-prev-button {
     position: relative;
 }
+
+/*月移動ボタンの背景色を透明にした*/
 #next-prev-button button{
-
+	 background-color:#99999000;
     font-size: 1.2rem;
-
 }
+
+
 /*#next-prev-button button:hover{
     background-color: #D4BB92;
     border-color: #D4BB92;
