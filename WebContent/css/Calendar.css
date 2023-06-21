@@ -284,6 +284,17 @@ top:-15px;
   left:25px;
 	font-size:2.5px;
 }
+
+/*リンクの下線削除*/
+a{
+ text-decoration: none;
+}
+
+/*訪問後パープル無効化*/
+a:visited{
+ color:black;
+}
+
 .sigoto img{
 width: 80px;
 left : 22px;
