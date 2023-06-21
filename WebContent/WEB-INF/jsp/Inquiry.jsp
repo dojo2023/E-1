@@ -8,12 +8,11 @@
 <title>お問い合わせ</title>
 <link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="/AllNightCalender/css/Inquiry.css">
-<script src="/AllNightCalender/js/Inquiry.js"></script>
 </head>
 <body>
 <div class="container">
   <div class="time"></div>
-  <div class="icon"><img src="/AllNightCalender/img\仮.png" width="50px"></div>
+  <div class="area-icon" id="main-icon"></div>
   <div class="inquiry_main">
     <!-- よくある質問の文字の左にアイコン設置 -->
   <div class="inline">
@@ -54,4 +53,6 @@
   </div>
     </div>
 </body>
+
+<script src="/AllNightCalender/js/Inquiry.js"></script>
 </html>

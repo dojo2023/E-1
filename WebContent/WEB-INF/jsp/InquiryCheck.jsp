@@ -12,7 +12,7 @@
 <body>
 <div class="container">
   <div class="time"></div>
-  <div class="icon"><img src="/AllNightCalender/img\仮.png" width="50px"></div>
+  <div class="area-icon" id="main-icon"></div>
   <div class="inquiry_main">
     <!-- よくある質問の文字の左にアイコン設置 -->
   <div class="inline">
@@ -51,4 +51,6 @@
 
 
 </body>
+
+<script src="/AllNightCalender/js/Inquiry.js"></script>
 </html>

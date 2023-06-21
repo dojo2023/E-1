@@ -9,13 +9,12 @@
 <title>よくある質問</title>
 <link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="/AllNightCalender/css/FAQ.css">
-<script src="/AllNightCalender/js/FAQ.js"></script>
 <!-- <link rel="stylesheet" href="/AllNightCalender/css/AllNightCalendar.css"> -->
 </head>
 <body>
 <div class="container">
   <div class="time"></div>
-  <div class="icon"><img src="/AllNightCalender/img\仮.png" width="50px"></div>
+    <div class="area-icon" id="main-icon"></div>
   <div class="question_main">
 
   <!-- よくある質問の文字の左にアイコン設置 -->
@@ -90,5 +89,5 @@
 <footer>
 
 </footer>
-
+<script src="/AllNightCalender/js/FAQ.js"></script>
 </html>
