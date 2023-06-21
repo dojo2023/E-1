@@ -118,10 +118,25 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-th {
-    color: #000;
+/*罫線見えないように*/
+#calendar th {
+    border-width: 0px;
+     padding: 10px;
+    text-align: center;
+    width: 100px;
+    height: 50px;
 }
-th, td {
+
+/*日曜日のth*/
+#calendar th:first-child {
+    color: red;
+}
+/*土曜日のth*/
+#calendar th:last-child {
+    color: blue;
+}
+
+ td {
     outline: 1px solid #ddd;
     padding-top: 10px;
     padding-bottom: 10px;
