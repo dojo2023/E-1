@@ -37,9 +37,14 @@
         font-weight: bold;
     }
 
+    .site-menu a {
+  		color:inherit;
+  		text-decoration: none;
+  	}
+
     .site-menu li {
         list-style:none;
-        margin-top: 60px;
+        /*margin-top: 60px;*/
         text-align: center;
 
     }
@@ -91,7 +96,7 @@
 
     #user-icon:hover {
         background-size: cover;
-        background-image: url('/ユーザーアイコンオーバーレイ.png');
+        background-image: url('img/ユーザーアイコンオーバーレイ.png');
         width: 170px;
         height: 104px;
         top: 2.5px;
@@ -105,10 +110,10 @@
 
 <div id="menu" class="site-menu">
     <ul>
-        <li>ポイント詳細</li>
-        <li>お問い合わせ</li>
-        <li>ポイント詳細</li>
-        <li>ポイント詳細</li>
+     	<a href="/AllNightCalender/PointDetailsServlet"><li>ポイント詳細</a></li>
+        <a href="/AllNightCalender/FAQServlet"><li>よくある質問</li></a>
+        <a href="/AllNightCalender/InquiryServlet"><li>お問い合わせ</li></a>
+        <a href="/AllNightCalender/LogoutServlet"><li>ログアウト</li></a>
     </ul>
 </div>
 

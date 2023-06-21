@@ -6,7 +6,7 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "inquiry_hedder inquiry_hedder icon"
+    "inquiry_hedder inquiry_hedder area-icon"
     "inquiry_left inquiry_main inquiry_right"
     "inquiry_footer inquiry_footer time";
 }
@@ -14,7 +14,7 @@
 
 .time { grid-area: time; }
 
-.icon { grid-area: icon; }
+.area-icon { grid-area: area-icon; }
 
 .inquiry_main { grid-area: inquiry_main;
  						  }

@@ -6,7 +6,7 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "question_hedder question_hedder icon"
+    "question_hedder question_hedder area-icon"
     "question_left question_main question_right"
     "question_footer question_footer time";
 }
@@ -14,7 +14,7 @@
 
 .time { grid-area: time; }
 
-.icon { grid-area: icon; }
+.area-icon { grid-area: area-icon; }
 
 .question_main { grid-area: question_main;
  						   }
