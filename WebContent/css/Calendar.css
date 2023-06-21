@@ -156,6 +156,18 @@ td:last-child {
 td.disabled {
     color: #ccc;
 }
+
+/*前後月の日曜日*/
+td.disabled:first-child{
+    color: #ff0000;
+}
+
+/*前後月の土曜日*/
+td.disabled:last-child{
+    color:blue;
+}
+
+
 /*本日*/
 td.today {
     background-color: #D65E72;
