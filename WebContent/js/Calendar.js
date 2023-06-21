@@ -26,7 +26,7 @@ function next(){
 function showProcess(date) {
     var year = date.getFullYear();
     var month = date.getMonth();
-    document.querySelector('#header').innerHTML = year + "年 " + (month + 1) + "月";
+    document.querySelector('#header').innerHTML =   (month + 1) + "/"+year ;
 
     var calendar = createProcess(year, month);
     document.querySelector('#calendar').innerHTML = calendar;
@@ -75,3 +75,31 @@ function createProcess(year, month) {
     }
     return calendar;
 }
+
+
+	    const mainIcon = document.getElementById('main-icon');
+	    fetch('js/icon_content.html')
+	      .then(response => response.text())
+	      .then(html => {
+	        mainIcon.innerHTML = html;
+	      });
+
+
+    var flag = 0;
+
+    function showMenu ()
+    {
+      if(flag == 0)
+      {
+        // クラスを追加している
+        document.getElementById("menu").classList.add("is-show");
+        flag = 1;
+      }
+      else
+      {
+        // クラスを削除している
+        document.getElementById("menu").classList.remove("is-show");
+        flag = 0;
+      }
+    }
+

@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="css/login.css">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 <title>ログイン</title>
 </head>
 <body>
@@ -15,6 +16,7 @@
 		    <div class="idpw">
 				<input id="userID" placeholder="ID"  type="text" name="userID"><br>
 				<input id="userPW" placeholder="PW"  type="password" name="userPW">
+				<span id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></span>
 			</div>
 			<div class="newLogin">
 				<a  id="newlogin" href="/AllNightCalender/RegisterServlet">新規会員登録はこちら</a>
