@@ -121,7 +121,7 @@
 
     <div class="area-calendarday">
      <a href="https://saruwakakun.com/"><!-- カレンダー --><div id="calendar"></div></a>
-<script src="js/Calendar.js"></script>
+
 
     </div>
 
@@ -131,4 +131,5 @@
     <div class="area-time">時間</div>
   </div>
 </body>
+<script src="js/Calendar.js"></script>
 </html>
