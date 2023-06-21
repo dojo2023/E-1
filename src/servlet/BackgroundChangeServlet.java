@@ -24,11 +24,9 @@ public class BackgroundChangeServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 
 		// メニューページにフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/backgroundChange.jsp");
-
-		dispatcher.forward(request, response);
-
-	}
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/backgroundChange.jsp");
+				dispatcher.forward(request, response);
+			}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
