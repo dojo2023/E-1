@@ -102,16 +102,18 @@
     color: #666;
 }
 #header {
-    text-align: center;
+    text-align: left;
     font-size: 24px;
     width: 100%;
+     /*左すぎるので右に寄せる*/
+     padding: 0 50px;
     margin: 1rem 0 0;
 }
 
 /*カレンダー*/
 #calendar {
     text-align: center;
-    width: 100%;
+     padding: 0 10px;
 }
 
 /*カレンダー詳細画面*/
@@ -123,11 +125,13 @@
 
 /*列幅均等化*/
 table {
-    outline: 2px solid #ececec;
+    /* outline: 2px solid #ececec; */
     border-collapse: collapse;
-    width:70px;
     table-layout: fixed;
+    width: 50px;
+     border-top: 2px solid #6495ed;
 }
+
 /*罫線見えないように*/
 #calendar th {
     border-width: 0px;
@@ -187,12 +191,14 @@ td.today {
 /*ボタン*/
 #next-prev-button {
     position: relative;
+
 }
 
 /*月移動ボタンの背景色を透明にした*/
 #next-prev-button button{
 	 background-color:#99999000;
     font-size: 1.2rem;
+    border: 0;
 }
 
 
