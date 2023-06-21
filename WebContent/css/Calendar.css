@@ -120,6 +120,7 @@
 /*全体の背景色*/
 .area-calendardetail{
  background-color:cornflowerblue;
+     z-index: 1;
 }
 
 
