@@ -27,14 +27,14 @@ public class PointDetailsServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/pointDetial.jsp");
 		dispatcher.forward(request, response);
 	}
-
-
+	
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/*
+		
 		//リクエストパラメーターを取得する
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("ID");
@@ -43,14 +43,14 @@ public class PointDetailsServlet extends HttpServlet {
 		String point_b = request.getParameter("POINT_B");
 		String POINT_p = request.getParameter("POINT_P");
 		String POINT_m = request.getParameter("POINT_M");
-
+		
 		//検索処理を行う
 		Point_dayDAO pDao = new Point_dayDAO();
 		List<Point_day> pointList = pDao.select(new Point_day(*));
-
+		
 		//検索結果をリクエストスコープに格納する
 		request.setAttributa("pointList", pointList);
-		*/
+		
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

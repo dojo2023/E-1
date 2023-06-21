@@ -11,15 +11,7 @@
 <title>カレンダー</title>
 </head>
 <body>
-<h1>背景を変更できます</h1>
 
-<input type ="button" value = "Sランク" >
-<input type ="button" value = "Aランク" ><br>
-<input type ="button" value = "月限定Sランク" >
-<input type ="button" value = "月限定Aランク" ><br>
-<input type ="button" value = "通常" ><br>
-<input type ="button" value = "確定" >
-<input type ="button" value = "選択解除" >
 
 
 

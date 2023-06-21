@@ -76,14 +76,14 @@ function createProcess(year, month) {
     return calendar;
 }
 
-
+	window.onload = function () {
 	    const mainIcon = document.getElementById('main-icon');
 	    fetch('js/icon_content.html')
 	      .then(response => response.text())
 	      .then(html => {
 	        mainIcon.innerHTML = html;
 	      });
-
+    }
 
     var flag = 0;
 
