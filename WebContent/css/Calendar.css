@@ -113,10 +113,20 @@
     text-align: center;
     width: 100%;
 }
+
+/*カレンダー詳細画面*/
+/*全体の背景色*/
+.area-calendardetail{
+ background-color:cornflowerblue;
+}
+
+
+/*列幅均等化*/
 table {
-    outline: 2px solid #ddd;
+    outline: 2px solid #ececec;
     border-collapse: collapse;
-    width: 100%;
+    width:70px;
+    table-layout: fixed;
 }
 /*罫線見えないように*/
 #calendar th {
@@ -138,12 +148,12 @@ table {
 
  td {
     outline: 1px solid #ddd;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    width: 100px;
-    height: 50px;
-}
+    padding:5px 0 50px 5px;
+    margin:20px 0 0 0 ;
+    text-align:left;
+  }
+
+
 /*日曜日*/
 td:first-child {
     color: red;
