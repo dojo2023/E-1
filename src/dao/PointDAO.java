@@ -1,4 +1,4 @@
-
+/*
 package dao;
 
 import java.sql.Connection;
@@ -24,7 +24,7 @@ public class PointDAO {
 				// SQL文を準備する
 				String sql = "select * from Point";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
-				
+
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
 
@@ -67,3 +67,4 @@ public class PointDAO {
 			return cardList;
 		}
 }
+*/
