@@ -126,7 +126,7 @@
     </div>
 
     <div class="area-tetsuya">徹夜</div>
-    <div class="area-icon">アイコン</div>
+    <div class="area-icon" id="main-icon"></div>
     <div class="area-calendardetail">カレンダー詳細</div>
     <div class="area-time">時間</div>
   </div>

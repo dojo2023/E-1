@@ -37,6 +37,11 @@ body {
 	margin-bottom: 10px;
 }
 
+#userPW {
+	border: none;
+}
+
+
 #newlogin {
 	margin-left: 348px;
 	text-decoration: none;
@@ -102,6 +107,9 @@ body {
 form {
 	display: flex;
 	flex-direction: column;
+	border-width: thin;
+  	border-style: solid;
+  	width: 200px;
 }
 
 .Btns {
@@ -110,4 +118,6 @@ form {
 	justify-content: center;
     align-items: center;
 }
+
+
 
