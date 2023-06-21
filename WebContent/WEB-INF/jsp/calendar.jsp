@@ -120,7 +120,7 @@
 
 
     <div class="area-calendarday">
-     <!-- カレンダー --><div id="calendar"></div>
+     <a href="https://saruwakakun.com/"><!-- カレンダー --><div id="calendar"></div></a>
 <script src="js/Calendar.js"></script>
 
     </div>

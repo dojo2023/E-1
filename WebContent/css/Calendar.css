@@ -169,6 +169,7 @@ td.today {
 }
 .area-calendarleftmanu {
 	background-color:#6495ed;
+	height: 600px;
 }
  /* === ボタンを表示するエリア ============================== */
 .switchArea {
