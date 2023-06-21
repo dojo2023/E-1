@@ -103,8 +103,8 @@
   <p></p>
   <p></p>
 <p >週/月</p>
-    <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードoff.png"alt="仕事モード"><p>仕事モード</p> </div>
-    <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="プライベートモード"><p>プライベートモード</p></div>
+    <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
+    <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png"alt="タイマー"><p>タイマー</p></div>
 </div>
 
