@@ -67,6 +67,8 @@
 
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
     <h1 id="header"></h1>
+   <div class="modeview"> <img src="/AllNightCalender/img/仕事モード上表示.png"></div>
+      <div class="modeview"> <img src="/AllNightCalender/img/プライベートモード上表示.png"></div>
       <!-- ボタンクリックで月移動 -->
         <div id="next-prev-button">
         <button id="prev" onclick="prev()">←</button>
