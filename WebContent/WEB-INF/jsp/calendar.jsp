@@ -120,17 +120,26 @@
 
 
     <div class="area-calendarday">
-     <a href="https://saruwakakun.com/"><!-- カレンダー --><div id="calendar"></div></a>
+     <a><!-- カレンダー --><div id="calendar"></div></a>
 
 
     </div>
 
     <div class="area-tetsuya">徹夜</div>
     <div class="area-icon" id="main-icon"></div>
-    <div class="area-calendardetail">カレンダー詳細</div>
+    <div class="area-calendardetail">
+      <a></a>
+
+      <input type="text" class="schedule-input" placeholder="用件">
+      <input type="text" class="schedule-input" placeholder="開始時間">
+      <input type="text" class="schedule-input" placeholder="終了時間">
+      <input type="text" class="schedule-input" placeholder="メモ">
+      <button type="button" onclick="registerSchedule()">登録</button>>
+    </div>
     <div class="area-time">時間</div>
   </div>
 </body>
+
 
 <script src="js/Calendar.js"></script>
 </html>
