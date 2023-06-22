@@ -51,7 +51,7 @@
 #header {
     text-align: left;
     font-size: 24px;
-    width: 100%;
+    width: 11%;
      /*左すぎるので右に寄せる*/
      padding: 0 50px;
     margin: 1rem 0 0;
@@ -93,6 +93,7 @@ table {
     width: 100px;
     height: 50px;
 }
+
 
 /*日曜日のth*/
 #calendar th:first-child {
@@ -257,4 +258,31 @@ a:visited{
 .sigoto img{
 width: 80px;
 left : 22px;
+}
+
+
+.tetsuyaArea {
+display: none;
+}
+.tetsuyaArea:checked + label .onImage {
+display: inline-block;
+		  width: 10px;
+}
+.tetsuyaArea:not(:checked) + label .offImage {
+display: inline-block;
+		  width: 10px;
+}
+
+
+.offImage{
+  transform: scale(20);
+}.onImage{
+  transform: scale(20);
+}
+
+
+.tekitoutetuya{
+	  position: absolute;
+  top: 30px;
+  right: 100px;
 }

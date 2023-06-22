@@ -159,3 +159,20 @@ function showMenu ()
     flag = 0;
   }
 }
+
+
+
+
+    const tetsuyaCheckbox = document.getElementById('tetsuyaCheckbox');
+    const onImage = document.querySelector('.onImage');
+    const offImage = document.querySelector('.offImage');
+
+    tetsuyaCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        onImage.style.display = 'inline-block';
+        offImage.style.display = 'none';
+      } else {
+        onImage.style.display = 'none';
+        offImage.style.display = 'inline-block';
+      }
+    });
