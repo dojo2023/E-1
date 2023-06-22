@@ -40,49 +40,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/Calendar.css">
-  <style>
-
-  /*領域生成*/
-.container {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 0.6fr 4.4fr 0.7fr 1.3fr;
-    grid-template-rows: 1fr 1.5fr 3fr 0.5fr;
-    grid-template-areas: 'calendarleftmanu calendarupmanu tetsuya icon'
-     'calendarleftmanu calendarday calendardetail calendardetail'
-      'calendarleftmanu calendarday calendardetail calendardetail'
-       'calendarleftmanu calendarday time time';
-}
-
-.area-calendarleftmanu {
-    grid-area: calendarleftmanu;
-}
-.area-calendarupmanu {
-    grid-area: calendarupmanu;
-}
-
-.area-tetsuya {
-    grid-area: tetsuya;
-}
-.area-icon {
-    grid-area: icon;
-}
-.area-calendarday {
-    grid-area: calendarday;
-}
-.area-calendardetail {
-    grid-area: calendardetail;
-}
-.area-time {
-    grid-area: time;
-}
-/*領域を赤線で囲む*/
-    .container * {
-      border: 1px solid red;
-      position: relative;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -120,17 +77,26 @@
 
 
     <div class="area-calendarday">
-     <a href="https://saruwakakun.com/"><!-- カレンダー --><div id="calendar"></div></a>
+     <a><!-- カレンダー --><div id="calendar"></div></a>
 
 
     </div>
 
     <div class="area-tetsuya">徹夜</div>
     <div class="area-icon" id="main-icon"></div>
-    <div class="area-calendardetail">カレンダー詳細</div>
+    <div class="area-calendardetail">
+      <a></a>
+
+      <input type="text" class="schedule-input" placeholder="用件">
+      <input type="text" class="schedule-input" placeholder="開始時間">
+      <input type="text" class="schedule-input" placeholder="終了時間">
+      <input type="text" class="schedule-input" placeholder="メモ">
+      <button type="button" onclick="registerSchedule()">登録</button>>
+    </div>
     <div class="area-time">時間</div>
   </div>
 </body>
+
 
 <script src="js/Calendar.js"></script>
 </html>

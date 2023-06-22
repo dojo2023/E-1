@@ -4,38 +4,40 @@
  */
 const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const today = new Date();
-// 月末だとずれる可能性があるため、1日固定で取得
 var showDate = new Date(today.getFullYear(), today.getMonth(), 1);
 
-// 初期表示
 window.onload = function () {
-    showProcess(today, calendar);
+    showProcess(today);
 };
-// 前の月表示
-function prev(){
+
+function prev() {
     showDate.setMonth(showDate.getMonth() - 1);
     showProcess(showDate);
 }
 
-// 次の月表示
-function next(){
+function next() {
     showDate.setMonth(showDate.getMonth() + 1);
     showProcess(showDate);
 }
 
-// カレンダー表示
 function showProcess(date) {
     var year = date.getFullYear();
     var month = date.getMonth();
-    document.querySelector('#header').innerHTML =   (month + 1) + "/"+year ;
+    document.querySelector('#header').innerHTML = (month + 1) + "/" + year;
 
     var calendar = createProcess(year, month);
     document.querySelector('#calendar').innerHTML = calendar;
+
+    // 各日付セルにクリックイベントを追加
+    var dateCells = document.querySelectorAll('.date-cell');
+    for (var i = 0; i < dateCells.length; i++) {
+        dateCells[i].addEventListener('click', function (event) {
+            showScheduleInput(this.dataset.date);
+        });
+    }
 }
 
-// カレンダー作成
 function createProcess(year, month) {
-    // 曜日
     var calendar = "<table><tr class='dayOfWeek'>";
     for (var i = 0; i < week.length; i++) {
         calendar += "<th>" + week[i] + "</th>";
@@ -48,27 +50,20 @@ function createProcess(year, month) {
     var lastMonthEndDate = new Date(year, month, 0).getDate();
     var row = Math.ceil((startDayOfWeek + endDate) / week.length);
 
-    // 1行ずつ設定
     for (var i = 0; i < row; i++) {
         calendar += "<tr>";
-        // 1colum単位で設定
         for (var j = 0; j < week.length; j++) {
             if (i == 0 && j < startDayOfWeek) {
-                // 1行目で1日まで先月の日付を設定
                 calendar += "<td class='disabled'>" + (lastMonthEndDate - startDayOfWeek + j + 1) + "</td>";
             } else if (count >= endDate) {
-                // 最終行で最終日以降、翌月の日付を設定
-                count++;
                 calendar += "<td class='disabled'>" + (count - endDate) + "</td>";
-            } else {
-                // 当月の日付を曜日に照らし合わせて設定
                 count++;
-                if(year == today.getFullYear()
-                  && month == (today.getMonth())
-                  && count == today.getDate()){
-                    calendar += "<td class='today'>" + count + "</td>";
+            } else {
+                count++;
+                if (year == today.getFullYear() && month == today.getMonth() && count == today.getDate()) {
+                    calendar += "<td class='today date-cell' data-date='" + count + "'>" + count + "</td>";
                 } else {
-                    calendar += "<td>" + count + "</td>";
+                    calendar += "<td class='date-cell' data-date='" + count + "'>" + count + "</td>";
                 }
             }
         }
@@ -76,6 +71,66 @@ function createProcess(year, month) {
     }
     return calendar;
 }
+
+function showScheduleInput(date) {
+    var scheduleInputArea = document.querySelector('.area-calendardetail');
+    scheduleInputArea.innerHTML = "";
+
+    var scheduleDate = document.createElement('h3');
+    scheduleDate.textContent = date + "/" + (showDate.getMonth() + 1) + "/" + showDate.getFullYear();
+
+    var schedulearea = document.createElement('a');
+
+    var scheduleInput = document.createElement('input');
+    scheduleInput.setAttribute('type', 'text');
+    scheduleInput.setAttribute('class', 'schedule-input');
+    scheduleInput.setAttribute('placeholder', '用件');
+
+    var startTimeInput = document.createElement('input');
+    startTimeInput.setAttribute('type', 'text');
+    startTimeInput.setAttribute('class', 'schedule-input');
+    startTimeInput.setAttribute('placeholder', '開始時間');
+
+    var endTimeInput = document.createElement('input');
+    endTimeInput.setAttribute('type', 'text');
+    endTimeInput.setAttribute('class', 'schedule-input');
+    endTimeInput.setAttribute('placeholder', '終了時間');
+
+    var memoInput = document.createElement('input');
+    memoInput.setAttribute('type', 'text');
+    memoInput.setAttribute('class', 'schedule-input');
+    memoInput.setAttribute('placeholder', 'メモ');
+
+    var registerButton = document.createElement('button');
+    registerButton.setAttribute('type', 'button');
+    registerButton.textContent = '登録';
+    registerButton.addEventListener('click', function () {
+        var inputs = document.querySelectorAll('.schedule-input');
+        var schedule = {};
+        for (var i = 0; i < inputs.length; i++) {
+            schedule[inputs[i].placeholder] = inputs[i].value;
+            inputs[i].value = '';
+        }
+
+        var scheduleDetail = document.createElement('div');
+        scheduleDetail.innerHTML =
+            "<p>用件：" + schedule['用件'] + "</p>" +
+            "<p>開始時間：" + schedule['開始時間'] + "</p>" +
+            "<p>終了時間：" + schedule['終了時間'] + "</p>" +
+            "<p>メモ：" + schedule['メモ'] + "</p>";
+
+        document.querySelector('.area-calendardetail a').appendChild(scheduleDetail);
+    });
+
+    scheduleInputArea.appendChild(scheduleDate);
+    scheduleInputArea.appendChild(schedulearea);
+    scheduleInputArea.appendChild(scheduleInput);
+    scheduleInputArea.appendChild(startTimeInput);
+    scheduleInputArea.appendChild(endTimeInput);
+    scheduleInputArea.appendChild(memoInput);
+    scheduleInputArea.appendChild(registerButton);
+}
+
 
 
 
