@@ -87,12 +87,15 @@
     <div class="area-calendardetail">
       <a></a>
 
+<div class ="register-area">
       <input type="text" class="schedule-input" placeholder="用件">
       <input type="text" class="schedule-input" placeholder="開始時間">
       <input type="text" class="schedule-input" placeholder="終了時間">
       <input type="text" class="schedule-input" placeholder="メモ">
       <button type="button" onclick="registerSchedule()">登録</button>>
-    </div>
+ </div>
+
+  </div>
     <div class="area-time">時間</div>
   </div>
 </body>
