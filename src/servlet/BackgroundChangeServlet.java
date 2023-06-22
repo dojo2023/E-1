@@ -23,11 +23,10 @@ public class BackgroundChangeServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=UTF-8");
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+
 		// メニューページにフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/backgroundChange.jsp");
-
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/backgroundChange.jsp");
 		dispatcher.forward(request, response);
-
 	}
 
 	/**
