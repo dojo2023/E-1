@@ -102,7 +102,7 @@
       <input type="text" class="schedule-input" placeholder="開始時間">
       <input type="text" class="schedule-input" placeholder="終了時間">
       <input type="text" class="schedule-input" placeholder="メモ">
-      <button type="button" onclick="registerSchedule()">登録</button>>
+      <button type="button" onclick="registerSchedule()">登録</button>
  </div>
 
   </div>
