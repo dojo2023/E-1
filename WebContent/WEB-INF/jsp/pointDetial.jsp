@@ -17,26 +17,31 @@
 <div id='myDiv'></div>
 
 <!-- どこからかJavascriptでデータを受け取りたい -->
-<!-- 基準は今の年・月・日 -->
+<!-- 基準は今の年・月・日? -->
 <!-- 年・月・日検索でポイントを引っ張って変数に入れたい -->
 <!--  次の月へ移動するときはどうする？-->
 
 <script>
-const nday = [1,2,3,4,5,6,7,8,9,10,11,12];
-const month = [1, 0.5, 0.7, 1.2, 0.3, 0.4, 1, 0.5, 0.7, 1.2, 0.3, 0.4, ];
+//横軸
+const month = [1,2,3,4,5,6,7,8,9,10,11,12];
+//縦軸
+const day　= [1, 0.5, 0.7, 1.2, 0.3, 0.4, 1, 0.5, 0.7, 1.2, 0.3, 0.4, ];
 const total = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 
 
+
+//棒線グラフ（１日の獲得量）
 var trace1 = {
-  x: nday,
-  y: month,
+  x: month,
+  y: day,
   name: '一日の獲得量',
   type: 'bar'
   };
 
+//折れ線グラフ（今月のポイント獲得推移）
 var trace2 = {
-  x: nday,
+  x: month,
   y: total,
   name: 'ポイント獲得推移',
   yaxis: 'y2',
@@ -60,8 +65,7 @@ var layout = {
 Plotly.newPlot('myDiv', data, layout);
 
 </script>
-
-<a href="//AllNightCalender/CalendarServlet">ホームに戻る</a>
+<button onclick="location.href='//AllNightCalender/CalendarServle'">ホームに戻る</button>
 </body>
 
 </html>
