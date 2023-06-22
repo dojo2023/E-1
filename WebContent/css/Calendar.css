@@ -19,9 +19,13 @@
 }
 
 
+/*週月ON*/
+
 .onImage img .offImage img{
 width: 40px;
 }
+
+
 
 .area-calendarupmanu {
     grid-area: calendarupmanu;
@@ -38,8 +42,6 @@ width: 40px;
 .weekmonthchange{
  width:120px;
 }
-
-
 
 .area-tetsuya {
     grid-area: tetsuya;
@@ -670,6 +672,7 @@ left : 22px;
 .tetsuyaArea {
 display: none;
 }
+
 .tetsuyaArea:checked + label .onImage {
 display: inline-block;
 		  width: 10px;
@@ -682,13 +685,16 @@ display: inline-block;
 
 .offImage{
   transform: scale(20);
-}.onImage{
-  transform: scale(20);
 }
 
+.onImage{
+  transform: scale(20);
+}
 
 .tekitoutetuya{
 	  position: absolute;
   top: 30px;
   right: 100px;
 }
+
+/**/
