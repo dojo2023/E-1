@@ -1,21 +1,39 @@
 @charset "utf-8";
+header{
+	margin: 10px 20px;
+	border-width: 0 0 5px 0;
+	border-style: solid;
+}
 
 body{
-	margin-left: auto;
-margin-right: auto;
+	width: 1272px;
+
+}
+
+.wrapper {
+    display: flex;
+}
+p{
+	text-align: center;
+
 }
 
 .box{
-  float: left;
+	width: 50%;
+  	margin: 0 20px;
+  	border-width: 2px;
+	border-style: solid;
 
-  margin: 0 20px;
 }
 
+
 .btn{
+
 	margin: 20px
 }
 
  td {
+    margin: auto;
     outline: 1px solid #ddd;
     padding-top: 10px;
     text-align: center;

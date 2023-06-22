@@ -11,36 +11,29 @@
 </head>
 
 <body>
-<<<<<<< Updated upstream
 
-=======
 <header>
 <h1>背景を変更できます</h1>
 </header>
+
 <main>
->>>>>>> Stashed changes
-
-
-
+  <div class="wrapper">
 	<div class="box btns">
-
-
-		<input type ="button" class ="btn" value = "Sランク" >
-		<input type ="button" class ="btn" value = "Aランク" ><br>
-		<input type ="button" class ="btn" value = "月限定Sランク" >
-		<input type ="button" class ="btn" value = "月限定Aランク" ><br>
-		<input type ="button" class ="btn" value = "通常" ><br>
-		<input type ="button" class ="btn" value = "確定" >
-		<input type ="button" class ="btn" value = "選択解除" ><br>
-
+		<input type ="submit" class ="btn" value = "Sランク" >
+		<input type ="submit" class ="btn" value = "Aランク" ><br>
+		<input type ="submit" class ="btn" value = "月限定Sランク" >
+		<input type ="submit" class ="btn" value = "月限定Aランク" ><br>
+		<input type ="submit" class ="btn" value = "通常" ><br>
+		<input type ="submit" class ="btn" value = "確定" >
+		<input type ="submit" class ="btn" value = "選択解除" ><br>
 		<a href="/AllNightCalender/WebContent/css/backgroundChange.css">ホームに戻る</a>
 	</div>
 
 
 	<div class="box">
 
-		<p>あなたは今[ ]ランクです</p><br>
-		   暗くなっている背景は</p><br>
+		<p>あなたは今[ ]ランクです<br>
+		   暗くなっている背景は<br>
 		   選択・設定出来ません</p><br>
 
 		<table border="1">
@@ -70,6 +63,7 @@
 		    </tr>
 		</table>
 	</div>
+  </div>
 
 
 </main>
