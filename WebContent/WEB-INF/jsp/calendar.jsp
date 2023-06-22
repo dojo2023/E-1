@@ -45,20 +45,17 @@
   <div class="container">
 
 <div class="area-calendarleftmanu">
-<p></p>
- <div class="switchArea">
-  <input type="checkbox" id="switch1">
-  <label for="switch1"><span></span></label>
-  <div id="swImg"></div>
+<div class="area-change">
+	<div class="change">
+  		<input type="checkbox" id="changeCheckbox" class="changeArea">
+  		<label class="change" for="changeCheckbox">
+    		<img class="weekmonthchange" src="/AllNightCalender/img/週.png" alt="仕事モードの画像" style="display: none;">
+			<img class="weekmonthchange" src="/AllNightCalender/img/月.png" alt="オフの画像" >
+		</label>
+	</div>
+  	</div>
 
 
-
-
-  </div>
-  <p></p>
-  <p></p>
-  <p></p>
-  <p></p>
 <p >週/月</p>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div>
@@ -66,9 +63,21 @@
 </div>
 
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
+    <div class="flex-want2">
     <h1 id="header"></h1>
-   <div class="modeview"> <img src="/AllNightCalender/img/仕事モード上表示.png"></div>
-      <div class="modeview"> <img src="/AllNightCalender/img/プライベートモード上表示.png"></div>
+
+<div class="area-mode">
+	<div class="mode">
+  		<input type="checkbox" id="modeCheckbox" class="modeArea">
+  		<label class="mode" for="modeCheckbox">
+    		<img class="img-b" src="/AllNightCalender/img/プライベートモード上表示.png"  style="display: none";>
+			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
+		</label>
+	</div>
+  	</div>
+
+  	</div>
+
       <!-- ボタンクリックで月移動 -->
         <div id="next-prev-button">
         <button id="prev" onclick="prev()">←</button>

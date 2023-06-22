@@ -15,12 +15,28 @@
 
 .area-calendarleftmanu {
     grid-area: calendarleftmanu;
+     width:120px;
 }
+
+
+.onImage img .offImage img{
+width: 40px;
+}
+
 .area-calendarupmanu {
     grid-area: calendarupmanu;
-    display: flex;
-
 }
+
+.flex-want2{
+	display:flex;
+}
+
+.mode img{
+	width:350px;
+}
+
+
+
 
 .area-tetsuya {
     grid-area: tetsuya;
@@ -595,7 +611,8 @@ td.today {
 
 /*予定登録画面 ズレの修正*/
 .area-calendardetail input[type="text"] {
- margin:4px 0px 2px 10px;
+ margin:5px 0px 2px 10px;
+  width:200px;
 }
 
 /*開始、終了時間登録*/
@@ -616,9 +633,10 @@ td.today {
 }
 
 /*登録ボタン*/
-.area-calendardetail buttom {
+.area-calendardetail button {
 white-space: pre-line;
 word-break: break-all;
+margin:10px ;
 }
 
 p.sample1 {
