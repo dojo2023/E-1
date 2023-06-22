@@ -18,6 +18,8 @@
 }
 .area-calendarupmanu {
     grid-area: calendarupmanu;
+    display: flex;
+
 }
 
 .area-tetsuya {
@@ -361,6 +363,7 @@ display: inline-block;
 }
 .area-calendarupmanu {
     grid-area: calendarupmanu;
+
 }
 
 .area-tetsuya {
