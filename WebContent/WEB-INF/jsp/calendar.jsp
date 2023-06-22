@@ -40,49 +40,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/Calendar.css">
-  <style>
-
-  /*領域生成*/
-.container {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 0.6fr 4.4fr 0.7fr 1.3fr;
-    grid-template-rows: 1fr 1.5fr 3fr 0.5fr;
-    grid-template-areas: 'calendarleftmanu calendarupmanu tetsuya icon'
-     'calendarleftmanu calendarday calendardetail calendardetail'
-      'calendarleftmanu calendarday calendardetail calendardetail'
-       'calendarleftmanu calendarday time time';
-}
-
-.area-calendarleftmanu {
-    grid-area: calendarleftmanu;
-}
-.area-calendarupmanu {
-    grid-area: calendarupmanu;
-}
-
-.area-tetsuya {
-    grid-area: tetsuya;
-}
-.area-icon {
-    grid-area: icon;
-}
-.area-calendarday {
-    grid-area: calendarday;
-}
-.area-calendardetail {
-    grid-area: calendardetail;
-}
-.area-time {
-    grid-area: time;
-}
-/*領域を赤線で囲む*/
-    .container * {
-      border: 1px solid red;
-      position: relative;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
