@@ -110,6 +110,11 @@
     margin: 1rem 0 0;
 }
 
+#header::first-letter{
+	font-size:60px;
+}
+
+
 /*カレンダー*/
 #calendar {
     text-align: center;
@@ -216,7 +221,7 @@ td.today {
 }
 .area-calendarleftmanu {
 	background-color:#6495ed;
-	height: 600px;
+	height: 700px;
 }
  /* === ボタンを表示するエリア ============================== */
 .switchArea {
