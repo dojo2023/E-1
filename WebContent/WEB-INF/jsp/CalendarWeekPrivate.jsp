@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -13,6 +12,16 @@
   <div class="container">
 
 <div class="area-calendarleftmanu">
+<div class="area-change">
+	<div class="change">
+  		<input type="checkbox" id="changeCheckbox" class="changeArea">
+  		<label class="change" for="changeCheckbox">
+    		<img class="weekmonthchange" src="/AllNightCalender/img/週.png" alt="仕事モードの画像" style="display: none;">
+			<img class="weekmonthchange" src="/AllNightCalender/img/月.png" alt="オフの画像" >
+		</label>
+	</div>
+  	</div>
+
 
 <p >週/月</p>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
