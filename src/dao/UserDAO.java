@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.User;
 
@@ -359,4 +361,62 @@ public class UserDAO {
 		// 結果を返す
 		return result;
 	}
+
+	// 現在のモードをdbに反映
+		public List<User>  point(String id) {
+			Connection conn = null;
+			List<User> pointList = new ArrayList<User>();
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+				// SQL文を準備する
+				String sql = "select now_point from user where ID = ?";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				if (id != null && !id.equals("")) {
+					pStmt.setString(1, id);
+				}
+				else {
+					pStmt.setString(1, null);
+				}
+
+				ResultSet rs = pStmt.executeQuery();
+				// 結果表をコレクションにコピーする
+				while (rs.next()) {
+					User user = new User(
+					rs.getString("NOW_POINT")
+					);
+					pointList.add(user);
+				}
+			}
+
+			catch (SQLException e) {
+				e.printStackTrace();
+				pointList = null;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				pointList = null;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						pointList = null;
+					}
+				}
+			}
+			// 結果を返す
+			return pointList;
+		}
 }

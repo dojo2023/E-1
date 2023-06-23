@@ -24,6 +24,11 @@ public class User implements Serializable {
 		this.tetsuya = tetsuya;
 	}
 
+	public User(String now_point) {
+		super();
+		this.now_point = now_point;
+	}
+
 	public User() {
 		super();
 		this.id = "";
