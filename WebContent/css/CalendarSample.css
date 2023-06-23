@@ -20,7 +20,7 @@
 }
 
 /*列幅均等化*/
-table {
+#calendar table {
     /* outline: 2px solid #ececec; */
     border-collapse: collapse;
     table-layout: fixed;
@@ -31,12 +31,11 @@ table {
 /*罫線見えないように*/
 #calendar th {
     border-width: 0px;
-     padding: 10px;
+     padding: 8px;
     text-align: center;
     width: 100px;
-    height: 50px;
+    height: 20px;
 }
-
 
 /*日曜日のth*/
 #calendar th:first-child {
