@@ -696,5 +696,9 @@ display: inline-block;
   top: 30px;
   right: 100px;
 }
+.img-p {   /*仕事モード画像*/
+ height:100px;
+ width: 300px;
+}
 
 /**/
