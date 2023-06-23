@@ -56,7 +56,8 @@
 
 
     <div class="area-calendarday">
-     <a><!-- カレンダー --><div id="calendar"></div></a>
+    <!-- カレンダー -->
+     <a><div id="calendar"></div></a>
 
 
     </div>
