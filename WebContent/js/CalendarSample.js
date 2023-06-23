@@ -1,7 +1,4 @@
 
-/**
- *
- */
 const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const today = new Date();
 var showDate = new Date(today.getFullYear(), today.getMonth(), 1);
@@ -73,7 +70,7 @@ function createProcess(year, month) {
 }
 
 function showScheduleInput(date) {
-    var scheduleInputArea = document.querySelector('.area-calendardetail');
+    var scheduleInputArea = document.querySelector('calenderdetail');
     scheduleInputArea.innerHTML = "";
 
     var scheduleDate = document.createElement('h3');
@@ -119,7 +116,7 @@ function showScheduleInput(date) {
             "<p>終了時間：" + schedule['終了時間'] + "</p>" +
             "<p>メモ：" + schedule['メモ'] + "</p>";
 
-        document.querySelector('.area-calendardetail a').appendChild(scheduleDetail);
+        document.querySelector('.calenderdetail a').appendChild(scheduleDetail);
     });
 
     scheduleInputArea.appendChild(scheduleDate);

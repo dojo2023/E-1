@@ -18,7 +18,9 @@
 
 <br>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
-    <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div>
+
+   <!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
+<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
 </div>
 
@@ -63,7 +65,7 @@
     <div class="area-icon" id="main-icon"></div>
     <div class="area-calendardetail">
       <a></a>
-
+	<div id="timershow"></div>
 <div class ="register-area">
       <input type="text" class="schedule-input" placeholder="用件">
       <input type="text" class="schedule-input" placeholder="開始時間">
