@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -6,22 +7,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/Calendar.css">
+  <link rel="stylesheet" href="css/CalendarBusinessTetsuya.css">
 </head>
 <body>
   <div class="container">
 
 <div class="area-calendarleftmanu">
-<div class="area-change">
-	<div class="change">
-  		<input type="checkbox" id="changeCheckbox" class="changeArea">
-  		<label class="change" for="changeCheckbox">
-    		<img class="weekmonthchange" src="/AllNightCalender/img/月.png" alt="仕事モードの画像" style="display: none;">
-			<img class="weekmonthchange" src="/AllNightCalender/img/週.png" alt="オフの画像" >
-		</label>
-	</div>
-  	</div>
-
 
 <p >週/月</p>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
@@ -89,5 +80,5 @@
 </body>
 
 
-<script src="js/Calendar.js"></script>
+<script src="js/CalendarBusinessTetsuya.js"></script>
 </html>
