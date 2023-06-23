@@ -1,7 +1,6 @@
 
-/**
- *
- */
+/*日付取得*/
+
 const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const today = new Date();
 var showDate = new Date(today.getFullYear(), today.getMonth(), 1);

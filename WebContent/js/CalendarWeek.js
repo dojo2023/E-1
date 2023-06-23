@@ -1,7 +1,6 @@
 
-/**
- *
- */
+/*週カレンダー*/
+
 const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const today = new Date();
 var showDate = new Date(today.getFullYear(), today.getMonth(), 1);
@@ -11,12 +10,12 @@ window.onload = function () {
 };
 
 function prev() {
-    showDate.setMonth(showDate.getMonth() - 1);
+    showDate.setMonth(showDate.getWeek() - 1);
     showProcess(showDate);
 }
 
 function next() {
-    showDate.setMonth(showDate.getMonth() + 1);
+    showDate.setMonth(showDate.getWeek() + 1);
     showProcess(showDate);
 }
 
@@ -25,7 +24,7 @@ function showProcess(date) {
     var month = date.getMonth();
     document.querySelector('#header').innerHTML = (month + 1) + "/" + year;
 
-    var calendar = createProcess(year, month);
+    var calendar = createProcess(month, week);
     document.querySelector('#calendar').innerHTML = calendar;
 
     // 各日付セルにクリックイベントを追加
@@ -37,7 +36,7 @@ function showProcess(date) {
     }
 }
 
-function createProcess(year, month) {
+function createProcess(month, week) {
     var calendar = "<table><tr class='dayOfWeek'>";
     for (var i = 0; i < week.length; i++) {
         calendar += "<th>" + week[i] + "</th>";
@@ -71,6 +70,8 @@ function createProcess(year, month) {
     }
     return calendar;
 }
+
+/*予定表示*/
 
 function showScheduleInput(date) {
     var scheduleInputArea = document.querySelector('.area-calendardetail');

@@ -710,6 +710,8 @@ left : 22px;
 }
 
 
+/*徹夜モードのONOFF*/
+
 .tetsuyaArea {
 display: none;
 }
@@ -738,4 +740,3 @@ display: inline-block;
   right: 100px;
 }
 
-/**/
