@@ -45,11 +45,18 @@
   <div class="container">
 
 <div class="area-calendarleftmanu">
+<div class="area-change">
+	<div class="change">
+  		<input type="checkbox" id="changeCheckbox" class="changeArea">
+  		<label class="change" for="changeCheckbox">
+    		<img class="weekmonthchange" src="/AllNightCalender/img/週.png" alt="仕事モードの画像" style="display: none;">
+			<img class="weekmonthchange" src="/AllNightCalender/img/月.png" alt="オフの画像" >
+		</label>
+	</div>
+  	</div>
 
 
-<br>
-<br>
-
+<p >週/月</p>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png"alt="タイマー"><p>タイマー</p></div>
@@ -61,10 +68,11 @@
 
 <div class="area-mode">
 	<div class="mode">
-
-
+  		<input type="checkbox" id="modeCheckbox" class="modeArea">
+  		<label class="mode" for="modeCheckbox">
+    		<img class="img-b" src="/AllNightCalender/img/プライベートモード上表示.png"  style="display: none";>
 			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
-
+		</label>
 	</div>
   	</div>
 
