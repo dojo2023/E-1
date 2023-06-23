@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	.timer {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.timerContent {
+		text-align: center;
+	}
+
+
+</style>
+<title>timer</title>
+</head>
+<body>
+	<div class="timer">
+		<div id="t" class="timerContent">
+        <h3>timer</h3>
+
+	          <label for="requirementInput">要件</label><br>
+	          <input type="text" id="requirementInput" value="" name="requirementInput" required><br>
+	          <label >開始時間</label><br>
+	          <input type="time" id="startTimeInput"  value="" ><br>
+	          <label for="elapsedTimeInput">経過時間</label><br>
+	          <input type="text" class="a" value="00:00:00" readonly><br>
+	          <input type="button" id="startBtn" value="スタート" onclick="startTimer()">
+	          <input type="button" id="stopBtn" value="ストップ" onclick="stopTimer()" style="display: none;">
+	          <input type="button" onclick="saveTimer()" value="保存">
+        </div>
+	</div>
+</body>
+<script>
+</script>
+</html>
