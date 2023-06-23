@@ -25,7 +25,7 @@
 
 <p >週/月</p>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
-    <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div>
+    <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードon.png"alt="プライベートモード"><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png"alt="タイマー"><p>タイマー</p></div>
 </div>
 
@@ -37,8 +37,8 @@
 	<div class="mode">
   		<input type="checkbox" id="modeCheckbox" class="modeArea">
   		<label class="mode" for="modeCheckbox">
-    		<img class="img-b" src="/AllNightCalender/img/プライベートモード上表示.png"  style="display: none";>
-			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
+    		<img class="img-b" src="/AllNightCalender/img/仕事モード上表示.png"  style="display: none";>
+			<img class="img-p" src="/AllNightCalender/img/プライベートモード上表示.png" >
 		</label>
 	</div>
   	</div>
