@@ -63,7 +63,7 @@
     <div class="area-icon" id="main-icon"></div>
     <div class="area-calendardetail">
       <a></a>
-
+	<div id="timershow"></div>
 <div class ="register-area">
       <input type="text" class="schedule-input" placeholder="用件">
       <input type="text" class="schedule-input" placeholder="開始時間">

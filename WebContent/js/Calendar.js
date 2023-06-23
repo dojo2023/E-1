@@ -176,7 +176,7 @@ function showMenu ()
     var end = document.getElementById("end");
     var Timerflag = 0;
     let mainTimer = document.getElementById('timershow');
-    var datail = document.getElementById("detail");
+    var datail = document.getElementById("register-area");
     function showMenuTimer ()
     {
 
