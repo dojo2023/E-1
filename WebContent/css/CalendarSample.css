@@ -124,18 +124,12 @@
     "dayview tetsuya-mode"
     "prev-next prev-next";
   grid-area: upmanu-3content;
-  	max-height:150px;
 }
 
 
 /*徹夜モード表示*/
 .tetsuya-mode {
 	grid-area: tetsuya-mode;
-}
-
-.tetsuya{
-	position: relative;
-	left: 400px; /*追記*/
 }
 
 
@@ -200,4 +194,15 @@ html, body , .container {
   position: relative;
 }
 
+.container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
 
