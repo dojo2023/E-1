@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -7,26 +6,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/CalendarPrivateTetsuya.css">
+  <link rel="stylesheet" href="css/CalendarPrivate.css">
 </head>
 <body>
   <div class="container">
 
 <div class="area-calendarleftmanu">
-<div class="area-change">
-	<div class="change">
-  		<input type="checkbox" id="changeCheckbox" class="changeArea">
-  		<label class="change" for="changeCheckbox">
-    		<img class="weekmonthchange" src="/AllNightCalender/img/週.png" alt="仕事モードの画像" style="display: none;">
-			<img class="weekmonthchange" src="/AllNightCalender/img/月.png" alt="オフの画像" >
-		</label>
-	</div>
-  	</div>
 
 
-<p >週/月</p>
-    <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
-    <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div>
+
+<br>
+   <!--   <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードoff.png"alt="仕事モード"><p>仕事モード</p> </div>-->
+    <div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarServlet"> <img src="/AllNightCalender/img/カレンダー仕事モードoff.png" alt="プライベートモード"></a></div>
+    <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードon.png"alt="プライベートモード"><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png"alt="タイマー"><p>タイマー</p></div>
 </div>
 
@@ -35,13 +27,9 @@
     <h1 id="header"></h1>
 
 <div class="area-mode">
-	<div class="mode">
-  		<input type="checkbox" id="modeCheckbox" class="modeArea">
-  		<label class="mode" for="modeCheckbox">
-    		<img class="img-b" src="/AllNightCalender/img/プライベートモード上表示.png"  style="display: none";>
-			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
-		</label>
-	</div>
+
+			<img class="img-p" src="/AllNightCalender/img/プライベートモード上表示.png" >
+
   	</div>
 
   	</div>
@@ -56,8 +44,7 @@
 
 
     <div class="area-calendarday">
-    <!-- カレンダー -->
-     <a><div id="calendar"></div></a>
+     <a><!-- カレンダー --><div id="calendar"></div></a>
 
 
     </div>
@@ -91,5 +78,5 @@
 </body>
 
 
-<script src="js/CalendarPrivateTetsuya.js"></script>
+<script src="js/Calendar.js"></script>
 </html>
