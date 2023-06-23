@@ -1,0 +1,67 @@
+    /*ハンバーガーメニュー*/
+    .site-menu {
+        position: fixed;
+        color: #fff;
+        background-color: rgba(174, 174, 174, 0.8);
+        padding-left: 16%;
+        padding: 6.8%;
+        padding-bottom: 50px;
+        display: none;
+        z-index:1;
+    }
+
+    .site-menu.is-show {
+        height: 100%;
+        right: 0;
+        display: block;
+         z-index: 3;
+    }
+
+    .site-menu ul {
+        padding-left: 0;
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .site-menu a {
+  		color:inherit;
+  		text-decoration: none;
+  	}
+
+    .site-menu li {
+        list-style:none;
+        /*margin-top: 60px;*/
+        text-align: center;
+
+    }
+
+    #toggle-menu-button {
+		background-color: transparent;
+        position: fixed;
+        right: 15px;
+        top: 40px;
+        display: block;
+        text-align:center;
+        width: 45px;
+        height: 40px;
+        border: none;
+        outline: none;
+        z-index: 10;
+    }
+    .menu{
+	width: 35px;
+	height: 35px;
+    }
+
+    #toggle-menu-button:hover {
+        background-image: url('img/ハンバーガーメニューオーバーレイ.png');
+
+        top: 43px;
+    }
+
+
+
+    /*ここまでハンバーガーメニュー*/
+

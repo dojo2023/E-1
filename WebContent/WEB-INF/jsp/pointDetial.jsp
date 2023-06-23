@@ -10,9 +10,52 @@
 <meta charset="utf-8">
 <script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
 <title>ポイント詳細画面</title>
-
+<link rel="stylesheet" href="css/pointDetial.css">
 </head>
+<header>
 
+
+<div id="menu" class="site-menu">
+    <ul>
+     	<a href="/AllNightCalender/PointDetailsServlet"><li>ポイント詳細</a></li>
+        <a href="/AllNightCalender/FAQServlet"><li>よくある質問</li></a>
+        <a href="/AllNightCalender/InquiryServlet"><li>お問い合わせ</li></a>
+        <a href="/AllNightCalender/LogoutServlet"><li>ログアウト</li></a>
+    </ul>
+</div>
+
+<button id="toggle-menu-button" onclick="showMenu()"><img src="/AllNightCalender/img/ハンバーガーメニュー.png"alt="" class="menu"></button>
+
+
+
+<script>
+const mainIcon = document.getElementById('main-icon');
+fetch('js/icon_content.html')
+  .then(response => response.text())
+  .then(html => {
+    mainIcon.innerHTML = html;
+  });
+
+var flag = 0;
+
+function showMenu ()
+{
+if(flag == 0)
+{
+// クラスを追加している
+document.getElementById("menu").classList.add("is-show");
+flag = 1;
+}
+else
+{
+// クラスを削除している
+document.getElementById("menu").classList.remove("is-show");
+flag = 0;
+}
+}
+</script>
+
+</header>
 <body>
 <div id='myDiv'></div>
 
@@ -65,7 +108,7 @@ var layout = {
 Plotly.newPlot('myDiv', data, layout);
 
 </script>
-<button onclick="location.href='//AllNightCalender/CalendarServle'">ホームに戻る</button>
+<a href="/AllNightCalender/CalendarServlet" class="homebutton">ホームに戻る</a>
 </body>
 
 </html>
