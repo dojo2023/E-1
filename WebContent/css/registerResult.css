@@ -32,6 +32,10 @@ h3 {
   transform: translateY(2px);
 }
 
+#error {
+	color:orange;
+}
+
 .wrap {
 	font-size: 30px;
 	display: flex;

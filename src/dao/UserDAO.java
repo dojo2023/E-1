@@ -62,6 +62,57 @@ public class UserDAO {
 	}
 
 
+	//新規登録時のID確認
+	public boolean isOkId(User user) {
+		Connection conn = null;
+		boolean result = false;
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+			// SELECT文を準備する
+			String sql = "select count(*) from USER where ID = ? ";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, user.getId());
+
+			// SELECT文を実行し、結果表を取得する
+			ResultSet rs = pStmt.executeQuery();
+
+			// ユーザーIDが一致するユーザーがいたかどうかをチェックする
+			rs.next();
+			if (rs.getInt("count(*)") == 0) {
+				result = true;
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			result = false;
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			result = false;
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+					result = false;
+				}
+			}
+		}
+
+		// 結果を返す
+		return result;
+	}
+
 	// 引数accountで指定されたレコードを登録し、成功したらtrueを返す
 	public boolean insert(User account) {
 		Connection conn = null;

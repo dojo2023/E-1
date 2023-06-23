@@ -14,10 +14,15 @@
 	<div class="Content">
 		<form name="myform" action="LoginServlet" method="post">
 		    <div class="idpw">
-				<input id="userID" placeholder="ID"  type="text" name="userID"><br>
-				<input id="userPW" placeholder="PW"  type="password" name="userPW">
-				<span id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></span>
+		    ログインID：<br>
+				<input id="userID" type="text" name="userID"><br>
+			パスワード:
+				<div class="Pweyesolid">
+					<input id="userPW" type="password" name="userPW">
+					<span id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></span>
+				</div>
 			</div>
+			<div id="error">${result }</div>
 			<div class="newLogin">
 				<a  id="newlogin" href="/AllNightCalender/RegisterServlet">新規会員登録はこちら</a>
 			</div>

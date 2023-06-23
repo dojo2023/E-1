@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.UserDAO;
 import model.User;
 
 /**
@@ -44,12 +45,23 @@ public class RegisterServlet extends HttpServlet {
 		user.setF_name(userName);
 		user.setPw(userPW);
 
-		HttpSession session = request.getSession();
-		session.setAttribute("user", user);
+		UserDAO uDao = new UserDAO();
 
-		// にフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/registerCheck.jsp");
-		dispatcher.forward(request, response);
+		if(uDao.isOkId(user)) {
+			HttpSession session = request.getSession();
+			session.setAttribute("user", user);
+
+			// registerCheck.jspにフォワードする
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/registerCheck.jsp");
+			dispatcher.forward(request, response);
+		} else {
+
+			request.setAttribute("result","※入力されたIDはすでに登録されています。");
+
+			// register.jspにフォワードする
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/register.jsp");
+			dispatcher.forward(request, response);
+		}
 	}
 
 }

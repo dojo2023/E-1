@@ -3,13 +3,6 @@
  */
 	'use strict';
 
-    function resetContent () {
-    	const id = document.getElementById('userID');
-		const pass = document.getElementById('userPW');
-
-    	id.placeholder = "ID";
-    	pass.placeholder = "PW";
-    }
 
 	document.getElementById("sendBtn").onclick = function (e) {
 		e.preventDefault();

@@ -40,6 +40,17 @@ img {
 	margin-bottom: 10px;
 }
 
+
+
+
+.text {
+	color:white;
+}
+
+#error {
+	color:orange;
+}
+
 #sendBtn {
 	margin-left:352px;
 	margin-right: 3px;

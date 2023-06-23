@@ -12,6 +12,7 @@
 	<div id="content"></div>
 	<div class="wrap">
 		<h3>登録が${result }しました</h3>
+		<span id="error" >${error }</span>
 		<button type="button" id="backBtn" onclick="location.href='LoginServlet'" >ログイン画面へ</button>
 	</div>
 </body>
