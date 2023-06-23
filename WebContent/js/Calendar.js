@@ -32,6 +32,12 @@ function showProcess(date) {
     var dateCells = document.querySelectorAll('.date-cell');
     for (var i = 0; i < dateCells.length; i++) {
         dateCells[i].addEventListener('click', function (event) {
+            // 選択した日付のセルに赤い枠線を付ける
+            var selectedDateCell = document.querySelector('.date-cell.selected');
+            if (selectedDateCell) {
+                selectedDateCell.classList.remove('selected');
+            }
+            this.classList.add('selected');
             showScheduleInput(this.dataset.date);
         });
     }

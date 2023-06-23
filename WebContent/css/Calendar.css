@@ -95,7 +95,6 @@ width: 40px;
 /*全体の背景色*/
 .area-calendardetail{
  background-color:cornflowerblue;
-     z-index: 1;
 }
 
 
@@ -107,6 +106,8 @@ table {
     width: 50px;
      border-top: 2px solid #6495ed;
 }
+
+
 
 /*罫線見えないように*/
 #calendar th {
@@ -126,11 +127,13 @@ table {
     color: blue;
 }
 
+
  td {
     outline: 1px solid #ddd;
     padding:5px 0 50px 5px;
     margin:20px 0 0 0 ;
     text-align:left;
+    z-index:9999;
   }
 
 
@@ -160,7 +163,7 @@ td.disabled:last-child{
 
 /*本日*/
 td.today {
-    background-color: #D65E72;
+    background-color: #4B7BD0;
     color: #fff;
 }
 
@@ -174,7 +177,6 @@ td.today {
 #next-prev-button button{
 	 background-color:#99999000;
     font-size: 1.2rem;
-    border: 0;
 }
 
 
@@ -371,5 +373,26 @@ display: inline-block;
  height:100px;
  width: 300px;
 }
+
+
+
+/*日付選択時の枠線 CSS*/
+.date-cell.selected {
+  position: relative;
+}
+
+
+.date-cell.selected::before {
+  content: "";
+  position: absolute;
+  top: 1.5px; /* 線の位置を調整 */
+  left: 1.5px; /* 線の位置を調整 */
+  right: 1.5px; /* 線の位置を調整 */
+  bottom: 1.5px; /* 線の位置を調整 */
+  border: 1.5px solid red; /* 線のスタイルや太さを適宜調整 */
+  box-sizing: border-box;
+}
+
+
 
 /**/
