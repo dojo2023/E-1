@@ -17,10 +17,10 @@
 
 <div id="menu" class="site-menu">
     <ul>
-     	<a href="/AllNightCalender/BackgroundChangeServlet"><li>背景変更</a></li>
-        <a href="/AllNightCalender/FAQServlet"><li>よくある質問</li></a>
-        <a href="/AllNightCalender/InquiryServlet"><li>お問い合わせ</li></a>
-        <a href="/AllNightCalender/LogoutServlet"><li>ログアウト</li></a>
+     	<li><a href="/AllNightCalender/BackgroundChangeServlet">背景変更</a></li>
+        <li><a href="/AllNightCalender/FAQServlet">よくある質問</a></li>
+        <li><a href="/AllNightCalender/InquiryServlet">お問い合わせ</a></li>
+        <li><a href="/AllNightCalender/LogoutServlet">ログアウト</a></li>
     </ul>
 </div>
 

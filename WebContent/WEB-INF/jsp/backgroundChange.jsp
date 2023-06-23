@@ -19,20 +19,26 @@
 <main>
   <div class="wrapper">
 	<div class="box btns">
-		<input type ="submit" class ="btn" value = "Sランク" >
-		<input type ="submit" class ="btn" value = "Aランク" ><br>
-		<input type ="submit" class ="btn" value = "月限定Sランク" >
-		<input type ="submit" class ="btn" value = "月限定Aランク" ><br>
-		<input type ="submit" class ="btn" value = "通常" ><br>
-		<input type ="submit" class ="btn" value = "確定" >
-		<input type ="submit" class ="btn" value = "選択解除" ><br>
-		<a href="/AllNightCalender/WebContent/css/backgroundChange.css">ホームに戻る</a>
+	<form method= "post" action="/AllNightCalender/BackgroundChangeServlet">
+  	<input type="button" id="button1" onclick="setUrl1()" value="${j.SC_S }">
+  	<input type="button" id="button2" onclick="setUrl2()" value="${j.SC_A }"><br>
+<!-- 		<input type ="botton" class ="btn" value = "月限定Sランク" >
+		<input type ="botton" class ="btn" value = "月限定Aランク" ><br>
+		<input type ="botton" class ="btn" value = "通常" ><br>
+ -->
+		<input type ="botton" class ="btn" value = "選択解除" ><br>
+
+		<input type="hidden" id="hidden" name="url" value="">
+  		<input type="submit" value="確定">
+	</form>
+
+		<a href="/AllNightCalender/src/servlet/CalendarServlet.java">ホームに戻る</a>
 	</div>
 
 
 	<div class="box">
 
-		<p>あなたは今[ ]ランクです<br>
+		<p>あなたは今[${xx} ]ランクです<br>
 		   暗くなっている背景は<br>
 		   選択・設定出来ません</p><br>
 
@@ -68,6 +74,21 @@
 
 </main>
 </body>
+<script>
+	function setUrl1() {
+		var hidden = document.getElementById("hidden");
+		var button = document.getElementById("button1");
+		hidden.value = button.value;
+	}
+
+	function setUrl2() {
+		var hidden = document.getElementById("hidden");
+		var button = document.getElementById("button2");
+		hidden.value = button.value;
+	}
+
+
+</script>
 
 
 
