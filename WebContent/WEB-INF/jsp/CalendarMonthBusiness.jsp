@@ -1,54 +1,20 @@
-<!--
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-
-<link rel="stylesheet" href="css/Calendar.css">
-<title>Insert title here</title>
-</head>
-<body>
-<div class="wrapper">
-<div class="area-calendarday">
--->
-<!--  <div class="container">-->
-    <!-- xxxx年xx月を表示 -->
-<!--      <h1 id="header"></h1>-->
-
-    <!-- ボタンクリックで月移動 -->
- <!--   <div id="next-prev-button">
-        <button id="prev" onclick="prev()">></button>
-        <button id="next" onclick="next()">></button>
-    </div>
-  -->
-    <!-- カレンダー
-    <div id="calendar"></div>
-   </div>
-</div>   -->
-  <!--  </div>  -->
-<!--
-<script src="js/Calendar.js"></script>
-</body>
-</html>
--->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/Calendar.css">
+  <link rel="stylesheet" href="css/CalendarBusiness.css">
 </head>
 <body>
   <div class="container">
 
 <div class="area-calendarleftmanu">
 
-
-
-<br>
+<p >週/月</p>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png"alt="タイマー"><p>タイマー</p></div>
@@ -59,9 +25,13 @@
     <h1 id="header"></h1>
 
 <div class="area-mode">
-
+	<div class="mode">
+  		<input type="checkbox" id="modeCheckbox" class="modeArea">
+  		<label class="mode" for="modeCheckbox">
+    		<img class="img-b" src="/AllNightCalender/img/プライベートモード上表示.png"  style="display: none";>
 			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
-
+		</label>
+	</div>
   	</div>
 
   	</div>
@@ -110,5 +80,5 @@
 </body>
 
 
-<script src="js/Calendar.js"></script>
+<script src="js/CalendarBusiness.js"></script>
 </html>

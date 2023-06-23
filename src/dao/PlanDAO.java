@@ -1,16 +1,18 @@
-/*
 package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.Plan;
 
 public class PlanDAO {
 		// 予定一覧の取得
-		public List<Plan> look(Plan plan) {
+		public List<Plan> look(Plan plans) {
 		Connection conn = null;
 		List<Plan> planList = new ArrayList<Plan>();
 
@@ -26,28 +28,25 @@ public class PlanDAO {
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
-				if (plan.getId() != null && !plan.getId().equals("")) {
-					pStmt.setString(1, plan.getId());
+				if (plans.getId() != null && !plans.getId().equals("")) {
+					pStmt.setString(1, plans.getId());
 				}
 				else {
 					pStmt.setString(1, null);
 				}
-				if (plan.getMode() != null && !plan.getMode().equals("")) {
-					pStmt.setString(2, plan.getMode());
+				if (plans.getMode() != null && !plans.getMode().equals("")) {
+					pStmt.setString(2, plans.getMode());
 				}
 				else {
 					pStmt.setString(2, null);
 				}
 
-
-				// SQL文を実行する
-				if (pStmt.executeUpdate() == 1) {
-					result = true;
-				}
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
 
 				// 結果表をコレクションにコピーする
 				while (rs.next()) {
-					Plan plan = new Pan(
+					Plan plan = new Plan(
 					rs.getString("NUMBER"),
 					rs.getString("ID"),
 					rs.getString("MODE"),
@@ -91,7 +90,7 @@ public class PlanDAO {
 
 
 		// 引数scheduleで指定されたレコードを登録し、成功したらtrueを返す
-		public boolean insert(Plan schedule) {
+		public boolean insert(String id,Plan schedule) {
 			Connection conn = null;
 			boolean result = false;
 
@@ -107,8 +106,8 @@ public class PlanDAO {
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
-				if (schedule.getId() != null && !schedule.getId().equals("")) {
-					pStmt.setString(1, schedule.getId());
+				if (id != null && !id.equals("")) {
+					pStmt.setString(1,id);
 				}
 				else {
 					pStmt.setString(1, null);
@@ -297,7 +296,7 @@ public class PlanDAO {
 	}
 
 	// データの更新
-	public boolean update(User date) {
+	public boolean update(Plan date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -442,4 +441,3 @@ public class PlanDAO {
 		return result;
 	}
 }
-*/
