@@ -11,7 +11,8 @@
 .mtj.tmp/
 
 # Package Files #
-
+apu.mv.db
+apu.trace.db
 *.war
 *.nar
 *.ear
