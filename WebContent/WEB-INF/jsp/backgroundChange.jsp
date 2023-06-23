@@ -23,22 +23,22 @@
   	<input type="button" id="button1" onclick="setUrl1()" value="${j.SC_S }">
   	<input type="button" id="button2" onclick="setUrl2()" value="${j.SC_A }"><br>
 <!-- 		<input type ="botton" class ="btn" value = "月限定Sランク" >
-		<input type ="botton" class ="btn" value = "月限定Aランク" ><br> -->
+		<input type ="botton" class ="btn" value = "月限定Aランク" ><br>
 		<input type ="botton" class ="btn" value = "通常" ><br>
-
+ -->
 		<input type ="botton" class ="btn" value = "選択解除" ><br>
 
 		<input type="hidden" id="hidden" name="url" value="">
   		<input type="submit" value="確定">
 	</form>
 
-		<a href="/AllNightCalender/WebContent/css/backgroundChange.css">ホームに戻る</a>
+		<a href="/AllNightCalender/src/servlet/CalendarServlet.java">ホームに戻る</a>
 	</div>
 
 
 	<div class="box">
 
-		<p>あなたは今[ ]ランクです<br>
+		<p>あなたは今[${xx} ]ランクです<br>
 		   暗くなっている背景は<br>
 		   選択・設定出来ません</p><br>
 
