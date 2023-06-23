@@ -26,6 +26,11 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		session.invalidate();
+
+		String tetuya =  (String) request.getAttribute("testuya");
+
+		request.setAttribute("tetuya",tetuya);
+
 		// ログインページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
 		dispatcher.forward(request, response);
@@ -61,7 +66,7 @@ public class LoginServlet extends HttpServlet {
 			request.setAttribute("result","※IDまたはパスワードに間違いがあります。");
 
 			// 結果ページにフォワードする
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/register.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
 			dispatcher.forward(request, response);
 		}
 	}

@@ -11,7 +11,8 @@
 <body>
 	<div id="content"></div>
 	<div class="wrap">
-		<h1>新規登録</h1>
+		<h1>登録内容はこれでよろしいですか？</h1>
+
 		<form action="RegisterCheckServlet" method="post">
 		<table>
 			<tr>

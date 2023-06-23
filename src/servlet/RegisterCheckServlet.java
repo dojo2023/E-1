@@ -46,12 +46,12 @@ public class RegisterCheckServlet extends HttpServlet {
 			// RegisterResultServletにフォワードする
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/registerResult.jsp");
 			dispatcher.forward(request, response);
-
 		}
 		else {
 			// 登録失敗
 			// リクエストスコープに、タイトル、メッセージ、戻り先を格納する
 			request.setAttribute("result","失敗");
+			request.setAttribute("error","データベース内エラー");
 
 			//  RegisterResultServletにフォワードする
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/registerResult.jsp");

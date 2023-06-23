@@ -31,24 +31,9 @@
 		}
 
 
-		if(id_len > 20) {
- 			id.placeholder = "※20文字以上の文字は入力しないでください";
- 			id.value = "";
- 		}
-
- 		if(f_name_len > 20) {
-			f_name.placeholder = "※20文字以上の文字は入力しないでください";
-			f_name.value = "";
- 		}
-
- 		if(l_name_len > 20) {
-			l_name.placeholder = "※20文字以上の文字は入力しないでください";
-			l_name.value = "";
- 		}
-
- 		if(pass_len > 20) {
-			pass.placeholder = "※20文字以上の文字は入力しないでください";
-			pass.value = "";
+		var error = document.getElementById("error");
+		if(id_len > 20 || f_name_len > 20 || l_name_len > 20 || pass_len > 20) {
+ 			error.textContent = "※20文字以上の文字は入力しないでください";
  		}
 
  		if((0 < id_len && id_len < 21) && (0 < l_name_len && l_name_len < 21) && (0 < f_name_len && f_name_len < 21) && (0 < pass_len && pass_len < 21)){
@@ -61,7 +46,7 @@
         return Math.floor((Math.random() * document.documentElement.clientWidth + 1)) + "px";
     }
 
-    function setRandomTop(imageHeight) {
+    function setRandomTop() {
         return Math.floor((Math.random() * document.documentElement.clientHeight + 1)) + "px";
     }
 
