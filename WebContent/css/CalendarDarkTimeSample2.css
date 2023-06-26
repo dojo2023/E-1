@@ -1,7 +1,7 @@
 @charset "utf-8";
 body{
  max-width:98%;
- background-color:#545454;
+ background-color:red;
 }
   /*領域生成*/
 .container {
@@ -55,7 +55,7 @@ width: 40px;
 }
 /*領域を赤線で囲む*/
     .container * {
-      /* border: 1px solid red; */
+      /*border: 1px solid red;*/
       position: relative;
     }
 /*全体*/
@@ -67,12 +67,11 @@ width: 40px;
 #header {
     text-align: left;
     font-size: 24px;
-	 width: 13%;
+ width: 13%;
      /*左すぎるので右に寄せる*/
     height: 14%;
     padding: 0 80px 0 30px;
     margin: 0.5rem 0 0;
-	color:white;
 }
 #header::first-letter{
 	font-size:60px;
@@ -108,17 +107,16 @@ width: 40px;
     text-align: center;
     width: 80px;
     height: 20px;
-	color:white;
 }
 /*日曜日のth*/
 #calendar th:first-child {
-    color: #ffaaaa;
+    color: red;
 }
 /*土曜日のth*/
 #calendar th:last-child {
-    color: #a8d7ff;
+    color: blue;
 }
- td { color: white;
+ td {
       outline: 1px solid #ddd;
     padding: 5px 0 40px 5px;
     margin:20px 0 0 0;
@@ -127,11 +125,11 @@ width: 40px;
   }
 /*日曜日*/
 td:first-child {
-    color: #ffb2b2;
+    color: red;
 }
 /*土曜日*/
 td:last-child {
-    color: #9595ff;
+    color: blue;
 }
 /*前後月の日付*/
 td.disabled {
@@ -139,11 +137,11 @@ td.disabled {
 }
 /*前後月の日曜日*/
 td.disabled:first-child{
-    color: rgb(255 109 109 / 50%);
+    color: rgba(255,0,0,0.5);
 }
 /*前後月の土曜日*/
 td.disabled:last-child{
-    color: rgb(109 109 255 / 53%);
+    color: rgba(0,0,255,0.5);
 }
 /*本日*/
 td.today {
@@ -157,9 +155,8 @@ td.today {
 /*月移動ボタンの背景色を透明にした*/
 #next-prev-button button{
 	 background-color:#99999000;
-	 font-size: 1.2rem;
-	 border: 0;
-	 color: white;
+    font-size: 1.2rem;
+    border: 0;
 }
 /*#next-prev-button button:hover{
     background-color: #D4BB92;

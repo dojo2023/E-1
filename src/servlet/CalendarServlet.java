@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 import dao.PlanDAO;
 import model.Plan;
 
-
 /**
  * Servlet implementation class CalendarServlet
  */
