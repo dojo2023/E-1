@@ -403,14 +403,14 @@ offImagetetsuyatime.style.display = 'inline-block';
 
 
 function BGchange(){
-	var tetsuyatimeCheckbox　= document.getElementById("tetsuyatimeCheckbox");
+	var tetsuyatimeCheckbox = document.getElementById("tetsuyatimeCheckbox");
      var cssFile = document.getElementById("cssFile");
 
   // チェックボックスがチェックされている場合
   if (tetsuyatimeCheckbox.checked) {
     cssFile.href = "css/CalendarDarkTimeSample2.css"; // ダークモードCSSを適用する
   } else {
-    cssFile.href = "Calendar.css"; // 通常CSS
+    cssFile.href = "css/Calendar.css"; // 通常CSS
   }
 }
 
