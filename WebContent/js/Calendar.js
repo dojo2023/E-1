@@ -15,6 +15,9 @@ function prev() {
     showProcess(showDate);
 }
 
+
+/*次の月*/
+
 function next() {
     showDate.setMonth(showDate.getMonth() + 1);
     showProcess(showDate);
