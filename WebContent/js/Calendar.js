@@ -179,23 +179,6 @@ function showMenu ()
       }
     });
 
-
-    const tetsuyatimeCheckbox = document.getElementById('tetsuyatimeCheckbox');
-    const onImagetetsuyatime = document.querySelector('.onImagetetsuyatime');
-    const offImagetetsuyatime = document.querySelector('.offImagetetsuyatime');
-
-    tetsuyatimeCheckbox.addEventListener('change', function() {
-      if (this.checked) {
-        onImagetetsuyatime.style.display = 'inline-block';
-        offImagetetsuyatime.style.display = 'none';
-      } else {
-        onImagtetsuyatimee.style.display = 'none';
-        offImagetetsuyatimes.style.display = 'inline-block';
-      }
-    });
-
-
-
   //timer js
     var youken = document.getElementById("youken");
     var start = document.getElementById("start");

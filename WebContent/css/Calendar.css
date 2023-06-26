@@ -398,11 +398,7 @@ a:visited{
  color:black;
 }
 
-/*左メニューの画像サイズがでかすぎる*/
-
 .sigoto img{width: 80px;left: 12px;}
-
-.tetsuyatime img{width: 80px;left: 12px;}
 
 
 /*徹夜*/
@@ -428,6 +424,31 @@ display: inline-block;
   top: 30px;
   right: 100px;
 }
+
+
+.tetsuyatimeArea {
+display: none;
+left: 43px;
+}
+.tetsuyatimeArea:checked + label .onImagetetsuyatime {
+display: inline-block;
+		  width: 7px;
+}
+.tetsuyatimeArea:not(:checked) + label .offImagetetsuyatime {
+display: inline-block;
+		  width: 7px;
+}
+.offImagetetsuyatime{
+  transform: scale(17);
+}.onImagetetsuyatime{
+  transform: scale(22);
+}
+.tekitoutetsuyatime{
+top:45px;
+left: 43px;
+}
+
+
 
 
 .img-p {   /*仕事モード画像*/
