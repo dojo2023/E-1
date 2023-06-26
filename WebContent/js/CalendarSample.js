@@ -15,6 +15,9 @@ function prev() {
     showProcess(showDate);
 }
 
+
+/*次の月*/
+
 function next() {
     showDate.setMonth(showDate.getMonth() + 1);
     showProcess(showDate);
@@ -62,14 +65,14 @@ function createProcess(year, month) {
             if (i == 0 && j < startDayOfWeek) {
                 calendar += "<td class='disabled'>" + (lastMonthEndDate - startDayOfWeek + j + 1) + "</td>";
             } else if (count >= endDate) {
-                calendar += "<td class='disabled'>" + (count - endDate) + "</td>";
+                calendar += "<td class='disabled'>" + (count - endDate + 1) + "</td>";
                 count++;
             } else {
                 count++;
                 if (year == today.getFullYear() && month == today.getMonth() && count == today.getDate()) {
                     calendar += "<td class='today date-cell' data-date='" + count + "'>" + count + "</td>";
                 } else {
-                    calendar += "<td class='date-cell' data-date='" + count + "'>" + count + "</td>";
+                    calendar += "<td class='date-cell' data-date='" + count + "'>" + count +"</td>";
                 }
             }
         }
@@ -83,7 +86,7 @@ function showScheduleInput(date) {
     scheduleInputArea.innerHTML = "";
 
     var scheduleDate = document.createElement('h3');
-    scheduleDate.textContent = date + "/" + (showDate.getMonth() + 1) + "/" + showDate.getFullYear();
+    scheduleDate.textContent = showDate.getFullYear();  + "/" + (showDate.getMonth() + 1) + "/" + date ;
 
     var schedulearea = document.createElement('a');
 

@@ -86,7 +86,7 @@ function showScheduleInput(date) {
     scheduleInputArea.innerHTML = "";
 
     var scheduleDate = document.createElement('h3');
-    scheduleDate.textContent = date + "/" + (showDate.getMonth() + 1) + "/" + showDate.getFullYear();
+   scheduleDate.textContent = showDate.getFullYear()  + "/" + (showDate.getMonth() + 1) + "/" + date ;
 
     var schedulearea = document.createElement('a');
 
