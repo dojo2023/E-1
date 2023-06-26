@@ -67,46 +67,59 @@
     <div class="area-calendardetail">
       <a></a>
 	<div id="timershow"></div>
-<div class ="register-area">
-	  <form name="myform" action="CalendarMonthBusinessServlet" method="get">
-	  	<input type="submit" value="新規登録">
-	  </form>
+	<div class ="register-area">
+	<form method="POST" action="/AllNightCalender/CalendarMonthBusinessServletUpdate">
+		<table>
+		<tr>
+		<td>用件</td>
+		</tr>
+		<tr>
+		<td><input type="text" name="what" value="${e.what}"></td>
+		</tr>
+		<tr>
+		<td>日時</td>
+		</tr>
+		<tr>
+		<td><input type="text" name="s_day" value="${e.s_day}"></td>
+		<td><input type="text" name="e_day" value="${e.e_day}"></td>
+		</tr>
+		<tr>
+		<td><input type="text" name="s_time" value="${e.s_time}"></td>
+		<td><input type="text" name="e_time" value="${e.e_time}"></td>
+		</tr>
+		<tr>
+		<td>色</td>
+		</tr>
+		</table>
+		<table value="${e.color}">
+		<tr>
+		<td><input type="radio" name="color" value="青" checked></td>
+		<td><input type="radio" name="color" value="緑"></td>
+		<td><input type="radio" name="color" value="赤"></td>
+		<td><input type="radio" name="color" value="橙"></td>
+		<td><input type="radio" name="color" value="黄"></td>
+		<td><input type="radio" name="color" value="黒"></td>
+		</tr>
+		</table>
+		<table>
+		<tr>
+		<td>メモ</td>
+		</tr>
+		<tr>
+		<td><input type="text" name="memo" value="${e.memo}"></td>
+		</tr>
 
-	<c:if test="${empty planList}">
-		<p>今日は暇です。</p>
-	</c:if>
-
-
-	<c:forEach var="e" items="${planList}" >
-		<table class="list">
+		</table>
+		<table>
 			<tr>
-				<td>No.${e.number}</td>
-			</tr>
-			<tr>
-				<td>${e.s_day}</td>
-				<td>${e.e_day}</td>
-			</tr>
-			<tr>
-				<td>${e.s_time}</td>
-				<td>${e.e_time}</td>
-			</tr>
-			<tr>
-				<td>${e.what}</td>
-			</tr>
-
-			<tr>
-				<form name="date" action="CalendarMonthBusinessServletUpdate" method="get">
-					<td><input type="submit" name="SUBMIT" value=${e.number}></td>
-				</form>
-				<form name="date" action="CalendarMonthBusinessDerete" method="get">
-				<td><input type="submit" name="SUBMIT" value=${e.number}></td>
-				</form>
+				<td>
+					<input type="submit" name="REGIST" value="更新">
+					<input type="reset" name="reset" value="リセット">
+				</td>
 			</tr>
 		</table>
-		<br>
-		<hr>
-		<br>
-	</c:forEach>
+	</form>
+
 
  </div>
 

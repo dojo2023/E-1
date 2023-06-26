@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import dao.PlanDAO;
+import model.Plan;
 
 /**
  * Servlet implementation class CalendarServlet
@@ -27,7 +31,13 @@ public class CalendarServlet extends HttpServlet {
 		String x = (String)session.getAttribute("mode");
 		String y = (String)session.getAttribute("tetsuya");
 		String z = (String)session.getAttribute("tetsuya_time");
+
+		PlanDAO pDao = new PlanDAO();
+
 		if (x.equals("business") && y.equals("0") && z.equals("0")) {
+			List<Plan> planList = pDao.look((String)session.getAttribute("id"),x);
+			session.setAttribute("planList", planList);
+			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusiness.jsp");
 			dispatcher.forward(request, response);
 		}

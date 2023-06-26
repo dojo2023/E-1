@@ -102,7 +102,9 @@ INSERT INTO user (ID,l_name,f_name,pw,now_point,which,mode_shift,tetsuya,tetsuya
 
 //planテーブルにサンプルデータを登録するSQL文
 INSERT INTO plan (id,mode,which,s_day,s_time,e_day,e_time,what,color,what_details,memo) VALUES ('tetsuya','business','schebule','2023-01-02','1300','2023-01-02','1500','会議','青','全体会議','');
-
+INSERT INTO plan (id,mode,which,s_day,s_time,e_day,e_time,what,color,what_details,memo) VALUES ('tetsuya','business','schebule','2023-06-26','1300','2023-06-26','1500','凄い会議','青','全体会議','');
+INSERT INTO plan (id,mode,which,s_day,s_time,e_day,e_time,what,color,what_details,memo) VALUES ('tetsuya','business','schebule','2023-06-26','1600','2023-06-26','2000','とにかく凄い会議','青','全体会議','');
+INSERT INTO plan (id,mode,which,s_day,s_time,e_day,e_time,what,color,what_details,memo) VALUES ('tarou','business','schebule','2023-06-26','1300','2023-06-26','1500','会議','青','全体会議','');
 
 //pointテーブルにサンプルデータを登録するSQL文
 INSERT INTO point (b_point,p_point,tetsuya_b,tetsuya_p,chance_bonus,b_max,p_max) VALUES ('1','1','15','15','7','5','1');

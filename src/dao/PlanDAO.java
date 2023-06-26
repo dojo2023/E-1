@@ -12,7 +12,7 @@ import model.Plan;
 
 public class PlanDAO {
 		// 予定一覧の取得
-		public List<Plan> look(String id,Plan plans) {
+		public List<Plan> look(String id,String mode) {
 		Connection conn = null;
 		List<Plan> planList = new ArrayList<Plan>();
 
@@ -34,8 +34,8 @@ public class PlanDAO {
 				else {
 					pStmt.setString(1, null);
 				}
-				if (plans.getMode() != null && !plans.getMode().equals("")) {
-					pStmt.setString(2, plans.getMode());
+				if (mode != null && !mode.equals("")) {
+					pStmt.setString(2, mode);
 				}
 				else {
 					pStmt.setString(2, null);
@@ -296,7 +296,7 @@ public class PlanDAO {
 	}
 
 	// データの更新
-	public boolean update(Plan date) {
+	public boolean update(String number,Plan date) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -308,7 +308,7 @@ public class PlanDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 			// SQL文を準備する
-			String sql = "update PLAN set where s_day=?,  s_time=?, e_day=?, e_time=?, what=?, color=?, what_details=?, memo=?  WHERE number=?";
+			String sql = "update PLAN set s_day=?,  s_time=?, e_day=?, e_time=?, what=?, color=?, what_details=?, memo=?  WHERE number=?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
@@ -360,8 +360,8 @@ public class PlanDAO {
 			else {
 				pStmt.setString(8, null);
 			}
-			if (date.getNumber() != null && !date.getNumber().equals("")) {
-				pStmt.setString(9, date.getNumber());
+			if (number != null && !number.equals("")) {
+				pStmt.setString(9, number);
 			}
 			else {
 				pStmt.setString(9, null);
