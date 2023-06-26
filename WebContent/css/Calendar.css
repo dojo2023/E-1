@@ -149,12 +149,12 @@ td.disabled {
 
 /*前後月の日曜日*/
 td.disabled:first-child{
-    color: #ff0000;
+    color: rgba(255,0,0,0.5);
 }
 
 /*前後月の土曜日*/
 td.disabled:last-child{
-    color:blue;
+    color: rgba(0,0,255,0.5);
 }
 
 
