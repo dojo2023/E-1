@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+body{
+ max-width:98%;
+}
   /*領域生成*/
 .container {
     width: 100%;
@@ -15,7 +18,7 @@
 
 .area-calendarleftmanu {
     grid-area: calendarleftmanu;
-     width:120px;
+     /*width:120px;*/
 }
 
 
@@ -50,7 +53,10 @@ width: 40px;
     grid-area: icon;
 }
 .area-calendarday {
+   text-align: center;
     grid-area: calendarday;
+    max-height:00px;
+    height: 20vh;
 }
 .area-calendardetail {
     grid-area: calendardetail;
@@ -60,7 +66,7 @@ width: 40px;
 }
 /*領域を赤線で囲む*/
     .container * {
-      border: 1px solid red;
+      /*border: 1px solid red;*/
       position: relative;
     }
 
@@ -74,10 +80,11 @@ width: 40px;
 #header {
     text-align: left;
     font-size: 24px;
- width: 11%;
+ width: 13%;
      /*左すぎるので右に寄せる*/
-     padding: 0 50px;
-    margin: 1rem 0 0;
+    height: 14%;
+    padding: 0 80px 0 30px;
+    margin: 0.5rem 0 0;
 }
 
 #header::first-letter{
@@ -87,8 +94,10 @@ width: 40px;
 
 /*カレンダー*/
 #calendar {
+    height: 20vh;
     text-align: center;
-     padding: 0 10px;
+    padding: 0 10px;
+    margin: auto;
 }
 
 /*カレンダー詳細画面*/
@@ -100,21 +109,25 @@ width: 40px;
 
 
 /*列幅均等化*/
-table {
+
+#calendar table {
     /* outline: 2px solid #ececec; */
     border-collapse: collapse;
+    /* height: 20vh; */
     table-layout: fixed;
-    width: 50px;
-     border-top: 2px solid #6495ed;
-}
+    margin: auto;
+    border-top: 2px solid #6495ed;
+    height:100%
+    /* display: flex; */
+    }
 
 /*罫線見えないように*/
 #calendar th {
     border-width: 0px;
      padding: 10px;
     text-align: center;
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 20px;
 }
 
 /*日曜日のth*/
@@ -127,10 +140,11 @@ table {
 }
 
  td {
-    outline: 1px solid #ddd;
-    padding:5px 0 50px 5px;
-    margin:20px 0 0 0 ;
+      outline: 1px solid #ddd;
+    padding: 5px 0 40px 5px;
+    margin:20px 0 0 0;
     text-align:left;
+    height: 10px;
   }
 
 
@@ -190,8 +204,13 @@ td.today {
     float: right;
 }
 .area-calendarleftmanu {
-	background-color:#6495ed;
-	height: 700px;
+	background-color:#6495ed;/*背景色*/
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+}
+.area-calendarleftmanu p{
+padding:0 0 0 4px;
 }
  /* === ボタンを表示するエリア ============================== */
 .switchArea {
@@ -260,7 +279,7 @@ td.today {
 /*カレンダー詳細 CSS*/
 
 .area-calendardetail  {
- height:494px;
+ height:250px;
 overflow: scroll;
  padding:0px 10px ;
 }
@@ -272,20 +291,54 @@ overflow: scroll;
 .area-calendardetail div {
     background-color: white;
     margin: 0px 10px;
+     padding: 0 0 0 0;
     border-bottom: 2px solid cornflowerblue;
 }
 
+.area-calendardetail label{
+	padding: 10px 10px;
+}
+
+.area-calendardetail label:first-child{
+    padding: 20px 10px;
+}
+
+#timershow{
+	width:220px;
+}
+
+#timershow #startBtn {
+	width:70px;
+	margin:4px 0 4px 0;
+}
+
+#timershow input{
+	width:70px;
+	margin:4px 0 4px 0;
+}
+
+#timershow input[type="text"] {
+	width:180px;
+}
+
+.timerContent label{
+	display: inline-block;
+	padding:0 0 1px 0;
+}
+
+#timershow h3{
+	margin:3px 0 3px 0;
+}
+
+
 .area-calendardetail input{
  width:200px;
- width: 100%;
- box-sizing: border-box;
- /* padding: 10px; */
+ margin:10px 0;
 }
 
 .area-calendardetail p{
  padding:2px 3px;
 }
-
 /*予定登録画面 ズレの修正*/
 .area-calendardetail input[type="text"] {
  margin: 4px 0px 2px 0px;
@@ -310,9 +363,9 @@ overflow: scroll;
 
 /*登録ボタン*/
 .area-calendardetail button {
-  flex-grow: 1;
-  color:red;
-  margin:10px 0;
+ flex-grow: 1;
+  color: black;
+  margin: 10px 0 5px 10px;
   display:flex;
   flex-direction: column;
 }
@@ -337,10 +390,8 @@ a:visited{
  color:black;
 }
 
-.sigoto img{
-width: 80px;
-left : 22px;
-}
+.sigoto img{width: 80px;left: 12px;}
+
 
 /*徹夜*/
 
@@ -368,7 +419,7 @@ display: inline-block;
 
 
 .img-p {   /*仕事モード画像*/
- height:100px;
+ height:87px;
  width: 300px;
 }
 
@@ -391,3 +442,6 @@ display: inline-block;
 
 
 /**/
+.area-time label{
+	margin:0 10px 0 0;
+}

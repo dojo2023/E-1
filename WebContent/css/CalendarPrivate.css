@@ -424,10 +424,12 @@ display: inline-block;
  /* transform: scale(0); */
 }
 
+
 /*日付選択時の枠線 CSS*/
 .date-cell.selected {
   position: relative;
 }
+
 .date-cell.selected::before {
   content: "";
   position: absolute;
