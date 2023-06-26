@@ -7,10 +7,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/CalendarPrivate.css">
+  <link rel="stylesheet" href="css/CalendarSample.css">
 </head>
 <body>
-
   <div class="container">
 
 <div class="area-calendarleftmanu">
@@ -18,10 +17,11 @@
 
 
 <br>
-  <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードoff.png"alt="仕事モード"><p>仕事モード</p> </div>
-     <!--   <div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarServlet"> <img src="/AllNightCalender/img/カレンダー仕事モードoff.png" alt="プライベートモード"></a></div>-->
-    <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードon.png"alt="プライベートモード"><p>プライベートモード</p></div>
-    <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()"  alt="タイマー"><p>タイマー</p></div>
+    <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
+
+   <!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
+<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a></div>
+    <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
 </div>
 
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
@@ -30,7 +30,7 @@
 
 <div class="area-mode">
 
-			<img class="img-p" src="/AllNightCalender/img/プライベートモード上表示.png" >
+			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
 
   	</div>
 
@@ -66,22 +66,16 @@
     <div class="area-calendardetail">
       <a></a>
 	<div id="timershow"></div>
-
-		<label class="schedule-label">用件</label>
+<div class ="register-area">
       <input type="text" class="schedule-input" placeholder="用件">
-      <label class="schedule-label">開始時間</label>
-      <input type="text" class="schedule-input" placeholder="開始時間"><label>～</label>
-      <br>
-      <label class="schedule-label">終了時間</label>
+      <input type="text" class="schedule-input" placeholder="開始時間">
       <input type="text" class="schedule-input" placeholder="終了時間">
-      <br>
-      <label class="schedule-label">メモ</label>
       <input type="text" class="schedule-input" placeholder="メモ">
       <button type="button" onclick="registerSchedule()">登録</button>
  </div>
 
   </div>
-    <div class="area-time"><label>経過時間</label><input type="text" id="i" value="00:00:00" class="a" required></div>
+    <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
   </div>
 </body>
 

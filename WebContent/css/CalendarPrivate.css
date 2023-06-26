@@ -424,6 +424,23 @@ display: inline-block;
  /* transform: scale(0); */
 }
 
+
+/*日付選択時の枠線 CSS*/
+.date-cell.selected {
+  position: relative;
+}
+
+.date-cell.selected::before {
+  content: "";
+  position: absolute;
+  top: 1.5px; /* 線の位置を調整 */
+  left: 1.5px; /* 線の位置を調整 */
+  right: 1.5px; /* 線の位置を調整 */
+  bottom: 1.5px; /* 線の位置を調整 */
+  border: 1.5px solid red; /* 線のスタイルや太さを適宜調整 */
+  box-sizing: border-box;
+}
+
 /**/
 
 .area-time label{
