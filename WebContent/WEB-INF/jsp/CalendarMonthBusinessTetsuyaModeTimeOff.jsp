@@ -18,12 +18,10 @@
 
 <br>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
-
-   <!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
-<div class="sigoto">
-	<img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a>
-</div>
+ 	<div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div>
+   	<!-- <div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a></div>-->
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
+    <div class="sigoto"><img class="tetuyatimeoff" src="/AllNightCalender/img/徹夜タイムoff.png" alt="徹夜タイム"><p>徹夜タイム</p></div>
 </div>
 
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
@@ -48,7 +46,7 @@
 
 
     <div class="area-calendarday">
-     <a><!-- カレンダー --><div id="calendar"></div></a>
+     <!-- カレンダー --><div id="calendar"><a></a></div>
 
 
     </div>
