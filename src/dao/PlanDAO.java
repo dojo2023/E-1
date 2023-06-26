@@ -12,7 +12,7 @@ import model.Plan;
 
 public class PlanDAO {
 		// 予定一覧の取得
-		public List<Plan> look(Plan plans) {
+		public List<Plan> look(String id,Plan plans) {
 		Connection conn = null;
 		List<Plan> planList = new ArrayList<Plan>();
 
@@ -24,12 +24,12 @@ public class PlanDAO {
 				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 				// SQL文を準備する
-				String sql = "select * from Plan where ID = ? and MODE = ?";
+				String sql = "select * from Plan where ID = ? and MODE = ? and s_day = CURRENT_DATE()";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
-				if (plans.getId() != null && !plans.getId().equals("")) {
-					pStmt.setString(1, plans.getId());
+				if (id != null && !id.equals("")) {
+					pStmt.setString(1, id);
 				}
 				else {
 					pStmt.setString(1, null);
@@ -201,7 +201,7 @@ public class PlanDAO {
 		}
 
 		// 引数paramで検索項目を指定し、検索結果のリストを返す
-		public List<Plan> select(Plan param) {
+		public List<Plan> select(String id,String mode,Plan param) {
 			Connection conn = null;
 			List<Plan> planList = new ArrayList<Plan>();
 
@@ -213,21 +213,21 @@ public class PlanDAO {
 				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 				// SQL文を準備する
-				String sql = "select * from PLAN WHERE ID = ? AND MODE = ? AND WHAT LIKE ? AND WHAT_DETAILS LIKE ? AND MEMO LIKE ? ORDER BY S_DAY S_TIME";
+				String sql = "select * from PLAN WHERE ( ID = ? AND MODE = ? ) AND ( WHAT LIKE ? AND WHAT_DETAILS LIKE ? AND MEMO LIKE ?)  ORDER BY S_DAY, S_TIME";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
-				if (param.getId() != null) {
-					pStmt.setString(1, "%" + param.getId() + "%");
+				if (id != null && !id.equals("")) {
+					pStmt.setString(1, id);
 				}
 				else {
-					pStmt.setString(1, "%");
+					pStmt.setString(1, null);
 				}
-				if (param.getMode() != null) {
-					pStmt.setString(2, "%" + param.getMode() + "%");
+				if (mode != null && !mode.equals("")) {
+					pStmt.setString(2, mode);
 				}
 				else {
-					pStmt.setString(2, "%");
+					pStmt.setString(2, null);
 				}
 				if (param.getWhat() != null) {
 					pStmt.setString(3, "%" + param.getWhat() + "%");
