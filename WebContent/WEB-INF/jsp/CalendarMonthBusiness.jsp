@@ -80,9 +80,6 @@
 	<c:forEach var="e" items="${planList}" >
 		<table class="list">
 			<tr>
-				<td>No.${e.number}</td>
-			</tr>
-			<tr>
 				<td>${e.s_day}</td>
 				<td>${e.e_day}</td>
 			</tr>
@@ -98,7 +95,7 @@
 				<form name="date" action="CalendarMonthBusinessServletUpdate" method="get">
 					<td><input type="submit" name="SUBMIT" value=${e.number}></td>
 				</form>
-				<form name="date" action="CalendarMonthBusinessDerete" method="get">
+				<form name="date" action="CalendarMonthBusinessServletDelete" method="get">
 				<td><input type="submit" name="SUBMIT" value=${e.number}></td>
 				</form>
 			</tr>

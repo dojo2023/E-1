@@ -62,7 +62,7 @@ public class CalendarMonthBusinessServlet extends HttpServlet {
 
 		if (pDao.insert((String)session.getAttribute("id"),plan)) {
 			// 登録成功
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusiness.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/CalendarServlet");
 			dispatcher.forward(request, response);
 
 		}
