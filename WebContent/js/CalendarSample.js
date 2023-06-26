@@ -179,6 +179,22 @@ function showMenu ()
       }
     });
 
+const tetsuyatimeCheckbox = document.getElementById('tetsuyatimeCheckbox');
+const onImagetetsuyatime = document.querySelector('.onImagetetsuyatime');
+const offImagetetsuyatime = document.querySelector('.offImagetetsuyatime');
+tetsuyatimeCheckbox.addEventListener('change', function() {
+if (this.checked) {
+onImagetetsuyatime.style.display = 'inline-block';
+offImagetetsuyatime.style.display = 'none';
+} else {
+onImagetetsuyatime.style.display = 'none';
+offImagetetsuyatime.style.display = 'inline-block';
+}
+});
+
+
+
+
   //timer js
     var youken = document.getElementById("youken");
     var start = document.getElementById("start");
@@ -384,4 +400,23 @@ function showMenu ()
 
 
 /*徹夜モードON・OFF処理*/
+
+
+function BGchange(){
+	var tetsuyatimeCheckbox　= document.getElementById("tetsuyatimeCheckbox");
+     var cssFile = document.getElementById("cssFile");
+
+  // チェックボックスがチェックされている場合
+  if (tetsuyatimeCheckbox.checked) {
+    cssFile.href = "css/CalendarDarkTimeSample2.css"; // ダークモードCSSを適用する
+  } else {
+    cssFile.href = "Calendar.css"; // 通常CSS
+  }
+}
+
+// チェックボックスの変更イベントを監視
+var modechange = document.getElementById("tetsuyatimeCheckbox");
+tetsuyatimeCheckbox.addEventListener("change", BGchange);
+
+
 

@@ -1,6 +1,7 @@
 @charset "utf-8";
 body{
  max-width:98%;
+ background-color:red;
 }
   /*領域生成*/
 .container {
@@ -359,20 +360,19 @@ left: 43px;
 display: inline-block;
 		  width: 7px;
 }
-.tetsuyatimeArea:not(:checked) + label .offImagetetsuyatime {
-display: inline-block;
-		  width: 7px;
+.tetsuyatimeArea:not(:checked) + label .offImagetetsuyatime {display: inline-block;
+width: 7px;
 }
+
 .offImagetetsuyatime{
-  transform: scale(17);
+transform: scale(17);
 }.onImagetetsuyatime{
-  transform: scale(22);
+transform: scale(22);
 }
 .tekitoutetsuyatime{
 top:45px;
 left: 43px;
 }
-
 
 
 

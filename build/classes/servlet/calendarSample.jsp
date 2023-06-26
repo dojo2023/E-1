@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" type="text/css" id="cssFile" href="css/Calendar.css">
+  <link rel="stylesheet" href="css/Calendar.css">
 </head>
 <body>
  <!-- 背景変更用ID -->
@@ -18,9 +18,9 @@
 	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
 	<div class="tekitoutetsuyatime">
-  		<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea">
+  		<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea" onclick="BGchange();">
   		<label class="tetsuyatime" for="tetsuyatimeCheckbox">
-    		<img class="onImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムon.png" alt="オンの画像" style="display: none;">
+    		<img class="onImagetetsuyatime"   src="/AllNightCalender/img/徹夜タイムon.png" alt="オンの画像" style="display: none;">
 			<img class="offImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムoff.png" alt="オフの画像">
 		</label>
 	</div>

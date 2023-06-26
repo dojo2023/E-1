@@ -1,9 +1,7 @@
 @charset "utf-8";
-
 body{
  max-width:98%;
 }
-
   /*領域生成*/
 .container {
     width: 100%;
@@ -16,37 +14,26 @@ body{
       'calendarleftmanu calendarday calendardetail calendardetail'
        'calendarleftmanu calendarday time time';
 }
-
 .area-calendarleftmanu {
     grid-area: calendarleftmanu;
-    /* width:120px; */
+     /*width:120px;*/
 }
-
-
 /*週月ON*/
-
 .onImage img .offImage img{
 width: 40px;
 }
-
-
-
 .area-calendarupmanu {
     grid-area: calendarupmanu;
 }
-
 .flex-want2{
 	display:flex;
 }
-
 .mode img{
 	width:350px;
 }
-
 .weekmonthchange{
  width:120px;
 }
-
 .area-tetsuya {
     grid-area: tetsuya;
 }
@@ -54,7 +41,7 @@ width: 40px;
     grid-area: icon;
 }
 .area-calendarday {
-    text-align: center;
+   text-align: center;
     grid-area: calendarday;
     max-height:00px;
     height: 20vh;
@@ -67,11 +54,9 @@ width: 40px;
 }
 /*領域を赤線で囲む*/
     .container * {
-      /* border: 1px solid red; */
+      /*border: 1px solid red;*/
       position: relative;
     }
-
-
 /*全体*/
 .wrapper{
     max-width: 600px;
@@ -81,18 +66,15 @@ width: 40px;
 #header {
     text-align: left;
     font-size: 24px;
-    width: 13%;
+ width: 13%;
      /*左すぎるので右に寄せる*/
     height: 14%;
     padding: 0 80px 0 30px;
     margin: 0.5rem 0 0;
 }
-
 #header::first-letter{
 	font-size:60px;
 }
-
-
 /*カレンダー*/
 #calendar {
     height: 20vh;
@@ -100,14 +82,12 @@ width: 40px;
     padding: 0 10px;
     margin: auto;
 }
-
 /*カレンダー詳細画面*/
 /*全体の背景色*/
 .area-calendardetail{
- background-color:#FFA500;/*背景色*/
+ background-color:cornflowerblue;
      z-index: 1;
 }
-
 /*列幅均等化*/
 #calendar table {
     /* outline: 2px solid #ececec; */
@@ -118,8 +98,7 @@ width: 40px;
     border-top: 2px solid #6495ed;
     height:100%
     /* display: flex; */
-}
-
+    }
 /*罫線見えないように*/
 #calendar th {
     border-width: 0px;
@@ -128,7 +107,6 @@ width: 40px;
     width: 80px;
     height: 20px;
 }
-
 /*日曜日のth*/
 #calendar th:first-child {
     color: red;
@@ -137,16 +115,13 @@ width: 40px;
 #calendar th:last-child {
     color: blue;
 }
-
  td {
-    outline: 1px solid #ddd;
+      outline: 1px solid #ddd;
     padding: 5px 0 40px 5px;
     margin:20px 0 0 0;
     text-align:left;
     height: 10px;
   }
-
-
 /*日曜日*/
 td:first-child {
     color: red;
@@ -159,43 +134,33 @@ td:last-child {
 td.disabled {
     color: #ccc;
 }
-
 /*前後月の日曜日*/
 td.disabled:first-child{
-    color: #ff0000;
+    color: rgba(255,0,0,0.5);
 }
-
 /*前後月の土曜日*/
 td.disabled:last-child{
-    color:blue;
+    color: rgba(0,0,255,0.5);
 }
-
-
 /*本日*/
 td.today {
-    background-color: #D65E72;
+    background-color: #4B7BD0;
     color: #fff;
 }
-
 /*ボタン*/
 #next-prev-button {
     position: relative;
-
 }
-
 /*月移動ボタンの背景色を透明にした*/
 #next-prev-button button{
 	 background-color:#99999000;
     font-size: 1.2rem;
     border: 0;
 }
-
-
 /*#next-prev-button button:hover{
     background-color: #D4BB92;
     border-color: #D4BB92;
 }*/
-
 #prev {
     float: left;
 }
@@ -203,12 +168,11 @@ td.today {
     float: right;
 }
 .area-calendarleftmanu {
-	background-color:#FFA500;/*背景色*/
+	background-color:#6495ed;/*背景色*/
 	height: 100%;
 	width: 100%;
 	margin: 0px;
 }
-
 .area-calendarleftmanu p{
 padding:0 0 0 4px;
 }
@@ -218,18 +182,15 @@ padding:0 0 0 4px;
   letter-spacing : 0;                   /* 文字間             */
   text-align     : center;              /* 文字位置は中央     */
   font-size      : 25px;                /* 文字サイズ         */
-
   position       : relative;            /* 親要素が基点       */
   margin         : auto;                /* 中央寄せ           */
   width          : 138px;               /* ボタンの横幅       */
   background     : #6495ed;                /* デフォルト背景色   */
 }
-
  /* === チェックボックス ==================================== */
 .switchArea input[type="checkbox"] {
   display        : none;            /* チェックボックス非表示 */
 }
-
  /* === チェックボックスのラベル（標準） ==================== */
 .switchArea label {
   display        : block;               /* ボックス要素に変更 */
@@ -238,26 +199,22 @@ padding:0 0 0 4px;
   border         : 2px solid #fff;   /* 未選択タブのの枠線 */
   border-radius  : 28px;                /* 角丸               */
 }
-
  /* === チェックボックスのラベル（ONのとき） ================ */
 .switchArea input[type="checkbox"]:checked +label {
   border-color   : #fff;             /* 選択タブの枠線     */
 }
-
  /* === 表示する文字（標準） ================================ */
 .switchArea label span:after{
   content        : "週";               /* 表示する文字       */
   padding        : 0 0 0 33px;          /* 表示する位置       */
   color          : #fff;             /* 文字色             */
 }
-
  /* === 表示する文字（ONのとき） ============================ */
 .switchArea  input[type="checkbox"]:checked + label span:after{
   content        : "月";                /* 表示する文字       */
   padding        : 0 33px 0 0;          /* 表示する位置       */
   color          : #fff;             /* 文字色             */
 }
-
  /* === 丸部分のSTYLE（標準） =============================== */
 .switchArea #swImg {
   position       : absolute;            /* 親要素からの相対位置*/
@@ -269,97 +226,108 @@ padding:0 0 0 4px;
   border-radius  : 24px;                /* 角丸               */
   transition     : .2s;                 /* 滑らか変化         */
 }
-
  /* === 丸部分のSTYLE（ONのとき） =========================== */
 .switchArea input[type="checkbox"]:checked ~ #swImg {
   transform      : translateX(82px);    /* 丸も右へ移動       */
   background     : #fff;             /* カーソルタブの背景 */
 }
-
 /*カレンダー詳細 CSS*/
-
 .area-calendardetail  {
  max-width: 250px;
  overflow: scroll;
  padding:0px 10px;
 }
-
 .area-calendardetail::-webkit-scrollbar{
   display: none;
 }
-
 .area-calendardetail div {
     background-color: white;
     margin: 0px 10px;
+     padding: 0 0 0 0;
     border-bottom: 2px solid cornflowerblue;
 }
-
+.area-calendardetail label{
+	padding: 10px 10px;
+}
+.area-calendardetail label:first-child{
+    padding: 20px 10px;
+}
+#timershow{
+	width:220px;
+}
+#timershow #startBtn {
+	width:70px;
+	margin:4px 0 4px 0;
+}
+#timershow input{
+	width:70px;
+	margin:4px 0 4px 0;
+}
+#timershow input[type="text"] {
+	width:180px;
+}
+.timerContent label{
+	display: inline-block;
+	padding:0 0 1px 0;
+}
+#timershow h3{
+	margin:3px 0 3px 0;
+}
 .area-calendardetail input{
  width:200px;
- width: 100%;
- box-sizing: border-box;
- /* padding: 10px; */
+ margin:10px 0;
 }
-
 .area-calendardetail p{
  padding:2px 3px;
 }
-
 /*予定登録画面 ズレの修正*/
 .area-calendardetail input[type="text"] {
- margin: 4px 0px 2px 0px;
+ margin: 3px 0px 2px 10px;
 }
-
 /*開始、終了時間登録*/
 .area-calendardetail input[type="text"]:nth-of-type(2) , .area-calendardetail input[type="text"]:nth-of-type(3){
  width:90px;
- margin:0 0 0 px;
+ margin:10px 0 10px 0px;
 }
-
+/*開始時間登録*/
+.area-calendardetail input[type="text"]:nth-of-type(2){
+ width:90px;
+ margin:10px 0px 0 0px;
+}
 /*終了時間登録*/
 .area-calendardetail input[type="text"]:nth-of-type(3){
  width:90px;
- margin:0 0 0 10px;
+ /* margin:0 0 0 10px; */
 }
-
 /*メモ登録*/
 .area-calendardetail input[type="text"]:nth-of-type(4) {
  height:70px;
 }
-
 /*登録ボタン*/
 .area-calendardetail button {
-  flex-grow: 1;
-  color:red;
-  margin:10px 0;
+ flex-grow: 1;
+  color: black;
+  margin: 10px 0 5px 10px;
   display:flex;
   flex-direction: column;
 }
-
-
 p.sample1 {
   text-align:center;
 	font-size:2.5px;
  }
-
  p{
 	font-size:2.5px;
 }
-
 /*リンクの下線削除*/
 a{
  text-decoration: none;
 }
-
 /*訪問後パープル無効化*/
 a:visited{
  color:black;
 }
-
 .sigoto img{width: 80px;left: 12px;}
-
 /*徹夜*/
-
 .tetsuyaArea {
 display: none;
 }
@@ -383,11 +351,53 @@ display: inline-block;
 }
 
 
-.img-p {   /*仕事モード画像*/
- height: 87px;
- width: 300px;
- /* transform: scale(0); */
+.tetsuyatimeArea {
+display: none;
+left: 43px;
+}
+.tetsuyatimeArea:checked + label .onImagetetsuyatime {
+display: inline-block;
+		  width: 7px;
+}
+.tetsuyatimeArea:not(:checked) + label .offImagetetsuyatime {display: inline-block;
+width: 7px;
 }
 
-/*タイマーレイアウト*/
+.offImagetetsuyatime{
+transform: scale(17);
+}.onImagetetsuyatime{
+transform: scale(22);
+}
+.tekitoutetsuyatime{
+top:45px;
+left: 43px;
+}
 
+
+
+.img-p {   /*仕事モード画像*/
+ height:87px;
+ width: 300px;
+}
+/*日付選択時の枠線 CSS*/
+.date-cell.selected {
+  position: relative;
+}
+.date-cell.selected::before {
+  content: "";
+  position: absolute;
+  top: 1.5px; /* 線の位置を調整 */
+  left: 1.5px; /* 線の位置を調整 */
+  right: 1.5px; /* 線の位置を調整 */
+  bottom: 1.5px; /* 線の位置を調整 */
+  border: 1.5px solid red; /* 線のスタイルや太さを適宜調整 */
+  box-sizing: border-box;
+}
+/**/
+.area-time label{
+	margin:0 10px 0 0;
+}
+
+.tetsuyatime img{
+	width:100px;
+}
