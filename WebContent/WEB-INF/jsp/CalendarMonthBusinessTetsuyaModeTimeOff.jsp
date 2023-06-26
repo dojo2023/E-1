@@ -18,30 +18,11 @@
 
 <br>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
- 	<div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div>
-   	<!-- <div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a></div>-->
+
+   <!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
+<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
-
-    <div class="tetuyatime">
-    	<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea">
-  		<label class="tetsuyatime" for="tetsuyatimeCheckbox">
-    		<div class="sigoto"><img class="tetuyatimeon" src="/AllNightCalender/img/徹夜タイムon.png" alt="徹夜タイムon" style="display: none;"></div>
-			<div class="sigoto"><img class="tetuyatimeoff" src="/AllNightCalender/img/徹夜モードoff.png" alt="徹夜タイムoff" style="display: none;"></div>
-		</label>
-	<p>徹夜タイム</p>
 </div>
-
-
-
-	<div class="tekitoutetuya">
-  		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
-  		<label class="tetsuya" for="tetsuyaCheckbox">
-    		<img class="onImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像" style="display: none;">
-			<a href="http://localhost:8080/AllNightCalender/CalendarServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードon.png" alt="オンの画像"></a>
-
-	</div>
-
-
 
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
     <div class="flex-want2">
@@ -65,7 +46,7 @@
 
 
     <div class="area-calendarday">
-     <!-- カレンダー --><div id="calendar"><a></a></div>
+     <a><!-- カレンダー --><div id="calendar"></div></a>
 
 
     </div>
@@ -74,8 +55,8 @@
 	<div class="tekitoutetuya">
   		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
   		<label class="tetsuya" for="tetsuyaCheckbox">
-    		<img class="onImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像" style="display: none;">
-			<a href="http://localhost:8080/AllNightCalender/CalendarServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードon.png" alt="オンの画像"></a>
+    		<img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="オンの画像" style="display: none;">
+			<img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像">
 		</label>
 	</div>
   	</div>
