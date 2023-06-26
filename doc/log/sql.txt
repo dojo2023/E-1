@@ -14,7 +14,7 @@ sa		（なし）
 DROP TABLE BC
 
 
-【userテーブル作成】
+//userテーブル作成
 CREATE TABLE user (
   ID VARCHAR(20) PRIMARY KEY,
   l_name VARCHAR(20) NOT NULL,
@@ -23,10 +23,11 @@ CREATE TABLE user (
   now_point int(5) DEFAULT 0,
   which VARCHAR(5) NOT NULL DEFAULT 'week',
   mode_shift VARCHAR(8) DEFAULT 'business' NOT NULL,
-  tetsuya int(1) DEFAULT 0
+  tetsuya int(1) DEFAULT 0,
+  tetsuya_time int(1) DEFAULT 0
 );
 
-【planテーブル作成】
+//planテーブル作成
 CREATE TABLE plan (
   number int IDENTITY(1,1) PRIMARY KEY,
   id varchar(20) NOT NULL,
@@ -43,7 +44,7 @@ CREATE TABLE plan (
 );
 
 
-【pointテーブル作成】
+//pointテーブル作成
 CREATE TABLE point (
   b_point int(2) NOT NULL,
   p_point int(2) NOT NULL,
@@ -55,7 +56,7 @@ CREATE TABLE point (
 );
 
 
-【rankテーブル作成】
+//rankテーブル作成
 CREATE TABLE rank (
   c_start int(4) NOT NULL,
   b_start int(4) NOT NULL,
@@ -64,7 +65,7 @@ CREATE TABLE rank (
 );
 
 
-【point_dayテーブル作成】
+//point_dayテーブル作成
 CREATE TABLE point_day (
   id varchar(20) NOT NULL,
   year int(4) NOT NULL,
@@ -77,7 +78,7 @@ CREATE TABLE point_day (
 );
 
 
-【rank_bonusテーブル作成】
+//rank_bonusテーブル作成
 CREATE TABLE rank_bonus (
   year int(4) NOT NULL,
   month int(2) NOT NULL,
@@ -87,42 +88,33 @@ CREATE TABLE rank_bonus (
 );
 
 
-【inquiryテーブル作成】
+//inquiryテーブル作成
 CREATE TABLE inquiry (
   id varchar(20) NOT NULL,
   genre varchar(20) NOT NULL,
   text varchar(200)
 );
 
-【userテーブルにサンプルデータを登録するSQL文】
-INSERT INTO user (ID,l_name,f_name,pw,now_point,which,mode_shift,tetsuya) VALUES ('tetsuya','労働','徹夜','1','0','week','business','0');
+//userテーブルにサンプルデータを登録するSQL文
+INSERT INTO user (ID,l_name,f_name,pw,now_point,which,mode_shift,tetsuya,tetsuya_time) VALUES ('tetsuya','労働','徹夜','1','0','week','business','0','0');
+INSERT INTO user (ID,l_name,f_name,pw,now_point,which,mode_shift,tetsuya,tetsuya_time) VALUES ('tarou','田中','太郎','1','0','month','private','1','0');
 
 
-【planテーブルにサンプルデータを登録するSQL文】
+//planテーブルにサンプルデータを登録するSQL文
 INSERT INTO plan (id,mode,which,s_day,s_time,e_day,e_time,what,color,what_details,memo) VALUES ('tetsuya','business','schebule','2023-01-02','1300','2023-01-02','1500','会議','青','全体会議','');
 
 
-
-【id_numberテーブルにサンプルデータを登録するSQL文】
-INSERT INTO id_number (id_number, id) VALUES ('1','tetsuya');
-
-
-【mode_numberテーブルにサンプルデータを登録するSQL文】
-INSERT INTO mode_number (mode_number, mode) VALUES ('1','business');
-INSERT INTO mode_number (mode_number, mode) VALUES ('2','private');
-
-
-【pointテーブルにサンプルデータを登録するSQL文】
+//pointテーブルにサンプルデータを登録するSQL文
 INSERT INTO point (b_point,p_point,tetsuya_b,tetsuya_p,chance_bonus,b_max,p_max) VALUES ('1','1','15','15','7','5','1');
 
 
-【rankテーブルにサンプルデータを登録するSQL文】
+//rankテーブルにサンプルデータを登録するSQL文
 INSERT INTO rank (c_start,b_start,a_start,s_start) VALUES ('25','50','125','1250');
 
 
-【point_dayテーブルにサンプルデータを登録するSQL文】
+//point_dayテーブルにサンプルデータを登録するSQL文
 INSERT INTO point_day (id,year,month,day,point_b,point_p,point_m) VALUES ('tetsuya','2023','5','1','5','1','6');
 
 
-【rank_bonusテーブルにサンプルデータを登録するSQL文】
+//rank_bonusテーブルにサンプルデータを登録するSQL文
 INSERT INTO rank_bonus(year,month,sc_s,sc_a) VALUE ('2023','month','','');

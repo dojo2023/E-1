@@ -470,4 +470,186 @@ public class UserDAO {
 			// 結果を返す
 			return pointList;
 		}
+
+
+		// モードの取得
+		public List<User> look(String id) {
+		Connection conn = null;
+		List<User> userMode = new ArrayList<User>();
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+				// SQL文を準備する
+				String sql = "select mode_shift from User where ID = ?";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				if (id != null && !id.equals("")) {
+					pStmt.setString(1, id);
+				}
+				else {
+					pStmt.setString(1, null);
+				}
+
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+
+				// 結果表をコレクションにコピーする
+				while (rs.next()) {
+					User user = new User(
+					rs.getString("MODE_SHIFT")
+					);
+					userMode.add(user);
+				}
+			}
+
+			catch (SQLException e) {
+				e.printStackTrace();
+				userMode = null;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				userMode = null;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						userMode = null;
+					}
+				}
+			}
+			// 結果を返す
+			return userMode;
+		}
+
+
+		// 徹夜モードの取得
+		public List<User> tetsuya(String id) {
+		Connection conn = null;
+		List<User> userMode = new ArrayList<User>();
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+				// SQL文を準備する
+				String sql = "select tetsuya from User where ID = ?";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				if (id != null && !id.equals("")) {
+					pStmt.setString(1, id);
+				}
+				else {
+					pStmt.setString(1, null);
+				}
+
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+
+				// 結果表をコレクションにコピーする
+				while (rs.next()) {
+					User user = new User(
+					rs.getString("TETSUYA")
+					);
+					userMode.add(user);
+				}
+			}
+
+			catch (SQLException e) {
+				e.printStackTrace();
+				userMode = null;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				userMode = null;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						userMode = null;
+					}
+				}
+			}
+			// 結果を返す
+			return userMode;
+		}
+
+		// 徹夜モードの取得
+		public List<User> time(String id) {
+		Connection conn = null;
+		List<User> userMode = new ArrayList<User>();
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+				// SQL文を準備する
+				String sql = "select tetsuya_time from User where ID = ?";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				if (id != null && !id.equals("")) {
+					pStmt.setString(1, id);
+				}
+				else {
+					pStmt.setString(1, null);
+				}
+
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+
+				// 結果表をコレクションにコピーする
+				while (rs.next()) {
+					User user = new User(
+					rs.getString("TETSUYA_TIME")
+					);
+					userMode.add(user);
+				}
+			}
+
+			catch (SQLException e) {
+				e.printStackTrace();
+				userMode = null;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				userMode = null;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						userMode = null;
+					}
+				}
+			}
+			// 結果を返す
+			return userMode;
+		}
 }

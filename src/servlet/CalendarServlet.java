@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class CalendarServlet
@@ -20,17 +21,37 @@ public class CalendarServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/calendar.jsp");
-		dispatcher.forward(request, response);
-	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		HttpSession session = request.getSession();
+
+		String x = (String)session.getAttribute("mode");
+		String y = (String)session.getAttribute("tetsuya");
+		String z = (String)session.getAttribute("tetsuya_time");
+		if (x.equals("business") && y.equals("0") && z.equals("0")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusiness.jsp");
+			dispatcher.forward(request, response);
+		}
+		else if (x.equals("business") && y.equals("1") && z.equals("0")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusinessTetsuyaModeTimeOff.jsp");
+			dispatcher.forward(request, response);
+		}
+		else if (x.equals("business") && y.equals("1") && z.equals("1")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusinessTetsuyaModeTimeOn.jsp");
+			dispatcher.forward(request, response);
+		}
+		else if (x.equals("private") && y.equals("0") && z.equals("0")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthPrivateTetsuyaMode.jsp");
+			dispatcher.forward(request, response);
+		}
+		else if (x.equals("private") && y.equals("1") && z.equals("0")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthPrivateTetsuyaModeTimeOff.jsp");
+			dispatcher.forward(request, response);
+		}
+		else if (x.equals("private") && y.equals("1") && z.equals("1")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusinessTetsuyaModeTimeOn.jsp");
+			dispatcher.forward(request, response);
+		}
+
 	}
 
 }

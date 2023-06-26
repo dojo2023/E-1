@@ -1,6 +1,11 @@
 package servlet;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -51,11 +56,50 @@ public class LoginServlet extends HttpServlet {
 		user.setId(id);
 		user.setPw(pw);
 
-		if (uDao.isLoginOK(user)) {
+		try {
+			if (uDao.isLoginOK(user)) {
 			// ログイン成功
 			// セッションスコープにIDを格納する
 			HttpSession session = request.getSession();
 			session.setAttribute("id", id);
+
+
+			Connection conn = null;
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+			String sql = "select mode_shift from user WHERE ID = ?";
+
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, id);
+			ResultSet rs = pStmt.executeQuery();
+
+			rs.next();
+			String mode = rs.getString("mode_shift");
+			session.setAttribute("mode", mode);
+
+			Connection conn2 = null;
+			conn2 = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+			String sql2 = "select tetsuya from user WHERE ID = ?";
+
+			PreparedStatement pStmt2 = conn2.prepareStatement(sql2);
+			pStmt2.setString(1, id);
+			ResultSet rs2 = pStmt2.executeQuery();
+
+			rs2.next();
+			String tetsuya = rs2.getString("tetsuya");
+			session.setAttribute("tetsuya", tetsuya);
+
+
+			Connection conn3 = null;
+			conn3 = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+			String sql3 = "select tetsuya_time from user WHERE ID = ?";
+
+			PreparedStatement pStmt3 = conn3.prepareStatement(sql3);
+			pStmt3.setString(1, id);
+			ResultSet rs3 = pStmt3.executeQuery();
+
+			rs3.next();
+			String tetsuya_time = rs3.getString("tetsuya_time");
+			session.setAttribute("tetsuya_time", tetsuya_time);
 
 			// サーブレットにリダイレクトする
 			response.sendRedirect("CalendarServlet");
@@ -68,6 +112,12 @@ public class LoginServlet extends HttpServlet {
 			// 結果ページにフォワードする
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
 			dispatcher.forward(request, response);
+		}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			e = null;
+
 		}
 	}
 }
