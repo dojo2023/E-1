@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="area-calendarday">
-     <a><!-- カレンダー --><div id="calendar"></div></a>
+    <div id="calendar"><a></a></div>
     </div>
     <div class="area-tetsuya">
 	<div class="tekitoutetuya">

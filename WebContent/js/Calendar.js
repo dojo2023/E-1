@@ -156,7 +156,6 @@ function showMenu ()
     const tetsuyatimeCheckbox = document.getElementById('tetsuyatimeCheckbox');
     const onImagetetsuyatime = document.querySelector('.onImagetetsuyatime');
     const offImagetetsuyatime = document.querySelector('.offImagetetsuyatime');
-
     tetsuyatimeCheckbox.addEventListener('change', function() {
       if (this.checked) {
         onImagetetsuyatime.style.display = 'inline-block';
