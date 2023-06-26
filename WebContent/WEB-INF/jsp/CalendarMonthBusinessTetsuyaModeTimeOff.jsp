@@ -7,17 +7,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/CalendarBusinessTetsuya.css">
+  <link rel="stylesheet" href="css/Calendar.css">
 </head>
 <body>
   <div class="container">
 
 <div class="area-calendarleftmanu">
 
-<p >週/月</p>
+
+
+<br>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
-    <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div>
-    <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png"alt="タイマー"><p>タイマー</p></div>
+
+   <!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
+<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a></div>
+    <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
 </div>
 
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
@@ -25,13 +29,9 @@
     <h1 id="header"></h1>
 
 <div class="area-mode">
-	<div class="mode">
-  		<input type="checkbox" id="modeCheckbox" class="modeArea">
-  		<label class="mode" for="modeCheckbox">
-    		<img class="img-b" src="/AllNightCalender/img/プライベートモード上表示.png"  style="display: none";>
+
 			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
-		</label>
-	</div>
+
   	</div>
 
   	</div>
@@ -65,7 +65,7 @@
     <div class="area-icon" id="main-icon"></div>
     <div class="area-calendardetail">
       <a></a>
-
+	<div id="timershow"></div>
 <div class ="register-area">
       <input type="text" class="schedule-input" placeholder="用件">
       <input type="text" class="schedule-input" placeholder="開始時間">
@@ -75,10 +75,10 @@
  </div>
 
   </div>
-    <div class="area-time">時間</div>
+    <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
   </div>
 </body>
 
 
-<script src="js/CalendarBusinessTetsuya.js"></script>
+<script src="js/Calendar.js"></script>
 </html>

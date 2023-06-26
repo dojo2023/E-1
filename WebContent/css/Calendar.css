@@ -160,7 +160,7 @@ td.disabled:last-child{
 
 /*本日*/
 td.today {
-    background-color: #D65E72;
+    background-color: #4B7BD0;
     color: #fff;
 }
 
@@ -371,5 +371,23 @@ display: inline-block;
  height:100px;
  width: 300px;
 }
+
+
+
+/*日付選択時の枠線 CSS*/
+.date-cell.selected {
+  position: relative;
+}
+.date-cell.selected::before {
+  content: "";
+  position: absolute;
+  top: 1.5px; /* 線の位置を調整 */
+  left: 1.5px; /* 線の位置を調整 */
+  right: 1.5px; /* 線の位置を調整 */
+  bottom: 1.5px; /* 線の位置を調整 */
+  border: 1.5px solid red; /* 線のスタイルや太さを適宜調整 */
+  box-sizing: border-box;
+}
+
 
 /**/
