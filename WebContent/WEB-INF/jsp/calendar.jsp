@@ -56,7 +56,7 @@
   		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
   		<label class="tetsuya" for="tetsuyaCheckbox">
     		<img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="オンの画像" style="display: none;">
-			<img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像">
+			<a href="http://localhost:8080/AllNightCalender/CalendarMonthBusinessTetsuyaModeTimeOnServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像">
 		</label>
 	</div>
   	</div>

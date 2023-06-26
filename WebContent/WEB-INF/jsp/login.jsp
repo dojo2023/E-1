@@ -8,6 +8,12 @@
 <link rel="stylesheet" href="css/login.css">
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 <title>ログイン</title>
+<style>
+	body {
+		background-image: url(${backgroundimg});
+		background-size: cover;
+	}
+</style>
 </head>
 <body>
 	<div id="content"></div>
