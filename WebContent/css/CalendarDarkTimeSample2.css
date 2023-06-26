@@ -1,7 +1,7 @@
 @charset "utf-8";
 body{
  max-width:98%;
- background-color:red;
+ background-color:#696969;
 }
   /*領域生成*/
 .container {
@@ -86,7 +86,7 @@ width: 40px;
 /*カレンダー詳細画面*/
 /*全体の背景色*/
 .area-calendardetail{
- background-color:cornflowerblue;
+ background-color:a9a9a9;
      z-index: 1;
 }
 /*列幅均等化*/
@@ -169,7 +169,7 @@ td.today {
     float: right;
 }
 .area-calendarleftmanu {
-	background-color:#6495ed;/*背景色*/
+	background-color:#a9a9a9;/*背景色*/
 	height: 100%;
 	width: 100%;
 	margin: 0px;
