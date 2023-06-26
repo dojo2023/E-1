@@ -385,7 +385,3 @@ function showMenu ()
 
 /*徹夜モードON・OFF処理*/
 
-
-function BGchange(){
-
-}
