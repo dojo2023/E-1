@@ -179,6 +179,24 @@ function showMenu ()
       }
     });
 
+
+    const tetsuyatimeCheckbox = document.getElementById('tetsuyatimeCheckbox');
+    const onImagetetsuyatime = document.querySelector('.onImagetetsuyatime');
+    const offImagetetsuyatime = document.querySelector('.offImagetetsuyatime');
+
+    tetsuyatimeCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        onImagetetsuyatime.style.display = 'inline-block';
+        offImagetetsuyatime.style.display = 'none';
+      } else {
+        onImagetetsuyatime.style.display = 'none';
+        offImagetetsuyatime.style.display = 'inline-block';
+      }
+    });
+
+
+
+
   //timer js
     var youken = document.getElementById("youken");
     var start = document.getElementById("start");
