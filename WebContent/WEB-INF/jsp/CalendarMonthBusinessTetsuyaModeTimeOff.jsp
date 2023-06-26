@@ -18,6 +18,7 @@
 
 	<br>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
+<<<<<<< Updated upstream
    	<!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
 	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
@@ -28,10 +29,28 @@
   		<!-- javascriptで新しく作る -->
   		<label class="tetsuyatime" for="tetsuyatimeCheckbox">
     		<img class="onImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムon.png"  onclick="backgroundChange()" alt="オンの画像" style="display: none;">
+=======
+
+   	<!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
+	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a></div>
+    <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
+	<div class="tekitoutetuyatime">
+  		<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea">
+  		<label class="tetsuyatime" for="tetsuyatimeCheckbox">
+    		<img class="onImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムon.png" alt="オンの画像" style="display: none;">
+>>>>>>> Stashed changes
 			<img class="offImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムoff.png" alt="オフの画像">
 		</label>
 	</div>
 </div>
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+>>>>>>> Stashed changes
 
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
     <div class="flex-want2">
@@ -55,7 +74,7 @@
 
 
     <div class="area-calendarday">
-     <!-- カレンダー --><div id="calendar"><a></a></div>
+     <a><!-- カレンダー --><div id="calendar"></div></a>
 
 
     </div>
@@ -64,8 +83,13 @@
 	<div class="tekitoutetuya">
   		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
   		<label class="tetsuya" for="tetsuyaCheckbox">
+<<<<<<< Updated upstream
     		<a href="http://localhost:8080/AllNightCalender/CalendarServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="offの画像" style="display: none;"></a>
 			<a href="http://localhost:8080/AllNightCalender/CalendarServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードon.png" alt="onの画像"></a>
+=======
+    		<img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="オンの画像" style="display: none;">
+			<img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像">
+>>>>>>> Stashed changes
 		</label>
 	</div>
   	</div>
