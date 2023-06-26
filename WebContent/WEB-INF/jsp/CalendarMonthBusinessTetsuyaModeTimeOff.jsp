@@ -23,9 +23,6 @@
 		</label>
 	</div>
 </div>
-
-
-
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
     <div class="flex-want2">
     <h1 id="header"></h1>
@@ -46,11 +43,12 @@
 	<div class="tekitoutetuya">
   		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
   		<label class="tetsuya" for="tetsuyaCheckbox">
-    		<img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="オンの画像" style="display: none;">
-			<img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像">
+    		<a href="http://localhost:8080/AllNightCalender/CalendarServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="offの画像" style="display: none;"></a>
+			<a href="http://localhost:8080/AllNightCalender/CalendarServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードon.png" alt="onの画像"></a>
 		</label>
 	</div>
   	</div>
+
     <div class="area-icon" id="main-icon"></div>
     <div class="area-calendardetail">
       <a></a>
