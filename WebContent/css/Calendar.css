@@ -398,7 +398,11 @@ a:visited{
  color:black;
 }
 
+/*左メニューの画像サイズがでかすぎる*/
+
 .sigoto img{width: 80px;left: 12px;}
+
+.tetsuyatime img{width: 80px;left: 12px;}
 
 
 /*徹夜*/
