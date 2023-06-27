@@ -89,15 +89,15 @@
 		<td>日時</td>
 		</tr>
 		<tr>
-		<td><input type="text" name="s_day" value="${e.s_day}"></td>
+		<td><input type="date" name="s_day" value="${e.s_day}" ></td>
 		<div class ="namisen">
 		<label name ="regist-namisen">~</label>
 		</div>
-		<td><input type="text" name="e_day" value="${e.e_day}"></td>
+		<td><input type="date" name="e_day" value="${e.e_day}" placeholder="19991214"></td>
 		</tr>
 		<tr>
-		<td><input type="text" name="s_time" value="${e.s_time}"></td>
-		<td><input type="text" name="e_time" value="${e.e_time}"></td>
+		<td><input type="time" name="s_time" value="${e.s_time}" placeholder="23:00"></td>
+		<td><input type="time" name="e_time" value="${e.e_time}" placeholder="08:00"></td>
 		</tr>
 
 
@@ -110,12 +110,18 @@
 		<div class="color_table">
 		<table value="${e.color}">
 		<tr>
-		<td><input type="radio" name="color" id="radioblue"  value="青" checked><label for="radioblue">青</label></td>
-		<td><input type="radio" name="color" id="radioGreen"  value="緑"><label for="radioGreen">青</label></td>
-		<td><input type="radio" name="color" id="rediored"  value="赤"><label for="rediored">青</label></td>
-		<td><input type="radio" name="color" id="redioOrange"  value="橙"><label for="redioOrange">青</label></td>
-		<td><input type="radio" name="color" id="redioYellow"  value="黄"><label for="redioYellow">青</label></td>
-		<td><input type="radio" name="color" id="redioBlack"  value="黒"><label for="redioBlack">青</label></td>
+		<td><input type="radio" name="color" id="radioblue"  value="青" checked>
+		<label for="radioblue"><img src="/AllNightCalender/img/青アイコン.png" width="20" height="20"></label></td>
+		<td><input type="radio" name="color" id="radioGreen"  value="緑">
+		<label for="radioGreen"><img src="/AllNightCalender/img/緑アイコン.png"  width="20" height="20"></label></td>
+		<td><input type="radio" name="color" id="rediored"  value="赤">
+		<label for="rediored"><img src="/AllNightCalender/img/赤アイコン.png"  width="20" height="20"></label></td>
+		<td><input type="radio" name="color" id="redioOrange"  value="橙">
+		<label for="redioOrange"><img src="/AllNightCalender/img/橙アイコン.png"  width="20" height="20"></label></td>
+		<td><input type="radio" name="color" id="redioYellow"  value="黄">
+		<label for="redioYellow"><img src="/AllNightCalender/img/黄アイコン.png"  width="20" height="20"></label></td>
+		<td><input type="radio" name="color" id="redioBlack"  value="黒">
+		<label for="redioBlack"><img src="/AllNightCalender/img/黒アイコン.png"  width="20" height="20"></label></td>
 		</tr>
 		</table>
 		</div>
@@ -139,8 +145,8 @@
 		<table>
 			<tr>
 				<td>
-					<input type="submit" name="REGIST" value="登録">
-					<input type="reset" name="reset" value="リセット">
+					<input type="submit" name="REGIST" class="regist-submit" >
+					<input type="reset" name="reset" class="regist-reset" >
 				</td>
 			</tr>
 		</table>
