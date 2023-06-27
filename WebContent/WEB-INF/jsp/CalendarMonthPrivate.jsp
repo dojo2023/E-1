@@ -18,7 +18,7 @@
 
 
 <br>
-  	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthBusinessTetsuyaModeOffServlet"><img src="/AllNightCalender/img/カレンダー仕事モードoff.png"alt="仕事モード"></a><p>仕事モード</p></div>
+  	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthBusinessServlet"><img src="/AllNightCalender/img/カレンダー仕事モードoff.png"alt="仕事モード"></a><p>仕事モード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードon.png"alt="プライベートモード"><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()"  alt="タイマー"><p>タイマー</p></div>
 </div>
