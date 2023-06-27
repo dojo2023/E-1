@@ -282,7 +282,7 @@ padding:0 0 0 4px;
 }
 /*予定登録画面 ズレの修正*/
 .area-calendardetail input[type="text"] {
- margin: 3px 0px 2px 10px;
+ /* margin: 3px 0px 2px 10px; */
 }
 /*開始、終了時間登録*/
 .area-calendardetail input[type="text"]:nth-of-type(2) , .area-calendardetail input[type="text"]:nth-of-type(3){
@@ -413,8 +413,9 @@ left: 43px;
 	max-height:20px;
 }
 
-.about_table td{
-
+.about_table [name="regist-namisen"]{
+	top:115px;
+	left:75px;
 }
 
 .about_table input[type="text"][name="what"]{
@@ -429,11 +430,11 @@ left: 43px;
 
 .about_table input[type="text"][name="e_day"],[type="text"][name="e_time"]{
 	max-width:70px;
-	margin:0 ;
+	margin: 0 0 0 15px;
 }
 
-.color_table{
-
+.color_table input[type="radio"]{
+	width:30px;
 }
 
 .memo_table{

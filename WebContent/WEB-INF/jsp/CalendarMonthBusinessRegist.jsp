@@ -85,8 +85,8 @@
 		</tr>
 		<tr>
 		<td><input type="text" name="s_day" value="${e.s_day}"></td>
-		<div class ="regist-namisen">
-		<td>～</td>
+		<div class ="namisen">
+		<label name ="regist-namisen">~</label>
 		</div>
 		<td><input type="text" name="e_day" value="${e.e_day}"></td>
 		</tr>
