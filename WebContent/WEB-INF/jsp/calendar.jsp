@@ -66,6 +66,7 @@
       <a></a>
 	<div id="timershow"></div>
 <div class ="register-area">
+<div class="general_plan_regist">
 		<label>用件</label>
       <input type="text" class="schedule-input" placeholder="用件">
       <label>開始時間</label>
@@ -77,6 +78,7 @@
       <label>メモ</label>
       <input type="text" class="schedule-input" placeholder="メモ">
       <button type="button" onclick="registerSchedule()">登録</button>
+ </div>
  </div>
 
   </div>

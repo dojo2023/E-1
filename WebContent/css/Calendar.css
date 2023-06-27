@@ -115,7 +115,7 @@ width: 40px;
 #calendar th:last-child {
     color: blue;
 }
- td {
+#calendar td {
       outline: 1px solid #ddd;
     padding: 5px 0 40px 5px;
     margin:20px 0 0 0;
@@ -123,27 +123,27 @@ width: 40px;
     height: 10px;
   }
 /*日曜日*/
-td:first-child {
-    color: red;
+#calendar td:first-child {
+    /* color: red; */
 }
 /*土曜日*/
-td:last-child {
+#calendar td:last-child {
     color: blue;
 }
 /*前後月の日付*/
-td.disabled {
+#calendar td.disabled {
     color: #ccc;
 }
 /*前後月の日曜日*/
-td.disabled:first-child{
+#calendar td.disabled:first-child{
     color: rgba(255,0,0,0.5);
 }
 /*前後月の土曜日*/
-td.disabled:last-child{
+#calendar td.disabled:last-child{
     color: rgba(0,0,255,0.5);
 }
 /*本日*/
-td.today {
+#calendar td.today {
     background-color: #4B7BD0;
     color: #fff;
 }
@@ -243,7 +243,7 @@ padding:0 0 0 4px;
 .area-calendardetail div {
     background-color: white;
     margin: 0px 10px;
-     padding: 0 0 0 0;
+    padding: 0 0 0 0;
     border-bottom: 2px solid cornflowerblue;
 }
 .area-calendardetail label{
@@ -401,4 +401,28 @@ left: 43px;
 
 .tetsuyatime img{
 	width:100px;
+}
+
+/*登録右画面CSS*/
+
+
+.about_table table,td{
+	max-width:80px;
+	margin: 0 2px 0 10px;
+}
+
+.about_table td{
+	max-height:20px;
+}
+
+.color_table{
+
+}
+
+.memo_table{
+
+}
+
+.regist_submit{
+
 }
