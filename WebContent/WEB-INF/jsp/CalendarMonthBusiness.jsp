@@ -66,6 +66,8 @@
 		<div id="timershow"></div>
 		<div class ="register-area">
 
+
+
 		<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
 			<input type="text" name="Serch">
 			<input type="submit" value="検索">
