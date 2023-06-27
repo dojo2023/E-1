@@ -3,7 +3,6 @@ package servlet;
 
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.Rank_bonusDAO;
-import dao.UserDAO;
 import model.Rank_bonus;
 
 /**
@@ -28,39 +26,43 @@ public class BackgroundChangeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.setContentType("text/html;charset=UTF-8");
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.setCharacterEncoding("UTF-8");
 
 //ランク表示
 		//セッションからのデータの取得
-		HttpSession session = request.getSession();
-		String UID =(String)session.getAttribute("id");
+		/*		HttpSession session = request.getSession();
+		int ID =(int)session.getAttribute("id");
 
 		//検索処理を行う
 		UserDAO UDao = new UserDAO();
-		//User = UDao.select(UID);
+		List<User> pointList = UDao.select(ID);
 
+		//検索結果をリクエストスコープに格納する
+		request.setAttribute("ｒ",pointList);
+*/
 
 
 
 //ランク表示ここまで
+
 //背景変更↓
+		//年月取得
 		Calendar calender = Calendar.getInstance();
 
-		int y = calender.get(Calendar.YEAR)+1;
+		int y = calender.get(Calendar.YEAR);
 		int m = calender.get(Calendar.MONTH)+1;
+		//ここまで
 
 		Rank_bonus bonus = new Rank_bonus();
 
 		//現在の月と年を入れる
-		bonus.setYear(y+"");
-		bonus.setMonth(m+"");
+		bonus.setYear(y);
+		bonus.setMonth(m);
 
 
 		//検索処理を行う
 		Rank_bonusDAO bDao = new Rank_bonusDAO();
-		List<Rank_bonus> bonusList = bDao.select(bonus);
+		Rank_bonus bonusList = bDao.select(bonus);
 
 
 		//検索結果をリクエストスコープに格納する
@@ -77,14 +79,19 @@ public class BackgroundChangeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 
-
+		//取得したURLをリクエストスコープに入れる
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			request.setCharacterEncoding("UTF-8");
+			HttpSession session = request.getSession();
+
+
 			String url = request.getParameter("url");
 
-			request.setAttribute("url", url);
+			session.setAttribute("url", url);
+
 
 			// ページにフォワードする
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/backgroundChange.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/calendar.jsp");
 			dispatcher.forward(request, response);
 
 
