@@ -71,23 +71,32 @@
 	<form method="POST" action="/AllNightCalender/CalendarMonthBusinessServlet">
 	<div class ="about_table">
 		<table>
+		<div class ="regist_task">
 		<tr>
 		<td>用件</td>
 		</tr>
 		<tr>
 		<td><input type="text" name="what" value="${e.what}"></td>
 		</tr>
+
+		<div class ="regist_time">
 		<tr>
 		<td>日時</td>
 		</tr>
 		<tr>
 		<td><input type="text" name="s_day" value="${e.s_day}"></td>
+		<div class ="regist-namisen">
+		<td>～</td>
+		</div>
 		<td><input type="text" name="e_day" value="${e.e_day}"></td>
 		</tr>
 		<tr>
 		<td><input type="text" name="s_time" value="${e.s_time}"></td>
 		<td><input type="text" name="e_time" value="${e.e_time}"></td>
 		</tr>
+
+
+		<div class ="set-plancolor">
 		<tr>
 		<td>色</td>
 		</tr>
@@ -105,6 +114,8 @@
 		</tr>
 		</table>
 		</div>
+		</div>
+
 		<div class="memo_table">
 		<table>
 		<tr>

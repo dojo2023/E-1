@@ -409,10 +409,27 @@ left: 43px;
 .about_table table,td{
 	max-width:80px;
 	margin: 0 2px 0 10px;
+	font-size:12px;
+	max-height:20px;
 }
 
 .about_table td{
-	max-height:20px;
+
+}
+
+.about_table input[type="text"][name="what"]{
+	width:170px;
+	margin:0;
+}
+
+.about_table input[type="text"][name="s_day"],[type="text"][name="s_time"]{
+	width:70px;
+	margin:0;
+}
+
+.about_table input[type="text"][name="e_day"],[type="text"][name="e_time"]{
+	max-width:70px;
+	margin:0 ;
 }
 
 .color_table{
