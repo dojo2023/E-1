@@ -1,6 +1,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,11 +68,49 @@
       <a></a>
 	<div id="timershow"></div>
 <div class ="register-area">
-      <input type="text" class="schedule-input" placeholder="用件">
-      <input type="text" class="schedule-input" placeholder="開始時間">
-      <input type="text" class="schedule-input" placeholder="終了時間">
-      <input type="text" class="schedule-input" placeholder="メモ">
-      <button type="button" onclick="registerSchedule()">登録</button>
+
+	<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
+		<input type="text" name="Serch">
+		<input type="submit" value="検索">
+	</form>
+
+	 <form name="regist" action="CalendarMonthBusinessServlet" method="get">
+	 	<input type="submit" value="新規登録">
+	 </form>
+
+	<c:if test="${empty serchList}">
+		<p>検索結果はありません。</p>
+	</c:if>
+
+
+	<c:forEach var="e" items="${serchList}" >
+		<table class="list">
+			<tr>
+				<td>${e.s_day}</td>
+				<td>${e.e_day}</td>
+			</tr>
+			<tr>
+				<td>${e.s_time}</td>
+				<td>${e.e_time}</td>
+			</tr>
+			<tr>
+				<td>${e.what}</td>
+			</tr>
+
+			<tr>
+				<form name="date" action="CalendarMonthBusinessServletUpdate" method="get">
+					<td><input type="submit" name="SUBMIT" value=${e.number}></td>
+				</form>
+				<form name="date" action="CalendarMonthBusinessServletDelete" method="get">
+				<td><input type="submit" name="SUBMIT" value=${e.number}></td>
+				</form>
+			</tr>
+		</table>
+		<br>
+		<hr>
+		<br>
+	</c:forEach>
+
  </div>
 
   </div>

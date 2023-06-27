@@ -19,7 +19,7 @@
 
 <br>
 	<div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
-	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
+	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthBusinessServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
 </div>
 
@@ -66,9 +66,15 @@
       <a></a>
 	<div id="timershow"></div>
 <div class ="register-area">
-	  <form name="myform" action="CalendarMonthBusinessServlet" method="get">
-	  	<input type="submit" value="新規登録">
-	  </form>
+
+	<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
+		<input type="text" name="Serch">
+		<input type="submit" value="検索">
+	</form>
+
+	 <form name="regist" action="CalendarMonthBusinessServlet" method="get">
+	 	<input type="submit" value="新規登録">
+	 </form>
 
 	<c:if test="${empty planList}">
 		<p>今日は暇です。</p>
