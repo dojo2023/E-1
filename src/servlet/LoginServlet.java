@@ -32,9 +32,9 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.invalidate();
 
-		String tetuya =  (String) request.getAttribute("testuya");
 
-		request.setAttribute("tetuya",tetuya);
+		String tetuya = "0";
+		request.setAttribute("tetsuya",tetuya);
 
 		// ログインページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
