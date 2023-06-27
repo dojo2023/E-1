@@ -62,13 +62,15 @@ public class CalendarMonthBusinessServlet extends HttpServlet {
 
 		if (pDao.insert((String)session.getAttribute("id"),plan)) {
 			// 登録成功
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/CalendarServlet");
+			request.setAttribute("result","登録完了");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusinessResult.jsp");
 			dispatcher.forward(request, response);
 
 		}
 		else {
 			// 送信失敗
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusiness.jsp");
+			request.setAttribute("result","登録失敗");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusinessResult.jsp");
 			dispatcher.forward(request, response);
 		}
 	}
