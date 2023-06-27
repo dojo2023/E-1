@@ -1,33 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/Calendar.css">
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="css/Calendar.css">
 </head>
+
 <body>
-  <div class="container">
-<div class="area-calendarleftmanu">
-	<br>
-    <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
-   	<!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
-	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
-    <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
-	<div class="tekitoutetsuyatime">
-  		<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea">
-  		<label class="tetsuyatime" for="tetsuyatimeCheckbox">
-    		<img class="onImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムon.png" alt="オンの画像" style="display: none;">
-			<img class="offImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムoff.png" alt="オフの画像">
-		</label>
+  	<div class="container">
+	<div class="area-calendarleftmanu">
+		<br>
+    	<div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
+   		<!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
+		<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
+    	<div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
+
+		<div class="tekitoutetsuyatime">
+  			<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea">
+
+  			<label class="tetsuyatime" for="tetsuyatimeCheckbox">
+    			<img class="onImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムon.png" alt="オンの画像" style="display: none;">
+				<img class="offImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムoff.png" alt="オフの画像">
+			</label>
+		</div>
 	</div>
-</div>
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
     <div class="flex-want2">
     <h1 id="header"></h1>
 <div class="area-mode">
-			<img class="img-p" src="/AllNightCalender/img/プライベートモード上表示.png" >
+			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
   	</div>
   	</div>
       <!-- ボタンクリックで月移動 -->
