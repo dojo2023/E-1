@@ -1,7 +1,7 @@
 @charset "utf-8";
 body{
  max-width:98%;
- background-color:#545454;
+ background-color:rgb(46,39,40);
 }
   /*領域生成*/
 .container {
@@ -108,7 +108,8 @@ width: 40px;
     text-align: center;
     width: 80px;
     height: 20px;
-	color:white;
+	color:ffff;
+
 }
 /*日曜日のth*/
 #calendar th:first-child {
@@ -124,6 +125,7 @@ width: 40px;
     margin:20px 0 0 0;
     text-align:left;
     height: 10px;
+    color:ffff;
   }
 /*日曜日*/
 td:first-child {
@@ -135,7 +137,7 @@ td:last-child {
 }
 /*前後月の日付*/
 td.disabled {
-    color: #ccc;
+    color: #a9a9a9;
 }
 /*前後月の日曜日*/
 td.disabled:first-child{
@@ -172,7 +174,7 @@ td.today {
     float: right;
 }
 .area-calendarleftmanu {
-	background-color:#6495ed;/*背景色*/
+	background-color:#00496D;/*背景色*/
 	height: 100%;
 	width: 100%;
 	margin: 0px;
@@ -240,6 +242,7 @@ padding:0 0 0 4px;
  max-width: 250px;
  overflow: scroll;
  padding:0px 10px;
+ background-color:#00496D;
 }
 .area-calendardetail::-webkit-scrollbar{
   display: none;
@@ -404,4 +407,7 @@ left: 43px;
 
 .tetsuyatime img{
 	width:100px;
+}
+td{
+	color:#ffff;
 }
