@@ -54,7 +54,7 @@ width: 40px;
 }
 /*領域を赤線で囲む*/
     .container * {
-      /*border: 1px solid red;*/
+      /* border: 1px solid red; */
       position: relative;
     }
 /*全体*/
@@ -244,10 +244,10 @@ padding:0 0 0 4px;
     background-color: white;
     margin: 0px 10px;
     padding: 0 0 0 0;
-    border-bottom: 2px solid cornflowerblue;
+    /* border-bottom: 2px solid cornflowerblue; */
 }
 .area-calendardetail label{
-	padding: 10px 10px;
+	/* padding: 10px 10px; */
 }
 .area-calendardetail label:first-child{
     padding: 20px 10px;
@@ -274,8 +274,8 @@ padding:0 0 0 4px;
 	margin:3px 0 3px 0;
 }
 .area-calendardetail input{
- width:200px;
- margin:10px 0;
+ /* width:200px; */
+ /* margin: 5px 0 0 0; */
 }
 .area-calendardetail p{
  padding:2px 3px;
@@ -405,6 +405,13 @@ left: 43px;
 
 /*登録右画面CSS*/
 
+.about_table h2{
+	text-align:center;
+	margin:20px 0 0 0;
+	padding:10px;
+	border-bottom:2px solid #6495ed;
+}
+
 
 .about_table table,td{
 	max-width:80px;
@@ -433,14 +440,45 @@ left: 43px;
 	margin: 0 0 0 15px;
 }
 
+
 .color_table input[type="radio"]{
-	width:30px;
+	width:15px;
 }
 
-.memo_table{
-
+.color_table label{
+	width:15px;
+	margin:6px;
 }
 
-.regist_submit{
-
+.memo_table table,td{
+	margin:0 0 0 18px;
 }
+
+.memo_table input[type="text"]{
+	width:170px;
+	font-size:12px;
+	max-height:20px;
+}
+
+.regist_submit {
+	display: flex;
+	justify-content: center;
+}
+
+
+.regist_submit td{
+		display: flex;
+	justify-content: center;
+	margin:10px 0 10px 0;
+}
+
+.regist_submit input[name="REGIST"] {
+	width:50px;
+	margin:0 10px 0px 0;
+}
+
+.regist_submit input[name="reset"] {
+	width:50px;
+	margin:0 10px 0 0;
+}
+

@@ -67,10 +67,15 @@
     <div class="area-calendardetail">
       <a></a>
 	<div id="timershow"></div>
+
 	<div class ="register-area">
 	<form method="POST" action="/AllNightCalender/CalendarMonthBusinessServlet">
 	<div class ="about_table">
 		<table>
+		<div class ="title_area">
+		<h2>登録＋</h2>
+		</div>
+
 		<div class ="regist_task">
 		<tr>
 		<td>用件</td>
@@ -119,6 +124,8 @@
 		<div class="memo_table">
 		<table>
 		<tr>
+
+
 		<td>メモ</td>
 		</tr>
 		<tr>
@@ -127,6 +134,7 @@
 
 		</table>
 		</div>
+
 		<div class="regist_submit">
 		<table>
 			<tr>
