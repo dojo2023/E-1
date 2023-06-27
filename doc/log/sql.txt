@@ -117,4 +117,4 @@ INSERT INTO point_day (id,year,month,day,point_b,point_p,point_m) VALUES ('tetsu
 
 
 //rank_bonusテーブルにサンプルデータを登録するSQL文
-INSERT INTO rank_bonus(year,month,sc_s,sc_a) VALUE ('2023','month','','');
+INSERT INTO rank_bonus(year,month,sc_s,sc_a) VALUES ('2023','6','AllNight.jpg','Background.jpg');
