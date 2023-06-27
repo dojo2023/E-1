@@ -105,12 +105,12 @@
 		<div class="color_table">
 		<table value="${e.color}">
 		<tr>
-		<td><input type="radio" name="color" value="青" checked>青</td>
-		<td><input type="radio" name="color" value="緑">緑</td>
-		<td><input type="radio" name="color" value="赤">赤</td>
-		<td><input type="radio" name="color" value="橙">橙</td>
-		<td><input type="radio" name="color" value="黄">黄</td>
-		<td><input type="radio" name="color" value="黒">黒</td>
+		<td><input type="radio" name="color" id="radioblue"  value="青" checked><label for="radioblue">青</label></td>
+		<td><input type="radio" name="color" id="radioGreen"  value="緑"><label for="radioGreen">青</label></td>
+		<td><input type="radio" name="color" id="rediored"  value="赤"><label for="rediored">青</label></td>
+		<td><input type="radio" name="color" id="redioOrange"  value="橙"><label for="redioOrange">青</label></td>
+		<td><input type="radio" name="color" id="redioYellow"  value="黄"><label for="redioYellow">青</label></td>
+		<td><input type="radio" name="color" id="redioBlack"  value="黒"><label for="redioBlack">青</label></td>
 		</tr>
 		</table>
 		</div>
