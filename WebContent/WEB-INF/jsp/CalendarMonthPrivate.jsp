@@ -41,8 +41,8 @@
 	<div class="tekitoutetuya">
   		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
   		<label class="tetsuya" for="tetsuyaCheckbox">
-    		<a href="http://localhost:8080/AllNightCalender/CalendarServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="offの画像" style="display: none;"></a>
-			<a href="http://localhost:8080/AllNightCalender/CalendarServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードon.png" alt="onの画像"></a>
+    		<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateModeTimeOffServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="onの画像" style="display: none;"></a>
+			<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateModeTimeOffServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="offの画像"></a>
 		</label>
 	</div>
   	</div>
@@ -52,14 +52,20 @@
       <a></a>
 	<div id="timershow"></div>
 <div class ="register-area">
+		<label>用件</label>
       <input type="text" class="schedule-input" placeholder="用件">
-      <input type="text" class="schedule-input" placeholder="開始時間">
+      <label>開始時間</label>
+      <input type="text" class="schedule-input" placeholder="開始時間"><label>～</label>
+      <br>
+      <label>終了時間</label>
       <input type="text" class="schedule-input" placeholder="終了時間">
+      <br>
+      <label>メモ</label>
       <input type="text" class="schedule-input" placeholder="メモ">
       <button type="button" onclick="registerSchedule()">登録</button>
  </div>
   </div>
-    <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
+    <div class="area-time"><label>経過時間</label><input type="text" id="i" value="00:00:00" class="a" required></div>
   </div>
     </div>
 </body>
