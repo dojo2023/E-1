@@ -93,12 +93,12 @@
 		</table>
 		<table value="${e.color}">
 		<tr>
-		<td><input type="radio" name="color" value="青" checked></td>
-		<td><input type="radio" name="color" value="緑"></td>
-		<td><input type="radio" name="color" value="赤"></td>
-		<td><input type="radio" name="color" value="橙"></td>
-		<td><input type="radio" name="color" value="黄"></td>
-		<td><input type="radio" name="color" value="黒"></td>
+		<td><input type="radio" name="color" value="青" checked>青</td>
+		<td><input type="radio" name="color" value="緑">緑</td>
+		<td><input type="radio" name="color" value="赤">赤</td>
+		<td><input type="radio" name="color" value="橙">橙</td>
+		<td><input type="radio" name="color" value="黄">黄</td>
+		<td><input type="radio" name="color" value="黒">黒</td>
 		</tr>
 		</table>
 		<table>
