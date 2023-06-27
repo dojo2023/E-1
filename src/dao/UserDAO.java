@@ -312,7 +312,7 @@ public class UserDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 			// SQL文を準備する
-			String sql = "update USER set MODE=? where ID=?";
+			String sql = "update USER set MODE_SHIFT=? where ID=?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
@@ -534,65 +534,61 @@ public class UserDAO {
 
 
 		// 徹夜モードの取得
-		public List<User> tetsuya(String id) {
-		Connection conn = null;
-		List<User> userMode = new ArrayList<User>();
+				public String tetsuya(String id) {
+				Connection conn = null;
+				String tetsuya;
 
-			try {
-				// JDBCドライバを読み込む
-				Class.forName("org.h2.Driver");
-
-				// データベースに接続する
-				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
-
-				// SQL文を準備する
-				String sql = "select tetsuya from User where ID = ?";
-				PreparedStatement pStmt = conn.prepareStatement(sql);
-
-				// SQL文を完成させる
-				if (id != null && !id.equals("")) {
-					pStmt.setString(1, id);
-				}
-				else {
-					pStmt.setString(1, null);
-				}
-
-				// SQL文を実行し、結果表を取得する
-				ResultSet rs = pStmt.executeQuery();
-
-				// 結果表をコレクションにコピーする
-				while (rs.next()) {
-					User user = new User(
-					rs.getString("TETSUYA")
-					);
-					userMode.add(user);
-				}
-			}
-
-			catch (SQLException e) {
-				e.printStackTrace();
-				userMode = null;
-			}
-			catch (ClassNotFoundException e) {
-				e.printStackTrace();
-				userMode = null;
-			}
-			finally {
-				// データベースを切断
-				if (conn != null) {
 					try {
-						conn.close();
+						// JDBCドライバを読み込む
+						Class.forName("org.h2.Driver");
+
+						// データベースに接続する
+						conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+						// SQL文を準備する
+						String sql = "select tetsuya from User where ID = ?";
+						PreparedStatement pStmt = conn.prepareStatement(sql);
+
+						// SQL文を完成させる
+						if (id != null && !id.equals("")) {
+							pStmt.setString(1, id);
+						}
+						else {
+							pStmt.setString(1, null);
+						}
+
+						// SQL文を実行し、結果表を取得する
+						ResultSet rs = pStmt.executeQuery();
+
+						// 結果表をコレクションにコピーする
+						rs.next();
+						tetsuya = rs.getString("TETSUYA");
+
+
+
 					}
+
 					catch (SQLException e) {
 						e.printStackTrace();
-						userMode = null;
+						tetsuya = "0";
 					}
+					catch (ClassNotFoundException e) {
+						e.printStackTrace();
+						tetsuya = "0";			}
+					finally {
+						// データベースを切断
+						if (conn != null) {
+							try {
+								conn.close();
+							}
+							catch (SQLException e) {
+								e.printStackTrace();
+								tetsuya = "0";					}
+						}
+					}
+					// 結果を返す
+					return tetsuya;
 				}
-			}
-			// 結果を返す
-			return userMode;
-		}
-
 		// 徹夜モードの取得
 		public List<User> time(String id) {
 		Connection conn = null;
