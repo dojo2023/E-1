@@ -69,6 +69,7 @@
 	<div id="timershow"></div>
 	<div class ="register-area">
 	<form method="POST" action="/AllNightCalender/CalendarMonthBusinessServlet">
+	<div class ="about_table">
 		<table>
 		<tr>
 		<td>用件</td>
@@ -91,6 +92,8 @@
 		<td>色</td>
 		</tr>
 		</table>
+		</div>
+		<div class="color_table">
 		<table value="${e.color}">
 		<tr>
 		<td><input type="radio" name="color" value="青" checked>青</td>
@@ -101,6 +104,8 @@
 		<td><input type="radio" name="color" value="黒">黒</td>
 		</tr>
 		</table>
+		</div>
+		<div class="memo_table">
 		<table>
 		<tr>
 		<td>メモ</td>
@@ -110,6 +115,8 @@
 		</tr>
 
 		</table>
+		</div>
+		<div class="regist_submit">
 		<table>
 			<tr>
 				<td>
@@ -118,6 +125,7 @@
 				</td>
 			</tr>
 		</table>
+		</div>
 	</form>
 
 
