@@ -41,8 +41,8 @@
 	<div class="tekitoutetuya">
   		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
   		<label class="tetsuya" for="tetsuyaCheckbox">
-    		<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateModeTimeOffServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="onの画像" style="display: none;"></a>
-			<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateModeTimeOffServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="offの画像"></a>
+    		<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="onの画像" style="display: none;"></a>
+			<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="offの画像"></a>
 		</label>
 	</div>
   	</div>

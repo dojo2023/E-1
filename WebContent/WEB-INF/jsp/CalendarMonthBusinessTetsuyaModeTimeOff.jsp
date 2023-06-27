@@ -27,7 +27,7 @@
     <div class="flex-want2">
     <h1 id="header"></h1>
 <div class="area-mode">
-			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
+			<img class="img-p" src="/AllNightCalender/img/プライベートモード上表示.png" >
   	</div>
   	</div>
       <!-- ボタンクリックで月移動 -->
