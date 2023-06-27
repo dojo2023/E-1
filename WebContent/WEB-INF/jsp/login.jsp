@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-   <%
- 	String tetsuya = (String)request.getAttribute("tetsuya");
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,13 +9,10 @@
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 <title>ログイン</title>
 <style>
-
-<% if(tetsuya.equals("1")){ %>
 	body {
-		background-image: url("img/AllNightLoginBackground.jpg");
+		background-image: url(${backgroundimg});
 		background-size: cover;
 	}
-<% }%>
 </style>
 </head>
 <body>
