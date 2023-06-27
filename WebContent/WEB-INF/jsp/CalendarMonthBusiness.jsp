@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -20,7 +19,7 @@
 <br>
 	<div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
 	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
-    <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
+     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
 </div>
 
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
@@ -63,26 +62,26 @@
 
     <div class="area-icon" id="main-icon"></div>
     <div class="area-calendardetail">
-      <a></a>
-	<div id="timershow"></div>
-<div class ="register-area">
+      	<a></a>
+		<div id="timershow"></div>
+		<div class ="register-area">
 
-	<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
-		<input type="text" name="Serch">
-		<input type="submit" value="検索">
-	</form>
+		<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
+			<input type="text" name="Serch">
+			<input type="submit" value="検索">
+		</form>
 
-	 <form name="regist" action="CalendarMonthBusinessServlet" method="get">
-	 	<input type="submit" value="新規登録">
-	 </form>
+	 	<form name="regist" action="CalendarMonthBusinessServlet" method="get">
+	 		<input type="submit" value="新規登録">
+	 	</form>
 
-	<c:if test="${empty planList}">
-		<p>今日は暇です。</p>
-	</c:if>
+		<c:if test="${empty planList}">
+			<p>今日は暇です。</p>
+		</c:if>
 
 
-	<c:forEach var="e" items="${planList}" >
-		<table class="list">
+		<c:forEach var="e" items="${planList}" >
+			<table class="list">
 			<tr>
 				<td>${e.s_day}</td>
 				<td>${e.e_day}</td>
@@ -111,11 +110,9 @@
 
  </div>
 
-  </div>
-    <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
-  </div>
+</div>
+<div class="area-time"><label>経過時間</label><input type="text" id="i" value="00:00:00" class="a" required></div>
+</div>
 </body>
-
-
 <script src="js/Calendar.js"></script>
 </html>

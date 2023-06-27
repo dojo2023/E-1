@@ -5,20 +5,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" type="text/css" id="cssFile" href="css/CalendarPrivate.css">
+  <link rel="stylesheet" href="css/CalendarPrivate.css">
 </head>
 <body>
- <!-- 背景変更用ID -->
- <div id="background">
-  <div class="container">
-<div class="area-calendarleftmanu">
-	<br>
-    <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
-   	<!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
-	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
-    <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
-	<div class="tekitoutetsuyatime">
-  		<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea">
+  	<div class="container">
+	<div class="area-calendarleftmanu">
+		<br>
+		<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarServlet"><img src="/AllNightCalender/img/カレンダー仕事モードoff.png"alt="仕事モード"></a><p>仕事モード</p>
+    	<div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードon.png" alt="プライベートモード"><p>プライベートモード</p></div>
+    	<div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
+		<div class="tekitoutetsuyatime"></div>
 	</div>
 </div>
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
@@ -26,6 +22,7 @@
     <h1 id="header"></h1>
 <div class="area-mode">
 			<img class="img-p" src="/AllNightCalender/img/プライベートモード上表示.png" >
+
   	</div>
   	</div>
       <!-- ボタンクリックで月移動 -->
@@ -41,8 +38,8 @@
 	<div class="tekitoutetuya">
   		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
   		<label class="tetsuya" for="tetsuyaCheckbox">
-    		<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="onの画像" style="display: none;"></a>
-			<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="offの画像"></a>
+			<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モード.onpng" alt="offの画像" style="display: none;"></a>
+    		<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="onの画像"></a>
 		</label>
 	</div>
   	</div>
@@ -65,9 +62,8 @@
       <button type="button" onclick="registerSchedule()">登録</button>
  </div>
   </div>
-    <div class="area-time"><label>経過時間</label><input type="text" id="i" value="00:00:00" class="a" required></div>
+    <div class="area-time"> <label>経過時間</label> <input type="text" id="i" value="00:00:00" class="a" required></div>
   </div>
-    </div>
 </body>
-<script src="js/CalendarSample.js"></script>
+<script src="js/CalendarPrivate.js"></script>
 </html>
