@@ -413,7 +413,7 @@ public class UserDAO {
 		return result;
 	}
 
-	// 現在のモードをdbに反映
+	// 現在のモードをdbに反映(ユーザーIDで所持ポイントを持ってくる)
 		public List<User>  point(String id) {
 			Connection conn = null;
 			List<User> pointList = new ArrayList<User>();
