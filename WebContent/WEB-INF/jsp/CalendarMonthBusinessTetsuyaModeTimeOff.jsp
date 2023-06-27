@@ -54,14 +54,20 @@
       <a></a>
 	<div id="timershow"></div>
 <div class ="register-area">
+		<label>用件</label>
       <input type="text" class="schedule-input" placeholder="用件">
-      <input type="text" class="schedule-input" placeholder="開始時間">
+      <label>開始時間</label>
+      <input type="text" class="schedule-input" placeholder="開始時間"><label>～</label>
+      <br>
+      <label>終了時間</label>
       <input type="text" class="schedule-input" placeholder="終了時間">
+      <br>
+      <label>メモ</label>
       <input type="text" class="schedule-input" placeholder="メモ">
       <button type="button" onclick="registerSchedule()">登録</button>
  </div>
   </div>
-    <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
+    <div class="area-time"><label>経過時間</label><input type="text" id="i" value="00:00:00" class="a" required></div>
   </div>
 </body>
 <script src="js/Calendar.js"></script>
