@@ -49,21 +49,21 @@
   	<table>
 
    <tr>
-   		<th><div class="wow"><a href="//AllNightCalender/CalendarServlet"> <button>ホームに戻る</button></a></th></div>
-  		  <th> <div class="honmono"  onclick="poor(event)" ><button>ホームに戻る</button></th></div>
-     		<th><div class="nisemono2" onclick="poor(event)"> <button>ホームに戻る</button></th></div>
+   		<th><div class="wow"><a href="//http://localhost:8080/AllNightCalender/CalendarServlet"> <button>ホームに戻る</button></a></div></th>
+  		  <th> <div class="honmono"  onclick="poor(event)" ><button>ホームに戻る</button></div></th>
+     		<th><div class="nisemono2" onclick="poor(event)"> <button>ホームに戻る</button></div></th>
      </tr>
 
       <tr>
-       <td><div class="nisemono1" onclick="poor(event)"> <button>ホームに戻る</button></td></div>
-     <td><button></button></td></div>
-     <td><div class="nisemono2" onclick="poor(event)"> <button>ホームに戻る</button></td></div>
+       <td><div class="nisemono1" onclick="poor(event)"> <button>ホームに戻る</button></div></td>
+     <td><button></button></td>
+     <td><div class="nisemono2" onclick="poor(event)"> <button>ホームに戻る</button></div></td>
     </tr>
 
        <tr>
-       <td><div class="nisemono1" onclick="poor(event)"> <button>ホームに戻る</button></td></div>
-   <td> <div class="honmono" onclick="poor(event)"><button>ホームに戻る</button></td></div>
-    <td><div class="nisemono2" onclick="poor(event)"> <button>ホームに戻る</button></td></div>
+       <td><div class="nisemono1" onclick="poor(event)"> <button>ホームに戻る</button></div></td>
+   <td> <div class="honmono" onclick="poor(event)"><button>ホームに戻る</button></div></td>
+    <td><div class="nisemono2" onclick="poor(event)"> <button>ホームに戻る</button></div></td>
     </tr>
 
     </table>
