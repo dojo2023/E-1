@@ -88,6 +88,89 @@ public class PlanDAO {
 			return planList;
 		}
 
+		// 予定一覧の取得
+		public List<Plan> lookDay(String id,String day,String mode) {
+		Connection conn = null;
+		List<Plan> planDayList = new ArrayList<Plan>();
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+				// SQL文を準備する
+				String sql = "select * from Plan where ID = ? and MODE = ? and s_day = ?";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				if (id != null && !id.equals("")) {
+					pStmt.setString(1, id);
+				}
+				else {
+					pStmt.setString(1, null);
+				}
+				if (mode != null && !mode.equals("")) {
+					pStmt.setString(2, mode);
+				}
+				else {
+					pStmt.setString(2, null);
+				}
+				if (day != null && !day.equals("")) {
+					pStmt.setString(3, day);
+				}
+				else {
+					pStmt.setString(3, null);
+				}
+
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+
+				// 結果表をコレクションにコピーする
+				while (rs.next()) {
+					Plan plan = new Plan(
+					rs.getString("NUMBER"),
+					rs.getString("ID"),
+					rs.getString("MODE"),
+					rs.getString("WHICH"),
+					rs.getString("S_DAY"),
+					rs.getString("S_TIME"),
+					rs.getString("E_DAY"),
+					rs.getString("E_TIME"),
+					rs.getString("WHAT"),
+					rs.getString("COLOR"),
+					rs.getString("WHAT_DETAILS"),
+					rs.getString("MEMO")
+					);
+					planDayList.add(plan);
+				}
+			}
+
+			catch (SQLException e) {
+				e.printStackTrace();
+				planDayList = null;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				planDayList = null;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						planDayList = null;
+					}
+				}
+			}
+			// 結果を返す
+			return planDayList;
+		}
+
 
 		// 引数scheduleで指定されたレコードを登録し、成功したらtrueを返す
 		public boolean insert(String id,Plan schedule) {

@@ -30,9 +30,6 @@ public class CalendarMonthBusinessSerchServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		String serch = request.getParameter("Serch");
 
-		String x = (String)session.getAttribute("id");
-		String y = (String)session.getAttribute("mode");
-
 		// 検索処理を行う
 		PlanDAO pDao = new PlanDAO();
 		List<Plan> serchList = pDao.select((String)session.getAttribute("id"),(String)session.getAttribute("mode"),serch);

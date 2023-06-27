@@ -73,49 +73,16 @@ function showScheduleInput(date) {
     var scheduleInputArea = document.querySelector('.area-calendardetail');
     scheduleInputArea.innerHTML = "";
     var scheduleDate = document.createElement('h3');
-    scheduleDate.textContent = date + "/" + (showDate.getMonth() + 1) + "/" + showDate.getFullYear();
-    var schedulearea = document.createElement('a');
-    var scheduleInput = document.createElement('input');
-    scheduleInput.setAttribute('type', 'text');
-    scheduleInput.setAttribute('class', 'schedule-input');
-    scheduleInput.setAttribute('placeholder', '用件');
-    var startTimeInput = document.createElement('input');
-    startTimeInput.setAttribute('type', 'text');
-    startTimeInput.setAttribute('class', 'schedule-input');
-    startTimeInput.setAttribute('placeholder', '開始時間');
-    var endTimeInput = document.createElement('input');
-    endTimeInput.setAttribute('type', 'text');
-    endTimeInput.setAttribute('class', 'schedule-input');
-    endTimeInput.setAttribute('placeholder', '終了時間');
-    var memoInput = document.createElement('input');
-    memoInput.setAttribute('type', 'text');
-    memoInput.setAttribute('class', 'schedule-input');
-    memoInput.setAttribute('placeholder', 'メモ');
-    var registerButton = document.createElement('button');
-    registerButton.setAttribute('type', 'button');
-    registerButton.textContent = '登録';
-    registerButton.addEventListener('click', function () {
-        var inputs = document.querySelectorAll('.schedule-input');
-        var schedule = {};
-        for (var i = 0; i < inputs.length; i++) {
-            schedule[inputs[i].placeholder] = inputs[i].value;
-            inputs[i].value = '';
-        }
-        var scheduleDetail = document.createElement('div');
-        scheduleDetail.innerHTML =
-            "<p>用件：" + schedule['用件'] + "</p>" +
-            "<p>開始時間：" + schedule['開始時間'] + "</p>" +
-            "<p>終了時間：" + schedule['終了時間'] + "</p>" +
-            "<p>メモ：" + schedule['メモ'] + "</p>";
-        document.querySelector('.area-calendardetail a').appendChild(scheduleDetail);
-    });
-    scheduleInputArea.appendChild(scheduleDate);
-    scheduleInputArea.appendChild(schedulearea);
-    scheduleInputArea.appendChild(scheduleInput);
-    scheduleInputArea.appendChild(startTimeInput);
-    scheduleInputArea.appendChild(endTimeInput);
-    scheduleInputArea.appendChild(memoInput);
-    scheduleInputArea.appendChild(registerButton);
+    scheduleDate.textContent = showDate.getFullYear() + "-" + (showDate.getMonth() + 1) + "-" + date;
+
+	var text = document.createElement('h3');
+	text.textContent = "読み込み中..."
+
+	location.href = '/AllNightCalender/CalendarMonthBusinessDay?day=' +  encodeURIComponent(scheduleDate.textContent);
+
+
+    scheduleInputArea.appendChild(text);
+
 }
     const mainIcon = document.getElementById('main-icon');
     fetch('js/icon_content.html')
@@ -320,24 +287,3 @@ function showMenu ()
       }
       document.getElementById('i').style.display = "none";
     }
-    /*徹夜モードON・OFF処理*/
-
-
-function BGchange(){
-	var tetsuyatimeCheckbox = document.getElementById("tetsuyatimeCheckbox");
-     var cssFile = document.getElementById("cssFile");
-
-  // チェックボックスがチェックされている場合
-  if (tetsuyatimeCheckbox.checked) {
-    cssFile.href = "css/CalendarDarkTimeBusiness.css"; // ダークモードCSSを適用する
-  } else {
-    cssFile.href = "css/Calendar.css"; // 通常CSS
-  }
-}
-
-// チェックボックスの変更イベントを監視
-var modechange = document.getElementById("tetsuyatimeCheckbox");
-tetsuyatimeCheckbox.addEventListener("change", BGchange);
-
-
-
