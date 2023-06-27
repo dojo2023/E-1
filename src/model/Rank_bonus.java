@@ -2,12 +2,12 @@ package model;
 import java.io.Serializable;
 
 public class Rank_bonus implements Serializable {
-	private int year;
-	private int month;
+	private String year;
+	private String month;
 	private String sc_s;
 	private String sc_a;
 
-	public Rank_bonus(int year, int month, String sc_s, String sc_a) {
+	public Rank_bonus(String year, String month, String sc_s, String sc_a) {
 		super();
 		this.year = year;
 		this.month = month;
@@ -17,25 +17,25 @@ public class Rank_bonus implements Serializable {
 
 	public Rank_bonus() {
 		super();
-		this.year = 0;
-		this.month = 0;
+		this.year = "";
+		this.month = "";
 		this.sc_s = "";
 		this.sc_a = "";
 	}
 
-	public int getYear() {
+	public String getYear() {
 		return year;
 	}
 
-	public void setYear(int year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
 
-	public int getMonth() {
+	public String getMonth() {
 		return month;
 	}
 
-	public void setMonth(int month) {
+	public void setMonth(String month) {
 		this.month = month;
 	}
 

@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/CalendarPrivateTetsuya.css">
+  <link rel="stylesheet" href="css/Calendar.css">
 </head>
 <body>
   <div class="container">
@@ -13,7 +13,7 @@
 	<br>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
    	<!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
-	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
+	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
 	<div class="tekitoutetsuyatime">
   		<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea">
