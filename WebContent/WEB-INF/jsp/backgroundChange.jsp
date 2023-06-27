@@ -22,7 +22,7 @@
 	<div class="box btns">
 	<form method= "post" action="/AllNightCalender/BackgroundChangeServlet">
 
-  			<input type="button" img src="/AllNightCalender/img/s6.png" id="button1" onclick="setUrl1()" value="${j.sc_s}">
+  			<input type="button" img src="/AllNightCalender/img/s6.jpg" id="button1" onclick="setUrl1()" value="${j.sc_s}">
   			<input type="button" img src="/AllNightCalender/img/a6.jpg"id="button2" onclick="setUrl2()" value="${j.sc_a}"><br>
 
 <!-- 		<input type ="botton" class ="btn" value = "月限定Sランク" >
