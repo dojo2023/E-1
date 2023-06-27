@@ -13,7 +13,7 @@
 	<br>
     <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
    	<!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
-	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
+	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
 	<div class="tekitoutetsuyatime">
   		<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea">
@@ -54,14 +54,20 @@
       <a></a>
 	<div id="timershow"></div>
 <div class ="register-area">
+		<label>用件</label>
       <input type="text" class="schedule-input" placeholder="用件">
-      <input type="text" class="schedule-input" placeholder="開始時間">
+      <label>開始時間</label>
+      <input type="text" class="schedule-input" placeholder="開始時間"><label>～</label>
+      <br>
+      <label>終了時間</label>
       <input type="text" class="schedule-input" placeholder="終了時間">
+      <br>
+      <label>メモ</label>
       <input type="text" class="schedule-input" placeholder="メモ">
       <button type="button" onclick="registerSchedule()">登録</button>
  </div>
   </div>
-    <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
+    <div class="area-time"><label>経過時間</label><input type="text" id="i" value="00:00:00" class="a" required></div>
   </div>
 </body>
 <script src="js/Calendar.js"></script>
