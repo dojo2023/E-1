@@ -287,3 +287,21 @@ function showMenu ()
       }
       document.getElementById('i').style.display = "none";
     }
+    /*徹夜モードON・OFF処理*/
+
+
+function BGchange(){
+	var tetsuyatimeCheckbox = document.getElementById("tetsuyatimeCheckbox");
+     var cssFile = document.getElementById("cssFile");
+
+  // チェックボックスがチェックされている場合
+  if (tetsuyatimeCheckbox.checked) {
+    cssFile.href = "css/CalendarDarkTimeSample2.css"; // ダークモードCSSを適用する
+  } else {
+    cssFile.href = "css/Calendar.css"; // 通常CSS
+  }
+}
+
+// チェックボックスの変更イベントを監視
+var modechange = document.getElementById("tetsuyatimeCheckbox");
+tetsuyatimeCheckbox.addEventListener("change", BGchange);
