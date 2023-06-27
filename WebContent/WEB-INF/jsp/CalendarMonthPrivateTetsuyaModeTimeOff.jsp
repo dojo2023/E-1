@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/Calendar.css">
+  <link rel="stylesheet" href="css/CalendarPrivate.css">
 </head>
 <body>
   <div class="container">
@@ -27,7 +27,8 @@
     <div class="flex-want2">
     <h1 id="header"></h1>
 <div class="area-mode">
-			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
+			<img class="img-p" src="/AllNightCalender/img/プライベートモード上表示.png" >
+
   	</div>
   	</div>
       <!-- ボタンクリックで月移動 -->
@@ -70,5 +71,5 @@
     <div class="area-time"> <label>経過時間</label> <input type="text" id="i" value="00:00:00" class="a" required></div>
   </div>
 </body>
-<script src="js/Calendar.js"></script>
+<script src="js/CalendarPrivate.js"></script>
 </html>
