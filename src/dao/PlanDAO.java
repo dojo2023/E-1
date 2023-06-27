@@ -201,7 +201,7 @@ public class PlanDAO {
 		}
 
 		// 引数paramで検索項目を指定し、検索結果のリストを返す
-		public List<Plan> select(String id,String mode,Plan param) {
+		public List<Plan> select(String id,String mode,String param) {
 			Connection conn = null;
 			List<Plan> planList = new ArrayList<Plan>();
 
@@ -213,7 +213,7 @@ public class PlanDAO {
 				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
 
 				// SQL文を準備する
-				String sql = "select * from PLAN WHERE ( ID = ? AND MODE = ? ) AND ( WHAT LIKE ? AND WHAT_DETAILS LIKE ? AND MEMO LIKE ?)  ORDER BY S_DAY, S_TIME";
+				String sql = "select * from PLAN WHERE ( ID = ? AND MODE = ? ) AND ( WHAT LIKE ? OR WHAT_DETAILS LIKE ? OR MEMO LIKE ?)  ORDER BY S_DAY, S_TIME";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
@@ -229,20 +229,20 @@ public class PlanDAO {
 				else {
 					pStmt.setString(2, null);
 				}
-				if (param.getWhat() != null) {
-					pStmt.setString(3, "%" + param.getWhat() + "%");
+				if (param != null) {
+					pStmt.setString(3, "%" + param + "%");
 				}
 				else {
 					pStmt.setString(3, "%");
 				}
-				if (param.getWhat_details() != null) {
-					pStmt.setString(4, "%" + param.getWhat_details() + "%");
+				if (param != null) {
+					pStmt.setString(4, "%" + param + "%");
 				}
 				else {
 					pStmt.setString(4, "%");
 				}
-				if (param.getMemo() != null) {
-					pStmt.setString(5, "%" + param.getMemo() + "%");
+				if (param != null) {
+					pStmt.setString(5, "%" + param + "%");
 				}
 				else {
 					pStmt.setString(5, "%");

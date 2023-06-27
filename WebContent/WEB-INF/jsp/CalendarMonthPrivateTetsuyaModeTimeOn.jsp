@@ -1,38 +1,5 @@
-<!--
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-
-<link rel="stylesheet" href="css/Calendar.css">
-<title>Insert title here</title>
-</head>
-<body>
-<div class="wrapper">
-<div class="area-calendarday">
--->
-<!--  <div class="container">-->
-    <!-- xxxx年xx月を表示 -->
-<!--      <h1 id="header"></h1>-->
-
-    <!-- ボタンクリックで月移動 -->
- <!--   <div id="next-prev-button">
-        <button id="prev" onclick="prev()">></button>
-        <button id="next" onclick="next()">></button>
-    </div>
-  -->
-    <!-- カレンダー
-    <div id="calendar"></div>
-   </div>
-</div>   -->
-  <!--  </div>  -->
-<!--
-<script src="js/Calendar.js"></script>
-</body>
-</html>
--->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,8 +12,6 @@
   <div class="container">
 
 <div class="area-calendarleftmanu">
-
-
 
 <br>
    <!--   <div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードoff.png"alt="仕事モード"><p>仕事モード</p> </div>-->
