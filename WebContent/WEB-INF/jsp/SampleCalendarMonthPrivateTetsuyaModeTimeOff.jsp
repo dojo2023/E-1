@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/CalendarPrivate.css">
+  <link rel="stylesheet" id="cssFile" href="css/CalendarPrivate.css">
 </head>
 <body>
   <div class="container">
