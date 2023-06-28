@@ -241,7 +241,7 @@ padding:0 0 0 4px;
   display: none;
 }
 .area-calendardetail div {
-    background-color: white;
+
     margin: 0px 10px;
     padding: 0 0 0 0;
     /* border-bottom: 2px solid cornflowerblue; */
@@ -279,6 +279,8 @@ padding:0 0 0 4px;
 }
 .area-calendardetail p{
  padding:2px 3px;
+ font-size: 12px;
+ left: 1px;
 }
 /*予定登録画面 ズレの修正*/
 .area-calendardetail input[type="text"] {
@@ -502,3 +504,14 @@ width:168px;
 	background-size:30px
 }
 
+table.list{
+	 padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #3c4a68;
+    background: #ffff;
+    border-bottom: solid 3px #aac5de;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
+    width: 230px;
+}
