@@ -413,8 +413,9 @@ public class UserDAO {
 		return result;
 	}
 
+	//public List<User> select(int iD)
 	// 現在のモードをdbに反映(ユーザーIDで所持ポイントを持ってくる)
-		public List<User>  point(String id) {
+		public List<User>  select(String id) {
 			Connection conn = null;
 			List<User> pointList = new ArrayList<User>();
 
@@ -652,4 +653,7 @@ public class UserDAO {
 			// 結果を返す
 			return userMode;
 		}
+
+
+
 }
