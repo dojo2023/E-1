@@ -22,7 +22,6 @@
 
    <!--  <div class="sigoto"><img src="/AllNightCalender/img/カレンダープライベートモードoff.png"alt="プライベートモード"><p>プライベートモード</p></div> -->
 <div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a></div>
-    <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
 </div>
 
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
@@ -71,7 +70,7 @@
 
 	<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
 		<input type="text" name="Serch">
-		<input type="submit" value="検索">
+		<input type="submit" value="🔍">
 	</form>
 
 	 <form name="regist" action="CalendarMonthBusinessServlet" method="get">
@@ -102,7 +101,7 @@
 					<td><input type="submit" name="SUBMIT" value=${e.number}></td>
 				</form>
 				<form name="date" action="CalendarMonthBusinessServletDelete" method="get">
-				<td><input type="submit" name="SUBMIT" value=${e.number}></td>
+				<td><input type="submit" name="DELETE" value=${e.number}></td>
 				</form>
 			</tr>
 		</table>

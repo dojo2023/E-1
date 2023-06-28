@@ -236,6 +236,7 @@ padding:0 0 0 4px;
  max-width: 250px;
  overflow: scroll;
  padding:0px 10px;
+ /* max-height: 400px; */
 }
 .area-calendardetail::-webkit-scrollbar{
   display: none;
@@ -515,3 +516,95 @@ table.list{
     padding: 0;
     width: 230px;
 }
+table.list{
+	 padding: 0.5em 1em;
+	 margin: 2em 0;
+	 color: #3c4a68;
+	 background: #ffff;
+	 border-bottom: solid 3px #aac5de;
+	 border-radius: 6px;
+	 margin: 0;
+	 padding: 0;
+	 width: 230px;
+}
+
+.area-calendardetail input[name="SUBMIT"]{
+	width: 50px;
+	height:35px;
+	color:#ff000000;
+	border:none;
+	background: url(../img/仕事モード予定編集ボタン.png) top no-repeat;
+	background-size:30px
+
+}
+
+.area-calendardetail input[name="DELETE"]{
+	width: 50px;
+	height:35px;
+	color:#ff000000;
+	border:none;
+	background: url(../img/仕事モード予定削除ボタン.png) top no-repeat;
+	background-size:30px
+}
+
+.area-calendardetail input[name="SUBMIT"] , .area-calendardetail input[name="DELETE"]{
+	width:50px;
+}
+
+
+
+.list tbody tr:nth-of-type(4) td{
+	width:50px;
+	text-align:right;
+}
+
+/*dayjsp範囲*/
+
+<<<<<<< Updated upstream
+.register-area{
+	/* background-color:white; */
+=======
+.register-area , .memo_table , .regist_submit{
+	background-color:white;
+>>>>>>> Stashed changes
+	top:10px;
+}
+
+.himadesu [name="serch"]{
+	top:10px;
+}
+
+.today-himadesu input[type=text]{
+	width: 135px;
+	top:1px;
+}
+
+
+.himadesu input[type=text]{
+	padding:2px;
+	bottom:1px;
+}
+
+.himadesu p{
+	margin:20px 0 ;
+}
+
+.himadesu form{
+	text-align:center;
+
+}
+
+
+.himadesu input[type=submit]{
+	text-align:center;
+	margin:0 0 20px 0;
+	background-color:#6495ed61;
+	border:none;
+}
+
+.himadesu input[type=submit]:hover{
+	text-align:center;
+	margin:0 0 20px 0;
+	background-color:#333c5061;
+	border:1px solid black;
+}s

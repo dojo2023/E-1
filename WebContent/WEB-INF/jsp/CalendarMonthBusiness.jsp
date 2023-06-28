@@ -18,8 +18,8 @@
 
 <br>
 	<div class="sigoto"><img src="/AllNightCalender/img/カレンダー仕事モードon.png"alt="仕事モード"><p>仕事モード</p> </div>
-	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
-     <div class="sigoto"><img src="/AllNightCalender/img/タイマーモードoff.png" onclick="showMenuTimer()" alt="タイマー"><p>タイマー</p></div>
+	<div class="sigoto"><a href="http://localhost:8080/AllNightCalender/CalendarMonthModeChangePrivateServlet"> <img src="/AllNightCalender/img/カレンダープライベートモードoff.png" alt="プライベートモード"></a><p>プライベートモード</p></div>
+
 </div>
 
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
@@ -54,7 +54,7 @@
   		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
   		<label class="tetsuya" for="tetsuyaCheckbox">
     		<a href="http://localhost:8080/AllNightCalender/CalendarMonthBusinessTetsuyaModeTimeOffServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="オンの画像" style="display: none;"></a>
-			<a href="http://localhost:8080/AllNightCalender/CalendarMonthBusinessTetsuyaModeTimeOffServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像"></a>
+			<a href="http://localhost:8080/AllNightCalender/CalendarMonthTetsuyaChangeOnServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像"></a>
 		</label>
 	</div>
   	</div>
@@ -63,23 +63,25 @@
     <div class="area-icon" id="main-icon"></div>
     <div class="area-calendardetail">
       	<a></a>
-		<div id="timershow"></div>
+
 		<div class ="register-area">
-
-
+		<div class ="himadesu">
+		<div class ="today-himadesu">
 
 		<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
 			<input type="text" name="Serch">
-			<input type="submit" value="検索">
+			<input type="submit" value="🔍">
 		</form>
+
+		<c:if test="${empty planList}">
+			<p>今日は暇です、予定はありません。</p>
+		</c:if>
+
 
 	 	<form name="regist" action="CalendarMonthBusinessServlet" method="get">
 	 		<input type="submit" value="新規登録">
 	 	</form>
 
-		<c:if test="${empty planList}">
-			<p>今日は暇です。</p>
-		</c:if>
 
 
 		<c:forEach var="e" items="${planList}" >
@@ -109,12 +111,14 @@
 		<hr>
 		<br>
 	</c:forEach>
-
+ </div>
  </div>
 
+
+<div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
 </div>
-<div class="area-time"><label>経過時間</label><input type="text" id="i" value="00:00:00" class="a" required></div>
 </div>
+ </div>
 </body>
 <script src="js/Calendar.js"></script>
 </html>
