@@ -72,14 +72,14 @@
 			<input type="submit" value="🔍">
 		</form>
 
-		<p>【${day}】の予定はありません</p>
+		<p>${day}</p>
 
 	 	<form name="regist" action="CalendarMonthBusinessServlet" method="get">
 	 		<input type="submit" value="新規登録">
 	 	</form>
 
 		<c:if test="${empty planDayList}">
-
+			<p>${day} は暇です。</p>
 		</c:if>
 
 

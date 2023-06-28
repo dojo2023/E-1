@@ -57,19 +57,92 @@
     <div class="area-icon" id="main-icon"></div>
     <div class="area-calendardetail">
       <a></a>
+	<div id="timershow"></div>
+	<div class ="register-area">
+	<form method="POST" class="regist_form_area" action="/AllNightCalender/CalendarMonthBusinessServlet">
+	<div class ="about_table">
+		<table>
+		<div class ="title_area">
+		<h2>登録＋</h2>
+		</div>
 
-<div class ="register-area">
-		<label>用件</label>
-      <input type="text" class="schedule-input" placeholder="用件">
-      <label>開始時間</label>
-      <input type="text" class="schedule-input" placeholder="開始時間"><label>～</label>
-      <br>
-      <label>終了時間</label>
-      <input type="text" class="schedule-input" placeholder="終了時間">
-      <br>
-      <label>メモ</label>
-      <input type="text" class="schedule-input" placeholder="メモ">
-      <button type="button" onclick="registerSchedule()">登録</button>
+		<div class ="regist_task">
+		<tr>
+		<td>用件</td>
+		</tr>
+		<tr>
+		<td><input type="text" name="what" value="${e.what}"></td>
+		</tr>
+
+		<div class ="regist_time">
+		<tr>
+		<td>日時</td>
+		</tr>
+		<tr>
+		<td><input type="date" name="s_day" value="${e.s_day}" ></td>
+		<div class ="namisen">
+		<label name ="regist-namisen">~</label>
+		</div>
+		<td><input type="date" name="e_day" value="${e.e_day}" placeholder="19991214"></td>
+		</tr>
+		<tr>
+		<td><input type="time" name="s_time" value="${e.s_time}" placeholder="23:00"></td>
+		<td><input type="time" name="e_time" value="${e.e_time}" placeholder="08:00"></td>
+		</tr>
+
+
+		<div class ="set-plancolor">
+		<tr>
+		<td>色</td>
+		</tr>
+		</table>
+		</div>
+		<div class="color_table">
+		<table value="${e.color}">
+		<tr>
+		<td><input type="radio" name="color" id="radioblue"  value="青" checked>
+		<label for="radioblue"><img src="/AllNightCalender/img/青アイコン.png" width="20" height="20"></label></td>
+		<td><input type="radio" name="color" id="radioGreen"  value="緑">
+		<label for="radioGreen"><img src="/AllNightCalender/img/緑アイコン.png"  width="20" height="20"></label></td>
+		<td><input type="radio" name="color" id="rediored"  value="赤">
+		<label for="rediored"><img src="/AllNightCalender/img/赤アイコン.png"  width="20" height="20"></label></td>
+		<td><input type="radio" name="color" id="redioOrange"  value="橙">
+		<label for="redioOrange"><img src="/AllNightCalender/img/橙アイコン.png"  width="20" height="20"></label></td>
+		<td><input type="radio" name="color" id="redioYellow"  value="黄">
+		<label for="redioYellow"><img src="/AllNightCalender/img/黄アイコン.png"  width="20" height="20"></label></td>
+		<td><input type="radio" name="color" id="redioBlack"  value="黒">
+		<label for="redioBlack"><img src="/AllNightCalender/img/黒アイコン.png"  width="20" height="20"></label></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+
+		<div class="memo_table">
+		<table>
+		<tr>
+
+
+		<td>メモ</td>
+		</tr>
+		<tr>
+		<td><input type="text" name="memo" value="${e.memo}"></td>
+		</tr>
+
+		</table>
+		</div>
+
+		<div class="regist_submit">
+		<table>
+			<tr>
+				<td>
+					<input type="submit" name="REGIST" class="regist-submit" >
+					<input type="reset" name="reset" class="regist-reset" >
+				</td>
+			</tr>
+		</table>
+		</div>
+	</form>
+
  </div>
   </div>
     <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>

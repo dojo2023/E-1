@@ -82,8 +82,6 @@
 	 		<input type="submit" value="新規登録">
 	 	</form>
 
-
-
 		<c:forEach var="e" items="${planList}" >
 			<table class="list">
 			<tr>

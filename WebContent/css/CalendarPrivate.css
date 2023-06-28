@@ -338,11 +338,13 @@ padding:0 0 0 4px;
 
 .area-calendardetail p{
  padding:2px 3px;
+ font-size: 12px;
+left: 1px;
 }
 
 /*予定登録画面 ズレの修正*/
 .area-calendardetail input[type="text"] {
- margin: 3px 0px 2px 10px;
+ 	/* margin: 3px 0px 2px 10px; */
 }
 
 /*開始、終了時間登録*/
@@ -482,8 +484,8 @@ width:100px;
 
 .about_table h2{
 	text-align:center;
-	margin:20px 0 0 0;
-	padding:10px;
+	margin:10px 0 0 0;
+	padding:5px  ;
 	border-bottom: 2px solid #ffa500;
 }
 
@@ -495,9 +497,7 @@ width:100px;
 	max-height:20px;
 }
 
-.about_table [name="what"]{
-width:168px;
-}
+.about_table [name="what"]{width:168px;}
 
 .about_table [name="regist-namisen"]{
 	top:115px;
@@ -585,3 +585,91 @@ width:168px;
 	background-size:30px
 }
 
+
+table.list{
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #3c4a68;
+background: #ffff;
+border-bottom: solid 3px #aac5de;
+border-radius: 6px;
+margin: 0;
+padding: 0;
+width: 230px;
+}
+
+table.list{
+padding: 0.5em 1em;
+margin: 2em 0;
+background: #ffff;
+border-bottom: solid 3px #aac5de;
+border-radius: 6px;
+margin: 0;
+padding: 0;
+width: 230px;
+}
+
+.area-calendardetail input[name="SUBMIT"] , .area-calendardetail input[name="DELETE"]{
+width:50px;
+}
+.list tbody tr:nth-of-type(4) td{
+width:50px;
+text-align:right;
+}
+/*dayjsp範囲*/
+.register-area{
+/* background-color:white; */
+}
+.register-area , .memo_table , .regist_submit{
+background-color:white;
+top:10px;
+}
+.himadesu [name="serch"] .regist-result-css [name="serch"]{
+top:10px;
+}
+.today-himadesu input[type=text] , .regist-result-css input[type=text]{
+width: 135px;
+top:1px;
+}
+.himadesu input[type=text] , .regist-result-css input[type=text]{
+padding:2px;
+bottom:1px;
+}
+.himadesu p , .regist-result-css p{
+margin:20px 0 ;
+}
+.himadesu form , .regist-result-css form{
+text-align:center;
+}
+.himadesu input[type=submit] , .regist-result-css input[type=submit]{
+text-align:center;
+margin:0 0 20px 0;
+background-color:#6495ed61;
+border:none;
+}
+.himadesu input[type=submit]:hover , .regist-result-css input[type=submit]:hover{
+text-align:center;
+margin:0 0 20px 0;
+background-color:#333c5061;
+border:1px solid black;
+}
+/*regist-result-css*/
+.regist-result-css > .inquiry_footer , .homebutton{
+background-color:#ffffff;
+text-align:center;
+padding:5px;
+}
+.homebutton:hover {
+color:#70879d;
+text-align:center;
+padding:5px;
+}
+.regist-result-css p {
+text-align:center;
+}
+
+
+.namisen{
+	height:1px;
+
+}

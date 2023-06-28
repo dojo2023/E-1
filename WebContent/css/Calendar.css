@@ -570,11 +570,9 @@ table.list{
 	top:10px;
 }
 
-.himadesu [name="serch"] {
+.himadesu [name="serch"] .regist-result-css [name="serch"]{
 	top:10px;
 }
-
-
 
 .today-himadesu input[type=text] , .regist-result-css input[type=text]{
 	width: 135px;
@@ -587,27 +585,18 @@ table.list{
 	bottom:1px;
 }
 
-.regist-result-css [name="serch"]{
-	top:10px;
-}
-
-
-
 .himadesu p , .regist-result-css p{
 	margin:20px 0 ;
 }
 
 .himadesu form , .regist-result-css form{
 	text-align:center;
+
 }
 
-.regist-result-css input[type=submit]{
-	top:2px;
-}
 
 .himadesu input[type=submit] , .regist-result-css input[type=submit]{
 	text-align:center;
-	height:23px;
 	margin:0 0 20px 0;
 	background-color:#6495ed61;
 	border:none;

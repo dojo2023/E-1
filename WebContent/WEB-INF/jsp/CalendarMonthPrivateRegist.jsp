@@ -66,10 +66,10 @@
     <div class="area-icon" id="main-icon"></div>
     <div class="area-calendardetail">
       <a></a>
-
+<div id="timershow"></div>
 
 	<div class ="register-area">
-	<form method="POST" action="/AllNightCalender/CalendarMonthPrivateServlet">
+	<form method="POST" class="regist_form_area"  action="/AllNightCalender/CalendarMonthPrivateServlet">
 	<div class ="about_table">
 		<table>
 		<div class ="title_area">
@@ -156,7 +156,6 @@
 
  </div>
 
-  </div>
     <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
   </div>
 </body>
