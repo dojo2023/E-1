@@ -72,5 +72,5 @@
     <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
   </div>
 </body>
-<script src="js/Calendar.js"></script>
+<script src="js/CalendarPrivate.js"></script>
 </html>
