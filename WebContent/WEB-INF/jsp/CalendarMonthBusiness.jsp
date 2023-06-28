@@ -65,21 +65,23 @@
       	<a></a>
 
 		<div class ="register-area">
-
-
+		<div class ="himadesu">
+		<div class ="today-himadesu">
 
 		<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
 			<input type="text" name="Serch">
 			<input type="submit" value="🔍">
 		</form>
 
+		<c:if test="${empty planList}">
+			<p>今日は暇です、予定はありません。</p>
+		</c:if>
+
+
 	 	<form name="regist" action="CalendarMonthBusinessServlet" method="get">
 	 		<input type="submit" value="新規登録">
 	 	</form>
 
-		<c:if test="${empty planList}">
-			<p>今日は暇です。</p>
-		</c:if>
 
 
 		<c:forEach var="e" items="${planList}" >
@@ -109,12 +111,14 @@
 		<hr>
 		<br>
 	</c:forEach>
-
+ </div>
  </div>
 
-</div>
+
 <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
 </div>
+</div>
+ </div>
 </body>
 <script src="js/Calendar.js"></script>
 </html>

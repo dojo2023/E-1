@@ -68,7 +68,7 @@
 	<div id="timershow"></div>
 
 	<div class ="register-area">
-	<form method="POST" action="/AllNightCalender/CalendarMonthBusinessServlet">
+	<form method="POST" class="regist_form_area" action="/AllNightCalender/CalendarMonthBusinessServlet">
 	<div class ="about_table">
 		<table>
 		<div class ="title_area">
