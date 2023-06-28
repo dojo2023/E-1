@@ -626,3 +626,23 @@ table.list{
 .regist-result-css p {
 	text-align:center;
 }
+
+.himadesu{
+	background-color:#fff;
+		background-color:#fff;
+	    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #3c4a68;
+    background: #ffff;
+    border-bottom: solid 3px #aac5de;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
+    width: 230px;
+}
+.register-area{
+	background-color:#6495ed;
+}
+table-list{
+	left:10px;
+}
