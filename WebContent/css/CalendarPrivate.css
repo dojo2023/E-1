@@ -292,11 +292,11 @@ padding:0 0 0 4px;
     background-color: white;
     margin: 0px 10px;
     padding: 0 0 0 0;
-    border-bottom: 2px solid orange;
+    /* border-bottom: 2px solid orange; */
 }
 
 .area-calendardetail label{
-	padding: 10px 10px;
+	/* padding: 10px 10px; */
 }
 
 .area-calendardetail label:first-child{
@@ -332,7 +332,7 @@ padding:0 0 0 4px;
 
 
 .area-calendardetail input{
- width:200px;
+ /* width:200px; */
  margin:10px 0;
 }
 
@@ -484,7 +484,7 @@ width:100px;
 	text-align:center;
 	margin:20px 0 0 0;
 	padding:10px;
-	border-bottom:2px solid #6495ed;
+	border-bottom: 2px solid #ffa500;
 }
 
 
@@ -501,7 +501,7 @@ width:168px;
 
 .about_table [name="regist-namisen"]{
 	top:115px;
-	left:70px;
+	left:80px;
 }
 
 .about_table input[type="date"][name="time"]{
@@ -511,15 +511,23 @@ width:168px;
 
 .about_table input[type="date"][name="s_day"],[name="s_time"]{
 	width:60px;
-	margin:0;
+	margin:0 0 0 10px;
+}
+
+.about_table [name="s_time"]{
+	max-width:64px;
+	margin: 10px 0 0 10px;
 }
 
 .about_table input[type="date"][name="e_day"],[name="e_time"]{
 	max-width:64px;
-	margin: 0 0 0 20px;
+	margin: 0 0 0 30px;
 }
 
-
+.about_table [name="e_time"]{
+	max-width:64px;
+	margin: 10px 0 0 30px;
+}
 
 .color_table input[type="radio"] {
     display: none;
@@ -563,7 +571,7 @@ width:168px;
 	border: 0px;
 	margin:0 10px 0px 0;
 	color: #ffffff00;
-	background: url(../img/仕事モード予定内容完了ボタン.png) top no-repeat;
+	background: url(../img/プライベートモード予定内容完了ボタン.png) top no-repeat;
 	background-size:30px
 }
 
@@ -573,7 +581,7 @@ width:168px;
 	border: 0px;
 	margin:0 10px 0 0;
 	color: #ffffff00;
-	background: url(../img/仕事モード予定削除ボタン.png) top no-repeat;
+	background: url(../img/プライベートモード予定削除ボタン.png) top no-repeat;
 	background-size:30px
 }
 
