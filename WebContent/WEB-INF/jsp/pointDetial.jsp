@@ -11,6 +11,12 @@
 <script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
 <title>ポイント詳細画面</title>
 <link rel="stylesheet" href="css/pointDetial.css">
+  <style>
+	body {
+		background-image: url("/AllNightCalender/img/${sessionScope.url}");
+		background-size: cover;
+	}
+</style>
 </head>
 <header>
 

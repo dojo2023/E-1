@@ -45,7 +45,23 @@ public class BackgroundChangeServlet extends HttpServlet {
 		//ランクポイントと現ポイントを比べる（余裕あれば）
 
 		//検索結果をリクエストスコープに格納する
-		request.setAttribute("r",pointList.get(0).getNow_point());
+
+		 int pt = Integer.parseInt(pointList.get(0).getNow_point());
+
+		String rank="D";
+
+		if(pt>=0 && 25>pt){
+			rank = "D";
+		}else if(pt>=25 && 50>pt){
+			rank="C";
+		}else if(pt>=50 && 125>pt){
+			rank="B";
+		}else if(pt>=125 && 1250>pt){
+			rank="A";
+		}else if(pt>=1250){
+			rank="S";
+		}
+		request.setAttribute("r",rank);
 
 
 

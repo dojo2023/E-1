@@ -9,6 +9,12 @@
 	<link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 	<link rel="stylesheet" href="/AllNightCalender/css/backgroundChange.css">
 	<title>カレンダー</title>
+	  <style>
+	body {
+		background-image: url("/AllNightCalender/img/${sessionScope.url}");
+		background-size: cover;
+	}
+</style>
 </head>
 
 <body>
@@ -20,16 +26,14 @@
 <main>
   <div class="wrapper">
 	<div class="box btns">
-	<form method= "post" action="/AllNightCalender/BackgroundChangeServlet">
+	<form method= "post" name="contactForm" action="/AllNightCalender/BackgroundChangeServlet">
 
-  			<input type="button" img src="/AllNightCalender/img/s6.jpg" id="button1" onclick="setUrl1()" value="${j.sc_s}">
-  			<input type="button" img src="/AllNightCalender/img/a6.jpg"id="button2" onclick="setUrl2()" value="${j.sc_a}"><br>
+  		<input type="button" name="srank" img src="/AllNightCalender/img/s6.jpg" id="button1" onclick="setUrl1()" value="${j.sc_s}">
+  		<input type="button" name="arank" img src="/AllNightCalender/img/a6.jpg"id="button2" onclick="setUrl2()" value="${j.sc_a}"><br>
 
-<!-- 		<input type ="botton" class ="btn" value = "月限定Sランク" >
-		<input type ="botton" class ="btn" value = "月限定Aランク" ><br>
-		<input type ="botton" class ="btn" value = "通常" ><br>
- -->
-		<input type ="botton" class ="btn" value = "選択解除" ><br>
+ 		<input type ="button" class ="btn" value = "通常" ><br>
+
+		<input type ="button" class ="btn" value = "選択解除" ><br>
 
 		<input type="hidden" id="hidden" name="url" value="">
   		<input type="submit" value="確定">
@@ -41,7 +45,7 @@
 
 	<div class="box">
 
-		<p>あなたは今[${r} ]ランクです<br>
+		<p>あなたは今[ ${r} ]ランクです<br>
 		   暗くなっている背景は<br>
 		   選択・設定出来ません</p><br>
 
@@ -74,7 +78,6 @@
 	</div>
   </div>
 
-
 </main>
 </body>
 <script>
@@ -89,21 +92,28 @@
 		var button = document.getElementById("button2");
 		hidden.value = button.value;
 	}
-	var rank = "表示エラー";
-	if(${r}>=0 && 24<${r}){
-		rank = "D";
-	}else if(${r}>=25 && 49<${r}){
-		rank="C";
-	}else if(${r}>=50 && 124<${r}){
-		rank="B";
-	}else if(${r}>=125 && 1249<${r}){
-		rank="A";
-	}else{
-		rank="S"
+
+	if ("${r}" == "A"||"${r}" == "S"){
+		}else{
+		// disabled属性を設定
+		let formElements = document.forms.contactForm;
+		formElements.arank.disabled = true;
+	}
+
+	if ("${r}" == "S"){
+		}else{
+		// disabled属性を設定
+		let formElements = document.forms.contactForm;
+		formElements.srank.disabled = true;
 	}
 
 
+
+
+
+
 </script>
+
 
 
 
