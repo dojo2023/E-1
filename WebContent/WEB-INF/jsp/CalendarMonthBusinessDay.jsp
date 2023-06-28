@@ -64,7 +64,7 @@
       	<a></a>
 		<div id="timershow"></div>
 		<div class ="register-area">
-
+		<div class ="himadesu">
 
 
 		<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
@@ -72,15 +72,16 @@
 			<input type="submit" value="🔍">
 		</form>
 
-		<p>${day}</p>
+		<p>【${day}】の予定はありません</p>
 
 	 	<form name="regist" action="CalendarMonthBusinessServlet" method="get">
 	 		<input type="submit" value="新規登録">
 	 	</form>
 
 		<c:if test="${empty planDayList}">
-			<p>その日は暇です。</p>
+
 		</c:if>
+
 
 
 		<c:forEach var="e" items="${planDayList}" >
@@ -110,7 +111,7 @@
 		<hr>
 		<br>
 	</c:forEach>
-
+ </div>
  </div>
 
 </div>

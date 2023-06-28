@@ -556,3 +556,43 @@ table.list{
 	width:50px;
 	text-align:right;
 }
+
+/*dayjsp範囲*/
+
+.register-area{
+	background-color:white;
+	top:10px;
+}
+
+.himadesu [name="serch"]{
+	top:10px;
+}
+
+.himadesu input[type=text]{
+	padding:2px;
+	bottom:1px;
+}
+
+.himadesu p{
+	margin:20px 0 ;
+}
+
+.himadesu form{
+	text-align:center;
+
+}
+
+
+.himadesu input[type=submit]{
+	text-align:center;
+	margin:0 0 20px 0;
+	background-color:#6495ed61;
+	border:none;
+}
+
+.himadesu input[type=submit]:hover{
+	text-align:center;
+	margin:0 0 20px 0;
+	background-color:#333c5061;
+	border:1px solid black;
+}
