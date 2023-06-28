@@ -67,92 +67,49 @@
     <div class="area-calendardetail">
       <a></a>
 	<div id="timershow"></div>
+<div class ="register-area">
 
-	<div class ="register-area">
-	<form method="POST" action="/AllNightCalender/CalendarMonthBusinessServlet">
-	<div class ="about_table">
-		<table>
-		<div class ="title_area">
-		<h2>登録＋</h2>
-		</div>
-
-		<div class ="regist_task">
-		<tr>
-		<td>用件</td>
-		</tr>
-		<tr>
-		<td><input type="text" name="what" value="${e.what}"></td>
-		</tr>
-
-		<div class ="regist_time">
-		<tr>
-		<td>日時</td>
-		</tr>
-		<tr>
-		<td><input type="date" name="s_day" value="${e.s_day}" ></td>
-		<div class ="namisen">
-		<label name ="regist-namisen">~</label>
-		</div>
-		<td><input type="date" name="e_day" value="${e.e_day}" placeholder="19991214"></td>
-		</tr>
-		<tr>
-		<td><input type="time" name="s_time" value="${e.s_time}" placeholder="23:00"></td>
-		<td><input type="time" name="e_time" value="${e.e_time}" placeholder="08:00"></td>
-		</tr>
-
-
-		<div class ="set-plancolor">
-		<tr>
-		<td>色</td>
-		</tr>
-		</table>
-		</div>
-		<div class="color_table">
-		<table value="${e.color}">
-		<tr>
-		<td><input type="radio" name="color" id="radioblue"  value="青" checked>
-		<label for="radioblue"><img src="/AllNightCalender/img/青アイコン.png" width="20" height="20"></label></td>
-		<td><input type="radio" name="color" id="radioGreen"  value="緑">
-		<label for="radioGreen"><img src="/AllNightCalender/img/緑アイコン.png"  width="20" height="20"></label></td>
-		<td><input type="radio" name="color" id="rediored"  value="赤">
-		<label for="rediored"><img src="/AllNightCalender/img/赤アイコン.png"  width="20" height="20"></label></td>
-		<td><input type="radio" name="color" id="redioOrange"  value="橙">
-		<label for="redioOrange"><img src="/AllNightCalender/img/橙アイコン.png"  width="20" height="20"></label></td>
-		<td><input type="radio" name="color" id="redioYellow"  value="黄">
-		<label for="redioYellow"><img src="/AllNightCalender/img/黄アイコン.png"  width="20" height="20"></label></td>
-		<td><input type="radio" name="color" id="redioBlack"  value="黒">
-		<label for="redioBlack"><img src="/AllNightCalender/img/黒アイコン.png"  width="20" height="20"></label></td>
-		</tr>
-		</table>
-		</div>
-		</div>
-
-		<div class="memo_table">
-		<table>
-		<tr>
-
-
-		<td>メモ</td>
-		</tr>
-		<tr>
-		<td><input type="text" name="memo" value="${e.memo}"></td>
-		</tr>
-
-		</table>
-		</div>
-
-		<div class="regist_submit">
-		<table>
-			<tr>
-				<td>
-					<input type="submit" name="REGIST" class="regist-submit" >
-					<input type="reset" name="reset" class="regist-reset" >
-				</td>
-			</tr>
-		</table>
-		</div>
+	<form name="serch" action="CalendarMonthPrivateSerchServlet" method="post">
+		<input type="text" name="Serch">
+		<input type="submit" value="検索">
 	</form>
 
+	 <form name="regist" action="CalendarMonthPrivateServlet" method="get">
+	 	<input type="submit" value="新規登録">
+	 </form>
+
+	<c:if test="${empty serchList}">
+		<p>検索結果はありません。</p>
+	</c:if>
+
+
+	<c:forEach var="e" items="${serchList}" >
+		<table class="list">
+			<tr>
+				<td>${e.s_day}</td>
+				<td>${e.e_day}</td>
+			</tr>
+			<tr>
+				<td>${e.s_time}</td>
+				<td>${e.e_time}</td>
+			</tr>
+			<tr>
+				<td>${e.what}</td>
+			</tr>
+
+			<tr>
+				<form name="date" action="CalendarMonthPrivateServletUpdate" method="get">
+					<td><input type="submit" name="SUBMIT" value=${e.number}></td>
+				</form>
+				<form name="date" action="CalendarMonthPrivateServletDelete" method="get">
+				<td><input type="submit" name="SUBMIT" value=${e.number}></td>
+				</form>
+			</tr>
+		</table>
+		<br>
+		<hr>
+		<br>
+	</c:forEach>
 
  </div>
 

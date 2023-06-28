@@ -54,7 +54,7 @@ width: 40px;
 }
 /*領域を赤線で囲む*/
     .container * {
-      /*border: 1px solid red;*/
+      /* border: 1px solid red; */
       position: relative;
     }
 /*全体*/
@@ -241,13 +241,13 @@ padding:0 0 0 4px;
   display: none;
 }
 .area-calendardetail div {
-    background-color: white;
+
     margin: 0px 10px;
     padding: 0 0 0 0;
-    border-bottom: 2px solid cornflowerblue;
+    /* border-bottom: 2px solid cornflowerblue; */
 }
 .area-calendardetail label{
-	padding: 10px 10px;
+	/* padding: 10px 10px; */
 }
 .area-calendardetail label:first-child{
     padding: 20px 10px;
@@ -274,11 +274,13 @@ padding:0 0 0 4px;
 	margin:3px 0 3px 0;
 }
 .area-calendardetail input{
- width:200px;
- margin:10px 0;
+ /* width:200px; */
+ /* margin: 5px 0 0 0; */
 }
 .area-calendardetail p{
  padding:2px 3px;
+ font-size: 12px;
+ left: 1px;
 }
 /*予定登録画面 ズレの修正*/
 .area-calendardetail input[type="text"] {
@@ -405,6 +407,13 @@ left: 43px;
 
 /*登録右画面CSS*/
 
+.about_table h2{
+	text-align:center;
+	margin:20px 0 0 0;
+	padding:10px;
+	border-bottom:2px solid #6495ed;
+}
+
 
 .about_table table,td{
 	max-width:80px;
@@ -413,34 +422,96 @@ left: 43px;
 	max-height:20px;
 }
 
-.about_table [name="regist-namisen"]{
-	top:115px;
-	left:75px;
+.about_table [name="what"]{
+width:168px;
 }
 
-.about_table input[type="text"][name="what"]{
+.about_table [name="regist-namisen"]{
+	top:115px;
+	left:70px;
+}
+
+.about_table input[type="date"][name="time"]{
 	width:170px;
 	margin:0;
 }
 
-.about_table input[type="text"][name="s_day"],[type="text"][name="s_time"]{
-	width:70px;
+.about_table input[type="date"][name="s_day"],[name="s_time"]{
+	width:60px;
 	margin:0;
 }
 
-.about_table input[type="text"][name="e_day"],[type="text"][name="e_time"]{
-	max-width:70px;
-	margin: 0 0 0 15px;
+.about_table input[type="date"][name="e_day"],[name="e_time"]{
+	max-width:64px;
+	margin: 0 0 0 20px;
 }
 
-.color_table input[type="radio"]{
-	width:30px;
+
+
+.color_table input[type="radio"] {
+    display: none;
 }
 
-.memo_table{
-
+.color_table label{
+	width:15px;
+	left:3px;
+	margin:0 0 0 7px;
 }
 
-.regist_submit{
+.color_table input[type="radio"]:checked + label img {
+   border: 3px solid #000000;
+}
 
+.memo_table table,td{
+	margin:0 0 0 18px;
+}
+
+.memo_table input[type="text"]{
+	width:170px;
+	font-size:12px;
+	max-height:20px;
+}
+
+.regist_submit {
+	display: flex;
+	justify-content: center;
+}
+
+
+.regist_submit td{
+		display: flex;
+	justify-content: center;
+	margin:10px 0 30px 0;
+}
+
+.regist_submit input[name="REGIST"] {
+	width:100px;
+	height:35px;
+	border: 0px;
+	margin:0 10px 0px 0;
+	color: #ffffff00;
+	background: url(../img/仕事モード予定内容完了ボタン.png) top no-repeat;
+	background-size:30px
+}
+
+.regist_submit input[name="reset"] {
+	width:100px;
+	height:35px;
+	border: 0px;
+	margin:0 10px 0 0;
+	color: #ffffff00;
+	background: url(../img/仕事モード予定削除ボタン.png) top no-repeat;
+	background-size:30px
+}
+
+table.list{
+	 padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #3c4a68;
+    background: #ffff;
+    border-bottom: solid 3px #aac5de;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
+    width: 230px;
 }

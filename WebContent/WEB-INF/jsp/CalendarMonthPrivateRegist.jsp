@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/Calendar.css">
+  <link rel="stylesheet" href="css/CalendarPrivate.css">
 </head>
 <body>
   <div class="container">
@@ -31,7 +31,7 @@
 
 <div class="area-mode">
 
-			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
+			<img class="img-p" src="/AllNightCalender/img/プライベートモード上表示.png" >
 
   	</div>
 
@@ -69,7 +69,7 @@
 	<div id="timershow"></div>
 
 	<div class ="register-area">
-	<form method="POST" action="/AllNightCalender/CalendarMonthBusinessServlet">
+	<form method="POST" action="/AllNightCalender/CalendarMonthPrivateServlet">
 	<div class ="about_table">
 		<table>
 		<div class ="title_area">
