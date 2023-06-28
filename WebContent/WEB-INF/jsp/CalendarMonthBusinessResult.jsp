@@ -70,13 +70,13 @@
 
 	<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
 		<input type="text" name="Serch">
-		<input type="submit" value="検索">
+		<input type="submit" value="🔍">
 	</form>
-
+<div class=sinki>
 	 <form name="regist" action="CalendarMonthBusinessServlet" method="get">
 	 	<input type="submit" value="新規登録">
 	 </form>
-
+</div>
 	<p>${result}</p>
 
 	<div class="inquiry_footer"><a href="/AllNightCalender/CalendarServlet" class="homebutton">今日の予定に戻る</a></div>

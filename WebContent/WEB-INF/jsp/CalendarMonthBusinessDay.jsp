@@ -69,7 +69,7 @@
 
 		<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
 			<input type="text" name="Serch">
-			<input type="submit" value="検索">
+			<input type="submit" value="🔍">
 		</form>
 
 		<p>${day}</p>

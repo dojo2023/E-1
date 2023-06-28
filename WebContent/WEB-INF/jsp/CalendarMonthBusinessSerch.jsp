@@ -70,7 +70,7 @@
 
 	<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
 		<input type="text" name="Serch">
-		<input type="submit" value="検索">
+		<input type="submit" value="🔍">
 	</form>
 
 	 <form name="regist" action="CalendarMonthBusinessServlet" method="get">
@@ -101,7 +101,7 @@
 					<td><input type="submit" name="SUBMIT" value=${e.number}></td>
 				</form>
 				<form name="date" action="CalendarMonthBusinessServletDelete" method="get">
-				<td><input type="submit" name="SUBMIT" value=${e.number}></td>
+				<td><input type="submit" name="DELETE" value=${e.number}></td>
 				</form>
 			</tr>
 		</table>

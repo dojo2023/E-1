@@ -515,3 +515,44 @@ table.list{
     padding: 0;
     width: 230px;
 }
+table.list{
+	 padding: 0.5em 1em;
+	 margin: 2em 0;
+	 color: #3c4a68;
+	 background: #ffff;
+	 border-bottom: solid 3px #aac5de;
+	 border-radius: 6px;
+	 margin: 0;
+	 padding: 0;
+	 width: 230px;
+}
+
+.area-calendardetail input[name="SUBMIT"]{
+	width: 50px;
+	height:35px;
+	color:#ff000000;
+	border:none;
+	background: url(../img/仕事モード予定編集ボタン.png) top no-repeat;
+	background-size:30px
+
+}
+
+.area-calendardetail input[name="DELETE"]{
+	width: 50px;
+	height:35px;
+	color:#ff000000;
+	border:none;
+	background: url(../img/仕事モード予定削除ボタン.png) top no-repeat;
+	background-size:30px
+}
+
+.area-calendardetail input[name="SUBMIT"] , .area-calendardetail input[name="DELETE"]{
+	width:50px;
+}
+
+
+
+.list tbody tr:nth-of-type(4) td{
+	width:50px;
+	text-align:right;
+}
