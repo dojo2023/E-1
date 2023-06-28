@@ -3,6 +3,7 @@ package servlet;
 
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,7 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.Rank_bonusDAO;
+import dao.UserDAO;
 import model.Rank_bonus;
+import model.User;
 
 /**
  * Servlet implementation class BackgroundChangeServlet
@@ -30,16 +33,19 @@ public class BackgroundChangeServlet extends HttpServlet {
 
 //ランク表示
 		//セッションからのデータの取得
-		/*		HttpSession session = request.getSession();
-		int ID =(int)session.getAttribute("id");
+		HttpSession session = request.getSession();
+		String ID =(String)session.getAttribute("id");
 
 		//検索処理を行う
 		UserDAO UDao = new UserDAO();
-		List<User> pointList = UDao.select(ID);
+		List<User> pointList = UDao.select("tetsuya");
+
+		//ランクdaoからランクポイント（余裕あれば）
+
+		//ランクポイントと現ポイントを比べる（余裕あれば）
 
 		//検索結果をリクエストスコープに格納する
-		request.setAttribute("ｒ",pointList);
-*/
+		request.setAttribute("r",pointList.get(0).getNow_point());
 
 
 
