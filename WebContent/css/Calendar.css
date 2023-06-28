@@ -236,6 +236,7 @@ padding:0 0 0 4px;
  max-width: 250px;
  overflow: scroll;
  padding:0px 10px;
+ /* max-height: 400px; */
 }
 .area-calendardetail::-webkit-scrollbar{
   display: none;
@@ -559,14 +560,25 @@ table.list{
 
 /*dayjsp範囲*/
 
+<<<<<<< Updated upstream
 .register-area{
 	/* background-color:white; */
+=======
+.register-area , .memo_table , .regist_submit{
+	background-color:white;
+>>>>>>> Stashed changes
 	top:10px;
 }
 
 .himadesu [name="serch"]{
 	top:10px;
 }
+
+.today-himadesu input[type=text]{
+	width: 135px;
+	top:1px;
+}
+
 
 .himadesu input[type=text]{
 	padding:2px;
@@ -595,4 +607,4 @@ table.list{
 	margin:0 0 20px 0;
 	background-color:#333c5061;
 	border:1px solid black;
-}
+}s
