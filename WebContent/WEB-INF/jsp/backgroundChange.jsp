@@ -41,7 +41,7 @@
 
 	<div class="box">
 
-		<p>あなたは今[${xx} ]ランクです<br>
+		<p>あなたは今[${r} ]ランクです<br>
 		   暗くなっている背景は<br>
 		   選択・設定出来ません</p><br>
 
@@ -88,6 +88,18 @@
 		var hidden = document.getElementById("hidden");
 		var button = document.getElementById("button2");
 		hidden.value = button.value;
+	}
+	var rank = "表示エラー";
+	if(${r}>=0 && 24<${r}){
+		rank = "D";
+	}else if(${r}>=25 && 49<${r}){
+		rank="C";
+	}else if(${r}>=50 && 124<${r}){
+		rank="B";
+	}else if(${r}>=125 && 1249<${r}){
+		rank="A";
+	}else{
+		rank="S"
 	}
 
 
