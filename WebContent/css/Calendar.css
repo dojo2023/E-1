@@ -560,51 +560,80 @@ table.list{
 
 /*dayjsp範囲*/
 
-<<<<<<< Updated upstream
 .register-area{
 	/* background-color:white; */
-=======
+}
+
+
 .register-area , .memo_table , .regist_submit{
 	background-color:white;
->>>>>>> Stashed changes
 	top:10px;
 }
 
-.himadesu [name="serch"]{
+.himadesu [name="serch"] {
 	top:10px;
 }
 
-.today-himadesu input[type=text]{
+
+
+.today-himadesu input[type=text] , .regist-result-css input[type=text]{
 	width: 135px;
 	top:1px;
 }
 
 
-.himadesu input[type=text]{
+.himadesu input[type=text] , .regist-result-css input[type=text]{
 	padding:2px;
 	bottom:1px;
 }
 
-.himadesu p{
+.regist-result-css [name="serch"]{
+	top:10px;
+}
+
+
+
+.himadesu p , .regist-result-css p{
 	margin:20px 0 ;
 }
 
-.himadesu form{
+.himadesu form , .regist-result-css form{
 	text-align:center;
-
 }
 
+.regist-result-css input[type=submit]{
+	top:2px;
+}
 
-.himadesu input[type=submit]{
+.himadesu input[type=submit] , .regist-result-css input[type=submit]{
 	text-align:center;
+	height:23px;
 	margin:0 0 20px 0;
 	background-color:#6495ed61;
 	border:none;
 }
 
-.himadesu input[type=submit]:hover{
+.himadesu input[type=submit]:hover , .regist-result-css input[type=submit]:hover{
 	text-align:center;
 	margin:0 0 20px 0;
 	background-color:#333c5061;
 	border:1px solid black;
-}s
+}
+
+/*regist-result-css*/
+
+.regist-result-css > .inquiry_footer , .homebutton{
+	background-color:#ffffff;
+	text-align:center;
+	padding:5px;
+}
+
+.homebutton:hover {
+	color:#70879d;
+	text-align:center;
+	padding:5px;
+}
+
+.regist-result-css p {
+	text-align:center;
+}
