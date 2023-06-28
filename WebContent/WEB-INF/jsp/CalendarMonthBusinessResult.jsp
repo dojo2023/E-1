@@ -67,6 +67,7 @@
       <a></a>
 	<div id="timershow"></div>
 <div class ="register-area">
+<div class ="regist-result-css">
 
 	<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
 		<input type="text" name="Serch">
@@ -80,7 +81,7 @@
 	<p>${result}</p>
 
 	<div class="inquiry_footer"><a href="/AllNightCalender/CalendarServlet" class="homebutton">今日の予定に戻る</a></div>
-
+</div>
  </div>
 
   </div>
