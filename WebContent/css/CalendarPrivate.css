@@ -569,7 +569,7 @@ width:168px;
 	width:100px;
 	height:35px;
 	border: 0px;
-	margin:0 10px 0px 0;
+	margin: 0 20px 0px 0;
 	color: #ffffff00;
 	background: url(../img/プライベートモード予定内容完了ボタン.png) top no-repeat;
 	background-size:30px
@@ -579,7 +579,7 @@ width:168px;
 	width:100px;
 	height:35px;
 	border: 0px;
-	margin:0 10px 0 0;
+	margin:0 0px 0 10px;
 	color: #ffffff00;
 	background: url(../img/プライベートモード予定削除ボタン.png) top no-repeat;
 	background-size:30px
