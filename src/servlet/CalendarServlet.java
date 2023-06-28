@@ -35,28 +35,28 @@ public class CalendarServlet extends HttpServlet {
 
 		PlanDAO pDao = new PlanDAO();
 
-		if (x.equals("business") && y.equals("0") && z.equals("0")) {
+		if (x.equals("business") && y.equals("0")) {
 			List<Plan> planList = pDao.look((String)session.getAttribute("id"),x);
 			session.setAttribute("planList", planList);
 
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusiness.jsp");
 			dispatcher.forward(request, response);
 		}
-		else if (x.equals("business") && y.equals("1") && z.equals("0")) {
+		else if (x.equals("business") && y.equals("1")) {
 			List<Plan> planList = pDao.look((String)session.getAttribute("id"),x);
 			session.setAttribute("planList", planList);
 
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthBusinessTetsuyaModeTimeOff.jsp");
 			dispatcher.forward(request, response);
 		}
-		else if (x.equals("private") && y.equals("0") && z.equals("0")) {
+		else if (x.equals("private") && y.equals("0")) {
 			List<Plan> planList = pDao.look((String)session.getAttribute("id"),x);
 			session.setAttribute("planList", planList);
 
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/CalendarMonthPrivate.jsp");
 			dispatcher.forward(request, response);
 		}
-		else if (x.equals("private") && y.equals("1") && z.equals("0")) {
+		else if (x.equals("private") && y.equals("1")) {
 			List<Plan> planList = pDao.look((String)session.getAttribute("id"),x);
 			session.setAttribute("planList", planList);
 
