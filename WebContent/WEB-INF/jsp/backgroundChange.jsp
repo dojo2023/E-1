@@ -75,6 +75,8 @@
 		      <td>０ポイント以上</td>
 		    </tr>
 		</table>
+		<img src="/AllNightCalender/img/s6.jpg">
+		<img src="/AllNightCalender/img/a6.jpg">
 	</div>
   </div>
 
