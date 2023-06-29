@@ -22,13 +22,13 @@ background-color:#777acc;
 }
 
 .s{
- transform: translate(175px, 159px);
+ transform: translate(-88px, 159px);
     background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783);
      animation: 2s example4 linear infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-    display: inline-block
+    display: inline-block;
     opacity:0.5;
 }
 
@@ -70,8 +70,9 @@ p{
  margin:10px;
 }
 
-#button1{;
+#button1{
 }
+
 @keyframes example4{
     100% { background-position: 200%; }
 }
