@@ -115,7 +115,37 @@ INSERT INTO rank (c_start,b_start,a_start,s_start) VALUES ('25','50','125','1250
 
 
 //point_dayテーブルにサンプルデータを登録するSQL文
-INSERT INTO point_day (id,year,month,day,point_b,point_p,point_m) VALUES ('tetsuya','2023','5','1','5','1','6');
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 1, 2, 3, 17);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 2, 3, 4, 215);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 3, 5, 8, 13);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 4, 2, 3, 5);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 5, 3, 4, 7);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 6, 2, 3, 5);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 7, 3, 4, 7);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 8, 5, 8, 356);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 9, 2, 3, 5);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 10, 3, 4, 23);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 11, 2, 3, 9);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 12, 3, 4, 7);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 13, 5, 8, 13);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 14, 2, 3, 23);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 15, 3, 4, 7);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 16, 2, 3, 45);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 17, 3, 4, 7);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 18, 5, 8, 13);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 19, 2, 3, 18);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 20, 3, 4, 14);月
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 21, 2, 3, 15);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 22, 3, 4, 23);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 23, 5, 8, 13);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 24, 2, 3, 45);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 25, 3, 4, 25);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 26, 2, 3, 46);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 27, 3, 4, 19);月
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 28, 5, 8, 11);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 29, 2, 3, 3);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 30, 0, 0, 0);
+INSERT INTO POINT_DAY VALUES('tetsuya', 2023, 6, 31, 0, 0, 0);
 
 
 //rank_bonusテーブルにサンプルデータを登録するSQL文
