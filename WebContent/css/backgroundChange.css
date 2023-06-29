@@ -1,122 +1,108 @@
-.wrapper {
-    display: flex;
+
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "title title"
+    "box1 box2";
 }
+	body {
+		background-image: url("/AllNightCalender/img/${sessionScope.url}");
+		background-size: cover;
+	}
 
-input[type="button"]{
- width:160px;
- height:40px;
- border-radius:10px;
- margin:10px;
-}
+.title { grid-area: title;
+    text-align:center;
+  	}
 
-input[type="button"]:hover{
-background-color:#777acc;
-}
-
-.a , .s{
- width:60px;
- height:50px;
- display:flex;
- font-family:"ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W6";
- font-weight:bold;
-}
-
-.s{
- transform: translate(-88px, 159px);
-    background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783);
-     animation: 2s example4 linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    display: inline-block;
-    opacity:0.5;
-}
-
-.a{
- transform: translate(350px, 110px);
-  background: linear-gradient(45deg,#969e6f,#e7e469 ) 0 / 200%;
-    animation: 2s example4 linear infinite;
-     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-}
-
-
-
-p{
-	text-align: center;
-}
-
-.box , .box2{
-  	margin: 0 20px;
+.box1 , .box2{
   	border-width: 2px;
   	border-style: solid;
   	text-align:center;
   	width: 600px;
 }
-
-
-
- td {
-    margin: auto;
-    padding-top: 10px;
-    text-align: center;
+.table2{
+	padding:10px;
 }
-
-#button1 , #button2{
- width:150px;
- height:50px;
- border-radius:10px;
- margin:10px;
-}
-
-#button1{
-}
-
-@keyframes example4{
-    100% { background-position: 200%; }
-}
-
-
-
-#button2{
-}
-
-#button3:active{
-	border:1px solid black;
-}
-
-
-th,td {
-    border: solid 1px;  /* æž ç·šæŒ‡å®š */
-    padding: 10px;      /* ä½™ç™½æŒ‡å®š */
-}
-
-img{
- width:200px;
- margin:30px;
-}
-
+.box1 { grid-area: box1;
+	}
 table{
-   border-collapse:  collapse; /* ã‚»ãƒ«ã®ç·šã‚’é‡ã­ã‚‹ */
+	margin:auto;
+	border-collapse: collapse;
 }
-
-form{
- margin:50px;
+  th,td {
+	  border: solid 1px;
+	  padding: 5px;
+  }
+  img{
+   width:200px;
+   margin:30px;
+  }
+  a{
+	text-decoration:none;
+   color:black;
+  }
+  a:hover{
+	text-decoration:none;
+   color:#fc7dff;
+  }
+#button1 , #button2{
+   width:150px;
+   height:50px;
+   border-radius:10px;
+   margin:10px;
+  }
+  @keyframes example4{
+	  100% { background-position: 200%; }
+  }
+	  button {
+		padding: 10px 20px;
+		background-color: #f2f2f2;
+		border: none;
+		border-radius: 5px;
+	  }
+	  button.selected {
+		background-color: red;
+	  }
+  #button3:active{
+	  border:1px solid black;
+  }
+.btn{
+	margin:10px;
 }
-
-input{
- margin:20px;
- width:300px;
+.btns{
+	margin:0px 0 10px;
 }
-
-a{
-  text-decoration:none;
- color:black;
+  .a , .s{
+   width:60px;
+   height:50px;
+   display:flex;
+   font-family:"ÃƒÂ£Ã†â€™Ã¢â‚¬â„¢ÃƒÂ£Ã†â€™Ã‚Â©ÃƒÂ£Ã¢â‚¬Å¡Ã‚Â®ÃƒÂ£Ã†â€™Ã…Â½ÃƒÂ¨Ã‚Â§Ã¢â‚¬â„¢ÃƒÂ£Ã¢â‚¬Å¡Ã‚Â´ ProN W6";
+   font-weight:bold;
+  }
+  .s{
+   transform: translate(-88px, -70px);
+	  background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783);
+	   animation: 2s example4 linear infinite;
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  font-weight: bold;
+	  display: inline-block;
+	  opacity:0.5;
+  }
+  .a{
+   transform: translate(360px, -130px);
+	background: linear-gradient(45deg,#969e6f,#e7e469 ) 0 / 200%;
+	  animation: 2s example4 linear infinite;
+	   -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  font-weight: bold;
+  }
+.inline{
+	padding:15px;
 }
-
-a:hover{
-  text-decoration:none;
- color:#fc7dff;
-}
-

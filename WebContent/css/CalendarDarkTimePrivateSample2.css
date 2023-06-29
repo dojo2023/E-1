@@ -147,7 +147,7 @@ width: 40px;
 }
 /*本日*/
 #calendar td.today {
-    background-color: #4B7BD0;
+    background-color: #ffa500;
     color: #fff;
 }
 /*ボタン*/
