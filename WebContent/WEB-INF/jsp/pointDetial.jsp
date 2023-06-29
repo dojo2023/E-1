@@ -18,6 +18,8 @@
 	}
 </style>
 </head>
+
+<body>
 <header>
 
 
@@ -62,8 +64,12 @@ flag = 0;
 </script>
 
 </header>
-<body>
+
 <div id='myDiv'></div>
+
+<c:forEach var="e" items="${g}" varStatus="s">
+	<input type="hidden" id="${s.count}" value="${e.point_m}"></input>
+</c:forEach>
 
 <!-- どこからかJavascriptでデータを受け取りたい -->
 <!-- 基準は今の年・月・日? -->
@@ -71,27 +77,41 @@ flag = 0;
 <!--  次の月へ移動するときはどうする？-->
 
 <script>
+
 //横軸
-const month = [1,2,3,4,5,6,7,8,9,10,11,12];
+const month_x = [1,2,3,4,5,6,7,8,9,10,11,12];
+const day_x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+
 //縦軸
-const day　= [1, 0.5, 0.7, 1.2, 0.3, 0.4, 1, 0.5, 0.7, 1.2, 0.3, 0.4, ];
-const total = [1,2,3,4,5,6,7,8,9,10,11,12];
+let day_y　= [];
+let total_y = [];
+let total = 0;
 
+for(let i = 1; i <= 31; i++){
+	let e = document.getElementById(i);
 
+	if(e !== null){
+		day_y.push(e.value);
+		total += parseInt(e.value);
+	}else{
+		day_y.push(0);
+	}
 
+	total_y.push(total);
+}
 
-//棒線グラフ（１日の獲得量）
+//棒グラフ（１日の獲得量）
 var trace1 = {
-  x: month,
-  y: day,
+  x: day_x,
+  y: day_y,
   name: '一日の獲得量',
   type: 'bar'
   };
 
 //折れ線グラフ（今月のポイント獲得推移）
 var trace2 = {
-  x: month,
-  y: total,
+  x: day_x,
+  y: total_y,
   name: 'ポイント獲得推移',
   yaxis: 'y2',
   type: 'scatter'
@@ -114,7 +134,9 @@ var layout = {
 Plotly.newPlot('myDiv', data, layout);
 
 </script>
+
 <a href="/AllNightCalender/CalendarServlet" class="homebutton">ホームに戻る</a>
+
 </body>
 
 </html>

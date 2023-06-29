@@ -28,8 +28,8 @@ public class Point_dayDAO {
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				pStmt.setString(1, point_day.getId());
-				pStmt.setString(2,point_day.getYear());
-				pStmt.setString(3,point_day.getMonth());
+				pStmt.setInt(2,point_day.getYear());
+				pStmt.setInt(3,point_day.getMonth());
 
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
@@ -38,12 +38,12 @@ public class Point_dayDAO {
 				while (rs.next()) {
 					Point_day card = new Point_day(
 					rs.getString("ID"),
-					rs.getString("YEAR"),
-					rs.getString("MONTH"),
-					rs.getString("DAY"),
-					rs.getString("POINT_B"),
-					rs.getString("POINT_P"),
-					rs.getString("POINT_M")
+					rs.getInt("YEAR"),
+					rs.getInt("MONTH"),
+					rs.getInt("DAY"),
+					rs.getInt("POINT_B"),
+					rs.getInt("POINT_P"),
+					rs.getInt("POINT_M")
 					);
 					pointList.add(card);
 				}
@@ -96,41 +96,41 @@ public class Point_dayDAO {
 				else {
 					pStmt.setString(1, null);
 				}
-				if (day_point.getYear() != null && !day_point.getYear().equals("")) {
-					pStmt.setString(2, day_point.getYear());
+				if (day_point.getYear() >=0 ){
+					pStmt.setInt(2, day_point.getYear());
 				}
 				else {
-					pStmt.setString(2, null);
+					pStmt.setInt(2, 0);
 				}
-				if (day_point.getMonth() != null && !day_point.getMonth().equals("")) {
-					pStmt.setString(3, day_point.getMonth());
-				}
-				else {
-					pStmt.setString(3, null);
-				}
-				if (day_point.getDay() != null && !day_point.getDay().equals("")) {
-					pStmt.setString(4, day_point.getDay());
+				if (day_point.getMonth()>=0) {
+					pStmt.setInt(3, day_point.getMonth());
 				}
 				else {
-					pStmt.setString(4, null);
+					pStmt.setInt(3, 0);
 				}
-				if (day_point.getPoint_b() != null && !day_point.getPoint_b().equals("")) {
-					pStmt.setString(5, day_point.getPoint_b());
-				}
-				else {
-					pStmt.setString(5, null);
-				}
-				if (day_point.getPoint_p() != null && !day_point.getPoint_p().equals("")) {
-					pStmt.setString(6, day_point.getPoint_p());
+				if (day_point.getDay() >=0) {
+					pStmt.setInt(4, day_point.getDay());
 				}
 				else {
-					pStmt.setString(6, null);
+					pStmt.setInt(4, 0);
 				}
-				if (day_point.getPoint_m() != null && !day_point.getPoint_m().equals("")) {
-					pStmt.setString(7, day_point.getPoint_m());
+				if (day_point.getPoint_b() >=0) {
+					pStmt.setInt(5, day_point.getPoint_b());
 				}
 				else {
-					pStmt.setString(7, null);
+					pStmt.setInt(5, 0);
+				}
+				if (day_point.getPoint_p()>=0) {
+					pStmt.setInt(6, day_point.getPoint_p());
+				}
+				else {
+					pStmt.setInt(6, 0);
+				}
+				if (day_point.getPoint_m()>=0) {
+					pStmt.setInt(7, day_point.getPoint_m());
+				}
+				else {
+					pStmt.setInt(7, 0);
 				}
 
 				// SQL文を実行する
