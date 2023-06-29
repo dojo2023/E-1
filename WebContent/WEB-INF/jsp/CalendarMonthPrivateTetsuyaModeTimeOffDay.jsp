@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/Calendar.css">
+  <link rel="stylesheet" href="css/CalendarPrivate.css">
 </head>
 <body>
   <div class="container">
@@ -27,7 +27,7 @@
 
 <div class="area-mode">
 
-			<img class="img-p" src="/AllNightCalender/img/仕事モード上表示.png" >
+			<img class="img-p" src="/AllNightCalender/img/プライベートモード上表示.png" >
 
   	</div>
 
@@ -52,8 +52,8 @@
 	<div class="tekitoutetuya">
   		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
   		<label class="tetsuya" for="tetsuyaCheckbox">
-    		<a href="http://localhost:8080/AllNightCalender/CalendarMonthBusinessTetsuyaModeTimeOffServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="オンの画像" style="display: none;"></a>
-			<a href="http://localhost:8080/AllNightCalender/CalendarMonthBusinessTetsuyaModeTimeOffServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像"></a>
+    		<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードon.png" alt="オンの画像" style="display: none;"></a>
+			<a href="http://localhost:8080/AllNightCalender/CalendarMonthPrivateTetsuyaModeTimeOffServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="オフの画像"></a>
 		</label>
 	</div>
   	</div>
@@ -64,23 +64,24 @@
       	<a></a>
 		<div id="timershow"></div>
 		<div class ="register-area">
+		<div class ="himadesu">
 
 
-
-		<form name="serch" action="CalendarMonthPrivateTetsuyaModeTimeOffSerchServlet" method="post">
+		<form name="serch" action="CalendarMonthPrivateSerchServlet" method="post">
 			<input type="text" name="Serch">
-			<input type="submit" value="検索">
+			<input type="submit" value="🔍">
 		</form>
 
 		<p>${day}</p>
 
-	 	<form name="regist" action="CalendarMonthPrivateTetsuyaModeTimeOffServlet" method="get">
+	 	<form name="regist" action="CalendarMonthPrivateServlet" method="get">
 	 		<input type="submit" value="新規登録">
 	 	</form>
 
 		<c:if test="${empty planDayList}">
-			<p>その日は暇です。</p>
+			<p>${day} は暇です。</p>
 		</c:if>
+
 
 
 		<c:forEach var="e" items="${planDayList}" >
@@ -98,10 +99,10 @@
 			</tr>
 
 			<tr>
-				<form name="date" action="CalendarMonthPrivateTetsuyaModeTimeOffServletUpdate" method="get">
+				<form name="date" action="CalendarMonthPrivateServletUpdate" method="get">
 					<td><input type="submit" name="SUBMIT" value=${e.number}></td>
 				</form>
-				<form name="date" action="CalendarMonthPrivateTetsuyaModeTimeOffServletDelete" method="get">
+				<form name="date" action="CalendarMonthPrivateServletDelete" method="get">
 				<td><input type="submit" name="SUBMIT" value=${e.number}></td>
 				</form>
 			</tr>
@@ -110,12 +111,12 @@
 		<hr>
 		<br>
 	</c:forEach>
-
+ </div>
  </div>
 
 </div>
 <div class="area-time"><label>経過時間</label><input type="text" id="i" value="00:00:00" class="a" required></div>
 </div>
 </body>
-<script src="js/Calendar.js"></script>
+<script src="js/CalendarPrivate.js"></script>
 </html>

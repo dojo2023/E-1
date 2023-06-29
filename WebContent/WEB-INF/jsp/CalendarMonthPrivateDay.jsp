@@ -117,5 +117,5 @@
 <div class="area-time"><label>経過時間</label><input type="text" id="i" value="00:00:00" class="a" required></div>
 </div>
 </body>
-<script src="js/Calendar.js"></script>
+<script src="js/CalendarPrivate.js"></script>
 </html>

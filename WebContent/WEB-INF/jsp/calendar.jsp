@@ -66,9 +66,8 @@
 
 
     <div class="area-icon" id="main-icon"></div>
-    <div class="area-calendardetail">
+  <div class="area-calendardetail">
       <a></a>
-	<div id="timershow"></div>
 
 <div class ="register-area">
 	<form method="POST" class="regist_form_area" action="/AllNightCalender/CalendarMonthBusinessServlet">
@@ -127,13 +126,11 @@
 		</tr>
 		</table>
 		</div>
-		</div>
+
 
 		<div class="memo_table">
 		<table>
 		<tr>
-
-
 		<td>メモ</td>
 		</tr>
 		<tr>
@@ -142,7 +139,7 @@
 
 		</table>
 		</div>
-
+</div>
 		<div class="regist_submit">
 		<table>
 			<tr>

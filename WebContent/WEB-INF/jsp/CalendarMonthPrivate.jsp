@@ -45,27 +45,62 @@
   	</div>
 
     <div class="area-icon" id="main-icon"></div>
-    <div class="area-calendardetail">
-      <a></a>
+   <div class="area-calendardetail">
+      	<a></a>
 
-<div class ="register-area">
-		<label>用件</label>
-      <input type="text" class="schedule-input" placeholder="用件">
-      <label>開始時間</label>
-      <input type="text" class="schedule-input" placeholder="開始時間"><label>～</label>
-      <br>
-      <label>終了時間</label>
-      <input type="text" class="schedule-input" placeholder="終了時間">
-      <br>
-      <label>メモ</label>
-      <input type="text" class="schedule-input" placeholder="メモ">
-      <button type="button" onclick="registerSchedule()">登録</button>
+		<div class ="register-area">
+		<div class ="himadesu">
+		<div class ="today-himadesu">
 
+		<form name="serch" action="CalendarMonthBusinessSerchServlet" method="post">
+			<input type="text" name="Serch">
+			<input type="submit" value="🔍">
+		</form>
+
+		<c:if test="${empty planList}">
+			<p>今日は暇です、予定はありません。</p>
+		</c:if>
+
+
+	 	<form name="regist" action="CalendarMonthBusinessServlet" method="get">
+	 		<input type="submit" value="新規登録">
+	 	</form>
+
+		<c:forEach var="e" items="${planList}" >
+			<table class="list">
+			<tr>
+				<td>${e.s_day}</td>
+				<td>${e.e_day}</td>
+			</tr>
+			<tr>
+				<td>${e.s_time}</td>
+				<td>${e.e_time}</td>
+			</tr>
+			<tr>
+				<td>${e.what}</td>
+			</tr>
+
+			<tr>
+				<form name="date" action="CalendarMonthBusinessServletUpdate" method="get">
+					<td><input type="submit" name="SUBMIT" value=${e.number}></td>
+				</form>
+				<form name="date" action="CalendarMonthBusinessServletDelete" method="get">
+				<td><input type="submit" name="SUBMIT" value=${e.number}></td>
+				</form>
+			</tr>
+		</table>
+		<br>
+		<hr>
+		<br>
+	</c:forEach>
  </div>
+ </div>
+
+</div>
 </div>
 <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
 
 </div>
 </body>
-<script src="js/Calendar.js"></script>
+<script src="js/CalendarPrivate.js"></script>
 </html>

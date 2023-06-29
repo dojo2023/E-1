@@ -641,12 +641,7 @@ margin:20px 0 ;
 .himadesu form , .regist-result-css form{
 text-align:center;
 }
-.himadesu input[type=submit] , .regist-result-css input[type=submit]{
-text-align:center;
-margin:0 0 20px 0;
-background-color:#6495ed61;
-border:none;
-}
+.himadesu input[type=submit] , .regist-result-css input[type=submit]{text-align:center;margin:0 0 20px 0;background-color: #eda26461;border:none;}
 .himadesu input[type=submit]:hover , .regist-result-css input[type=submit]:hover{
 text-align:center;
 margin:0 0 20px 0;

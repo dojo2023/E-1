@@ -89,5 +89,5 @@
 </body>
 
 
-<script src="js/Calendar.js"></script>
+<script src="js/CalendarPrivate.js"></script>
 </html>
