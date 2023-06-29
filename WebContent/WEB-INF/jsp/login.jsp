@@ -14,7 +14,7 @@
 <style>
 <% if(tetsuya.equals("1")){ %>
 	body {
-		background-image: url("img/AllNightBackground.jpg");
+		background-image: url("img/AllNightLoginBackground.jpg");
 		background-size: cover;
 	}
 <% } %>

@@ -6,12 +6,12 @@ public class User implements Serializable {
 	private String l_name;
 	private String f_name;
 	private String pw;
-	private String now_point;
+	private int now_point;
 	private String which;
 	private String mode_shift;
 	private String tetsuya;
 
-	public User(String id, String l_name, String f_name, String pw, String now_point, String which,
+	public User(String id, String l_name, String f_name, String pw, int now_point, String which,
 			String mode_shift, String tetsuya) {
 		super();
 		this.id = id;
@@ -24,7 +24,7 @@ public class User implements Serializable {
 		this.tetsuya = tetsuya;
 	}
 
-	public User(String now_point) {
+	public User(int now_point) {
 		super();
 		this.now_point = now_point;
 	}
@@ -35,7 +35,7 @@ public class User implements Serializable {
 		this.l_name = "";
 		this.f_name = "";
 		this.pw = "";
-		this.now_point = "";
+		this.now_point = 0;
 		this.which = "";
 		this.mode_shift = "";
 		this.tetsuya = "";
@@ -73,11 +73,11 @@ public class User implements Serializable {
 		this.pw = pw;
 	}
 
-	public String getNow_point() {
+	public  int getNow_point() {
 		return now_point;
 	}
 
-	public void setNow_point(String now_point) {
+	public void setNow_point(int now_point) {
 		this.now_point = now_point;
 	}
 

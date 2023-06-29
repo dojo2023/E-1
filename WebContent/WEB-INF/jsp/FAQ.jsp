@@ -49,7 +49,7 @@
   	<table>
 
    <tr>
-   		<th><div class="wow"><a href="//http://localhost:8080/AllNightCalender/CalendarServlet"> <button>ホームに戻る</button></a></div></th>
+   		<th><div class="wow"><a href="CalendarServlet"> <button>ホームに戻る</button></a></div></th>
   		  <th> <div class="honmono"  onclick="poor(event)" ><button>ホームに戻る</button></div></th>
      		<th><div class="nisemono2" onclick="poor(event)"> <button>ホームに戻る</button></div></th>
      </tr>

@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String tetuya = (String)session.getAttribute("tetsuya_time");
+	String chance = (String)session.getAttribute("chance");
+	String flag = (String)session.getAttribute("flag");
+%>
 
 
 <!DOCTYPE html>
@@ -11,6 +16,12 @@
 </head>
 
 <body>
+
+<input type="hidden" id="handan" value="<%= flag %>">
+
+<%if(chance.equals("1")) { %>
+<div class="video-overlay"></div>
+<%  }%>
   	<div class="container">
 	<div class="area-calendarleftmanu">
 		<br>
@@ -20,12 +31,15 @@
 
 
 		<div class="tekitoutetsuyatime">
+		<form  action="PoindAddServlet" name="myform" onsubmit="return false" method="GET">
   			<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea">
 
   			<label class="tetsuyatime" for="tetsuyatimeCheckbox">
-    			<img class="onImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムon.png" alt="オンの画像" style="display: none;">
-				<img class="offImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムoff.png" alt="オフの画像">
+    			<input type="image" class="onImagetetsuyatime" onclick="checkpoint()" src="/AllNightCalender/img/徹夜タイムon.png" alt="オンの画像" style="display: none;">
+				<img class="offImagetetsuyatime" onclick="startTetsuyaTime()" src="/AllNightCalender/img/徹夜タイムoff.png" alt="オフの画像">
 			</label>
+			<input type="hidden" id="point" name="point" value="0">
+			</form>
 		</div>
 	</div>
     <div class="area-calendarupmanu"><!-- xxxx年xx月を表示 -->
@@ -48,7 +62,7 @@
 	<div class="tekitoutetuya">
   		<input type="checkbox" id="tetsuyaCheckbox" class="tetsuyaArea">
   		<label class="tetsuya" for="tetsuyaCheckbox">
-    		<a href="http://localhost:8080/AllNightCalender/CalendarServlet"><img class="onImage" src="/AllNightCalender/img/徹夜モードoff.png" alt="offの画像" style="display: none;"></a>
+    		<input type="image" class="onImagetetsuyatime" src="/AllNightCalender/img/徹夜タイムon.png" alt="オンの画像" style="display: none;">
 			<a href="http://localhost:8080/AllNightCalender/CalendarMonthTetsuyaChengeOffServlet"><img class="offImage" src="/AllNightCalender/img/徹夜モードon.png" alt="onの画像"></a>
 		</label>
 	</div>
@@ -143,9 +157,11 @@
 		</div>
 	</form>
 
+
  </div>
+  <div class="area-time"><input type="text" id="i" value="00:10" class="a" style="display: none"; required></div>
   </div>
-    <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
+
   </div>
 </body>
 <script src="js/Calendar.js"></script>

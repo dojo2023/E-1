@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/Calendar.css">
 </head>
 <body>
+<input type="hidden" id="handan" value="">
+<input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea" style="display:none;">
   <div class="container">
 
 <div class="area-calendarleftmanu">
@@ -115,7 +117,6 @@
 
 </div>
 </div>
-<div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
  </div>
 </body>
 <script src="js/Calendar.js"></script>

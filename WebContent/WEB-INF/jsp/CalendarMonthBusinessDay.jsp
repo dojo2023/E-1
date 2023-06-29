@@ -115,8 +115,10 @@
  </div>
 
 </div>
-<div class="area-time"><label>経過時間</label><input type="text" id="i" value="00:00:00" class="a" required></div>
+<div class="area-time"><<input type="text" id="i" value="00:10" class="a" style="display: none"; required></div>
 </div>
+<input type="hidden" id="handan" value="">
+<input type="hidden" id="tetsuyatimeCheckbox" class="tetsuyatimeArea" >
 </body>
 <script src="js/Calendar.js"></script>
 </html>

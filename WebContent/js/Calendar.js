@@ -6,6 +6,29 @@ const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const today = new Date();
 var showDate = new Date(today.getFullYear(), today.getMonth(), 1);
 window.onload = function () {
+var handan = document.getElementById("handan");
+  if(handan.value == 1) {
+  var video = document.createElement("video");
+  video.src = videoUrl;
+  video.autoplay = true;
+  video.loop = false;
+  video.controls = false;
+  video.style.width = "100%";
+  video.style.height = "100%";
+  video.style.objectFit = "cover";
+  video.style.position = "fixed";
+  video.style.top = "0";
+  video.style.left = "0";
+  video.style.zIndex = "9998";
+  video.style.pointerEvenets = "none";
+
+  document.body.appendChild(video);
+
+    setTimeout(function(){
+      document.body.removeChild(video);
+      document.querySelector(".video-overlay").classList.add("hidden");
+    }, playTime);
+	}
     showProcess(today);
 };
 function prev() {
@@ -305,3 +328,92 @@ function BGchange(){
 // チェックボックスの変更イベントを監視
 var modechange = document.getElementById("tetsuyatimeCheckbox");
 tetsuyatimeCheckbox.addEventListener("change", BGchange);
+
+
+    //徹夜タイマーon時の処理
+
+    var tetsuyaTime = document.getElementById("testuyaTime");
+    var timershow = document.getElementById('i');
+    var Seconds = 10;
+    var Minutes = 0;
+    var countFlag = 1;
+    var point = 0;
+	var points = document.getElementById("point");
+
+    //var minutes = 90;
+    //var seconds = 0;
+
+      //スタートボタンを押したときの処理
+    function startTetsuyaTime() {
+      //check();
+
+
+      timershow.style.display = "block";
+      timerInterval = setInterval(timeCountDown, 1000);
+    }
+
+
+
+
+
+     //経過時間をリセットし、一時的なデータもリセットする
+    function clearTime() {
+      clearInterval(timerInterval);
+      elapsedSeconds = 0;
+      elapsedMinutes = 0;
+      elapsedHours = 0;
+
+      timershow.style.display = "none";
+    }
+
+
+    //経過時間のカウントダウン
+    function timeCountDown() {
+      Seconds--;
+
+      if(Seconds < 0 && countFlag == 1) {
+      	alert("休憩しましょう");
+      	point+=15;
+      	points.value = point;
+        Seconds = 3;
+      	Minutes--;
+      	countFlag = 0;
+      } else if (Seconds < 0 && countFlag==0) {
+      	alert("休憩終了です。引き続き徹夜しましょう。");
+      	Seconds = 9;
+      	countFlag = 1;
+
+      }
+
+      if (Minutes < 0) {
+        Minutes = 0;
+      }
+
+      var elapsedMinutesString = padZero(Minutes);
+      var elapsedSecondsString = padZero(Seconds);
+      var elapseTime = elapsedMinutesString + ':' + elapsedSecondsString;
+      var a = document.getElementsByClassName('a');
+      for(let i = 0; i < a.length ; i++ ){
+        a[i].value = elapseTime;
+      }
+
+
+    }
+
+    function checkpoint(e) {
+// result変数に「はい」を選んだらtrue「いいえ」を選んだらfalseが入る
+
+
+	var result = confirm('本当に徹夜タイムを終了しますか？\n現在のポイント:'+ point*7);
+
+		if(result) {
+ 		 //はいを選んだときの処理
+ 		 document.myform.submit();
+		} else {
+ 		//いいえを選んだときの処理
+
+		}
+    }
+
+    var videoUrl = "img/Video.mp4";
+    var playTime = 5000;

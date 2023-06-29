@@ -46,7 +46,7 @@ public class BackgroundChangeServlet extends HttpServlet {
 
 		//検索結果をリクエストスコープに格納する
 
-		 int pt = Integer.parseInt(pointList.get(0).getNow_point());
+		 int pt = pointList.get(0).getNow_point();
 
 		String rank="D";
 
@@ -113,7 +113,7 @@ public class BackgroundChangeServlet extends HttpServlet {
 
 
 			// ページにフォワードする
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/calendar.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("CalendarServlet");
 			dispatcher.forward(request, response);
 
 

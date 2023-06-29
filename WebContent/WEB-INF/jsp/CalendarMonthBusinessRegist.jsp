@@ -153,7 +153,7 @@
 	</form>
 
  </div>
- <div class="area-time"><input type="text" id="i" value="00:00:00" class="a" required></div>
+ <div class="area-time"><input type="text" id="i" value="00:10" class="a" style="display: none"; required></div>
  </div>
 
 

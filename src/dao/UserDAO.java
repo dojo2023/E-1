@@ -202,12 +202,7 @@ public class UserDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			if (point.getNow_point() != null && !point.getNow_point().equals("")) {
-				pStmt.setString(1, point.getNow_point());
-			}
-			else {
-				pStmt.setString(1, null);
-			}
+				pStmt.setInt(1, point.getNow_point());
 			if (point.getId() != null && !point.getId().equals("")) {
 				pStmt.setString(2, point.getId());
 			}
@@ -442,7 +437,7 @@ public class UserDAO {
 				// 結果表をコレクションにコピーする
 				while (rs.next()) {
 					User user = new User(
-					rs.getString("NOW_POINT")
+					rs.getInt("NOW_POINT")
 					);
 					pointList.add(user);
 				}
@@ -471,6 +466,61 @@ public class UserDAO {
 			// 結果を返す
 			return pointList;
 		}
+		// 現在のtetuyatimeをdbに反映
+				public void updateTetsuya(User tetsuya) {
+					Connection conn = null;
+
+
+					try {
+						// JDBCドライバを読み込む
+						Class.forName("org.h2.Driver");
+
+						// データベースに接続する
+						conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+						// SQL文を準備する
+						String sql = "update USER set TETSUYA_TIME=? where ID=?";
+						PreparedStatement pStmt = conn.prepareStatement(sql);
+
+						// SQL文を完成させる
+						if (tetsuya.getTetsuya() != null && !tetsuya.getTetsuya().equals("")) {
+							pStmt.setString(1, tetsuya.getTetsuya());
+						}
+						else {
+							pStmt.setString(1, null);
+						}
+						if (tetsuya.getId() != null && !tetsuya.getId().equals("")) {
+							pStmt.setString(2, tetsuya.getId());
+						}
+						else {
+							pStmt.setString(2, null);
+						}
+
+						// SQL文を実行する
+						pStmt.executeUpdate();
+
+
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+					}
+					catch (ClassNotFoundException e) {
+						e.printStackTrace();
+					}
+					finally {
+						// データベースを切断
+						if (conn != null) {
+							try {
+								conn.close();
+							}
+							catch (SQLException e) {
+								e.printStackTrace();
+							}
+						}
+					}
+
+
+				}
 
 
 		// モードの取得
@@ -535,64 +585,62 @@ public class UserDAO {
 
 
 		// 徹夜モードの取得
-		public List<User> tetsuya(String id) {
-		Connection conn = null;
-		List<User> userMode = new ArrayList<User>();
+		// 徹夜モードの取得
+				public String tetsuya(String id) {
+				Connection conn = null;
+				String tetsuya;
 
-			try {
-				// JDBCドライバを読み込む
-				Class.forName("org.h2.Driver");
-
-				// データベースに接続する
-				conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
-
-				// SQL文を準備する
-				String sql = "select tetsuya from User where ID = ?";
-				PreparedStatement pStmt = conn.prepareStatement(sql);
-
-				// SQL文を完成させる
-				if (id != null && !id.equals("")) {
-					pStmt.setString(1, id);
-				}
-				else {
-					pStmt.setString(1, null);
-				}
-
-				// SQL文を実行し、結果表を取得する
-				ResultSet rs = pStmt.executeQuery();
-
-				// 結果表をコレクションにコピーする
-				while (rs.next()) {
-					User user = new User(
-					rs.getString("TETSUYA")
-					);
-					userMode.add(user);
-				}
-			}
-
-			catch (SQLException e) {
-				e.printStackTrace();
-				userMode = null;
-			}
-			catch (ClassNotFoundException e) {
-				e.printStackTrace();
-				userMode = null;
-			}
-			finally {
-				// データベースを切断
-				if (conn != null) {
 					try {
-						conn.close();
+						// JDBCドライバを読み込む
+						Class.forName("org.h2.Driver");
+
+						// データベースに接続する
+						conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+						// SQL文を準備する
+						String sql = "select tetsuya from User where ID = ?";
+						PreparedStatement pStmt = conn.prepareStatement(sql);
+
+						// SQL文を完成させる
+						if (id != null && !id.equals("")) {
+							pStmt.setString(1, id);
+						}
+						else {
+							pStmt.setString(1, null);
+						}
+
+						// SQL文を実行し、結果表を取得する
+						ResultSet rs = pStmt.executeQuery();
+
+						// 結果表をコレクションにコピーする
+						rs.next();
+						tetsuya = rs.getString("TETSUYA");
+
+
+
 					}
+
 					catch (SQLException e) {
 						e.printStackTrace();
-						userMode = null;
+						tetsuya = "0";
 					}
+					catch (ClassNotFoundException e) {
+						e.printStackTrace();
+						tetsuya = "0";			}
+					finally {
+						// データベースを切断
+						if (conn != null) {
+							try {
+								conn.close();
+							}
+							catch (SQLException e) {
+								e.printStackTrace();
+								tetsuya = "0";					}
+						}
+					}
+					// 結果を返す
+					return tetsuya;
 				}
-			}
-			// 結果を返す
-			return userMode;
-		}
 
 		// 徹夜モードの取得
 		public List<User> time(String id) {
@@ -653,6 +701,58 @@ public class UserDAO {
 			// 結果を返す
 			return userMode;
 		}
+
+		// 現在のモードをdbに反映
+			public int  point(String id) {
+				Connection conn = null;
+				int point = 0;
+
+				try {
+					// JDBCドライバを読み込む
+					Class.forName("org.h2.Driver");
+
+					// データベースに接続する
+					conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/apu", "sa", "");
+
+					// SQL文を準備する
+					String sql = "select NOW_POINT from USER WHERE ID=?";
+					PreparedStatement pStmt = conn.prepareStatement(sql);
+
+					// SQL文を完成させる
+						pStmt.setString(1, id);
+
+					// SQL文を実行する
+					ResultSet rs = pStmt.executeQuery();
+
+
+					rs.next();
+
+					point = rs.getInt("NOW_POINT");
+
+
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+				}
+				catch (ClassNotFoundException e) {
+					e.printStackTrace();
+				}
+				finally {
+					// データベースを切断
+					if (conn != null) {
+						try {
+							conn.close();
+						}
+						catch (SQLException e) {
+							e.printStackTrace();
+						}
+					}
+				}
+
+				// 結果を返す
+				return point;
+
+			}
 
 
 
