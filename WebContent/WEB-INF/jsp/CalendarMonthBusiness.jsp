@@ -5,11 +5,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/Calendar.css">
 </head>
+
 <body>
+
 <input type="hidden" id="handan" value="">
 <input type="checkbox" id="tetsuyatimeCheckbox" class="tetsuyatimeArea" style="display:none;">
   <div class="container">
