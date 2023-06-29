@@ -7,6 +7,12 @@
 <title>お問い合わせ完了</title>
 <link rel="shortcut icon" href="/AllNightCalender/img\icon.png">
 <link rel="stylesheet" href="/AllNightCalender/css/Inquiry.css">
+	  <style>
+	body {
+		background-image: url("/AllNightCalender/img/${sessionScope.url}");
+		background-size: cover;
+	}
+</style>
 </head>
 <body>
 <div class="container">
