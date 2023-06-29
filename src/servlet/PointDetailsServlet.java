@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.Point_dayDAO;
+import dao.UserDAO;
 import model.Point_day;
 
 /**
@@ -46,6 +47,11 @@ public class PointDetailsServlet extends HttpServlet {
 		//検索処理を行う
 		Point_dayDAO pDao = new Point_dayDAO();
 		List<Point_day> pointList = pDao.look(new Point_day(ID, y, m, 0, 0, 0, 0));
+
+		UserDAO uDao = new UserDAO();
+		int poinat = uDao.point((String)session.getAttribute("id"));
+
+		request.setAttribute("point",poinat);
 
 		//検索結果をリクエストスコープに格納する
 		request.setAttribute("g", pointList);

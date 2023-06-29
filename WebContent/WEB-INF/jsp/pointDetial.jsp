@@ -64,11 +64,9 @@ flag = 0;
 </script>
 
 </header>
-
 <div id='myDiv'></div>
-
 <c:forEach var="e" items="${g}" varStatus="s">
-	<input type="hidden" id="${s.count}" value="${e.point_m}"></input>
+	<input type="hidden" id="${s.count }" value="${e.point_m}"></input>
 </c:forEach>
 
 <!-- どこからかJavascriptでデータを受け取りたい -->
@@ -83,7 +81,7 @@ const month_x = [1,2,3,4,5,6,7,8,9,10,11,12];
 const day_x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
 
 //縦軸
-let day_y　= [];
+let day_y = [];
 let total_y = [];
 let total = 0;
 
@@ -120,8 +118,8 @@ var trace2 = {
 var data = [trace1, trace2];
 
 var layout = {
-  title: '獲得ポイント合計',
-  yaxis: {title: '一日の獲得量'},
+  title: '獲得ポイント合計'+${point}+'pt',
+  xaxis: {title: '一日の獲得量'},
   yaxis2: {
   title: 'ポイント獲得推移',
   titlefont: {color: 'rgb(148, 103, 189)'},

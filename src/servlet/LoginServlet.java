@@ -110,6 +110,8 @@ public class LoginServlet extends HttpServlet {
 			// リクエストスコープに、タイトル、メッセージ、戻り先を格納する
 			request.setAttribute("result","※IDまたはパスワードに間違いがあります。");
 
+			request.setAttribute("tetsuya","0");
+
 			// 結果ページにフォワードする
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
 			dispatcher.forward(request, response);
