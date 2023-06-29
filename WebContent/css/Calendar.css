@@ -124,7 +124,7 @@ width: 40px;
   }
 /*日曜日*/
 #calendar td:first-child {
-    /* color: red; */
+    color: red;
 }
 /*土曜日*/
 #calendar td:last-child {
