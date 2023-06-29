@@ -1,8 +1,9 @@
 @charset "utf-8";
+
 header{
 	margin: 10px 20px;
 	border-width: 0 0 5px 0;
-	border-style: solid;
+	border-style: 1px solid ;
 }
 
 body{
@@ -13,9 +14,16 @@ body{
 .wrapper {
     display: flex;
 }
+
 p{
 	text-align: center;
+}
 
+.box2{
+	width: 50%;
+  	margin: 0 20px;
+  	border-width: 2px;
+	border-style: solid;
 }
 
 .box{
@@ -23,13 +31,44 @@ p{
   	margin: 0 20px;
   	border-width: 2px;
 	border-style: solid;
-
+ text-align:center;
 }
 
+table{
+ text-align:center;
+}
+
+form{
+ text-align:center;
+ padding:40px;
+}
+
+#button1 , #button2 ,#button3{
+ width:150px;
+ height:40px;
+ text-align:center;
+ border-radius:10px;
+ margin:10px;
+}
+
+
+.box2{
+ text-align:center;
+}
 
 .btn{
 
 	margin: 20px
+}
+
+a{
+  text-decoration:none;
+ color:black;
+}
+
+a:hover{
+  text-decoration:none;
+ color:#fc7dff;
 }
 
  td {
@@ -40,5 +79,8 @@ p{
 
 }
 
-
+img{
+ margin:30px;
+ width:150px;
+}
 

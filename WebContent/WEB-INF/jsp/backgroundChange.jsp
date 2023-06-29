@@ -25,13 +25,14 @@
 
 <main>
   <div class="wrapper">
-	<div class="box btns">
+	<div class="box2">
+	 <div class="btns">
 	<form method= "post" name="contactForm" action="/AllNightCalender/BackgroundChangeServlet">
 
   		<input type="button" name="srank" img src="/AllNightCalender/img/s6.jpg" id="button1" onclick="setUrl1()" value="${j.sc_s}">
-  		<input type="button" name="arank" img src="/AllNightCalender/img/a6.jpg"id="button2" onclick="setUrl2()" value="${j.sc_a}"><br>
+  		<input type="button" name="arank" img src="/AllNightCalender/img/a6.jpg" id="button2" onclick="setUrl2()" value="${j.sc_a}"><br>
 
- 		<input type ="button" class ="btn" value = "通常" ><br>
+ 		<input type ="button" class ="btn" value = "通常" id="button3"><br>
 
 		<input type ="button" class ="btn" value = "選択解除" ><br>
 
@@ -41,6 +42,7 @@
 
 		<a href="/AllNightCalender/src/servlet/CalendarServlet.java">ホームに戻る</a>
 	</div>
+	</div>
 
 
 	<div class="box">
@@ -49,7 +51,7 @@
 		   暗くなっている背景は<br>
 		   選択・設定出来ません</p><br>
 
-		<table border="1">
+		<table align="center" border="1">
 		    <tr>
 		      <td>Sランク</td>
 		      <td>１２５０ポイント以上</td>
@@ -75,8 +77,8 @@
 		      <td>０ポイント以上</td>
 		    </tr>
 		</table>
-		<img src="/AllNightCalender/img/s6.jpg">
-		<img src="/AllNightCalender/img/a6.jpg">
+		<img src="/AllNightCalender/img/s6.jpg" alt="sランク背景">
+		<img src="/AllNightCalender/img/a6.jpg" alt="aランク背景">
 	</div>
   </div>
 
