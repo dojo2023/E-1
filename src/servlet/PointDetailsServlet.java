@@ -33,15 +33,15 @@ public class PointDetailsServlet extends HttpServlet {
 //グラフデータ取得
 		//セッションからのデータの取得
 		HttpSession session = request.getSession();
-//		String ID =(String)session.getAttribute("id");
-		String ID ="tetsuya";
+		String ID =(String)session.getAttribute("id");
+		//String ID ="tetsuya";
 
 		//年月取得
 		Calendar calender = Calendar.getInstance();
-//		int y = calender.get(Calendar.YEAR);
-//		int m = calender.get(Calendar.MONTH)+1;
-		int y = 2023;
-		int m = 6;
+		int y = calender.get(Calendar.YEAR);
+		int m = calender.get(Calendar.MONTH)+1;
+//		int y = 2023;
+//		int m = 6;
 
 		//検索処理を行う
 		Point_dayDAO pDao = new Point_dayDAO();

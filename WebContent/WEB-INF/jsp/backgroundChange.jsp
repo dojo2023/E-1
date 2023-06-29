@@ -30,10 +30,10 @@
 
 	 	<div class="s"><p>Sランク</p></div>
 	<div class="a"><p>Aランク</p></div>
-	<form method= "post" name="contactForm" action="/AllNightCalender/BackgroundChangeServlet">
+	<form method="post" name="contactForm" action="/AllNightCalender/BackgroundChangeServlet">
 
-  		<input type="button" name="srank" img src="/AllNightCalender/img/s6.jpg" id="button1" onclick="setUrl1()" value="${j.sc_s}">
-  		<input type="button" name="arank" img src="/AllNightCalender/img/a6.jpg" id="button2" onclick="setUrl2()" value="${j.sc_a}"><br>
+  		<input type="button" name="srank"  src="/AllNightCalender/img/s6.jpg" id="button1" onclick="setUrl1()" value="${j.sc_s}">
+  		<input type="button" name="arank"  src="/AllNightCalender/img/a6.jpg" id="button2" onclick="setUrl2()" value="${j.sc_a}"><br>
 
  		<input type ="button" class ="btn" value = "通常" id="button3"><br>
 
@@ -43,7 +43,7 @@
   		<input type="submit" value="確定(ホームに戻ると反映されます)">
 	</form>
 
-		<a href="/AllNightCalender/src/servlet/CalendarServlet.java">ホームに戻る</a>
+		<a href="/AllNightCalender/CalendarServlet">ホームに戻る</a>
 	</div>
 	</div>
 
