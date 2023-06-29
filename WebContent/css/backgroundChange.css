@@ -1,64 +1,112 @@
-@charset "utf-8";
-
-header{
-	margin: 10px 20px;
-	border-width: 0 0 5px 0;
-	border-style: 1px solid ;
-}
-
-body{
-	width: 1272px;
-
-}
-
 .wrapper {
     display: flex;
 }
+
+input[type="button"]{
+ width:160px;
+ height:40px;
+ border-radius:10px;
+ margin:10px;
+}
+
+input[type="button"]:hover{
+background-color:#777acc;
+}
+
+.a , .s{
+ width:60px;
+ height:50px;
+ display:flex;
+ font-family:"ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W6";
+ font-weight:bold;
+}
+
+.s{
+ transform: translate(175px, 159px);
+    background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783);
+     animation: 2s example4 linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    display: inline-block
+    opacity:0.5;
+}
+
+.a{
+ transform: translate(350px, 110px);
+  background: linear-gradient(45deg,#969e6f,#e7e469 ) 0 / 200%;
+    animation: 2s example4 linear infinite;
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
 
 p{
 	text-align: center;
 }
 
-.box2{
-	width: 50%;
+.box , .box2{
   	margin: 0 20px;
   	border-width: 2px;
-	border-style: solid;
+  	border-style: solid;
+  	text-align:center;
+  	width: 600px;
 }
 
-.box{
-	width: 50%;
-  	margin: 0 20px;
-  	border-width: 2px;
-	border-style: solid;
- text-align:center;
+
+
+ td {
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
 }
 
-table{
- text-align:center;
-}
-
-form{
- text-align:center;
- padding:40px;
-}
-
-#button1 , #button2 ,#button3{
+#button1 , #button2{
  width:150px;
- height:40px;
- text-align:center;
+ height:50px;
  border-radius:10px;
  margin:10px;
 }
 
-
-.box2{
- text-align:center;
+#button1{;
+}
+@keyframes example4{
+    100% { background-position: 200%; }
 }
 
-.btn{
 
-	margin: 20px
+
+#button2{
+}
+
+#button3:active{
+	border:1px solid black;
+}
+
+
+th,td {
+    border: solid 1px;  /* æž ç·šæŒ‡å®š */
+    padding: 10px;      /* ä½™ç™½æŒ‡å®š */
+}
+
+img{
+ width:200px;
+ margin:30px;
+}
+
+table{
+   border-collapse:  collapse; /* ã‚»ãƒ«ã®ç·šã‚’é‡ã­ã‚‹ */
+}
+
+form{
+ margin:50px;
+}
+
+input{
+ margin:20px;
+ width:300px;
 }
 
 a{
@@ -69,18 +117,5 @@ a{
 a:hover{
   text-decoration:none;
  color:#fc7dff;
-}
-
- td {
-    margin: auto;
-    outline: 1px solid #ddd;
-    padding-top: 10px;
-    text-align: center;
-
-}
-
-img{
- margin:30px;
- width:150px;
 }
 

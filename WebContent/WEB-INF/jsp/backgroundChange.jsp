@@ -27,6 +27,9 @@
   <div class="wrapper">
 	<div class="box2">
 	 <div class="btns">
+
+	 	<div class="s"><p>Sランク</p></div>
+	<div class="a"><p>Aランク</p></div>
 	<form method= "post" name="contactForm" action="/AllNightCalender/BackgroundChangeServlet">
 
   		<input type="button" name="srank" img src="/AllNightCalender/img/s6.jpg" id="button1" onclick="setUrl1()" value="${j.sc_s}">
@@ -37,7 +40,7 @@
 		<input type ="button" class ="btn" value = "選択解除" ><br>
 
 		<input type="hidden" id="hidden" name="url" value="">
-  		<input type="submit" value="確定">
+  		<input type="submit" value="確定(ホームに戻ると反映されます)">
 	</form>
 
 		<a href="/AllNightCalender/src/servlet/CalendarServlet.java">ホームに戻る</a>
