@@ -85,7 +85,7 @@
 					<td><input type="submit" name="SUBMIT" value=${e.number}></td>
 				</form>
 				<form name="date" action="CalendarMonthBusinessServletDelete" method="get">
-				<td><input type="submit" name="SUBMIT" value=${e.number}></td>
+				<td><input type="submit" name="DELETE" value=${e.number}></td>
 				</form>
 			</tr>
 		</table>
