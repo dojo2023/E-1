@@ -566,7 +566,7 @@ table.list{
 
 
 .register-area , .memo_table , .regist_submit{
-	background-color:white;
+	/*background-color:white;*/
 	top:10px;
 }
 
@@ -640,9 +640,9 @@ table.list{
     padding: 0;
     width: 230px;
 }
-.register-area{
+/*.register-area{
 	background-color: #ffffff;
-}
+}*/
 table-list{
 	left:10px;
 }
